@@ -48,18 +48,24 @@
             this.estatDelProcésDenvasatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comptadorsDeLotsmesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.referènciesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.arxiuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sortirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.arxiuToolStripMenuItem,
             this.mantenimentDusuarisToolStripMenuItem,
             this.registreProveïdorsToolStripMenuItem,
             this.dadesEmpresaToolStripMenuItem,
             this.recepcióBestiarToolStripMenuItem,
             this.gestióDeProcessosToolStripMenuItem,
-            this.fitxersAuxiliarsToolStripMenuItem});
+            this.fitxersAuxiliarsToolStripMenuItem,
+            this.ajudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(890, 24);
@@ -78,13 +84,13 @@
             // afegirToolStripMenuItem
             // 
             this.afegirToolStripMenuItem.Name = "afegirToolStripMenuItem";
-            this.afegirToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.afegirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.afegirToolStripMenuItem.Text = "Afegir";
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             // 
             // registreProveïdorsToolStripMenuItem
@@ -195,10 +201,39 @@
             this.referènciesToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.referènciesToolStripMenuItem.Text = "Referències";
             // 
+            // arxiuToolStripMenuItem
+            // 
+            this.arxiuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sortirToolStripMenuItem});
+            this.arxiuToolStripMenuItem.Name = "arxiuToolStripMenuItem";
+            this.arxiuToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.arxiuToolStripMenuItem.Text = "Arxiu";
+            // 
+            // sortirToolStripMenuItem
+            // 
+            this.sortirToolStripMenuItem.Name = "sortirToolStripMenuItem";
+            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sortirToolStripMenuItem.Text = "Sortir";
+            // 
+            // ajudaToolStripMenuItem
+            // 
+            this.ajudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sobreToolStripMenuItem});
+            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.ajudaToolStripMenuItem.Text = "Ajuda";
+            // 
+            // sobreToolStripMenuItem
+            // 
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sobreToolStripMenuItem.Text = "Sobre...";
+            // 
             // TemplateMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(890, 555);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -233,5 +268,9 @@
         private System.Windows.Forms.ToolStripMenuItem afegirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         public System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem arxiuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sortirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
     }
 }

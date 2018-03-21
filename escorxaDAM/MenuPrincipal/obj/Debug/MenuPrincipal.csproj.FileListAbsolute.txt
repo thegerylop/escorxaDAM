@@ -1,0 +1,11 @@
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\MenuPrincipal.exe.config
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\MenuPrincipal.exe
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\MenuPrincipal.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\Template.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\Template.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.Properties.Resources.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.exe
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.pdb

@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Template;
 
-namespace Principal
+namespace MenuPrincipal
 {
-    public partial class Principal : Template.TemplateMenu
+    public partial class MenuPrincipal : Template.TemplateMenu
     {
-        public Principal()
+        public MenuPrincipal()
         {
             InitializeComponent();
         }
