@@ -1,0 +1,7 @@
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\dll\Template.dll
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\dll\Template.pdb
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\Template\obj\Debug\Template.TemplateMenu.resources
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\Template\obj\Debug\Template.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\Template\obj\Debug\Template.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\Template\obj\Debug\Template.dll
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\Template\obj\Debug\Template.pdb

@@ -1,0 +1,7 @@
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\dll\CustomControl.dll
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\dll\CustomControl.pdb
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\CustomControl\obj\Debug\CustomControl.CustomTextBox.resources
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\CustomControl\obj\Debug\CustomControl.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\CustomControl\obj\Debug\CustomControl.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\CustomControl\obj\Debug\CustomControl.dll
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\CustomControl\obj\Debug\CustomControl.pdb

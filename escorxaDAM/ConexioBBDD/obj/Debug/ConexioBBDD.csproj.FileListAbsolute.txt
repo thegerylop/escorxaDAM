@@ -1,0 +1,5 @@
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\dll\ConexioBBDD.dll
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\dll\ConexioBBDD.pdb
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\ConexioBBDD\obj\Debug\ConexioBBDD.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\ConexioBBDD\obj\Debug\ConexioBBDD.dll
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\ConexioBBDD\obj\Debug\ConexioBBDD.pdb
