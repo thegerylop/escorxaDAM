@@ -53,7 +53,7 @@ namespace CustomControl
 
         public void this_Leave(object sender, EventArgs e)
         {
-            if (this.Text == "")
+                if (this.Text == "")
             {
                 this.Text = _placeholder;
             }

@@ -25,3 +25,9 @@ C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\MenuPrincipal\bin\Debug\CustomCont
 C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.Login.resources
 C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.MenuPrincipal.resources
 C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.Splash.resources
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\MenuPrincipal\bin\Debug\ConexioBBDD.dll
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\MenuPrincipal\bin\Debug\MySql.Data.dll
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\MenuPrincipal\bin\Debug\ConexioBBDD.pdb
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\MenuPrincipal\bin\Debug\MySql.Data.xml
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\MenuPrincipal\bin\Debug\BaseForm.dll
+C:\Users\admin\Desktop\excorxaDAMF\escorxaDAM\MenuPrincipal\bin\Debug\BaseForm.pdb

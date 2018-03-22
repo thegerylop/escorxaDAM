@@ -42,9 +42,9 @@
             this.dgvBase.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvBase.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBase.BackgroundColor = System.Drawing.Color.Gray;
-            this.dgvBase.Location = new System.Drawing.Point(12, 331);
+            this.dgvBase.Location = new System.Drawing.Point(148, 378);
             this.dgvBase.Name = "dgvBase";
-            this.dgvBase.Size = new System.Drawing.Size(873, 255);
+            this.dgvBase.Size = new System.Drawing.Size(873, 222);
             this.dgvBase.TabIndex = 0;
             this.dgvBase.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvBase_DataError);
             // 
@@ -55,7 +55,7 @@
             this.btnActualitzar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualitzar.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.btnActualitzar.ForeColor = System.Drawing.Color.White;
-            this.btnActualitzar.Location = new System.Drawing.Point(753, 287);
+            this.btnActualitzar.Location = new System.Drawing.Point(889, 335);
             this.btnActualitzar.Name = "btnActualitzar";
             this.btnActualitzar.Size = new System.Drawing.Size(132, 26);
             this.btnActualitzar.TabIndex = 36;
@@ -70,7 +70,7 @@
             this.btnAfegir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAfegir.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.btnAfegir.ForeColor = System.Drawing.Color.White;
-            this.btnAfegir.Location = new System.Drawing.Point(629, 287);
+            this.btnAfegir.Location = new System.Drawing.Point(763, 335);
             this.btnAfegir.Name = "btnAfegir";
             this.btnAfegir.Size = new System.Drawing.Size(117, 26);
             this.btnAfegir.TabIndex = 38;
@@ -89,14 +89,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(913, 604);
+            this.ClientSize = new System.Drawing.Size(1185, 633);
             this.Controls.Add(this.btnAfegir);
             this.Controls.Add(this.btnActualitzar);
             this.Controls.Add(this.dgvBase);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BaseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "test";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgvBase)).EndInit();
             this.ResumeLayout(false);
 

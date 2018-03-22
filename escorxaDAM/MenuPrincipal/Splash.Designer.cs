@@ -52,6 +52,7 @@
             this.Controls.Add(this.progressBarSplash);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Splash";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Splash";
             this.ResumeLayout(false);
 
