@@ -30,26 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timerSplash = new System.Windows.Forms.Timer(this.components);
-            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.progressBarSplash = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // timerSplash
             // 
             this.timerSplash.Tick += new System.EventHandler(this.timerSplash_Tick);
             // 
-            // progressBar
+            // progressBarSplash
             // 
-            this.progressBar.Location = new System.Drawing.Point(29, 181);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(453, 23);
-            this.progressBar.TabIndex = 0;
+            this.progressBarSplash.Location = new System.Drawing.Point(29, 181);
+            this.progressBarSplash.Name = "progressBarSplash";
+            this.progressBarSplash.Size = new System.Drawing.Size(453, 23);
+            this.progressBarSplash.TabIndex = 0;
             // 
             // Splash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(517, 261);
-            this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.progressBarSplash);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Splash";
             this.Text = "Splash";
@@ -60,6 +60,6 @@
         #endregion
 
         private System.Windows.Forms.Timer timerSplash;
-        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.ProgressBar progressBarSplash;
     }
 }

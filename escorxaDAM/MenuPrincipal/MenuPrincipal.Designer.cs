@@ -36,7 +36,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 555);
             this.Name = "MenuPrincipal";
-            this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
 

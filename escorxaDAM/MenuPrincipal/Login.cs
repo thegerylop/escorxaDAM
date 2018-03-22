@@ -20,6 +20,7 @@ namespace MenuPrincipal
         private void button1_Click(object sender, EventArgs e)
         {
             Form frm = new MenuPrincipal();
+            frm.Show();
         }
     }
 }

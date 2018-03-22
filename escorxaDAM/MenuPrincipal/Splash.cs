@@ -15,12 +15,13 @@ namespace MenuPrincipal
         public Splash()
         {
             InitializeComponent();
+            timerSplash.Start();
         }
 
         private void timerSplash_Tick(object sender, EventArgs e)
         {
-            progressBar.Increment(5);
-            if(progressBar.Value == 100)
+            progressBarSplash.Increment(5);
+            if(progressBarSplash.Value == 100)
             {
                 timerSplash.Stop();
                 Form frm = new Login();
