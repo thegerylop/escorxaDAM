@@ -24,5 +24,15 @@ namespace MenuPrincipal
             Base.Dock = DockStyle.Fill;
             Base.Show();
         }
+
+        private void recepcióBestiarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enmagatzematgeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

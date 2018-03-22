@@ -60,11 +60,6 @@ namespace CustomControl
             this.BackColor = Color.White;
         }
 
-        public void CustomControlTB_Load(object sender, EventArgs e)
-        {
-            this.Text = _placeholder;
-        }
-
         private void InitializeComponent()
         {
             this.SuspendLayout();
