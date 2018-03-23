@@ -45,6 +45,7 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.idUsuari = new CustomControl.CustomTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -236,10 +237,22 @@
             this.checkBox7.Tag = "actiu";
             this.checkBox7.UseVisualStyleBackColor = true;
             // 
+            // idUsuari
+            // 
+            this.idUsuari.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.idUsuari.Location = new System.Drawing.Point(272, 51);
+            this.idUsuari.Name = "idUsuari";
+            this.idUsuari.Options = CustomControl.CustomTextBox.Items.Password;
+            this.idUsuari.Placeholder = null;
+            this.idUsuari.Size = new System.Drawing.Size(161, 20);
+            this.idUsuari.TabIndex = 50;
+            this.idUsuari.Tag = "idUsuari";
+            // 
             // MantenimentUsuaris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1211, 733);
+            this.Controls.Add(this.idUsuari);
             this.Controls.Add(this.checkBox7);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
@@ -268,6 +281,7 @@
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.checkBox7, 0);
+            this.Controls.SetChildIndex(this.idUsuari, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -294,5 +308,6 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox7;
+        private CustomControl.CustomTextBox idUsuari;
     }
 }

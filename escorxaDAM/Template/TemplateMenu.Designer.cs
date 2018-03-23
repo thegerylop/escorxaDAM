@@ -30,13 +30,15 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arxiuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajudaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajudaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sortirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimentDusuarisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.afegirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registreProveïdorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dadesEmpresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.recepcióBestiarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestióDeProcessosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fitxersAuxiliarsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nivellsDaccésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,9 +52,12 @@
             this.estatDelProcésDenvasatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comptadorsDeLotsmesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.referènciesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajudaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajudaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sobreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.estabulacióToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sacrificiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.processatInicialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.emmagatzematgeIConservacióToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.processatFinalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recepcióToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +68,6 @@
             this.mantenimentDusuarisToolStripMenuItem,
             this.registreProveïdorsToolStripMenuItem,
             this.dadesEmpresaToolStripMenuItem,
-            this.recepcióBestiarToolStripMenuItem,
             this.gestióDeProcessosToolStripMenuItem,
             this.fitxersAuxiliarsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -81,10 +85,31 @@
             this.arxiuToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.arxiuToolStripMenuItem.Text = "Arxiu";
             // 
+            // ajudaToolStripMenuItem1
+            // 
+            this.ajudaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajudaToolStripMenuItem2,
+            this.sobreToolStripMenuItem1});
+            this.ajudaToolStripMenuItem1.Name = "ajudaToolStripMenuItem1";
+            this.ajudaToolStripMenuItem1.Size = new System.Drawing.Size(105, 22);
+            this.ajudaToolStripMenuItem1.Text = "Ajuda";
+            // 
+            // ajudaToolStripMenuItem2
+            // 
+            this.ajudaToolStripMenuItem2.Name = "ajudaToolStripMenuItem2";
+            this.ajudaToolStripMenuItem2.Size = new System.Drawing.Size(113, 22);
+            this.ajudaToolStripMenuItem2.Text = "Ajuda";
+            // 
+            // sobreToolStripMenuItem1
+            // 
+            this.sobreToolStripMenuItem1.Name = "sobreToolStripMenuItem1";
+            this.sobreToolStripMenuItem1.Size = new System.Drawing.Size(113, 22);
+            this.sobreToolStripMenuItem1.Text = "Sobre...";
+            // 
             // sortirToolStripMenuItem
             // 
             this.sortirToolStripMenuItem.Name = "sortirToolStripMenuItem";
-            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.sortirToolStripMenuItem.Text = "Sortir";
             // 
             // mantenimentDusuarisToolStripMenuItem
@@ -120,14 +145,15 @@
             this.dadesEmpresaToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
             this.dadesEmpresaToolStripMenuItem.Text = "Dades empresa";
             // 
-            // recepcióBestiarToolStripMenuItem
-            // 
-            this.recepcióBestiarToolStripMenuItem.Name = "recepcióBestiarToolStripMenuItem";
-            this.recepcióBestiarToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
-            this.recepcióBestiarToolStripMenuItem.Text = "Recepció bestiar";
-            // 
             // gestióDeProcessosToolStripMenuItem
             // 
+            this.gestióDeProcessosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.recepcióToolStripMenuItem,
+            this.estabulacióToolStripMenuItem,
+            this.sacrificiToolStripMenuItem,
+            this.processatInicialToolStripMenuItem,
+            this.emmagatzematgeIConservacióToolStripMenuItem,
+            this.processatFinalToolStripMenuItem});
             this.gestióDeProcessosToolStripMenuItem.Name = "gestióDeProcessosToolStripMenuItem";
             this.gestióDeProcessosToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
             this.gestióDeProcessosToolStripMenuItem.Text = "Gestió de processos";
@@ -216,26 +242,41 @@
             this.referènciesToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.referènciesToolStripMenuItem.Text = "Referències";
             // 
-            // ajudaToolStripMenuItem1
+            // estabulacióToolStripMenuItem
             // 
-            this.ajudaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajudaToolStripMenuItem2,
-            this.sobreToolStripMenuItem1});
-            this.ajudaToolStripMenuItem1.Name = "ajudaToolStripMenuItem1";
-            this.ajudaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.ajudaToolStripMenuItem1.Text = "Ajuda";
+            this.estabulacióToolStripMenuItem.Name = "estabulacióToolStripMenuItem";
+            this.estabulacióToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.estabulacióToolStripMenuItem.Text = "Estabulació";
             // 
-            // ajudaToolStripMenuItem2
+            // sacrificiToolStripMenuItem
             // 
-            this.ajudaToolStripMenuItem2.Name = "ajudaToolStripMenuItem2";
-            this.ajudaToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
-            this.ajudaToolStripMenuItem2.Text = "Ajuda";
+            this.sacrificiToolStripMenuItem.Name = "sacrificiToolStripMenuItem";
+            this.sacrificiToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.sacrificiToolStripMenuItem.Text = "Sacrifici";
             // 
-            // sobreToolStripMenuItem1
+            // processatInicialToolStripMenuItem
             // 
-            this.sobreToolStripMenuItem1.Name = "sobreToolStripMenuItem1";
-            this.sobreToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.sobreToolStripMenuItem1.Text = "Sobre...";
+            this.processatInicialToolStripMenuItem.Name = "processatInicialToolStripMenuItem";
+            this.processatInicialToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.processatInicialToolStripMenuItem.Text = "Processat inicial";
+            // 
+            // emmagatzematgeIConservacióToolStripMenuItem
+            // 
+            this.emmagatzematgeIConservacióToolStripMenuItem.Name = "emmagatzematgeIConservacióToolStripMenuItem";
+            this.emmagatzematgeIConservacióToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.emmagatzematgeIConservacióToolStripMenuItem.Text = "Emmagatzematge i conservació";
+            // 
+            // processatFinalToolStripMenuItem
+            // 
+            this.processatFinalToolStripMenuItem.Name = "processatFinalToolStripMenuItem";
+            this.processatFinalToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.processatFinalToolStripMenuItem.Text = "Processat final";
+            // 
+            // recepcióToolStripMenuItem
+            // 
+            this.recepcióToolStripMenuItem.Name = "recepcióToolStripMenuItem";
+            this.recepcióToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.recepcióToolStripMenuItem.Text = "Recepció";
             // 
             // TemplateMenu
             // 
@@ -259,7 +300,6 @@
         private System.Windows.Forms.ToolStripMenuItem mantenimentDusuarisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registreProveïdorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dadesEmpresaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem recepcióBestiarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestióDeProcessosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fitxersAuxiliarsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nivellsDaccésToolStripMenuItem;
@@ -281,5 +321,11 @@
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem estabulacióToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sacrificiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem processatInicialToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem emmagatzematgeIConservacióToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem processatFinalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recepcióToolStripMenuItem;
     }
 }

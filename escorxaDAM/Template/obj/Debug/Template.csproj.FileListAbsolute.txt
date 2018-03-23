@@ -5,3 +5,4 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Template\obj\Debug\Template.csproj.
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Template\obj\Debug\Template.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Template\obj\Debug\Template.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Template\obj\Debug\Template.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Template\obj\Debug\Template.csprojResolveAssemblyReference.cache

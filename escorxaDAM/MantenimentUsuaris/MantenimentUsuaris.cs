@@ -26,6 +26,7 @@ namespace MantenimentUsuaris
         {
             this.dgvBase.Columns["idUsuari"].Visible = false;
             this.dgvBase.Columns["actiu"].Visible = false;
+            idUsuari.Visible = false;
         }
     }
 }
