@@ -53,6 +53,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,6 +79,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BaseForm\BaseForm.csproj">
+      <Project>{cf89ea7d-d834-4cb1-8888-e9c0fb24ee7f}</Project>
+      <Name>BaseForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MantenimentUsuaris\MantenimentUsuaris.csproj">
+      <Project>{8c221afb-fbe1-4a6a-8626-c98b8960a54a}</Project>
+      <Name>MantenimentUsuaris</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Template\Template.csproj">
       <Project>{5377da58-e5e8-456d-ac68-d7bbe6ece0e8}</Project>
       <Name>Template</Name>

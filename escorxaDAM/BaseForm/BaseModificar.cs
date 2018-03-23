@@ -11,13 +11,13 @@ using ConexioBBDD;
 namespace BaseForm
 {
 
-    public partial class BaseForm : Form
+    public partial class BaseModificar : Form
     {
         String query = "";
         DataRow row;
         DataSet dataSet = new DataSet();
         String table = "";
-        public BaseForm()
+        public BaseModificar()
         {
             InitializeComponent();
         }
@@ -33,6 +33,11 @@ namespace BaseForm
             dataSet = bd.portarPerConsulta(query, table);
             BindingDades(table);
         }
+        public virtual void actualitzar_Click(object sender, EventArgs e)
+        {
+            ActualitzarMySQL(table);
+        }
+
         public void ActualitzarMySQL(string table)
         {
             Boolean correcte = false;
@@ -70,15 +75,23 @@ namespace BaseForm
             }
             return true;
         }
+
         private void BindingDades(string table)
         {
             foreach (Control txt in this.Controls)
             {
-                if (txt.GetType() == typeof(CustomControl.CustomTextBox))
+                if (txt.GetType() == typeof(CustomControl.CustomTextBox) || txt.GetType() == typeof(CheckBox))
                 {
                     if (txt.Tag.ToString() != "") {
                         txt.DataBindings.Clear();
-                        txt.DataBindings.Add("Text", dataSet.Tables[table], txt.Tag.ToString(), true);
+                        if(txt.GetType() == typeof(CustomControl.CustomTextBox)) {
+                            txt.DataBindings.Add("Text", dataSet.Tables[table], txt.Tag.ToString(), true);
+                        }
+                        else if(txt.GetType() == typeof(CheckBox))
+                        {
+                            txt.DataBindings.Add("Checked", dataSet.Tables[table], txt.Tag.ToString());
+                        }
+                        
                         txt.Validated += new System.EventHandler(this.validarText);
                     }
                 }
@@ -91,34 +104,6 @@ namespace BaseForm
         {
             Control test = (Control)sender;
             test.DataBindings[0].BindingManagerBase.EndCurrentEdit();
-        }
-        public virtual void btnAfegir_Click(object sender, EventArgs e)
-        {
-            AfegirCamp(table);
-        }
-
-        public virtual void actualitzar_Click(object sender, EventArgs e)
-        {
-            ActualitzarMySQL(table);
-        }
-
-        public void netejarCamps()
-        {
-            foreach (Control txt in this.Controls)
-            {
-                if (txt.GetType() == typeof(CustomControl.CustomTextBox))
-                {
-                    txt.Text = "";
-                }
-            }
-        }
-
-        public void AfegirCamp(string table)
-        {
-            row = dataSet.Tables[table].NewRow();
-            dataSet.Tables[table].Rows.Add(row);
-            dgvBase.Rows[dgvBase.Rows.Count - 2].Selected = true;
-            dgvBase.CurrentCell = dgvBase.Rows[dgvBase.Rows.Count - 2].Cells[1];
         }
        
         private void dgvBase_DataError(object sender, DataGridViewDataErrorEventArgs e)

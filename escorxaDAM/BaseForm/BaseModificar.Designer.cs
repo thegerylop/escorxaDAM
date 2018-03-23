@@ -1,6 +1,6 @@
 ﻿namespace BaseForm
 {
-    partial class BaseForm
+    partial class BaseModificar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseModificar));
             this.dgvBase = new System.Windows.Forms.DataGridView();
             this.btnActualitzar = new System.Windows.Forms.Button();
-            this.btnAfegir = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBase)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvBase
             // 
+            this.dgvBase.AllowUserToAddRows = false;
             this.dgvBase.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvBase.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBase.BackgroundColor = System.Drawing.Color.Gray;
-            this.dgvBase.Location = new System.Drawing.Point(12, 331);
+            this.dgvBase.Location = new System.Drawing.Point(161, 395);
             this.dgvBase.Name = "dgvBase";
+            this.dgvBase.ReadOnly = true;
             this.dgvBase.Size = new System.Drawing.Size(873, 255);
             this.dgvBase.TabIndex = 0;
             this.dgvBase.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvBase_DataError);
@@ -55,7 +56,7 @@
             this.btnActualitzar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualitzar.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.btnActualitzar.ForeColor = System.Drawing.Color.White;
-            this.btnActualitzar.Location = new System.Drawing.Point(753, 287);
+            this.btnActualitzar.Location = new System.Drawing.Point(902, 351);
             this.btnActualitzar.Name = "btnActualitzar";
             this.btnActualitzar.Size = new System.Drawing.Size(132, 26);
             this.btnActualitzar.TabIndex = 36;
@@ -63,39 +64,23 @@
             this.btnActualitzar.UseVisualStyleBackColor = false;
             this.btnActualitzar.Click += new System.EventHandler(this.actualitzar_Click);
             // 
-            // btnAfegir
-            // 
-            this.btnAfegir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAfegir.BackColor = System.Drawing.Color.DimGray;
-            this.btnAfegir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAfegir.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.btnAfegir.ForeColor = System.Drawing.Color.White;
-            this.btnAfegir.Location = new System.Drawing.Point(629, 287);
-            this.btnAfegir.Name = "btnAfegir";
-            this.btnAfegir.Size = new System.Drawing.Size(117, 26);
-            this.btnAfegir.TabIndex = 38;
-            this.btnAfegir.Text = "Afegir";
-            this.btnAfegir.UseVisualStyleBackColor = false;
-            this.btnAfegir.Click += new System.EventHandler(this.btnAfegir_Click);
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // BaseForm
+            // BaseModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(913, 604);
-            this.Controls.Add(this.btnAfegir);
+            this.ClientSize = new System.Drawing.Size(1211, 733);
             this.Controls.Add(this.btnActualitzar);
             this.Controls.Add(this.dgvBase);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "BaseForm";
+            this.Name = "BaseModificar";
             this.Tag = "test";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBase)).EndInit();
             this.ResumeLayout(false);
@@ -103,7 +88,6 @@
         }
 
         #endregion
-        public System.Windows.Forms.Button btnAfegir;
         public System.Windows.Forms.Button btnActualitzar;
         public System.Windows.Forms.DataGridView dgvBase;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
