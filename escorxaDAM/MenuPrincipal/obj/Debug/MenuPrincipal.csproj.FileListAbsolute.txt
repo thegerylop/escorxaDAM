@@ -22,3 +22,5 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\MySql.Data.
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.MenuPrincipal.resources
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.Login.resources
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.Splash.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\ComunitatsAutonomes.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\ComunitatsAutonomes.pdb

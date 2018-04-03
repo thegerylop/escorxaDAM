@@ -7,3 +7,4 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.BaseInserir.resources
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.BaseModificar.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.BaseForm.resources

@@ -40,6 +40,11 @@
             this.registreProveïdorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dadesEmpresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestióDeProcessosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recepcióBestiarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estabulacióToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sacrificiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.processatFinalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.emmagatzematgeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fitxersAuxiliarsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nivellsDaccésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comunitatsAutònomesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,11 +57,6 @@
             this.estatDelProcésDenvasatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comptadorsDeLotsmesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.referènciesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.recepcióBestiarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.estabulacióToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sacrificiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.processatFinalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.emmagatzematgeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,7 +90,7 @@
             this.ajudaToolStripMenuItem2,
             this.sobreToolStripMenuItem1});
             this.ajudaToolStripMenuItem1.Name = "ajudaToolStripMenuItem1";
-            this.ajudaToolStripMenuItem1.Size = new System.Drawing.Size(105, 22);
+            this.ajudaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.ajudaToolStripMenuItem1.Text = "Ajuda";
             // 
             // ajudaToolStripMenuItem2
@@ -108,8 +108,9 @@
             // sortirToolStripMenuItem
             // 
             this.sortirToolStripMenuItem.Name = "sortirToolStripMenuItem";
-            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sortirToolStripMenuItem.Text = "Sortir";
+            this.sortirToolStripMenuItem.Click += new System.EventHandler(this.sortirToolStripMenuItem_Click);
             // 
             // mantenimentDusuarisToolStripMenuItem
             // 
@@ -123,14 +124,14 @@
             // afegirToolStripMenuItem
             // 
             this.afegirToolStripMenuItem.Name = "afegirToolStripMenuItem";
-            this.afegirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.afegirToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.afegirToolStripMenuItem.Text = "Afegir";
             this.afegirToolStripMenuItem.Click += new System.EventHandler(this.afegirToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
@@ -157,6 +158,37 @@
             this.gestióDeProcessosToolStripMenuItem.Name = "gestióDeProcessosToolStripMenuItem";
             this.gestióDeProcessosToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
             this.gestióDeProcessosToolStripMenuItem.Text = "Gestió de processos";
+            // 
+            // recepcióBestiarToolStripMenuItem
+            // 
+            this.recepcióBestiarToolStripMenuItem.Name = "recepcióBestiarToolStripMenuItem";
+            this.recepcióBestiarToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.recepcióBestiarToolStripMenuItem.Text = "Recepció bestiar";
+            // 
+            // estabulacióToolStripMenuItem
+            // 
+            this.estabulacióToolStripMenuItem.Name = "estabulacióToolStripMenuItem";
+            this.estabulacióToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.estabulacióToolStripMenuItem.Text = "Estabulació";
+            // 
+            // sacrificiToolStripMenuItem
+            // 
+            this.sacrificiToolStripMenuItem.Name = "sacrificiToolStripMenuItem";
+            this.sacrificiToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.sacrificiToolStripMenuItem.Text = "Sacrifici";
+            // 
+            // processatFinalToolStripMenuItem
+            // 
+            this.processatFinalToolStripMenuItem.Name = "processatFinalToolStripMenuItem";
+            this.processatFinalToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.processatFinalToolStripMenuItem.Text = "Processat final";
+            // 
+            // emmagatzematgeToolStripMenuItem
+            // 
+            this.emmagatzematgeToolStripMenuItem.Name = "emmagatzematgeToolStripMenuItem";
+            this.emmagatzematgeToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.emmagatzematgeToolStripMenuItem.Text = "Emmagatzematge";
+            this.emmagatzematgeToolStripMenuItem.Click += new System.EventHandler(this.emmagatzematgeToolStripMenuItem_Click);
             // 
             // fitxersAuxiliarsToolStripMenuItem
             // 
@@ -187,6 +219,7 @@
             this.comunitatsAutònomesToolStripMenuItem.Name = "comunitatsAutònomesToolStripMenuItem";
             this.comunitatsAutònomesToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.comunitatsAutònomesToolStripMenuItem.Text = "Comunitats autònomes";
+            this.comunitatsAutònomesToolStripMenuItem.Click += new System.EventHandler(this.comunitatsAutònomesToolStripMenuItem_Click);
             // 
             // tipusDexplotacióToolStripMenuItem
             // 
@@ -241,37 +274,6 @@
             this.referènciesToolStripMenuItem.Name = "referènciesToolStripMenuItem";
             this.referènciesToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.referènciesToolStripMenuItem.Text = "Referències";
-            // 
-            // recepcióBestiarToolStripMenuItem
-            // 
-            this.recepcióBestiarToolStripMenuItem.Name = "recepcióBestiarToolStripMenuItem";
-            this.recepcióBestiarToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.recepcióBestiarToolStripMenuItem.Text = "Recepció bestiar";
-            // 
-            // estabulacióToolStripMenuItem
-            // 
-            this.estabulacióToolStripMenuItem.Name = "estabulacióToolStripMenuItem";
-            this.estabulacióToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.estabulacióToolStripMenuItem.Text = "Estabulació";
-            // 
-            // sacrificiToolStripMenuItem
-            // 
-            this.sacrificiToolStripMenuItem.Name = "sacrificiToolStripMenuItem";
-            this.sacrificiToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.sacrificiToolStripMenuItem.Text = "Sacrifici";
-            // 
-            // processatFinalToolStripMenuItem
-            // 
-            this.processatFinalToolStripMenuItem.Name = "processatFinalToolStripMenuItem";
-            this.processatFinalToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.processatFinalToolStripMenuItem.Text = "Processat final";
-            // 
-            // emmagatzematgeToolStripMenuItem
-            // 
-            this.emmagatzematgeToolStripMenuItem.Name = "emmagatzematgeToolStripMenuItem";
-            this.emmagatzematgeToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.emmagatzematgeToolStripMenuItem.Text = "Emmagatzematge";
-            this.emmagatzematgeToolStripMenuItem.Click += new System.EventHandler(this.emmagatzematgeToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 

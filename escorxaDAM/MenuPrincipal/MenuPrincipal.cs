@@ -35,5 +35,19 @@ namespace MenuPrincipal
         {
 
         }
+
+        private void comunitatsAutònomesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ComunitatsAutonomes.ComunitatsAutonomes frm = new ComunitatsAutonomes.ComunitatsAutonomes();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void sortirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login frm = new Login();
+            frm.Show();
+        }
     }
 }
