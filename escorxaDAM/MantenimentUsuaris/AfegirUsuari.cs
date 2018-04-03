@@ -14,10 +14,5 @@ namespace MantenimentUsuaris
         {
             InitializeComponent();
         }
-
-        private void AfegirUsuari_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

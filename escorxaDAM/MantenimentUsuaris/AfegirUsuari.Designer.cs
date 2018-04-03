@@ -272,7 +272,6 @@
             this.Name = "AfegirUsuari";
             this.Text = "Afegir usuari";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.AfegirUsuari_Load);
             this.Controls.SetChildIndex(this.btnInserir, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
