@@ -56,5 +56,12 @@ namespace MenuPrincipal
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void païsosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Paisos.Paisos frm = new Paisos.Paisos();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

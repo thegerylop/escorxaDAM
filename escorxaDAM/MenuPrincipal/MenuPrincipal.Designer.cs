@@ -238,6 +238,7 @@
             this.païsosToolStripMenuItem.Name = "païsosToolStripMenuItem";
             this.païsosToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.païsosToolStripMenuItem.Text = "Països";
+            this.païsosToolStripMenuItem.Click += new System.EventHandler(this.païsosToolStripMenuItem_Click);
             // 
             // estatDeLaInspeccióToolStripMenuItem
             // 
