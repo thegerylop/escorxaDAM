@@ -113,6 +113,10 @@
       <Project>{a7279e0e-d844-4cc7-99da-9939eaa74818}</Project>
       <Name>CustomControl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EstatInspeccio\EstatInspeccio.csproj">
+      <Project>{db9b3d0e-03e3-4757-912d-6687b9399c6a}</Project>
+      <Name>EstatInspeccio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MantenimentUsuaris\MantenimentUsuaris.csproj">
       <Project>{8c221afb-fbe1-4a6a-8626-c98b8960a54a}</Project>
       <Name>MantenimentUsuaris</Name>

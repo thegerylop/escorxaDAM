@@ -49,5 +49,12 @@ namespace MenuPrincipal
             Login frm = new Login();
             frm.Show();
         }
+
+        private void estatDeLaInspeccióToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EstatInspeccio.estatInspeccio frm = new EstatInspeccio.estatInspeccio();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

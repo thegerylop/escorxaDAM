@@ -90,7 +90,7 @@
             this.ajudaToolStripMenuItem2,
             this.sobreToolStripMenuItem1});
             this.ajudaToolStripMenuItem1.Name = "ajudaToolStripMenuItem1";
-            this.ajudaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ajudaToolStripMenuItem1.Size = new System.Drawing.Size(105, 22);
             this.ajudaToolStripMenuItem1.Text = "Ajuda";
             // 
             // ajudaToolStripMenuItem2
@@ -108,7 +108,7 @@
             // sortirToolStripMenuItem
             // 
             this.sortirToolStripMenuItem.Name = "sortirToolStripMenuItem";
-            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.sortirToolStripMenuItem.Text = "Sortir";
             this.sortirToolStripMenuItem.Click += new System.EventHandler(this.sortirToolStripMenuItem_Click);
             // 
@@ -244,6 +244,7 @@
             this.estatDeLaInspeccióToolStripMenuItem.Name = "estatDeLaInspeccióToolStripMenuItem";
             this.estatDeLaInspeccióToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.estatDeLaInspeccióToolStripMenuItem.Text = "Estat de la inspecció";
+            this.estatDeLaInspeccióToolStripMenuItem.Click += new System.EventHandler(this.estatDeLaInspeccióToolStripMenuItem_Click);
             // 
             // sistemesDatordimentToolStripMenuItem
             // 
