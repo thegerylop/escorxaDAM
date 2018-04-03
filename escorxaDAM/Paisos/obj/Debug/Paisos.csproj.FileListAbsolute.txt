@@ -1,0 +1,7 @@
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Paisos.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Paisos.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.Paisos.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.pdb

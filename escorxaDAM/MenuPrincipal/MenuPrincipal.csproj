@@ -121,6 +121,10 @@
       <Project>{8c221afb-fbe1-4a6a-8626-c98b8960a54a}</Project>
       <Name>MantenimentUsuaris</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Paisos\Paisos.csproj">
+      <Project>{67e0b030-f54a-4355-97b3-34464fb55e9f}</Project>
+      <Name>Paisos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Template\Template.csproj">
       <Project>{5377da58-e5e8-456d-ac68-d7bbe6ece0e8}</Project>
       <Name>Template</Name>
