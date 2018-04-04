@@ -226,12 +226,14 @@
             this.tipusDexplotacióToolStripMenuItem.Name = "tipusDexplotacióToolStripMenuItem";
             this.tipusDexplotacióToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.tipusDexplotacióToolStripMenuItem.Text = "Tipus d\'explotació";
+            this.tipusDexplotacióToolStripMenuItem.Click += new System.EventHandler(this.tipusDexplotacióToolStripMenuItem_Click);
             // 
             // situacióDexplotacióToolStripMenuItem
             // 
             this.situacióDexplotacióToolStripMenuItem.Name = "situacióDexplotacióToolStripMenuItem";
             this.situacióDexplotacióToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.situacióDexplotacióToolStripMenuItem.Text = "Situació d\'explotació";
+            this.situacióDexplotacióToolStripMenuItem.Click += new System.EventHandler(this.situacióDexplotacióToolStripMenuItem_Click);
             // 
             // païsosToolStripMenuItem
             // 
@@ -252,30 +254,35 @@
             this.sistemesDatordimentToolStripMenuItem.Name = "sistemesDatordimentToolStripMenuItem";
             this.sistemesDatordimentToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.sistemesDatordimentToolStripMenuItem.Text = "Sistemes d\'atordiment";
+            this.sistemesDatordimentToolStripMenuItem.Click += new System.EventHandler(this.sistemesDatordimentToolStripMenuItem_Click);
             // 
             // estatDelProcésDeRefrigeracióToolStripMenuItem
             // 
             this.estatDelProcésDeRefrigeracióToolStripMenuItem.Name = "estatDelProcésDeRefrigeracióToolStripMenuItem";
             this.estatDelProcésDeRefrigeracióToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.estatDelProcésDeRefrigeracióToolStripMenuItem.Text = "Estat del procés de refrigeració";
+            this.estatDelProcésDeRefrigeracióToolStripMenuItem.Click += new System.EventHandler(this.estatDelProcésDeRefrigeracióToolStripMenuItem_Click);
             // 
             // estatDelProcésDenvasatToolStripMenuItem
             // 
             this.estatDelProcésDenvasatToolStripMenuItem.Name = "estatDelProcésDenvasatToolStripMenuItem";
             this.estatDelProcésDenvasatToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.estatDelProcésDenvasatToolStripMenuItem.Text = "Estat del procés d\'envasat";
+            this.estatDelProcésDenvasatToolStripMenuItem.Click += new System.EventHandler(this.estatDelProcésDenvasatToolStripMenuItem_Click);
             // 
             // comptadorsDeLotsmesToolStripMenuItem
             // 
             this.comptadorsDeLotsmesToolStripMenuItem.Name = "comptadorsDeLotsmesToolStripMenuItem";
             this.comptadorsDeLotsmesToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.comptadorsDeLotsmesToolStripMenuItem.Text = "Comptadors de lots/mes";
+            this.comptadorsDeLotsmesToolStripMenuItem.Click += new System.EventHandler(this.comptadorsDeLotsmesToolStripMenuItem_Click);
             // 
             // referènciesToolStripMenuItem
             // 
             this.referènciesToolStripMenuItem.Name = "referènciesToolStripMenuItem";
             this.referènciesToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.referènciesToolStripMenuItem.Text = "Referències";
+            this.referènciesToolStripMenuItem.Click += new System.EventHandler(this.referènciesToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 

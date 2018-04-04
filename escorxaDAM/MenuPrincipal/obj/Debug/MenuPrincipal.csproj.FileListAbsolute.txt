@@ -28,3 +28,17 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\EstatInspec
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\EstatInspeccio.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\Paisos.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\Paisos.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\ComptadorsLotsMs.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\EstatProcesEnvasat.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\EstatProcesRefrigeracio.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\Referencies.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\SistemesAtordiment.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\SituacioExplotacio.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\Tipus d'explotacio.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\ComptadorsLotsMs.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\EstatProcesEnvasat.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\EstatProcesRefrigeracio.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\Referencies.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\SistemesAtordiment.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\SituacioExplotacio.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\Tipus d'explotacio.pdb

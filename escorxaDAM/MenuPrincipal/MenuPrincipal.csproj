@@ -101,6 +101,10 @@
       <Project>{cf89ea7d-d834-4cb1-8888-e9c0fb24ee7f}</Project>
       <Name>BaseForm</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ComptadorsLotsMs\ComptadorsLotsMes.csproj">
+      <Project>{11fd1d45-8920-4e99-a2f3-de059f2bb017}</Project>
+      <Name>ComptadorsLotsMes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ComunitatsAutonomes\ComunitatsAutonomes.csproj">
       <Project>{f8a4404f-1b65-4517-885c-416ab6074596}</Project>
       <Name>ComunitatsAutonomes</Name>
@@ -117,6 +121,14 @@
       <Project>{db9b3d0e-03e3-4757-912d-6687b9399c6a}</Project>
       <Name>EstatInspeccio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EstatProcesEnvasat\EstatProcesEnvasat.csproj">
+      <Project>{d6eaddbf-54c9-446e-9e4c-22bade6d74a2}</Project>
+      <Name>EstatProcesEnvasat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EstatProcesRefrigeracio\EstatProcesRefrigeracio.csproj">
+      <Project>{d9565db0-a4e6-449b-a5a7-31d01e7cb34c}</Project>
+      <Name>EstatProcesRefrigeracio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MantenimentUsuaris\MantenimentUsuaris.csproj">
       <Project>{8c221afb-fbe1-4a6a-8626-c98b8960a54a}</Project>
       <Name>MantenimentUsuaris</Name>
@@ -125,9 +137,25 @@
       <Project>{67e0b030-f54a-4355-97b3-34464fb55e9f}</Project>
       <Name>Paisos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Referencies\Referencies.csproj">
+      <Project>{de48c2d8-fbac-479a-bf61-89343e7033ea}</Project>
+      <Name>Referencies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SistemesAtordiment\SistemesAtordiment.csproj">
+      <Project>{6985312a-b116-4461-ba62-10cfbb440731}</Project>
+      <Name>SistemesAtordiment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SituacioExplotacio\SituacioExplotacio.csproj">
+      <Project>{a0981491-3ad4-44f3-a371-400e82366b46}</Project>
+      <Name>SituacioExplotacio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Template\Template.csproj">
       <Project>{5377da58-e5e8-456d-ac68-d7bbe6ece0e8}</Project>
       <Name>Template</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tipus d%27explotacio\TipusD%27explotacio.csproj">
+      <Project>{b58fe275-cd33-41be-8bc2-a09bb97e03cc}</Project>
+      <Name>TipusD%27explotacio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

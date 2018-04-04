@@ -1,0 +1,7 @@
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\SituacioExplotacio.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\SituacioExplotacio.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SituacioExplotacio\obj\Debug\SituacioExplotacio.situacioExplotacio.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SituacioExplotacio\obj\Debug\SituacioExplotacio.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SituacioExplotacio\obj\Debug\SituacioExplotacio.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SituacioExplotacio\obj\Debug\SituacioExplotacio.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SituacioExplotacio\obj\Debug\SituacioExplotacio.pdb

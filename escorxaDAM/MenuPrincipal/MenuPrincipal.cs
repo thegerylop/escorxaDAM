@@ -63,5 +63,54 @@ namespace MenuPrincipal
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void tipusDexplotacióToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tipus_d_explotacio.TipusExplotacio frm = new Tipus_d_explotacio.TipusExplotacio();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void situacióDexplotacióToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SituacioExplotacio.situacioExplotacio frm = new SituacioExplotacio.situacioExplotacio();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void sistemesDatordimentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SistemesAtordiment.sistemesAtordiment frm = new SistemesAtordiment.sistemesAtordiment();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void estatDelProcésDeRefrigeracióToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EstatProcesRefrigeracio.estatProcesRefrigeracio frm = new EstatProcesRefrigeracio.estatProcesRefrigeracio();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void estatDelProcésDenvasatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EstatProcesEnvasat.estatProcesEnvasat frm = new EstatProcesEnvasat.estatProcesEnvasat();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void comptadorsDeLotsmesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ComptadorsLotsMs.comptadorsLotsMes frm = new ComptadorsLotsMs.comptadorsLotsMes();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void referènciesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Referencies.referencies frm = new Referencies.referencies();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
