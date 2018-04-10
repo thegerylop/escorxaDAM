@@ -159,5 +159,6 @@ namespace MenuPrincipal
                     processatFinalToolStripMenuItem.Visible = true;
                 }
             }
+        }
     }
 }

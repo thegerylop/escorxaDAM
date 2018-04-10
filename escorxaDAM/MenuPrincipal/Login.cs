@@ -25,7 +25,7 @@ namespace MenuPrincipal
             CCPassword.Text = "Contrasenya";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             string command = "SELECT idUsuari FROM usuaris where Nom = '" + CCLogin.Text + "' and password = '" + CCPassword.Text + "'";
             //BINARY
@@ -33,7 +33,7 @@ namespace MenuPrincipal
             string commandAcces = "SELECT `idNivellAcces` FROM `permisos` WHERE `idUsuari`= " + idUsuari;
             if(idUsuari != "")
             {
-                string[] nivellAcces = conn.resultatComandaArray(commandAcces); 
+                string[] nivellAcces = conn.resultatComandaArray(commandAcces);
                 MenuPrincipal frm = new MenuPrincipal();
                 frm.menuAcces(nivellAcces);
                 this.Close();
