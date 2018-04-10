@@ -33,8 +33,9 @@ namespace MenuPrincipal
             string commandAcces = "SELECT `idNivellAcces` FROM `permisos` WHERE `idUsuari`= " + idUsuari;
             if(idUsuari != "")
             {
-                string[] nivellAcces = conn.resultatComandaArray(commandAcces);
-                Form frm = new MenuPrincipal();
+                string[] nivellAcces = conn.resultatComandaArray(commandAcces); 
+                MenuPrincipal frm = new MenuPrincipal();
+                frm.menuAcces(nivellAcces);
                 this.Close();
                 frm.Show();
             }

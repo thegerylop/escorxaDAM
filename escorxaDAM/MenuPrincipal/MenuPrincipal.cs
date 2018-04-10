@@ -12,6 +12,11 @@ namespace MenuPrincipal
 {
     public partial class MenuPrincipal : Form
     {
+        string[] acces;
+        public void menuAcces(string[] value)
+        {
+            acces = value;
+        }
         public MenuPrincipal()
         {
             InitializeComponent();
@@ -112,5 +117,47 @@ namespace MenuPrincipal
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+            accesMenu();
+        }
+        private void accesMenu()
+        {
+            foreach(string element in acces)
+            {
+                if(element.Equals("1"))
+                {
+                    mantenimentDusuarisToolStripMenuItem.Visible = true;
+                    registreProveïdorsToolStripMenuItem.Visible = true;
+                    dadesEmpresaToolStripMenuItem.Visible = true;
+                    fitxersAuxiliarsToolStripMenuItem.Visible = true;
+                }
+                if(element.Equals("2"))
+                {
+                    gestióDeProcessosToolStripMenuItem.Visible = true;
+                    recepcióBestiarToolStripMenuItem.Visible = true;
+                }
+                if(element.Equals("3"))
+                {
+                    gestióDeProcessosToolStripMenuItem.Visible = true;
+                    estabulacióToolStripMenuItem.Visible = true;
+                }
+                if(element.Equals("4"))
+                {
+                    gestióDeProcessosToolStripMenuItem.Visible = true;
+                    sacrificiToolStripMenuItem.Visible = true;
+                }
+                if(element.Equals("5"))
+                {
+                    gestióDeProcessosToolStripMenuItem.Visible = true;
+                    emmagatzematgeToolStripMenuItem.Visible = true;
+                }
+                if(element.Equals("6"))
+                {
+                    gestióDeProcessosToolStripMenuItem.Visible = true;
+                    processatFinalToolStripMenuItem.Visible = true;
+                }
+            }
     }
 }
