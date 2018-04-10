@@ -5,4 +5,3 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\CustomControl\obj\Debug\CustomContr
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\CustomControl\obj\Debug\CustomControl.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\CustomControl\obj\Debug\CustomControl.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\CustomControl\obj\Debug\CustomControl.pdb
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\CustomControl\obj\Debug\CustomControl.csprojResolveAssemblyReference.cache

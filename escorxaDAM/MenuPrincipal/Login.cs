@@ -18,16 +18,22 @@ namespace MenuPrincipal
             InitializeComponent();
         }
 
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            CCLogin.Text = "Usuari";
+            CCPassword.Text = "Contrasenya";
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            string login = CCLogin.Text;
-            string password = CCPassword.Text;
-            Boolean acces;
+            string command = "SELECT idUsuari FROM usuaris where Nom = '" + CCLogin.Text + "' and password = '" + CCPassword.Text + "'";
             //BINARY
-            string comanda = "SELECT codiUsuari, password FROM usuaris WHERE codiUsuari = '" + login + "' and password = '" + password + "'";
-            acces = conn.executaComanda(comanda);
-            if(acces)
+            string idUsuari = conn.resultatComanda(command);
+            string commandAcces = "SELECT `idNivellAcces` FROM `permisos` WHERE `idUsuari`= " + idUsuari;
+            if(idUsuari != "")
             {
+                string[] nivellAcces = conn.resultatComandaArray(commandAcces);
                 Form frm = new MenuPrincipal();
                 this.Close();
                 frm.Show();
@@ -36,13 +42,6 @@ namespace MenuPrincipal
             {
                 MessageBox.Show("Usuari o contrasenya incorrecta");
             }
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-            CCLogin.Text = "Usuari";
-            CCPassword.Text = "Contrasenya";
         }
     }
 }
