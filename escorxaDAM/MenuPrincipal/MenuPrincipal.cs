@@ -160,5 +160,11 @@ namespace MenuPrincipal
                 }
             }
         }
+
+        private void sobreToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AcercDe frm = new AcercDe();
+            frm.Show();
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace MenuPrincipal
 
         private void timerSplash_Tick(object sender, EventArgs e)
         {
-            progressBarSplash.Increment(5);
+            progressBarSplash.Increment(2);
             if(progressBarSplash.Value == 100)
             {
                 timerSplash.Stop();

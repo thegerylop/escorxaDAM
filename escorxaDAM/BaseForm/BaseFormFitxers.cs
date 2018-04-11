@@ -143,10 +143,5 @@ namespace BaseForm
             MessageBox.Show("Entrada no vàlida");
             dgvBase.RefreshEdit();
         }
-
-        private void BaseForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
