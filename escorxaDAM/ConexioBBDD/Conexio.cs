@@ -6,21 +6,28 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Data;
+using System.Configuration;
 
 
 namespace ConexioBBDD
 {
     public class Conexio
     {
-        string connString = "SERVER= 51.255.58.1;PORT=3306;DATABASE=g2s2am_escorxaDAM;UID=g2s2am;PASSWORD=diopters12345;";
+
+        string connString;
 
         MySqlConnection conn = new MySqlConnection();
-
         public void connexio()
         {
+            connString = PortaCadenaConnexio();
             conn = new MySqlConnection(connString);
             conn.Open();
             conn.InitializeLifetimeService();
+        }
+        public string PortaCadenaConnexio()
+        {
+            string cadena = ConfigurationManager.ConnectionStrings["escorxaDAM"].ConnectionString;
+            return cadena;
         }
 
         public Boolean executaComanda(string comanda)

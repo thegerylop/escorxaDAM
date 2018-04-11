@@ -33,7 +33,11 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\SituacioExp
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\Template.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\Tipus d'explotacio.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\MySql.Data.xml
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\MenuPrincipal.exe.config
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\MenuPrincipal.exe
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\MenuPrincipal.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.AcercDe.resources
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.Login.resources
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.MenuPrincipal.resources
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.Properties.Resources.resources
@@ -42,4 +46,3 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincip
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.exe
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.pdb
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.AcercDe.resources

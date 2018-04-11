@@ -166,5 +166,10 @@ namespace MenuPrincipal
             AcercDe frm = new AcercDe();
             frm.Show();
         }
+
+        private void nivellsDaccésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
