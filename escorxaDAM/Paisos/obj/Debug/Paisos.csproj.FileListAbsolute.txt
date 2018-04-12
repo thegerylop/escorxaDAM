@@ -5,4 +5,3 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.csproj.Gene
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.pdb
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.csprojResolveAssemblyReference.cache

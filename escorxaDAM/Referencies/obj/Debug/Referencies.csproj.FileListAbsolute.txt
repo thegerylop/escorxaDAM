@@ -5,4 +5,3 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Referencies\obj\Debug\Referencies.c
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Referencies\obj\Debug\Referencies.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Referencies\obj\Debug\Referencies.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Referencies\obj\Debug\Referencies.pdb
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Referencies\obj\Debug\Referencies.csprojResolveAssemblyReference.cache
