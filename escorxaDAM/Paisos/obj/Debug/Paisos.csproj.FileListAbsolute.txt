@@ -1,7 +1,8 @@
-C:\DAM\Projecte 2\escorxaDAM\dll\Paisos.dll
-C:\DAM\Projecte 2\escorxaDAM\dll\Paisos.pdb
-C:\DAM\Projecte 2\escorxaDAM\Paisos\obj\Debug\Paisos.Paisos.resources
-C:\DAM\Projecte 2\escorxaDAM\Paisos\obj\Debug\Paisos.csproj.GenerateResource.Cache
-C:\DAM\Projecte 2\escorxaDAM\Paisos\obj\Debug\Paisos.csproj.CoreCompileInputs.cache
-C:\DAM\Projecte 2\escorxaDAM\Paisos\obj\Debug\Paisos.dll
-C:\DAM\Projecte 2\escorxaDAM\Paisos\obj\Debug\Paisos.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Paisos.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Paisos.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.Paisos.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.csprojResolveAssemblyReference.cache

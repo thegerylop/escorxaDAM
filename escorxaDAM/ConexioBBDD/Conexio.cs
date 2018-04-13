@@ -1,4 +1,4 @@
-﻿ using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,85 +6,58 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Data;
+using System.Configuration;
 
 
 namespace ConexioBBDD
 {
     public class Conexio
     {
-        string connString = "SERVER= 51.255.58.1;PORT=3306;DATABASE=g2s2am_escorxaDAM;UID=g2s2am;PASSWORD=diopters12345;";
+
+        string connString;
+
         MySqlConnection conn = new MySqlConnection();
-
-        public string connexioLogin(String login, String password)
-        {
-            string comanda = "SELECT usuari, contrasenya FROM personal WHERE BINARY usuari = '" + login + "' and contrasenya = '" + password + "'";
-            conn.ConnectionString = connString;
-            conn.Open();
-            try
-            {
-                MySqlCommand command = new MySqlCommand(comanda, conn);
-                MySqlDataReader dataReader = command.ExecuteReader();
-                string select = null;
-                //code to get select
-                if (dataReader.Read())
-                {
-                    dataReader.Read();
-                    if (dataReader[0].ToString().Length > 1 && dataReader[1].ToString().Length > 1)
-                    {
-                        select = dataReader[0].ToString() + " - " + dataReader[1].ToString();
-                    }
-                    dataReader.Close();
-                    return select;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
-            }
-            finally { conn.Close(); }
-        }
-
         public void connexio()
         {
+            connString = PortaCadenaConnexio();
             conn = new MySqlConnection(connString);
             conn.Open();
             conn.InitializeLifetimeService();
         }
-        public DataSet portarPerConsulta(String query, String table)
+        public string PortaCadenaConnexio()
         {
-            MySqlDataAdapter dtaDades = new MySqlDataAdapter();
-            MySqlCommandBuilder construct = new MySqlCommandBuilder();
-            DataSet dtsDades = new DataSet();
+            string cadena = ConfigurationManager.ConnectionStrings["escorxaDAM"].ConnectionString;
+            return cadena;
+        }
 
+        public Boolean executaComanda(string comanda)
+        {
             try
             {
                 connexio();
-                dtaDades = new MySqlDataAdapter(query, conn);
-                construct = new MySqlCommandBuilder(dtaDades);
-                dtsDades = new DataSet();
-                dtaDades.Fill(dtsDades, table);
-
+                MySqlCommand command = new MySqlCommand(comanda, conn);
+                var result = command.ExecuteScalar();
+                if(result != null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
 
             }
-            catch (MySqlException eMySql)
+            catch(MySqlException eMySql)
             {
                 MessageBox.Show(eMySql.ToString());
+                return false;
             }
             finally
             {
-                if (conn != null)
-                {
-                    conn.Close();
-                    conn.Dispose();
-                }
+                conn.Close();
             }
-            return dtsDades;
         }
+
         public String resultatComanda(string comanda)
         {
             try
@@ -92,9 +65,9 @@ namespace ConexioBBDD
                 connexio();
                 MySqlCommand command = new MySqlCommand(comanda, conn);
 
-                using (MySqlDataReader dr = command.ExecuteReader())
+                using(MySqlDataReader dr = command.ExecuteReader())
                 {
-                    while (dr.Read())
+                    while(dr.Read())
                     {
                         string resultat = dr[0].ToString();
                         return resultat;
@@ -102,10 +75,41 @@ namespace ConexioBBDD
                 }
                 return "";
             }
-            catch (MySqlException eMySql)
+            catch(MySqlException eMySql)
             {
                 MessageBox.Show(eMySql.ToString());
                 return "";
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        public String[] resultatComandaArray(string comanda)
+        {
+            List<string> list = new List<string>();
+            try
+            {
+                connexio();
+                MySqlCommand command = new MySqlCommand(comanda, conn);
+
+                using(MySqlDataReader dr = command.ExecuteReader())
+                {
+                    while(dr.Read())
+                    {
+                        list.Add(dr.GetString(0));
+
+                    }
+                    return list.ToArray();
+                }
+                return list.ToArray();
+            }
+            catch(MySqlException eMySql)
+            {
+                MessageBox.Show(eMySql.ToString());
+                return list.ToArray();
             }
             finally
             {
@@ -128,19 +132,19 @@ namespace ConexioBBDD
                 dtaDepart = new MySqlDataAdapter(query, conn);
                 construct = new MySqlCommandBuilder(dtaDepart);
 
-                if (dtsAct.HasChanges())
+                if(dtsAct.HasChanges())
                 {
                     dtaDepart.Update(dtsAct, taula);
                 }
             }
-            catch (MySqlException e)
+            catch(MySqlException e)
             {
                 correcte = false;
                 MessageBox.Show(e.Message.ToString());
             }
             finally
             {
-                if (conn != null)
+                if(conn != null)
                 {
                     conn.Close();
                     conn.Dispose();
@@ -176,13 +180,13 @@ namespace ConexioBBDD
 
 
             }
-            catch (MySqlException eMySql)
+            catch(MySqlException eMySql)
             {
                 MessageBox.Show(eMySql.ToString());
             }
             finally
             {
-                if (conn != null)
+                if(conn != null)
                 {
                     conn.Close();
                     conn.Dispose();
@@ -190,32 +194,36 @@ namespace ConexioBBDD
             }
             return dt;
         }
-        public Boolean executaComanda(string comanda)
+        public DataSet portarPerConsulta(String query, String table)
         {
+            MySqlDataAdapter dtaDades = new MySqlDataAdapter();
+            MySqlCommandBuilder construct = new MySqlCommandBuilder();
+            DataSet dtsDades = new DataSet();
+
             try
             {
                 connexio();
-                MySqlCommand command = new MySqlCommand(comanda, conn);
-                var result = command.ExecuteScalar();
-                if (result != null)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                dtaDades = new MySqlDataAdapter(query, conn);
+                construct = new MySqlCommandBuilder(dtaDades);
+                dtsDades = new DataSet();
+                dtaDades.Fill(dtsDades, table);
+
 
             }
-            catch (MySqlException eMySql)
+            catch(MySqlException eMySql)
             {
                 MessageBox.Show(eMySql.ToString());
-                return false;
             }
             finally
             {
-                conn.Close();
+                if(conn != null)
+                {
+                    conn.Close();
+                    conn.Dispose();
+                }
             }
+            return dtsDades;
         }
+
     }
 }

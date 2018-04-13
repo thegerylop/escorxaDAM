@@ -8,6 +8,9 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\bin\Debug\BaseFo
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\bin\Debug\ConexioBBDD.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\bin\Debug\CustomControl.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\bin\Debug\MySql.Data.xml
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\MantenimentUsuaris.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\MantenimentUsuaris.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.csprojResolveAssemblyReference.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.AfegirUsuari.resources
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.MantenimentUsuaris.resources
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.csproj.GenerateResource.Cache
