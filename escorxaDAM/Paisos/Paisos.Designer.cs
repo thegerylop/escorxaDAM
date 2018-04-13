@@ -35,6 +35,14 @@
             this.customTextBox1 = new CustomControl.CustomTextBox();
             this.SuspendLayout();
             // 
+            // btnAfegir
+            // 
+            this.btnAfegir.Location = new System.Drawing.Point(924, 313);
+            // 
+            // btnActualitzar
+            // 
+            this.btnActualitzar.Location = new System.Drawing.Point(1047, 313);
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;

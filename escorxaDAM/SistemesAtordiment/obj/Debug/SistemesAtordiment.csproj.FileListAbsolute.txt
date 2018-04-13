@@ -1,6 +1,5 @@
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\SistemesAtordiment.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\SistemesAtordiment.pdb
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.csprojResolveAssemblyReference.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.sistemesAtordiment.resources
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.csproj.GenerateResource.Cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.csproj.CoreCompileInputs.cache

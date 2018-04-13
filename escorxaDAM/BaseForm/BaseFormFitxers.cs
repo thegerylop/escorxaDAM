@@ -13,6 +13,7 @@ namespace BaseForm
 
     public partial class BaseForm : Form
     {
+
         String query = "";
         DataRow row;
         DataSet dataSet = new DataSet();
@@ -142,6 +143,10 @@ namespace BaseForm
             e.ThrowException = false;
             MessageBox.Show("Entrada no vàlida");
             dgvBase.RefreshEdit();
+        }
+
+        private void BaseForm_Load(object sender, EventArgs e)
+        {
         }
     }
 }
