@@ -62,17 +62,18 @@ namespace MenuPrincipal
                 item.Text = Convert.ToString(row["nomItem"]);
                 item.Dll = Convert.ToString(row["dll"]);
                 item.Taula = Convert.ToString(row["taula"]);
-                item.Click += new EventHandler(validarText);
+                item.Click += new EventHandler(itemForm);
                 menuStrip1.Items.Add(item);
 
             }
 
         }
-        public void validarText(object sender, EventArgs e)
+        public void itemForm(object sender, EventArgs e)
         {
-            var dllFile = new FileInfo(@"ComptadorsLotsMs.dll");
-            Assembly assembly = Assembly.LoadFile(dllFile.FullName);
-            Type type = assembly.GetType("comptadorsLotsMes");
+            string name = ((CustomControl.menuItem)sender).Dll+"."+((CustomControl.menuItem)sender).Taula;
+            var dllFile = new FileInfo(((CustomControl.menuItem)sender).Dll);
+            Assembly assembly = Assembly.LoadFile(dllFile.FullName+".dll");
+            Type type = assembly.GetType(name);
             Form form = (Form)Activator.CreateInstance(type);
             form.MdiParent = this;
             form.Show();
