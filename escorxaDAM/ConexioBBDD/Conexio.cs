@@ -225,5 +225,16 @@ namespace ConexioBBDD
             return dtsDades;
         }
 
+        static void Main(string[] args)
+        {
+            using (g2s2am_escorxaDAMDataSet context = new g2s2am_escorxaDAMDataSet())
+            {
+                context.comunitats_autonomes = (from p in context.comunitats_autonomes
+                                                where p.nomComunitatAutonoma == "Catalunya"
+                                                select p).FirstOrDefault();
+                context.comunitats_autonomes.Addcomunitats_autonomesRow();
+            }
+
+        }
     }
 }
