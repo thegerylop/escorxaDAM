@@ -42,3 +42,47 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\Referencies
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\SistemesAtordiment.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\SituacioExplotacio.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\bin\Debug\Tipus d'explotacio.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\MenuPrincipal.exe.config
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\MenuPrincipal.exe
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\MenuPrincipal.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\BaseForm.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\ComptadorsLotsMs.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\ComunitatsAutonomes.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\ConexioBBDD.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\CustomControl.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\EstatInspeccio.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\EstatProcesEnvasat.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\EstatProcesRefrigeracio.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\MantenimentUsuaris.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\Paisos.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\Referencies.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\SistemesAtordiment.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\SituacioExplotacio.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\Template.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\Tipus d'explotacio.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\MySql.Data.dll
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\BaseForm.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\ComptadorsLotsMs.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\ComunitatsAutonomes.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\ConexioBBDD.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\CustomControl.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\EstatInspeccio.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\EstatProcesEnvasat.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\EstatProcesRefrigeracio.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\MantenimentUsuaris.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\Paisos.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\Referencies.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\SistemesAtordiment.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\SituacioExplotacio.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\Template.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\Tipus d'explotacio.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\bin\Debug\MySql.Data.xml
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.csprojResolveAssemblyReference.cache
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.Login.resources
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.MenuPrincipal.resources
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.Properties.Resources.resources
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.Splash.resources
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.csproj.GenerateResource.Cache
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.csproj.CoreCompileInputs.cache
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.exe
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.pdb

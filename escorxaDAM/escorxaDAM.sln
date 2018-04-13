@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControl", "CustomControl\CustomControl.csproj", "{A7279E0E-D844-4CC7-99DA-9939EAA74818}"
 EndProject
@@ -34,6 +34,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComptadorsLotsMes", "ComptadorsLotsMs\ComptadorsLotsMes.csproj", "{11FD1D45-8920-4E99-A2F3-DE059F2BB017}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Referencies", "Referencies\Referencies.csproj", "{DE48C2D8-FBAC-479A-BF61-89343E7033EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinQ_EntityF", "LinQ_EntityF\LinQ_EntityF.csproj", "{17603958-E293-444E-9012-194A3A0B9B2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -303,6 +305,22 @@ Global
 		{DE48C2D8-FBAC-479A-BF61-89343E7033EA}.Release|x64.Build.0 = Release|Any CPU
 		{DE48C2D8-FBAC-479A-BF61-89343E7033EA}.Release|x86.ActiveCfg = Release|Any CPU
 		{DE48C2D8-FBAC-479A-BF61-89343E7033EA}.Release|x86.Build.0 = Release|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Debug|ARM.Build.0 = Debug|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Debug|x64.Build.0 = Debug|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Debug|x86.Build.0 = Debug|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Release|ARM.ActiveCfg = Release|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Release|ARM.Build.0 = Release|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Release|x64.ActiveCfg = Release|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Release|x64.Build.0 = Release|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Release|x86.ActiveCfg = Release|Any CPU
+		{17603958-E293-444E-9012-194A3A0B9B2D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
