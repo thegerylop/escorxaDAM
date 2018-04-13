@@ -14,3 +14,4 @@ C:\DAM\Projecte 2\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.csproj.Gene
 C:\DAM\Projecte 2\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.csproj.CoreCompileInputs.cache
 C:\DAM\Projecte 2\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.dll
 C:\DAM\Projecte 2\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.pdb
+C:\DAM\Projecte 2\escorxaDAM\dll\EstatInspeccio.dll.config

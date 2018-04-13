@@ -46,3 +46,16 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincip
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.exe
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.pdb
+C:\DAM\Projecte 2\escorxaDAM\dll\MenuPrincipal.exe.config
+C:\DAM\Projecte 2\escorxaDAM\dll\MenuPrincipal.exe
+C:\DAM\Projecte 2\escorxaDAM\dll\MenuPrincipal.pdb
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.csprojResolveAssemblyReference.cache
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.AcercDe.resources
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.Login.resources
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.MenuPrincipal.resources
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.Properties.Resources.resources
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.Splash.resources
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.csproj.GenerateResource.Cache
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.csproj.CoreCompileInputs.cache
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.exe
+C:\DAM\Projecte 2\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.pdb
