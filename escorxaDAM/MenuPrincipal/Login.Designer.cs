@@ -55,6 +55,7 @@
             this.CCLogin.Placeholder = "Usuari";
             this.CCLogin.Size = new System.Drawing.Size(191, 20);
             this.CCLogin.TabIndex = 1;
+            this.CCLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CCLogin_Click);
             // 
             // CCPassword
             // 
@@ -65,6 +66,7 @@
             this.CCPassword.Placeholder = "Contrasenya";
             this.CCPassword.Size = new System.Drawing.Size(191, 20);
             this.CCPassword.TabIndex = 2;
+            this.CCPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CCPassword_Click);
             // 
             // pictureBox1
             // 
