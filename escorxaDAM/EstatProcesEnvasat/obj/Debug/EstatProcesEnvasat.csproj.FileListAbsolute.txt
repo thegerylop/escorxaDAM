@@ -1,11 +1,3 @@
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\EstatProcesEnvasat.dll
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\EstatProcesEnvasat.pdb
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.estatProcesEnvasat.resources
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.csproj.GenerateResource.Cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.dll
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.pdb
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.csprojResolveAssemblyReference.cache
 C:\DAM\Projecte 2\escorxaDAM\dll\EstatProcesEnvasat.dll
 C:\DAM\Projecte 2\escorxaDAM\dll\EstatProcesEnvasat.pdb
 C:\DAM\Projecte 2\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.csprojResolveAssemblyReference.cache
@@ -14,3 +6,11 @@ C:\DAM\Projecte 2\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.csp
 C:\DAM\Projecte 2\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.csproj.CoreCompileInputs.cache
 C:\DAM\Projecte 2\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.dll
 C:\DAM\Projecte 2\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\EstatProcesEnvasat.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\EstatProcesEnvasat.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.estatProcesEnvasat.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.csproj.CopyComplete
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesEnvasat\obj\Debug\EstatProcesEnvasat.pdb
