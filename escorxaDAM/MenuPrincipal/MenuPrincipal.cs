@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +14,7 @@ namespace MenuPrincipal
 {
     public partial class MenuPrincipal : Form
     {
+        ConexioBBDD.Conexio conn = new ConexioBBDD.Conexio();
         string[] acces;
         public void menuAcces(string[] value)
         {
@@ -22,100 +25,9 @@ namespace MenuPrincipal
             InitializeComponent();
         }
 
-        private void afegirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MantenimentUsuaris.AfegirUsuari frm = new MantenimentUsuaris.AfegirUsuari();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MantenimentUsuaris.MantenimentUsuaris frm = new MantenimentUsuaris.MantenimentUsuaris();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void emmagatzematgeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comunitatsAutònomesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ComunitatsAutonomes.ComunitatsAutonomes frm = new ComunitatsAutonomes.ComunitatsAutonomes();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
         private void sortirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Login frm = new Login();
-            frm.Show();
-            this.Close();
-        }
-
-        private void estatDeLaInspeccióToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            EstatInspeccio.estatInspeccio frm = new EstatInspeccio.estatInspeccio();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void païsosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Paisos.Paisos frm = new Paisos.Paisos();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void tipusDexplotacióToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Tipus_d_explotacio.TipusExplotacio frm = new Tipus_d_explotacio.TipusExplotacio();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void situacióDexplotacióToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SituacioExplotacio.situacioExplotacio frm = new SituacioExplotacio.situacioExplotacio();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void sistemesDatordimentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SistemesAtordiment.sistemesAtordiment frm = new SistemesAtordiment.sistemesAtordiment();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void estatDelProcésDeRefrigeracióToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            EstatProcesRefrigeracio.estatProcesRefrigeracio frm = new EstatProcesRefrigeracio.estatProcesRefrigeracio();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void estatDelProcésDenvasatToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            EstatProcesEnvasat.estatProcesEnvasat frm = new EstatProcesEnvasat.estatProcesEnvasat();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void comptadorsDeLotsmesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ComptadorsLotsMs.comptadorsLotsMes frm = new ComptadorsLotsMs.comptadorsLotsMes();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void referènciesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Referencies.referencies frm = new Referencies.referencies();
-            frm.MdiParent = this;
-            frm.Show();
+            Application.Exit();
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
@@ -124,79 +36,60 @@ namespace MenuPrincipal
         }
         private void accesMenu()
         {
-            foreach(string element in acces)
+            string nivells = "";
+            int count = 0;
+            foreach (string item in acces)
             {
-                if(element.Equals("1"))
+                count++;
+                if(count == acces.Length)
                 {
-                    mantenimentDusuarisToolStripMenuItem.Visible = true;
-                    registreProveïdorsToolStripMenuItem.Visible = true;
-                    dadesEmpresaToolStripMenuItem.Visible = true;
-                    fitxersAuxiliarsToolStripMenuItem.Visible = true;
-                }
-                if(element.Equals("2"))
+                    nivells += item + "%'";
+                } else
                 {
-                    gestióDeProcessosToolStripMenuItem.Visible = true;
-                    recepcióBestiarToolStripMenuItem.Visible = true;
+                    nivells += item + "%' OR `nivellAcces` like '%";
                 }
-                if(element.Equals("3"))
-                {
-                    gestióDeProcessosToolStripMenuItem.Visible = true;
-                    estabulacióToolStripMenuItem.Visible = true;
-                }
-                if(element.Equals("4"))
-                {
-                    gestióDeProcessosToolStripMenuItem.Visible = true;
-                    sacrificiToolStripMenuItem.Visible = true;
-                }
-                if(element.Equals("5"))
-                {
-                    gestióDeProcessosToolStripMenuItem.Visible = true;
-                    emmagatzematgeToolStripMenuItem.Visible = true;
-                }
-                if(element.Equals("6"))
-                {
-                    gestióDeProcessosToolStripMenuItem.Visible = true;
-                    processatFinalToolStripMenuItem.Visible = true;
-                }
+                
             }
-        }
+            string query = "select * from itemMenu where `nivellAcces` like '%" + nivells;
+            DataSet menu = conn.portarPerConsulta(query, "menu");
+            DataTable dt = menu.Tables[0];
+            ToolStripMenuItem mt = new ToolStripMenuItem();
 
+            foreach(DataRow row in dt.Rows)
+            {
+                CustomControl.menuItem item = new CustomControl.menuItem();
+                item.Font = new Font("Segoe UI", 11f);
+                item.Text = Convert.ToString(row["nomItem"]);
+                item.Dll = Convert.ToString(row["dll"]);
+                item.Taula = Convert.ToString(row["taula"]);
+                item.Click += new EventHandler(itemForm);
+                menuStrip1.Items.Add(item);
+
+            }
+
+        }
+        public void itemForm(object sender, EventArgs e)
+        {
+            string name = ((CustomControl.menuItem)sender).Dll+"."+((CustomControl.menuItem)sender).Taula;
+            var dllFile = new FileInfo(((CustomControl.menuItem)sender).Dll);
+            Assembly assembly = Assembly.LoadFile(dllFile.FullName+".dll");
+            Type type = assembly.GetType(name);
+            Form form = (Form)Activator.CreateInstance(type);
+            form.MdiParent = this;
+            form.Show();
+            form.BringToFront();
+        }
         private void sobreToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             AcercDe frm = new AcercDe();
-            if (!IsOpen("AcercDe"))
-            {
-                frm.Show();
-            }
-            else
-            {
-                frm.Focus();
-            }
+            frm.Show();
         }
 
-        private void nivellsDaccésToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tancarSessióToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void MenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (!IsOpen("Login"))
-            {
-                Application.Exit();
-            }
-        }
-
-        public static bool IsOpen(string nameForm)
-        {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.Name.Equals(nameForm))
-                {
-                    return true;
-                }
-            }
-            return false;
+            this.Close();
+            Login frm = new Login();
+            frm.Show();
         }
     }
 }

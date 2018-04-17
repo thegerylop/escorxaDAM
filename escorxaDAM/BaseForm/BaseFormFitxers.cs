@@ -13,6 +13,7 @@ namespace BaseForm
 
     public partial class BaseForm : Form
     {
+
         String query = "";
         DataRow row;
         DataSet dataSet = new DataSet();
@@ -21,11 +22,20 @@ namespace BaseForm
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Agafa el nom d'una taula de la BBDD, donada per paràmetre
+        /// i crida a la funció PortaDadesMySql per fer el binding
+        /// </summary>
+        /// <param name="value">Nom de la taula que s'ha d'anar a buscar a la BBDD</param>
         public void Table(string value)
         {
             table = value;
             PortarDadesMySQL(table);
         }
+        /// <summary>
+        /// Donada una taula de la BBDD per paràmetre, crida a la BBDD, agafa la informació i la bindeja al datagrid
+        /// </summary>
+        /// <param name="table">Nom de la taula que s'ha de bindejar</param>
         public void PortarDadesMySQL(string table)
         {
             ConexioBBDD.Conexio bd = new ConexioBBDD.Conexio();
@@ -33,6 +43,11 @@ namespace BaseForm
             dataSet = bd.portarPerConsulta(query, table);
             BindingDades(table);
         }
+        /// <summary>
+        /// Donada una taula de la BBDD per paràmetre, compara el dataset i el datatable
+        /// i actualitza la taula a la BBDD
+        /// </summary>
+        /// <param name="table"></param>
         public void ActualitzarMySQL(string table)
         {
             Boolean correcte = false;
@@ -56,6 +71,10 @@ namespace BaseForm
             }
             
         }
+        /// <summary>
+        /// Comprova que cap camp del formulari estigui buit
+        /// </summary>
+        /// <returns>Retorna si el formulari està tot omplert (true), o falta algun camp per omplir (false)</returns>
         private Boolean ComprovarCamps()
         {
             foreach (Control txt in this.Controls)
@@ -70,6 +89,10 @@ namespace BaseForm
             }
             return true;
         }
+        /// <summary>
+        /// Agafa les dades del dataset i les passa al datatable
+        /// </summary>
+        /// <param name="table">Taula a la que passem les dades del dataset</param>
         private void BindingDades(string table)
         {
             foreach (Control txt in this.Controls)
@@ -86,21 +109,34 @@ namespace BaseForm
             dgvBase.AutoGenerateColumns = true;
             dgvBase.DataSource = dataSet.Tables[table]; // dataset
         }
-
+        /// <summary>
+        /// Valida que no estiguis editant un textbox per enviar-lo al dataset
+        /// </summary>
+        /// <param name="sender">Texbox que estem validant</param>
         public void validarText(object sender, EventArgs e)
         {
             Control validar = (Control)sender;
             validar.DataBindings[0].BindingManagerBase.EndCurrentEdit();
         }
+        /// <summary>
+        /// Crida la funció AfegirCamp, donant el valor de table
+        /// </summary>
+        /// <param name="sender">Taula que enviem</param>
         public virtual void btnAfegir_Click(object sender, EventArgs e)
         {
             AfegirCamp(table);
         }
-
+        /// <summary>
+        /// Crida la funció ActualitzarMySql
+        /// </summary>
+        /// <param name="sender">Taula que enviem</param>
         public virtual void actualitzar_Click(object sender, EventArgs e)
         {
             ActualitzarMySQL(table);
         }
+        /// <summary>
+        /// Neteja tots els textboxs del formulari
+        /// </summary>
         public void netejarCamps()
         {
             foreach (Control txt in this.Controls)
@@ -111,6 +147,10 @@ namespace BaseForm
                 }
             }
         }
+        /// <summary>
+        /// Donat el datagrid per paràmetre, afegeix una fila nova al datagrid corresponent
+        /// </summary>
+        /// <param name="table">Nom del datagrid</param>
         public void AfegirCamp(string table)
         {
             int numIndex = 1;
@@ -136,12 +176,18 @@ namespace BaseForm
             }
             
         }
-       
+        /// <summary>
+        /// Aquesta funció s'executa quan l'usuari introdueix un tipus incorrecte d'entrada en un textbox
+        /// </summary>
         private void dgvBase_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.ThrowException = false;
             MessageBox.Show("Entrada no vàlida");
             dgvBase.RefreshEdit();
+        }
+
+        private void BaseForm_Load(object sender, EventArgs e)
+        {
         }
     }
 }
