@@ -51,18 +51,21 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(27, 189);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 20);
+            this.label1.Size = new System.Drawing.Size(112, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "escorxaDAM";
+            this.label1.Text = "EscorxaDAM";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 229);
+            this.label2.Location = new System.Drawing.Point(28, 228);
+            this.label2.MaximumSize = new System.Drawing.Size(320, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.Size = new System.Drawing.Size(317, 117);
             this.label2.TabIndex = 4;
-            this.label2.Text = "escoxaDAM...";
+            this.label2.Text = "EscorxaDAM es una aplicación de gestión de mataderos bovinos y control de la traz" +
+    "abilidad.\r\n\r\n\r\n\r\nDesarrollador:        Diopters S.L.\r\nVersión: \t                " +
+    "1.0.22\r\n\r\nCopyright (c) 2017-2018";
             // 
             // AcercDe
             // 

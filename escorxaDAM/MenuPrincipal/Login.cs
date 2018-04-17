@@ -21,6 +21,7 @@ namespace MenuPrincipal
 
         private void Login_Load(object sender, EventArgs e)
         {
+            CCLogin.Select();
             CCLogin.Text = "Usuari";
             CCPassword.Text = "Contrasenya";
         }
@@ -42,6 +43,22 @@ namespace MenuPrincipal
             else
             {
                 MessageBox.Show("Usuari o contrasenya incorrecta");
+            }
+        }
+
+        private void CCLogin_Click(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
+        }
+
+        private void CCPassword_Click(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
             }
         }
     }
