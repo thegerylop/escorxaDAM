@@ -5,3 +5,4 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspe
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.csprojResolveAssemblyReference.cache

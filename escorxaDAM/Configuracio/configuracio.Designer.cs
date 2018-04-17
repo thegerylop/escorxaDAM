@@ -30,48 +30,60 @@
         {
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.paisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.provasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip2
             // 
+            this.menuStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.paisosToolStripMenuItem});
+            this.paisosToolStripMenuItem,
+            this.provasToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1211, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(1083, 28);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
             // paisosToolStripMenuItem
             // 
+            this.paisosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.paisosToolStripMenuItem.Name = "paisosToolStripMenuItem";
-            this.paisosToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.paisosToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.paisosToolStripMenuItem.Text = "Paisos";
             this.paisosToolStripMenuItem.Click += new System.EventHandler(this.paisosToolStripMenuItem_Click);
+            // 
+            // provasToolStripMenuItem
+            // 
+            this.provasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.provasToolStripMenuItem.Name = "provasToolStripMenuItem";
+            this.provasToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.provasToolStripMenuItem.Text = "provas";
             // 
             // panel1
             // 
             this.panel1.AutoSize = true;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1211, 709);
+            this.panel1.Size = new System.Drawing.Size(1083, 585);
             this.panel1.TabIndex = 2;
             // 
             // configuracio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1211, 733);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1083, 613);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "configuracio";
+            this.ShowIcon = false;
             this.Text = "configuracio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.configuracio_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
@@ -83,5 +95,6 @@
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem paisosToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem provasToolStripMenuItem;
     }
 }

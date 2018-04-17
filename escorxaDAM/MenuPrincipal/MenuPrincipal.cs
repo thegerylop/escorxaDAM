@@ -77,6 +77,7 @@ namespace MenuPrincipal
             Form form = (Form)Activator.CreateInstance(type);
             form.MdiParent = this;
             form.Show();
+            form.BringToFront();
         }
         private void sobreToolStripMenuItem1_Click(object sender, EventArgs e)
         {

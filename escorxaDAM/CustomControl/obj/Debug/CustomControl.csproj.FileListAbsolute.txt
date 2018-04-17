@@ -1,6 +1,5 @@
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\CustomControl.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\CustomControl.pdb
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\CustomControl\obj\Debug\CustomControl.csprojResolveAssemblyReference.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\CustomControl\obj\Debug\CustomControl.CustomTextBox.resources
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\CustomControl\obj\Debug\CustomControl.csproj.GenerateResource.Cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\CustomControl\obj\Debug\CustomControl.csproj.CoreCompileInputs.cache

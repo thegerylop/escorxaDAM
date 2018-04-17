@@ -26,12 +26,18 @@ namespace Configuracio
 
         private void paisosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             panel1.Controls.Clear();
             Paisos.Paisos frm = new Paisos.Paisos();
             frm.TopLevel = false;
             panel1.Controls.Add(frm);
             frm.Dock = DockStyle.Fill;
             frm.Show();
+        }
+
+        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

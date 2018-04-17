@@ -5,3 +5,4 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SituacioExplotacio\obj\Debug\Situac
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SituacioExplotacio\obj\Debug\SituacioExplotacio.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SituacioExplotacio\obj\Debug\SituacioExplotacio.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SituacioExplotacio\obj\Debug\SituacioExplotacio.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SituacioExplotacio\obj\Debug\SituacioExplotacio.csprojResolveAssemblyReference.cache
