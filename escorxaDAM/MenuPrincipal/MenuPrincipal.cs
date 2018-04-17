@@ -50,9 +50,9 @@ namespace MenuPrincipal
 
         private void sortirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
             Login frm = new Login();
             frm.Show();
+            this.Close();
         }
 
         private void estatDeLaInspeccióToolStripMenuItem_Click(object sender, EventArgs e)
@@ -164,12 +164,39 @@ namespace MenuPrincipal
         private void sobreToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             AcercDe frm = new AcercDe();
-            frm.Show();
+            if (!IsOpen("AcercDe"))
+            {
+                frm.Show();
+            }
+            else
+            {
+                frm.Focus();
+            }
         }
 
         private void nivellsDaccésToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!IsOpen("Login"))
+            {
+                Application.Exit();
+            }
+        }
+
+        public static bool IsOpen(string nameForm)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.Name.Equals(nameForm))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

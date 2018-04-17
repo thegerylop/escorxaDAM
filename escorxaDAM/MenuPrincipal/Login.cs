@@ -37,8 +37,8 @@ namespace MenuPrincipal
                 string[] nivellAcces = conn.resultatComandaArray(commandAcces);
                 MenuPrincipal frm = new MenuPrincipal();
                 frm.menuAcces(nivellAcces);
-                this.Close();
                 frm.Show();
+                this.Close();
             }
             else
             {
@@ -60,6 +60,28 @@ namespace MenuPrincipal
             {
                 btnLogin.PerformClick();
             }
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            {
+                if (!IsOpen("MenuPrincipal"))
+                {
+                    Application.Exit();
+                }
+            }
+        }
+
+        public static bool IsOpen(string nameForm)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.Name.Equals(nameForm))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

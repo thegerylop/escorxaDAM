@@ -131,14 +131,14 @@
             // afegirToolStripMenuItem
             // 
             this.afegirToolStripMenuItem.Name = "afegirToolStripMenuItem";
-            this.afegirToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.afegirToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.afegirToolStripMenuItem.Text = "Afegir";
             this.afegirToolStripMenuItem.Click += new System.EventHandler(this.afegirToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
@@ -156,13 +156,13 @@
             // afegirToolStripMenuItem1
             // 
             this.afegirToolStripMenuItem1.Name = "afegirToolStripMenuItem1";
-            this.afegirToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
+            this.afegirToolStripMenuItem1.Size = new System.Drawing.Size(142, 24);
             this.afegirToolStripMenuItem1.Text = "Afegir";
             // 
             // modificarToolStripMenuItem1
             // 
             this.modificarToolStripMenuItem1.Name = "modificarToolStripMenuItem1";
-            this.modificarToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
+            this.modificarToolStripMenuItem1.Size = new System.Drawing.Size(142, 24);
             this.modificarToolStripMenuItem1.Text = "Modificar";
             // 
             // dadesEmpresaToolStripMenuItem
@@ -179,13 +179,13 @@
             // afegirToolStripMenuItem2
             // 
             this.afegirToolStripMenuItem2.Name = "afegirToolStripMenuItem2";
-            this.afegirToolStripMenuItem2.Size = new System.Drawing.Size(152, 24);
+            this.afegirToolStripMenuItem2.Size = new System.Drawing.Size(142, 24);
             this.afegirToolStripMenuItem2.Text = "Afegir";
             // 
             // modificarToolStripMenuItem2
             // 
             this.modificarToolStripMenuItem2.Name = "modificarToolStripMenuItem2";
-            this.modificarToolStripMenuItem2.Size = new System.Drawing.Size(152, 24);
+            this.modificarToolStripMenuItem2.Size = new System.Drawing.Size(142, 24);
             this.modificarToolStripMenuItem2.Text = "Modificar";
             // 
             // gestióDeProcessosToolStripMenuItem
@@ -338,6 +338,7 @@
             this.Name = "MenuPrincipal";
             this.Text = "Menu Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
