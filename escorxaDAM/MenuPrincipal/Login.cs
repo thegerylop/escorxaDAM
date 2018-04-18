@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConexioBBDD;
+using BaseForm;
 namespace MenuPrincipal
 {
     public partial class Login : Form
@@ -22,8 +23,8 @@ namespace MenuPrincipal
         private void Login_Load(object sender, EventArgs e)
         {
             CCLogin.Select();
-            CCLogin.Text = "Usuari";
-            CCPassword.Text = "Contrasenya";
+            CCLogin.Text = "admin";
+            CCPassword.Text = "admin";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace MenuPrincipal
                 MenuPrincipal frm = new MenuPrincipal();
                 frm.menuAcces(nivellAcces);
                 frm.Show();
-                this.Close();
+                this.Hide();
             }
             else
             {
@@ -65,23 +66,8 @@ namespace MenuPrincipal
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
             {
-                if (!IsOpen("MenuPrincipal"))
-                {
-                    Application.Exit();
-                }
+                Application.Exit();
             }
-        }
-
-        public static bool IsOpen(string nameForm)
-        {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.Name.Equals(nameForm))
-                {
-                    return true;
-                }
-            }
-            return false;
         }
     }
 }

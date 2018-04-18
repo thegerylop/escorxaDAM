@@ -9,7 +9,6 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Tipus d'explotacio\obj\Debug\Tipus 
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Tipus d'explotacio\obj\Debug\Tipus d'explotacio.pdb
 C:\DAM\Projecte 2\escorxaDAM\dll\Tipus d'explotacio.dll
 C:\DAM\Projecte 2\escorxaDAM\dll\Tipus d'explotacio.pdb
-C:\DAM\Projecte 2\escorxaDAM\Tipus d'explotacio\obj\Debug\TipusD'explotacio.csprojResolveAssemblyReference.cache
 C:\DAM\Projecte 2\escorxaDAM\Tipus d'explotacio\obj\Debug\Tipus_d_explotacio.TipusExplotacio.resources
 C:\DAM\Projecte 2\escorxaDAM\Tipus d'explotacio\obj\Debug\TipusD'explotacio.csproj.GenerateResource.Cache
 C:\DAM\Projecte 2\escorxaDAM\Tipus d'explotacio\obj\Debug\TipusD'explotacio.csproj.CoreCompileInputs.cache

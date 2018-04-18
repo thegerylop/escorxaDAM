@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BaseForm;
 
 namespace MenuPrincipal
 {
@@ -82,14 +83,30 @@ namespace MenuPrincipal
         private void sobreToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             AcercDe frm = new AcercDe();
-            frm.Show();
+            if (!Metodes.IsOpen("AcercDe"))
+            {
+                frm.Show();
+            }
+            else
+            {
+                Application.OpenForms[frm.Name].Focus();
+            }
         }
 
         private void tancarSessióToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            if (Metodes.IsOpen("AcercDe"))
+            {
+                Application.OpenForms.OfType<AcercDe>().First().Close();
+            }
             Login frm = new Login();
             frm.Show();
+        }
+
+        private void MenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

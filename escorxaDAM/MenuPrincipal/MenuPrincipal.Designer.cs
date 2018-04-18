@@ -71,13 +71,13 @@
             // ajudaToolStripMenuItem2
             // 
             this.ajudaToolStripMenuItem2.Name = "ajudaToolStripMenuItem2";
-            this.ajudaToolStripMenuItem2.Size = new System.Drawing.Size(126, 24);
+            this.ajudaToolStripMenuItem2.Size = new System.Drawing.Size(152, 24);
             this.ajudaToolStripMenuItem2.Text = "Ajuda";
             // 
             // sobreToolStripMenuItem1
             // 
             this.sobreToolStripMenuItem1.Name = "sobreToolStripMenuItem1";
-            this.sobreToolStripMenuItem1.Size = new System.Drawing.Size(126, 24);
+            this.sobreToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
             this.sobreToolStripMenuItem1.Text = "Sobre...";
             this.sobreToolStripMenuItem1.Click += new System.EventHandler(this.sobreToolStripMenuItem1_Click);
             // 
@@ -107,6 +107,7 @@
             this.ShowIcon = false;
             this.Text = "Menu Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

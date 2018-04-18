@@ -60,6 +60,7 @@
     <Compile Include="BaseModificar.Designer.cs">
       <DependentUpon>BaseModificar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Metodes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
