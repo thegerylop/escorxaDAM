@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
 using System.Configuration;
@@ -16,11 +16,11 @@ namespace ConexioBBDD
 
         string connString;
 
-        MySqlConnection conn = new MySqlConnection();
+        SqlConnection conn = new SqlConnection();
         public void connexio()
         {
             connString = PortaCadenaConnexio();
-            conn = new MySqlConnection(connString);
+            conn = new SqlConnection(connString);
             conn.Open();
             conn.InitializeLifetimeService();
         }
@@ -35,7 +35,7 @@ namespace ConexioBBDD
             try
             {
                 connexio();
-                MySqlCommand command = new MySqlCommand(comanda, conn);
+                SqlCommand command = new SqlCommand(comanda, conn);
                 var result = command.ExecuteScalar();
                 if(result != null)
                 {
@@ -47,7 +47,7 @@ namespace ConexioBBDD
                 }
 
             }
-            catch(MySqlException eMySql)
+            catch(SqlException eMySql)
             {
                 MessageBox.Show(eMySql.ToString());
                 return false;
@@ -63,9 +63,9 @@ namespace ConexioBBDD
             try
             {
                 connexio();
-                MySqlCommand command = new MySqlCommand(comanda, conn);
+                SqlCommand command = new SqlCommand(comanda, conn);
 
-                using(MySqlDataReader dr = command.ExecuteReader())
+                using(SqlDataReader dr = command.ExecuteReader())
                 {
                     while(dr.Read())
                     {
@@ -75,7 +75,7 @@ namespace ConexioBBDD
                 }
                 return "";
             }
-            catch(MySqlException eMySql)
+            catch(SqlException eMySql)
             {
                 MessageBox.Show(eMySql.ToString());
                 return "";
@@ -93,20 +93,20 @@ namespace ConexioBBDD
             try
             {
                 connexio();
-                MySqlCommand command = new MySqlCommand(comanda, conn);
+                SqlCommand command = new SqlCommand(comanda, conn);
 
-                using(MySqlDataReader dr = command.ExecuteReader())
+                using(SqlDataReader dr = command.ExecuteReader())
                 {
                     while(dr.Read())
                     {
-                        list.Add(dr.GetString(0));
+                        list.Add(dr.GetInt64(0).ToString());
 
                     }
                     return list.ToArray();
                 }
                 return list.ToArray();
             }
-            catch(MySqlException eMySql)
+            catch(SqlException eMySql)
             {
                 MessageBox.Show(eMySql.ToString());
                 return list.ToArray();
@@ -122,22 +122,22 @@ namespace ConexioBBDD
         {
             bool correcte = true;
 
-            MySqlDataAdapter dtaDepart;
-            MySqlCommandBuilder construct;
+            SqlDataAdapter dtaDepart;
+            SqlCommandBuilder construct;
 
             try
             {
                 connexio();
 
-                dtaDepart = new MySqlDataAdapter(query, conn);
-                construct = new MySqlCommandBuilder(dtaDepart);
+                dtaDepart = new SqlDataAdapter(query, conn);
+                construct = new SqlCommandBuilder(dtaDepart);
 
                 if(dtsAct.HasChanges())
                 {
                     dtaDepart.Update(dtsAct, taula);
                 }
             }
-            catch(MySqlException e)
+            catch(SqlException e)
             {
                 correcte = false;
                 MessageBox.Show(e.Message.ToString());
@@ -157,7 +157,7 @@ namespace ConexioBBDD
         {
             connexio();
 
-            MySqlCommand cmdQry = new MySqlCommand(cmd, conn);
+            SqlCommand cmdQry = new SqlCommand(cmd, conn);
 
             return cmdQry.ExecuteNonQuery();
 
@@ -165,22 +165,22 @@ namespace ConexioBBDD
 
         public DataTable searchTableFromQuery(string query2)
         {
-            MySqlDataAdapter dtaDades = new MySqlDataAdapter();
-            MySqlCommandBuilder construct = new MySqlCommandBuilder();
+            SqlDataAdapter dtaDades = new SqlDataAdapter();
+            SqlCommandBuilder construct = new SqlCommandBuilder();
             DataSet dtsDades = new DataSet();
             DataTable dt = null;
             try
             {
                 connexio();
-                dtaDades = new MySqlDataAdapter(query2, conn);
-                construct = new MySqlCommandBuilder(dtaDades);
+                dtaDades = new SqlDataAdapter(query2, conn);
+                construct = new SqlCommandBuilder(dtaDades);
                 dtsDades = new DataSet();
                 dt = new DataTable();
                 dtaDades.Fill(dt);
 
 
             }
-            catch(MySqlException eMySql)
+            catch(SqlException eMySql)
             {
                 MessageBox.Show(eMySql.ToString());
             }
@@ -196,21 +196,21 @@ namespace ConexioBBDD
         }
         public DataSet portarPerConsulta(String query, String table)
         {
-            MySqlDataAdapter dtaDades = new MySqlDataAdapter();
-            MySqlCommandBuilder construct = new MySqlCommandBuilder();
+            SqlDataAdapter dtaDades = new SqlDataAdapter();
+            SqlCommandBuilder construct = new SqlCommandBuilder();
             DataSet dtsDades = new DataSet();
 
             try
             {
                 connexio();
-                dtaDades = new MySqlDataAdapter(query, conn);
-                construct = new MySqlCommandBuilder(dtaDades);
+                dtaDades = new SqlDataAdapter(query, conn);
+                construct = new SqlCommandBuilder(dtaDades);
                 dtsDades = new DataSet();
                 dtaDades.Fill(dtsDades, table);
 
 
             }
-            catch(MySqlException eMySql)
+            catch(SqlException eMySql)
             {
                 MessageBox.Show(eMySql.ToString());
             }

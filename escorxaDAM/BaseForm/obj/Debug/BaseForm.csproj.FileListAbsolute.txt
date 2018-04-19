@@ -6,7 +6,6 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.BaseIns
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.BaseModificar.resources
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.csproj.GenerateResource.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.csproj.CopyComplete
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.pdb
 C:\DAM\Projecte 2\escorxaDAM\dll\BaseForm.dll

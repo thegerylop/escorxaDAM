@@ -14,7 +14,6 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ComunitatsAutonomes\obj\Debug\Comun
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ComunitatsAutonomes\obj\Debug\ComunitatsAutonomes.ComunitatsAutonomes.resources
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ComunitatsAutonomes\obj\Debug\ComunitatsAutonomes.csproj.GenerateResource.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ComunitatsAutonomes\obj\Debug\ComunitatsAutonomes.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ComunitatsAutonomes\obj\Debug\ComunitatsAutonomes.csproj.CopyComplete
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ComunitatsAutonomes\obj\Debug\ComunitatsAutonomes.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ComunitatsAutonomes\obj\Debug\ComunitatsAutonomes.pdb
 C:\DAM\Projecte 2\escorxaDAM\dll\ComunitatsAutonomes.dll

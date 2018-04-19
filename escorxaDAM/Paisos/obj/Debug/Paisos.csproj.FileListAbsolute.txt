@@ -4,7 +4,6 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.csprojResol
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.Paisos.resources
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.csproj.GenerateResource.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.csproj.CopyComplete
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Paisos\obj\Debug\Paisos.pdb
 C:\DAM\Projecte 2\escorxaDAM\dll\Paisos.dll

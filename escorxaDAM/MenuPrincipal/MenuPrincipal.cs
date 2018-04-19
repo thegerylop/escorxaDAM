@@ -47,11 +47,11 @@ namespace MenuPrincipal
                     nivells += item + "%'";
                 } else
                 {
-                    nivells += item + "%' OR `nivellAcces` like '%";
+                    nivells += item + "%' OR nivellAcces like '%";
                 }
                 
             }
-            string query = "select * from itemMenu where `nivellAcces` like '%" + nivells;
+            string query = "select * from itemMenu where nivellAcces like '%" + nivells;
             DataSet menu = conn.portarPerConsulta(query, "menu");
             DataTable dt = menu.Tables[0];
             ToolStripMenuItem mt = new ToolStripMenuItem();

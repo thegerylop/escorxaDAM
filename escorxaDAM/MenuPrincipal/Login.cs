@@ -32,7 +32,7 @@ namespace MenuPrincipal
             string command = "SELECT idUsuari FROM usuaris where Nom = '" + CCLogin.Text + "' and password = '" + CCPassword.Text + "'";
             //BINARY
             string idUsuari = conn.resultatComanda(command);
-            string commandAcces = "SELECT `idNivellAcces` FROM `permisos` WHERE `idUsuari`= " + idUsuari;
+            string commandAcces = "SELECT idNivellAcces FROM permisos WHERE idUsuari= " + idUsuari;
             if(idUsuari != "")
             {
                 string[] nivellAcces = conn.resultatComandaArray(commandAcces);

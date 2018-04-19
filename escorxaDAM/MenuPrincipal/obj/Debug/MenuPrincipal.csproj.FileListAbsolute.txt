@@ -44,7 +44,6 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincip
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.Splash.resources
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.csproj.GenerateResource.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.csproj.CopyComplete
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.exe
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MenuPrincipal\obj\Debug\MenuPrincipal.pdb
 C:\DAM\Projecte 2\escorxaDAM\dll\MenuPrincipal.exe.config
