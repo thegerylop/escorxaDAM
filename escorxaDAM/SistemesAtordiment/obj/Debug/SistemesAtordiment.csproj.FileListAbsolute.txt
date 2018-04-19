@@ -14,3 +14,4 @@ C:\DAM\Projecte 2\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.csp
 C:\DAM\Projecte 2\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.csproj.CoreCompileInputs.cache
 C:\DAM\Projecte 2\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.dll
 C:\DAM\Projecte 2\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.pdb
+C:\DAM\Projecte 2\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.csprojResolveAssemblyReference.cache

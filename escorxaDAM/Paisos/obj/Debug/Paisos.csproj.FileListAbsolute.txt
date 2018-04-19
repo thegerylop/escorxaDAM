@@ -14,3 +14,4 @@ C:\DAM\Projecte 2\escorxaDAM\Paisos\obj\Debug\Paisos.csproj.GenerateResource.Cac
 C:\DAM\Projecte 2\escorxaDAM\Paisos\obj\Debug\Paisos.csproj.CoreCompileInputs.cache
 C:\DAM\Projecte 2\escorxaDAM\Paisos\obj\Debug\Paisos.dll
 C:\DAM\Projecte 2\escorxaDAM\Paisos\obj\Debug\Paisos.pdb
+C:\DAM\Projecte 2\escorxaDAM\Paisos\obj\Debug\Paisos.csprojResolveAssemblyReference.cache

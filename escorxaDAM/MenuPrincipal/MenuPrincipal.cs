@@ -76,9 +76,16 @@ namespace MenuPrincipal
             Assembly assembly = Assembly.LoadFile(dllFile.FullName+".dll");
             Type type = assembly.GetType(name);
             Form form = (Form)Activator.CreateInstance(type);
-            form.MdiParent = this;
-            form.Show();
-            form.BringToFront();
+            if (!Metodes.IsOpen(form.Name))
+            {
+                form.MdiParent = this;
+                form.Show();
+            }
+            else
+            {
+                Application.OpenForms[form.Name].Focus();
+            }
+            //form.BringToFront();
         }
         private void sobreToolStripMenuItem1_Click(object sender, EventArgs e)
         {
