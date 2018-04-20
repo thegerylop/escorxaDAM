@@ -727,7 +727,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="escorxadam2Entities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="escorxadam2Entities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="animals" EntityType="Self.animals" />
     <EntitySet Name="comptadors_lot_mes" EntityType="Self.comptadors_lot_mes" />
     <EntitySet Name="comunitats_autonomes" EntityType="Self.comunitats_autonomes" />

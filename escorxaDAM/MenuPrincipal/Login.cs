@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConexioBBDD;
 using BaseForm;
+using Modelos;
 namespace MenuPrincipal
 {
     public partial class Login : Form
@@ -18,7 +19,19 @@ namespace MenuPrincipal
         {
             InitializeComponent();
         }
+        private void loginEF()
+        {
+            escorxadam _m = new escorxadam();
 
+            //var query = hacerla
+            // permisos.ToList();
+
+            permisos p = new permisos();
+            p.idUsuari = 1233;
+
+                _m.SaveChanges();
+                
+        }
 
         private void Login_Load(object sender, EventArgs e)
         {

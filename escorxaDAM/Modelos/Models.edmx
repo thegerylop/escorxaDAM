@@ -1,0 +1,2050 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="escorxadam2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="animals">
+          <Key>
+            <PropertyRef Name="idAnimal" />
+          </Key>
+          <Property Name="idAnimal" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idPaisNaixement" Type="bigint" Nullable="false" />
+          <Property Name="idRecepcioBestiar" Type="bigint" Nullable="false" />
+          <Property Name="DIB" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="Sexe" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Edat" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="DIBmare" Type="varchar" MaxLength="14" Nullable="false" />
+        </EntityType>
+        <EntityType Name="comptadors_lot_mes">
+          <Key>
+            <PropertyRef Name="idComptadorLotMes" />
+          </Key>
+          <Property Name="idComptadorLotMes" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomComptadorLotMes" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="comunitats_autonomes">
+          <Key>
+            <PropertyRef Name="idComunitatAutonoma" />
+          </Key>
+          <Property Name="idComunitatAutonoma" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomComunitatAutonoma" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="abreviacioComunitatAutonoma" Type="varchar" MaxLength="3" Nullable="false" />
+        </EntityType>
+        <EntityType Name="emmagatzematges">
+          <Key>
+            <PropertyRef Name="idEmmagatzematge" />
+          </Key>
+          <Property Name="idEmmagatzematge" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idEstatRefrigeracio" Type="bigint" Nullable="false" />
+          <Property Name="idUsuariEntrada" Type="bigint" Nullable="false" />
+          <Property Name="idUsuariSortida" Type="bigint" Nullable="false" />
+          <Property Name="numCambraFrigorifica" Type="int" Nullable="false" />
+          <Property Name="dataEntrada" Type="datetime2" Precision="0" Nullable="false" />
+          <Property Name="dataSortida" Type="datetime2" Precision="0" Nullable="false" />
+          <Property Name="temperaturaMaxima" Type="float" Nullable="false" />
+          <Property Name="temperaturaMinima" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="estables">
+          <Key>
+            <PropertyRef Name="idEstable" />
+          </Key>
+          <Property Name="idEstable" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idUsuariResponsable" Type="bigint" Nullable="false" />
+          <Property Name="idEstatEstabulacio" Type="bigint" Nullable="false" />
+          <Property Name="idInspeccioSanitaria" Type="bigint" Nullable="false" />
+          <Property Name="numEstable" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="dataEntrada" Type="datetime2" Precision="0" Nullable="false" />
+          <Property Name="dataSortida" Type="datetime2" Precision="0" Nullable="false" />
+          <Property Name="Incidencies" Type="varchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="estat_estabulacions">
+          <Key>
+            <PropertyRef Name="idEstatEstabulacio" />
+          </Key>
+          <Property Name="idEstatEstabulacio" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomEstatEstabulacio" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="estat_inspeccions">
+          <Key>
+            <PropertyRef Name="idEstatInspeccio" />
+          </Key>
+          <Property Name="idEstatInspeccio" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomEstatInspeccio" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="estat_processos_envasat">
+          <Key>
+            <PropertyRef Name="idEstatProcesEnvasat" />
+          </Key>
+          <Property Name="idEstatProcesEnvasat" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomEstatProcesEnvasat" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="estat_processos_inicials">
+          <Key>
+            <PropertyRef Name="idEstatProcesInicial" />
+          </Key>
+          <Property Name="idEstatProcesInicial" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Estat" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="estat_refrigeracions">
+          <Key>
+            <PropertyRef Name="idEstatRefrigeracio" />
+          </Key>
+          <Property Name="idEstatRefrigeracio" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomEstatRefrigeracio" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="estat_sacrifici">
+          <Key>
+            <PropertyRef Name="idEstatSacrifici" />
+          </Key>
+          <Property Name="idEstatSacrifici" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomEstatSacrifici" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="inspeccions">
+          <Key>
+            <PropertyRef Name="idInspeccio" />
+          </Key>
+          <Property Name="idInspeccio" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idEstatInspeccio" Type="bigint" Nullable="false" />
+          <Property Name="codiInspeccio" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="codiVeterinari" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="dataInspeccio" Type="date" Nullable="false" />
+          <Property Name="descInspeccio" Type="varchar" MaxLength="1000" Nullable="false" />
+        </EntityType>
+        <EntityType Name="itemMenu">
+          <Key>
+            <PropertyRef Name="idItem" />
+          </Key>
+          <Property Name="idItem" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomItem" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="ordre" Type="bigint" Nullable="false" />
+          <Property Name="dll" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="taula" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="nivellAcces" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="lots">
+          <Key>
+            <PropertyRef Name="idLot" />
+          </Key>
+          <Property Name="idLot" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idRemo" Type="bigint" Nullable="false" />
+          <Property Name="idEstabulacio" Type="bigint" />
+          <Property Name="idSacrifici" Type="bigint" />
+          <Property Name="idProcessatInicial" Type="bigint" />
+          <Property Name="idProcessatFinal" Type="bigint" />
+          <Property Name="idEmmagatzematge" Type="bigint" />
+          <Property Name="numLot" Type="varchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="nivells_acces">
+          <Key>
+            <PropertyRef Name="idNivellAcces" />
+          </Key>
+          <Property Name="idNivellAcces" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomNivellAcces" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="abreviacioNivellAcces" Type="varchar" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="paisos">
+          <Key>
+            <PropertyRef Name="idPais" />
+          </Key>
+          <Property Name="idPais" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomPais" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="abreviaturaPais" Type="varchar" MaxLength="4" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="permisos">
+          <Key>
+            <PropertyRef Name="idUsuari" />
+            <PropertyRef Name="idNivellAcces" />
+          </Key>
+          <Property Name="idUsuari" Type="bigint" Nullable="false" />
+          <Property Name="idNivellAcces" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="processats_finals">
+          <Key>
+            <PropertyRef Name="idProcessatFinal" />
+          </Key>
+          <Property Name="idProcessatFinal" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idUsuari" Type="bigint" Nullable="false" />
+          <Property Name="idSafata" Type="bigint" Nullable="false" />
+          <Property Name="idEstatEnvasat" Type="bigint" Nullable="false" />
+          <Property Name="DIB" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="dataEnvasat" Type="datetime2" Precision="0" Nullable="false" />
+          <Property Name="diaCaducitat" Type="date" Nullable="false" />
+          <Property Name="pesSafata" Type="float" Nullable="false" />
+          <Property Name="percO2" Type="float" Nullable="false" />
+          <Property Name="percCO2" Type="float" Nullable="false" />
+          <Property Name="Mioglobina" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="processats_inicials">
+          <Key>
+            <PropertyRef Name="idProcessatInicial" />
+          </Key>
+          <Property Name="idProcessatInicial" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idUsuari" Type="bigint" Nullable="false" />
+          <Property Name="idEstatInicial" Type="bigint" Nullable="false" />
+          <Property Name="numCarril" Type="int" Nullable="false" />
+          <Property Name="DIB" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="pesCanal" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="proveidors">
+          <Key>
+            <PropertyRef Name="idProveidor" />
+          </Key>
+          <Property Name="idProveidor" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idComunitatAutonoma" Type="bigint" Nullable="false" />
+          <Property Name="idTipusExplotacio" Type="bigint" Nullable="false" />
+          <Property Name="idSituacioActual" Type="bigint" Nullable="false" />
+          <Property Name="nomResponsable" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="primerCognom" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="segonCognom" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="nomExplotacio" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="direccioExplotacio" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="codiExplotacio" Type="varchar" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <EntityType Name="recepcions_bestiar">
+          <Key>
+            <PropertyRef Name="idRecepcio" />
+          </Key>
+          <Property Name="idRecepcio" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idUsuariReceptor" Type="bigint" Nullable="false" />
+          <Property Name="idProveidor" Type="bigint" Nullable="false" />
+          <Property Name="codiREMO" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="codiREGA" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="codiTransportista" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="dataSortidaExplotacio" Type="date" Nullable="false" />
+          <Property Name="dataEntradaEscorxador" Type="date" Nullable="false" />
+          <Property Name="numTotalAnimals" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="referencies">
+          <Key>
+            <PropertyRef Name="idReferencia" />
+          </Key>
+          <Property Name="idReferencia" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomReferencia" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sacrificis">
+          <Key>
+            <PropertyRef Name="idSacrifici" />
+          </Key>
+          <Property Name="idSacrifici" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idUsuari" Type="bigint" Nullable="false" />
+          <Property Name="idSistemaAtordiment" Type="bigint" Nullable="false" />
+          <Property Name="idInspeccioSanitaria" Type="bigint" Nullable="false" />
+          <Property Name="idEstatSacrifici" Type="bigint" />
+          <Property Name="boxImmobilitzacio" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="AparellAtordiment" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="dataSacrifici" Type="date" Nullable="false" />
+          <Property Name="Incidencies" Type="varchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sistemes_atordiment">
+          <Key>
+            <PropertyRef Name="idSistemaAtordiment" />
+          </Key>
+          <Property Name="idSistemaAtordiment" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomSistemaAtordiment" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="situacio_explotacions">
+          <Key>
+            <PropertyRef Name="idSituacioExplotacio" />
+          </Key>
+          <Property Name="idSituacioExplotacio" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomSituacioExplotacio" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tipus_explotacions">
+          <Key>
+            <PropertyRef Name="idTipusExplotacio" />
+          </Key>
+          <Property Name="idTipusExplotacio" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomTipusExplotacio" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="usuaris">
+          <Key>
+            <PropertyRef Name="idUsuari" />
+          </Key>
+          <Property Name="idUsuari" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nom" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="primerCognom" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="segonCognom" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="codiUsuari" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="actiu" Type="smallint" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__animals__idPaisN__25518C17">
+          <End Role="paisos" Type="Self.paisos" Multiplicity="1" />
+          <End Role="animals" Type="Self.animals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="paisos">
+              <PropertyRef Name="idPais" />
+            </Principal>
+            <Dependent Role="animals">
+              <PropertyRef Name="idPaisNaixement" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__animals__idRecep__2645B050">
+          <End Role="recepcions_bestiar" Type="Self.recepcions_bestiar" Multiplicity="1" />
+          <End Role="animals" Type="Self.animals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="recepcions_bestiar">
+              <PropertyRef Name="idRecepcio" />
+            </Principal>
+            <Dependent Role="animals">
+              <PropertyRef Name="idRecepcioBestiar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__emmagatze__idEst__282DF8C2">
+          <End Role="estat_refrigeracions" Type="Self.estat_refrigeracions" Multiplicity="1" />
+          <End Role="emmagatzematges" Type="Self.emmagatzematges" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estat_refrigeracions">
+              <PropertyRef Name="idEstatRefrigeracio" />
+            </Principal>
+            <Dependent Role="emmagatzematges">
+              <PropertyRef Name="idEstatRefrigeracio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__emmagatze__idUsu__29221CFB">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="emmagatzematges" Type="Self.emmagatzematges" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="emmagatzematges">
+              <PropertyRef Name="idUsuariEntrada" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__emmagatze__idUsu__2A164134">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="emmagatzematges" Type="Self.emmagatzematges" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="emmagatzematges">
+              <PropertyRef Name="idUsuariSortida" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__estables__idEsta__2B0A656D">
+          <End Role="estat_estabulacions" Type="Self.estat_estabulacions" Multiplicity="1" />
+          <End Role="estables" Type="Self.estables" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estat_estabulacions">
+              <PropertyRef Name="idEstatEstabulacio" />
+            </Principal>
+            <Dependent Role="estables">
+              <PropertyRef Name="idEstatEstabulacio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__estables__idInsp__2BFE89A6">
+          <End Role="inspeccions" Type="Self.inspeccions" Multiplicity="1" />
+          <End Role="estables" Type="Self.estables" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inspeccions">
+              <PropertyRef Name="idInspeccio" />
+            </Principal>
+            <Dependent Role="estables">
+              <PropertyRef Name="idInspeccioSanitaria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__estables__idUsua__2CF2ADDF">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="estables" Type="Self.estables" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="estables">
+              <PropertyRef Name="idUsuariResponsable" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__inspeccio__idEst__2DE6D218">
+          <End Role="estat_inspeccions" Type="Self.estat_inspeccions" Multiplicity="1" />
+          <End Role="inspeccions" Type="Self.inspeccions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estat_inspeccions">
+              <PropertyRef Name="idEstatInspeccio" />
+            </Principal>
+            <Dependent Role="inspeccions">
+              <PropertyRef Name="idEstatInspeccio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__lots__idEmmagatz__2EDAF651">
+          <End Role="emmagatzematges" Type="Self.emmagatzematges" Multiplicity="0..1" />
+          <End Role="lots" Type="Self.lots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="emmagatzematges">
+              <PropertyRef Name="idEmmagatzematge" />
+            </Principal>
+            <Dependent Role="lots">
+              <PropertyRef Name="idEmmagatzematge" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__lots__idEstabula__2FCF1A8A">
+          <End Role="estables" Type="Self.estables" Multiplicity="0..1" />
+          <End Role="lots" Type="Self.lots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estables">
+              <PropertyRef Name="idEstable" />
+            </Principal>
+            <Dependent Role="lots">
+              <PropertyRef Name="idEstabulacio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__lots__idProcessa__30C33EC3">
+          <End Role="processats_finals" Type="Self.processats_finals" Multiplicity="0..1" />
+          <End Role="lots" Type="Self.lots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="processats_finals">
+              <PropertyRef Name="idProcessatFinal" />
+            </Principal>
+            <Dependent Role="lots">
+              <PropertyRef Name="idProcessatFinal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__lots__idProcessa__31B762FC">
+          <End Role="processats_inicials" Type="Self.processats_inicials" Multiplicity="0..1" />
+          <End Role="lots" Type="Self.lots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="processats_inicials">
+              <PropertyRef Name="idProcessatInicial" />
+            </Principal>
+            <Dependent Role="lots">
+              <PropertyRef Name="idProcessatInicial" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__lots__idRemo__32AB8735">
+          <End Role="recepcions_bestiar" Type="Self.recepcions_bestiar" Multiplicity="1" />
+          <End Role="lots" Type="Self.lots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="recepcions_bestiar">
+              <PropertyRef Name="idRecepcio" />
+            </Principal>
+            <Dependent Role="lots">
+              <PropertyRef Name="idRemo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__lots__idSacrific__339FAB6E">
+          <End Role="sacrificis" Type="Self.sacrificis" Multiplicity="0..1" />
+          <End Role="lots" Type="Self.lots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sacrificis">
+              <PropertyRef Name="idSacrifici" />
+            </Principal>
+            <Dependent Role="lots">
+              <PropertyRef Name="idSacrifici" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__permisos__idNive__46B27FE2">
+          <End Role="nivells_acces" Type="Self.nivells_acces" Multiplicity="1" />
+          <End Role="permisos" Type="Self.permisos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nivells_acces">
+              <PropertyRef Name="idNivellAcces" />
+            </Principal>
+            <Dependent Role="permisos">
+              <PropertyRef Name="idNivellAcces" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__permisos__idUsua__3587F3E0">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="permisos" Type="Self.permisos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="permisos">
+              <PropertyRef Name="idUsuari" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__permisos__idUsua__45BE5BA9">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="permisos" Type="Self.permisos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="permisos">
+              <PropertyRef Name="idUsuari" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__permisos__idUsua__47A6A41B">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="permisos" Type="Self.permisos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="permisos">
+              <PropertyRef Name="idUsuari" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__processat__idEst__395884C4">
+          <End Role="estat_processos_inicials" Type="Self.estat_processos_inicials" Multiplicity="1" />
+          <End Role="processats_inicials" Type="Self.processats_inicials" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estat_processos_inicials">
+              <PropertyRef Name="idEstatProcesInicial" />
+            </Principal>
+            <Dependent Role="processats_inicials">
+              <PropertyRef Name="idEstatInicial" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__processat__idSaf__367C1819">
+          <End Role="referencies" Type="Self.referencies" Multiplicity="1" />
+          <End Role="processats_finals" Type="Self.processats_finals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="referencies">
+              <PropertyRef Name="idReferencia" />
+            </Principal>
+            <Dependent Role="processats_finals">
+              <PropertyRef Name="idSafata" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__processat__idUsu__37703C52">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="processats_finals" Type="Self.processats_finals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="processats_finals">
+              <PropertyRef Name="idUsuari" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__processat__idUsu__3864608B">
+          <End Role="estat_processos_envasat" Type="Self.estat_processos_envasat" Multiplicity="1" />
+          <End Role="processats_finals" Type="Self.processats_finals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estat_processos_envasat">
+              <PropertyRef Name="idEstatProcesEnvasat" />
+            </Principal>
+            <Dependent Role="processats_finals">
+              <PropertyRef Name="idUsuari" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__processat__idUsu__3A4CA8FD">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="processats_inicials" Type="Self.processats_inicials" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="processats_inicials">
+              <PropertyRef Name="idUsuari" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__proveidor__idCom__3B40CD36">
+          <End Role="comunitats_autonomes" Type="Self.comunitats_autonomes" Multiplicity="1" />
+          <End Role="proveidors" Type="Self.proveidors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="comunitats_autonomes">
+              <PropertyRef Name="idComunitatAutonoma" />
+            </Principal>
+            <Dependent Role="proveidors">
+              <PropertyRef Name="idComunitatAutonoma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__proveidor__idSit__3C34F16F">
+          <End Role="situacio_explotacions" Type="Self.situacio_explotacions" Multiplicity="1" />
+          <End Role="proveidors" Type="Self.proveidors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="situacio_explotacions">
+              <PropertyRef Name="idSituacioExplotacio" />
+            </Principal>
+            <Dependent Role="proveidors">
+              <PropertyRef Name="idSituacioActual" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__proveidor__idTip__3D2915A8">
+          <End Role="tipus_explotacions" Type="Self.tipus_explotacions" Multiplicity="1" />
+          <End Role="proveidors" Type="Self.proveidors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipus_explotacions">
+              <PropertyRef Name="idTipusExplotacio" />
+            </Principal>
+            <Dependent Role="proveidors">
+              <PropertyRef Name="idTipusExplotacio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recepcion__idPro__3E1D39E1">
+          <End Role="proveidors" Type="Self.proveidors" Multiplicity="1" />
+          <End Role="recepcions_bestiar" Type="Self.recepcions_bestiar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="proveidors">
+              <PropertyRef Name="idProveidor" />
+            </Principal>
+            <Dependent Role="recepcions_bestiar">
+              <PropertyRef Name="idProveidor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recepcion__idUsu__3F115E1A">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="recepcions_bestiar" Type="Self.recepcions_bestiar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="recepcions_bestiar">
+              <PropertyRef Name="idUsuariReceptor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__sacrifici__idEst__40058253">
+          <End Role="estat_sacrifici" Type="Self.estat_sacrifici" Multiplicity="0..1" />
+          <End Role="sacrificis" Type="Self.sacrificis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estat_sacrifici">
+              <PropertyRef Name="idEstatSacrifici" />
+            </Principal>
+            <Dependent Role="sacrificis">
+              <PropertyRef Name="idEstatSacrifici" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__sacrifici__idIns__40F9A68C">
+          <End Role="inspeccions" Type="Self.inspeccions" Multiplicity="1" />
+          <End Role="sacrificis" Type="Self.sacrificis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inspeccions">
+              <PropertyRef Name="idInspeccio" />
+            </Principal>
+            <Dependent Role="sacrificis">
+              <PropertyRef Name="idInspeccioSanitaria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__sacrifici__idSis__41EDCAC5">
+          <End Role="sistemes_atordiment" Type="Self.sistemes_atordiment" Multiplicity="1" />
+          <End Role="sacrificis" Type="Self.sacrificis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sistemes_atordiment">
+              <PropertyRef Name="idSistemaAtordiment" />
+            </Principal>
+            <Dependent Role="sacrificis">
+              <PropertyRef Name="idSistemaAtordiment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__sacrifici__idUsu__42E1EEFE">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="sacrificis" Type="Self.sacrificis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="sacrificis">
+              <PropertyRef Name="idUsuari" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="escorxadam2ModelStoreContainer">
+          <EntitySet Name="animals" EntityType="Self.animals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="comptadors_lot_mes" EntityType="Self.comptadors_lot_mes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="comunitats_autonomes" EntityType="Self.comunitats_autonomes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="emmagatzematges" EntityType="Self.emmagatzematges" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estables" EntityType="Self.estables" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estat_estabulacions" EntityType="Self.estat_estabulacions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estat_inspeccions" EntityType="Self.estat_inspeccions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estat_processos_envasat" EntityType="Self.estat_processos_envasat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estat_processos_inicials" EntityType="Self.estat_processos_inicials" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estat_refrigeracions" EntityType="Self.estat_refrigeracions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estat_sacrifici" EntityType="Self.estat_sacrifici" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inspeccions" EntityType="Self.inspeccions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="itemMenu" EntityType="Self.itemMenu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="lots" EntityType="Self.lots" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="nivells_acces" EntityType="Self.nivells_acces" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="paisos" EntityType="Self.paisos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="processats_finals" EntityType="Self.processats_finals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="processats_inicials" EntityType="Self.processats_inicials" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="proveidors" EntityType="Self.proveidors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="recepcions_bestiar" EntityType="Self.recepcions_bestiar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="referencies" EntityType="Self.referencies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sacrificis" EntityType="Self.sacrificis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sistemes_atordiment" EntityType="Self.sistemes_atordiment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="situacio_explotacions" EntityType="Self.situacio_explotacions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipus_explotacions" EntityType="Self.tipus_explotacions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usuaris" EntityType="Self.usuaris" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="permisos" EntityType="Self.permisos" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [permisos].[idUsuari] AS [idUsuari], 
+    [permisos].[idNivellAcces] AS [idNivellAcces]
+    FROM [dbo].[permisos] AS [permisos]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__animals__idPaisN__25518C17" Association="Self.FK__animals__idPaisN__25518C17">
+            <End Role="paisos" EntitySet="paisos" />
+            <End Role="animals" EntitySet="animals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__animals__idRecep__2645B050" Association="Self.FK__animals__idRecep__2645B050">
+            <End Role="recepcions_bestiar" EntitySet="recepcions_bestiar" />
+            <End Role="animals" EntitySet="animals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__emmagatze__idEst__282DF8C2" Association="Self.FK__emmagatze__idEst__282DF8C2">
+            <End Role="estat_refrigeracions" EntitySet="estat_refrigeracions" />
+            <End Role="emmagatzematges" EntitySet="emmagatzematges" />
+          </AssociationSet>
+          <AssociationSet Name="FK__emmagatze__idUsu__29221CFB" Association="Self.FK__emmagatze__idUsu__29221CFB">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="emmagatzematges" EntitySet="emmagatzematges" />
+          </AssociationSet>
+          <AssociationSet Name="FK__emmagatze__idUsu__2A164134" Association="Self.FK__emmagatze__idUsu__2A164134">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="emmagatzematges" EntitySet="emmagatzematges" />
+          </AssociationSet>
+          <AssociationSet Name="FK__estables__idEsta__2B0A656D" Association="Self.FK__estables__idEsta__2B0A656D">
+            <End Role="estat_estabulacions" EntitySet="estat_estabulacions" />
+            <End Role="estables" EntitySet="estables" />
+          </AssociationSet>
+          <AssociationSet Name="FK__estables__idInsp__2BFE89A6" Association="Self.FK__estables__idInsp__2BFE89A6">
+            <End Role="inspeccions" EntitySet="inspeccions" />
+            <End Role="estables" EntitySet="estables" />
+          </AssociationSet>
+          <AssociationSet Name="FK__estables__idUsua__2CF2ADDF" Association="Self.FK__estables__idUsua__2CF2ADDF">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="estables" EntitySet="estables" />
+          </AssociationSet>
+          <AssociationSet Name="FK__inspeccio__idEst__2DE6D218" Association="Self.FK__inspeccio__idEst__2DE6D218">
+            <End Role="estat_inspeccions" EntitySet="estat_inspeccions" />
+            <End Role="inspeccions" EntitySet="inspeccions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__lots__idEmmagatz__2EDAF651" Association="Self.FK__lots__idEmmagatz__2EDAF651">
+            <End Role="emmagatzematges" EntitySet="emmagatzematges" />
+            <End Role="lots" EntitySet="lots" />
+          </AssociationSet>
+          <AssociationSet Name="FK__lots__idEstabula__2FCF1A8A" Association="Self.FK__lots__idEstabula__2FCF1A8A">
+            <End Role="estables" EntitySet="estables" />
+            <End Role="lots" EntitySet="lots" />
+          </AssociationSet>
+          <AssociationSet Name="FK__lots__idProcessa__30C33EC3" Association="Self.FK__lots__idProcessa__30C33EC3">
+            <End Role="processats_finals" EntitySet="processats_finals" />
+            <End Role="lots" EntitySet="lots" />
+          </AssociationSet>
+          <AssociationSet Name="FK__lots__idProcessa__31B762FC" Association="Self.FK__lots__idProcessa__31B762FC">
+            <End Role="processats_inicials" EntitySet="processats_inicials" />
+            <End Role="lots" EntitySet="lots" />
+          </AssociationSet>
+          <AssociationSet Name="FK__lots__idRemo__32AB8735" Association="Self.FK__lots__idRemo__32AB8735">
+            <End Role="recepcions_bestiar" EntitySet="recepcions_bestiar" />
+            <End Role="lots" EntitySet="lots" />
+          </AssociationSet>
+          <AssociationSet Name="FK__lots__idSacrific__339FAB6E" Association="Self.FK__lots__idSacrific__339FAB6E">
+            <End Role="sacrificis" EntitySet="sacrificis" />
+            <End Role="lots" EntitySet="lots" />
+          </AssociationSet>
+          <AssociationSet Name="FK__permisos__idNive__46B27FE2" Association="Self.FK__permisos__idNive__46B27FE2">
+            <End Role="nivells_acces" EntitySet="nivells_acces" />
+            <End Role="permisos" EntitySet="permisos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__permisos__idUsua__3587F3E0" Association="Self.FK__permisos__idUsua__3587F3E0">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="permisos" EntitySet="permisos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__permisos__idUsua__45BE5BA9" Association="Self.FK__permisos__idUsua__45BE5BA9">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="permisos" EntitySet="permisos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__permisos__idUsua__47A6A41B" Association="Self.FK__permisos__idUsua__47A6A41B">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="permisos" EntitySet="permisos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__processat__idEst__395884C4" Association="Self.FK__processat__idEst__395884C4">
+            <End Role="estat_processos_inicials" EntitySet="estat_processos_inicials" />
+            <End Role="processats_inicials" EntitySet="processats_inicials" />
+          </AssociationSet>
+          <AssociationSet Name="FK__processat__idSaf__367C1819" Association="Self.FK__processat__idSaf__367C1819">
+            <End Role="referencies" EntitySet="referencies" />
+            <End Role="processats_finals" EntitySet="processats_finals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__processat__idUsu__37703C52" Association="Self.FK__processat__idUsu__37703C52">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="processats_finals" EntitySet="processats_finals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__processat__idUsu__3864608B" Association="Self.FK__processat__idUsu__3864608B">
+            <End Role="estat_processos_envasat" EntitySet="estat_processos_envasat" />
+            <End Role="processats_finals" EntitySet="processats_finals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__processat__idUsu__3A4CA8FD" Association="Self.FK__processat__idUsu__3A4CA8FD">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="processats_inicials" EntitySet="processats_inicials" />
+          </AssociationSet>
+          <AssociationSet Name="FK__proveidor__idCom__3B40CD36" Association="Self.FK__proveidor__idCom__3B40CD36">
+            <End Role="comunitats_autonomes" EntitySet="comunitats_autonomes" />
+            <End Role="proveidors" EntitySet="proveidors" />
+          </AssociationSet>
+          <AssociationSet Name="FK__proveidor__idSit__3C34F16F" Association="Self.FK__proveidor__idSit__3C34F16F">
+            <End Role="situacio_explotacions" EntitySet="situacio_explotacions" />
+            <End Role="proveidors" EntitySet="proveidors" />
+          </AssociationSet>
+          <AssociationSet Name="FK__proveidor__idTip__3D2915A8" Association="Self.FK__proveidor__idTip__3D2915A8">
+            <End Role="tipus_explotacions" EntitySet="tipus_explotacions" />
+            <End Role="proveidors" EntitySet="proveidors" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recepcion__idPro__3E1D39E1" Association="Self.FK__recepcion__idPro__3E1D39E1">
+            <End Role="proveidors" EntitySet="proveidors" />
+            <End Role="recepcions_bestiar" EntitySet="recepcions_bestiar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recepcion__idUsu__3F115E1A" Association="Self.FK__recepcion__idUsu__3F115E1A">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="recepcions_bestiar" EntitySet="recepcions_bestiar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__sacrifici__idEst__40058253" Association="Self.FK__sacrifici__idEst__40058253">
+            <End Role="estat_sacrifici" EntitySet="estat_sacrifici" />
+            <End Role="sacrificis" EntitySet="sacrificis" />
+          </AssociationSet>
+          <AssociationSet Name="FK__sacrifici__idIns__40F9A68C" Association="Self.FK__sacrifici__idIns__40F9A68C">
+            <End Role="inspeccions" EntitySet="inspeccions" />
+            <End Role="sacrificis" EntitySet="sacrificis" />
+          </AssociationSet>
+          <AssociationSet Name="FK__sacrifici__idSis__41EDCAC5" Association="Self.FK__sacrifici__idSis__41EDCAC5">
+            <End Role="sistemes_atordiment" EntitySet="sistemes_atordiment" />
+            <End Role="sacrificis" EntitySet="sacrificis" />
+          </AssociationSet>
+          <AssociationSet Name="FK__sacrifici__idUsu__42E1EEFE" Association="Self.FK__sacrifici__idUsu__42E1EEFE">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="sacrificis" EntitySet="sacrificis" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="escorxadam2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="animals">
+          <Key>
+            <PropertyRef Name="idAnimal" />
+          </Key>
+          <Property Name="idAnimal" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idPaisNaixement" Type="Int64" Nullable="false" />
+          <Property Name="idRecepcioBestiar" Type="Int64" Nullable="false" />
+          <Property Name="DIB" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Sexe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Edat" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DIBmare" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="paisos" Relationship="Self.FK__animals__idPaisN__25518C17" FromRole="animals" ToRole="paisos" />
+          <NavigationProperty Name="recepcions_bestiar" Relationship="Self.FK__animals__idRecep__2645B050" FromRole="animals" ToRole="recepcions_bestiar" />
+        </EntityType>
+        <EntityType Name="comptadors_lot_mes">
+          <Key>
+            <PropertyRef Name="idComptadorLotMes" />
+          </Key>
+          <Property Name="idComptadorLotMes" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomComptadorLotMes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="comunitats_autonomes">
+          <Key>
+            <PropertyRef Name="idComunitatAutonoma" />
+          </Key>
+          <Property Name="idComunitatAutonoma" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomComunitatAutonoma" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="abreviacioComunitatAutonoma" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="proveidors" Relationship="Self.FK__proveidor__idCom__3B40CD36" FromRole="comunitats_autonomes" ToRole="proveidors" />
+        </EntityType>
+        <EntityType Name="emmagatzematges">
+          <Key>
+            <PropertyRef Name="idEmmagatzematge" />
+          </Key>
+          <Property Name="idEmmagatzematge" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idEstatRefrigeracio" Type="Int64" Nullable="false" />
+          <Property Name="idUsuariEntrada" Type="Int64" Nullable="false" />
+          <Property Name="idUsuariSortida" Type="Int64" Nullable="false" />
+          <Property Name="numCambraFrigorifica" Type="Int32" Nullable="false" />
+          <Property Name="dataEntrada" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="dataSortida" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="temperaturaMaxima" Type="Double" Nullable="false" />
+          <Property Name="temperaturaMinima" Type="Double" Nullable="false" />
+          <NavigationProperty Name="estat_refrigeracions" Relationship="Self.FK__emmagatze__idEst__282DF8C2" FromRole="emmagatzematges" ToRole="estat_refrigeracions" />
+          <NavigationProperty Name="usuaris" Relationship="Self.FK__emmagatze__idUsu__29221CFB" FromRole="emmagatzematges" ToRole="usuaris" />
+          <NavigationProperty Name="usuaris1" Relationship="Self.FK__emmagatze__idUsu__2A164134" FromRole="emmagatzematges" ToRole="usuaris" />
+          <NavigationProperty Name="lots" Relationship="Self.FK__lots__idEmmagatz__2EDAF651" FromRole="emmagatzematges" ToRole="lots" />
+        </EntityType>
+        <EntityType Name="estables">
+          <Key>
+            <PropertyRef Name="idEstable" />
+          </Key>
+          <Property Name="idEstable" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idUsuariResponsable" Type="Int64" Nullable="false" />
+          <Property Name="idEstatEstabulacio" Type="Int64" Nullable="false" />
+          <Property Name="idInspeccioSanitaria" Type="Int64" Nullable="false" />
+          <Property Name="numEstable" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dataEntrada" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="dataSortida" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Incidencies" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="estat_estabulacions" Relationship="Self.FK__estables__idEsta__2B0A656D" FromRole="estables" ToRole="estat_estabulacions" />
+          <NavigationProperty Name="inspeccions" Relationship="Self.FK__estables__idInsp__2BFE89A6" FromRole="estables" ToRole="inspeccions" />
+          <NavigationProperty Name="usuaris" Relationship="Self.FK__estables__idUsua__2CF2ADDF" FromRole="estables" ToRole="usuaris" />
+          <NavigationProperty Name="lots" Relationship="Self.FK__lots__idEstabula__2FCF1A8A" FromRole="estables" ToRole="lots" />
+        </EntityType>
+        <EntityType Name="estat_estabulacions">
+          <Key>
+            <PropertyRef Name="idEstatEstabulacio" />
+          </Key>
+          <Property Name="idEstatEstabulacio" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomEstatEstabulacio" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="estables" Relationship="Self.FK__estables__idEsta__2B0A656D" FromRole="estat_estabulacions" ToRole="estables" />
+        </EntityType>
+        <EntityType Name="estat_inspeccions">
+          <Key>
+            <PropertyRef Name="idEstatInspeccio" />
+          </Key>
+          <Property Name="idEstatInspeccio" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomEstatInspeccio" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="inspeccions" Relationship="Self.FK__inspeccio__idEst__2DE6D218" FromRole="estat_inspeccions" ToRole="inspeccions" />
+        </EntityType>
+        <EntityType Name="estat_processos_envasat">
+          <Key>
+            <PropertyRef Name="idEstatProcesEnvasat" />
+          </Key>
+          <Property Name="idEstatProcesEnvasat" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomEstatProcesEnvasat" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="processats_finals" Relationship="Self.FK__processat__idUsu__3864608B" FromRole="estat_processos_envasat" ToRole="processats_finals" />
+        </EntityType>
+        <EntityType Name="estat_processos_inicials">
+          <Key>
+            <PropertyRef Name="idEstatProcesInicial" />
+          </Key>
+          <Property Name="idEstatProcesInicial" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Estat" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="processats_inicials" Relationship="Self.FK__processat__idEst__395884C4" FromRole="estat_processos_inicials" ToRole="processats_inicials" />
+        </EntityType>
+        <EntityType Name="estat_refrigeracions">
+          <Key>
+            <PropertyRef Name="idEstatRefrigeracio" />
+          </Key>
+          <Property Name="idEstatRefrigeracio" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomEstatRefrigeracio" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="emmagatzematges" Relationship="Self.FK__emmagatze__idEst__282DF8C2" FromRole="estat_refrigeracions" ToRole="emmagatzematges" />
+        </EntityType>
+        <EntityType Name="estat_sacrifici">
+          <Key>
+            <PropertyRef Name="idEstatSacrifici" />
+          </Key>
+          <Property Name="idEstatSacrifici" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomEstatSacrifici" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="sacrificis" Relationship="Self.FK__sacrifici__idEst__40058253" FromRole="estat_sacrifici" ToRole="sacrificis" />
+        </EntityType>
+        <EntityType Name="inspeccions">
+          <Key>
+            <PropertyRef Name="idInspeccio" />
+          </Key>
+          <Property Name="idInspeccio" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idEstatInspeccio" Type="Int64" Nullable="false" />
+          <Property Name="codiInspeccio" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codiVeterinari" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dataInspeccio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="descInspeccio" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="estables" Relationship="Self.FK__estables__idInsp__2BFE89A6" FromRole="inspeccions" ToRole="estables" />
+          <NavigationProperty Name="estat_inspeccions" Relationship="Self.FK__inspeccio__idEst__2DE6D218" FromRole="inspeccions" ToRole="estat_inspeccions" />
+          <NavigationProperty Name="sacrificis" Relationship="Self.FK__sacrifici__idIns__40F9A68C" FromRole="inspeccions" ToRole="sacrificis" />
+        </EntityType>
+        <EntityType Name="itemMenu">
+          <Key>
+            <PropertyRef Name="idItem" />
+          </Key>
+          <Property Name="idItem" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomItem" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ordre" Type="Int64" Nullable="false" />
+          <Property Name="dll" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="taula" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nivellAcces" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="lots">
+          <Key>
+            <PropertyRef Name="idLot" />
+          </Key>
+          <Property Name="idLot" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idRemo" Type="Int64" Nullable="false" />
+          <Property Name="idEstabulacio" Type="Int64" />
+          <Property Name="idSacrifici" Type="Int64" />
+          <Property Name="idProcessatInicial" Type="Int64" />
+          <Property Name="idProcessatFinal" Type="Int64" />
+          <Property Name="idEmmagatzematge" Type="Int64" />
+          <Property Name="numLot" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="emmagatzematges" Relationship="Self.FK__lots__idEmmagatz__2EDAF651" FromRole="lots" ToRole="emmagatzematges" />
+          <NavigationProperty Name="estables" Relationship="Self.FK__lots__idEstabula__2FCF1A8A" FromRole="lots" ToRole="estables" />
+          <NavigationProperty Name="processats_finals" Relationship="Self.FK__lots__idProcessa__30C33EC3" FromRole="lots" ToRole="processats_finals" />
+          <NavigationProperty Name="processats_inicials" Relationship="Self.FK__lots__idProcessa__31B762FC" FromRole="lots" ToRole="processats_inicials" />
+          <NavigationProperty Name="recepcions_bestiar" Relationship="Self.FK__lots__idRemo__32AB8735" FromRole="lots" ToRole="recepcions_bestiar" />
+          <NavigationProperty Name="sacrificis" Relationship="Self.FK__lots__idSacrific__339FAB6E" FromRole="lots" ToRole="sacrificis" />
+        </EntityType>
+        <EntityType Name="nivells_acces">
+          <Key>
+            <PropertyRef Name="idNivellAcces" />
+          </Key>
+          <Property Name="idNivellAcces" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomNivellAcces" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="abreviacioNivellAcces" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="permisos" Relationship="Self.FK__permisos__idNive__46B27FE2" FromRole="nivells_acces" ToRole="permisos" />
+        </EntityType>
+        <EntityType Name="paisos">
+          <Key>
+            <PropertyRef Name="idPais" />
+          </Key>
+          <Property Name="idPais" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomPais" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="abreviaturaPais" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="animals" Relationship="Self.FK__animals__idPaisN__25518C17" FromRole="paisos" ToRole="animals" />
+        </EntityType>
+        <EntityType Name="processats_finals">
+          <Key>
+            <PropertyRef Name="idProcessatFinal" />
+          </Key>
+          <Property Name="idProcessatFinal" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idUsuari" Type="Int64" Nullable="false" />
+          <Property Name="idSafata" Type="Int64" Nullable="false" />
+          <Property Name="idEstatEnvasat" Type="Int64" Nullable="false" />
+          <Property Name="DIB" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dataEnvasat" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="diaCaducitat" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="pesSafata" Type="Double" Nullable="false" />
+          <Property Name="percO2" Type="Double" Nullable="false" />
+          <Property Name="percCO2" Type="Double" Nullable="false" />
+          <Property Name="Mioglobina" Type="Double" Nullable="false" />
+          <NavigationProperty Name="estat_processos_envasat" Relationship="Self.FK__processat__idUsu__3864608B" FromRole="processats_finals" ToRole="estat_processos_envasat" />
+          <NavigationProperty Name="lots" Relationship="Self.FK__lots__idProcessa__30C33EC3" FromRole="processats_finals" ToRole="lots" />
+          <NavigationProperty Name="referencies" Relationship="Self.FK__processat__idSaf__367C1819" FromRole="processats_finals" ToRole="referencies" />
+          <NavigationProperty Name="usuaris" Relationship="Self.FK__processat__idUsu__37703C52" FromRole="processats_finals" ToRole="usuaris" />
+        </EntityType>
+        <EntityType Name="processats_inicials">
+          <Key>
+            <PropertyRef Name="idProcessatInicial" />
+          </Key>
+          <Property Name="idProcessatInicial" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idUsuari" Type="Int64" Nullable="false" />
+          <Property Name="idEstatInicial" Type="Int64" Nullable="false" />
+          <Property Name="numCarril" Type="Int32" Nullable="false" />
+          <Property Name="DIB" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pesCanal" Type="Double" Nullable="false" />
+          <NavigationProperty Name="estat_processos_inicials" Relationship="Self.FK__processat__idEst__395884C4" FromRole="processats_inicials" ToRole="estat_processos_inicials" />
+          <NavigationProperty Name="lots" Relationship="Self.FK__lots__idProcessa__31B762FC" FromRole="processats_inicials" ToRole="lots" />
+          <NavigationProperty Name="usuaris" Relationship="Self.FK__processat__idUsu__3A4CA8FD" FromRole="processats_inicials" ToRole="usuaris" />
+        </EntityType>
+        <EntityType Name="proveidors">
+          <Key>
+            <PropertyRef Name="idProveidor" />
+          </Key>
+          <Property Name="idProveidor" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idComunitatAutonoma" Type="Int64" Nullable="false" />
+          <Property Name="idTipusExplotacio" Type="Int64" Nullable="false" />
+          <Property Name="idSituacioActual" Type="Int64" Nullable="false" />
+          <Property Name="nomResponsable" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="primerCognom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="segonCognom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nomExplotacio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="direccioExplotacio" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codiExplotacio" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="comunitats_autonomes" Relationship="Self.FK__proveidor__idCom__3B40CD36" FromRole="proveidors" ToRole="comunitats_autonomes" />
+          <NavigationProperty Name="situacio_explotacions" Relationship="Self.FK__proveidor__idSit__3C34F16F" FromRole="proveidors" ToRole="situacio_explotacions" />
+          <NavigationProperty Name="tipus_explotacions" Relationship="Self.FK__proveidor__idTip__3D2915A8" FromRole="proveidors" ToRole="tipus_explotacions" />
+          <NavigationProperty Name="recepcions_bestiar" Relationship="Self.FK__recepcion__idPro__3E1D39E1" FromRole="proveidors" ToRole="recepcions_bestiar" />
+        </EntityType>
+        <EntityType Name="recepcions_bestiar">
+          <Key>
+            <PropertyRef Name="idRecepcio" />
+          </Key>
+          <Property Name="idRecepcio" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idUsuariReceptor" Type="Int64" Nullable="false" />
+          <Property Name="idProveidor" Type="Int64" Nullable="false" />
+          <Property Name="codiREMO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codiREGA" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codiTransportista" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dataSortidaExplotacio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="dataEntradaEscorxador" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="numTotalAnimals" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="animals" Relationship="Self.FK__animals__idRecep__2645B050" FromRole="recepcions_bestiar" ToRole="animals" />
+          <NavigationProperty Name="lots" Relationship="Self.FK__lots__idRemo__32AB8735" FromRole="recepcions_bestiar" ToRole="lots" />
+          <NavigationProperty Name="proveidors" Relationship="Self.FK__recepcion__idPro__3E1D39E1" FromRole="recepcions_bestiar" ToRole="proveidors" />
+          <NavigationProperty Name="usuaris" Relationship="Self.FK__recepcion__idUsu__3F115E1A" FromRole="recepcions_bestiar" ToRole="usuaris" />
+        </EntityType>
+        <EntityType Name="referencies">
+          <Key>
+            <PropertyRef Name="idReferencia" />
+          </Key>
+          <Property Name="idReferencia" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomReferencia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="processats_finals" Relationship="Self.FK__processat__idSaf__367C1819" FromRole="referencies" ToRole="processats_finals" />
+        </EntityType>
+        <EntityType Name="sacrificis">
+          <Key>
+            <PropertyRef Name="idSacrifici" />
+          </Key>
+          <Property Name="idSacrifici" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idUsuari" Type="Int64" Nullable="false" />
+          <Property Name="idSistemaAtordiment" Type="Int64" Nullable="false" />
+          <Property Name="idInspeccioSanitaria" Type="Int64" Nullable="false" />
+          <Property Name="idEstatSacrifici" Type="Int64" />
+          <Property Name="boxImmobilitzacio" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AparellAtordiment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dataSacrifici" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Incidencies" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="estat_sacrifici" Relationship="Self.FK__sacrifici__idEst__40058253" FromRole="sacrificis" ToRole="estat_sacrifici" />
+          <NavigationProperty Name="inspeccions" Relationship="Self.FK__sacrifici__idIns__40F9A68C" FromRole="sacrificis" ToRole="inspeccions" />
+          <NavigationProperty Name="lots" Relationship="Self.FK__lots__idSacrific__339FAB6E" FromRole="sacrificis" ToRole="lots" />
+          <NavigationProperty Name="sistemes_atordiment" Relationship="Self.FK__sacrifici__idSis__41EDCAC5" FromRole="sacrificis" ToRole="sistemes_atordiment" />
+          <NavigationProperty Name="usuaris" Relationship="Self.FK__sacrifici__idUsu__42E1EEFE" FromRole="sacrificis" ToRole="usuaris" />
+        </EntityType>
+        <EntityType Name="sistemes_atordiment">
+          <Key>
+            <PropertyRef Name="idSistemaAtordiment" />
+          </Key>
+          <Property Name="idSistemaAtordiment" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomSistemaAtordiment" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="sacrificis" Relationship="Self.FK__sacrifici__idSis__41EDCAC5" FromRole="sistemes_atordiment" ToRole="sacrificis" />
+        </EntityType>
+        <EntityType Name="situacio_explotacions">
+          <Key>
+            <PropertyRef Name="idSituacioExplotacio" />
+          </Key>
+          <Property Name="idSituacioExplotacio" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomSituacioExplotacio" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="proveidors" Relationship="Self.FK__proveidor__idSit__3C34F16F" FromRole="situacio_explotacions" ToRole="proveidors" />
+        </EntityType>
+        <EntityType Name="tipus_explotacions">
+          <Key>
+            <PropertyRef Name="idTipusExplotacio" />
+          </Key>
+          <Property Name="idTipusExplotacio" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomTipusExplotacio" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="proveidors" Relationship="Self.FK__proveidor__idTip__3D2915A8" FromRole="tipus_explotacions" ToRole="proveidors" />
+        </EntityType>
+        <EntityType Name="usuaris">
+          <Key>
+            <PropertyRef Name="idUsuari" />
+          </Key>
+          <Property Name="idUsuari" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="primerCognom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="segonCognom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codiUsuari" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="actiu" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="emmagatzematges" Relationship="Self.FK__emmagatze__idUsu__29221CFB" FromRole="usuaris" ToRole="emmagatzematges" />
+          <NavigationProperty Name="emmagatzematges1" Relationship="Self.FK__emmagatze__idUsu__2A164134" FromRole="usuaris" ToRole="emmagatzematges" />
+          <NavigationProperty Name="estables" Relationship="Self.FK__estables__idUsua__2CF2ADDF" FromRole="usuaris" ToRole="estables" />
+          <NavigationProperty Name="processats_finals" Relationship="Self.FK__processat__idUsu__37703C52" FromRole="usuaris" ToRole="processats_finals" />
+          <NavigationProperty Name="processats_inicials" Relationship="Self.FK__processat__idUsu__3A4CA8FD" FromRole="usuaris" ToRole="processats_inicials" />
+          <NavigationProperty Name="recepcions_bestiar" Relationship="Self.FK__recepcion__idUsu__3F115E1A" FromRole="usuaris" ToRole="recepcions_bestiar" />
+          <NavigationProperty Name="sacrificis" Relationship="Self.FK__sacrifici__idUsu__42E1EEFE" FromRole="usuaris" ToRole="sacrificis" />
+          <NavigationProperty Name="permisos" Relationship="Self.FK__permisos__idUsua__3587F3E0" FromRole="usuaris" ToRole="permisos" />
+          <NavigationProperty Name="permisos1" Relationship="Self.FK__permisos__idUsua__45BE5BA9" FromRole="usuaris" ToRole="permisos" />
+          <NavigationProperty Name="permisos2" Relationship="Self.FK__permisos__idUsua__47A6A41B" FromRole="usuaris" ToRole="permisos" />
+        </EntityType>
+        <EntityType Name="permisos">
+          <Key>
+            <PropertyRef Name="idUsuari" />
+            <PropertyRef Name="idNivellAcces" />
+          </Key>
+          <Property Name="idUsuari" Type="Int64" Nullable="false" />
+          <Property Name="idNivellAcces" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="nivells_acces" Relationship="Self.FK__permisos__idNive__46B27FE2" FromRole="permisos" ToRole="nivells_acces" />
+          <NavigationProperty Name="usuaris" Relationship="Self.FK__permisos__idUsua__3587F3E0" FromRole="permisos" ToRole="usuaris" />
+          <NavigationProperty Name="usuaris1" Relationship="Self.FK__permisos__idUsua__45BE5BA9" FromRole="permisos" ToRole="usuaris" />
+          <NavigationProperty Name="usuaris2" Relationship="Self.FK__permisos__idUsua__47A6A41B" FromRole="permisos" ToRole="usuaris" />
+        </EntityType>
+        <Association Name="FK__animals__idPaisN__25518C17">
+          <End Role="paisos" Type="Self.paisos" Multiplicity="1" />
+          <End Role="animals" Type="Self.animals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="paisos">
+              <PropertyRef Name="idPais" />
+            </Principal>
+            <Dependent Role="animals">
+              <PropertyRef Name="idPaisNaixement" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__animals__idRecep__2645B050">
+          <End Role="recepcions_bestiar" Type="Self.recepcions_bestiar" Multiplicity="1" />
+          <End Role="animals" Type="Self.animals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="recepcions_bestiar">
+              <PropertyRef Name="idRecepcio" />
+            </Principal>
+            <Dependent Role="animals">
+              <PropertyRef Name="idRecepcioBestiar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__proveidor__idCom__3B40CD36">
+          <End Role="comunitats_autonomes" Type="Self.comunitats_autonomes" Multiplicity="1" />
+          <End Role="proveidors" Type="Self.proveidors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="comunitats_autonomes">
+              <PropertyRef Name="idComunitatAutonoma" />
+            </Principal>
+            <Dependent Role="proveidors">
+              <PropertyRef Name="idComunitatAutonoma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__emmagatze__idEst__282DF8C2">
+          <End Role="estat_refrigeracions" Type="Self.estat_refrigeracions" Multiplicity="1" />
+          <End Role="emmagatzematges" Type="Self.emmagatzematges" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estat_refrigeracions">
+              <PropertyRef Name="idEstatRefrigeracio" />
+            </Principal>
+            <Dependent Role="emmagatzematges">
+              <PropertyRef Name="idEstatRefrigeracio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__emmagatze__idUsu__29221CFB">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="emmagatzematges" Type="Self.emmagatzematges" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="emmagatzematges">
+              <PropertyRef Name="idUsuariEntrada" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__emmagatze__idUsu__2A164134">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="emmagatzematges" Type="Self.emmagatzematges" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="emmagatzematges">
+              <PropertyRef Name="idUsuariSortida" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__lots__idEmmagatz__2EDAF651">
+          <End Role="emmagatzematges" Type="Self.emmagatzematges" Multiplicity="0..1" />
+          <End Role="lots" Type="Self.lots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="emmagatzematges">
+              <PropertyRef Name="idEmmagatzematge" />
+            </Principal>
+            <Dependent Role="lots">
+              <PropertyRef Name="idEmmagatzematge" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__estables__idEsta__2B0A656D">
+          <End Role="estat_estabulacions" Type="Self.estat_estabulacions" Multiplicity="1" />
+          <End Role="estables" Type="Self.estables" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estat_estabulacions">
+              <PropertyRef Name="idEstatEstabulacio" />
+            </Principal>
+            <Dependent Role="estables">
+              <PropertyRef Name="idEstatEstabulacio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__estables__idInsp__2BFE89A6">
+          <End Role="inspeccions" Type="Self.inspeccions" Multiplicity="1" />
+          <End Role="estables" Type="Self.estables" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inspeccions">
+              <PropertyRef Name="idInspeccio" />
+            </Principal>
+            <Dependent Role="estables">
+              <PropertyRef Name="idInspeccioSanitaria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__estables__idUsua__2CF2ADDF">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="estables" Type="Self.estables" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="estables">
+              <PropertyRef Name="idUsuariResponsable" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__lots__idEstabula__2FCF1A8A">
+          <End Role="estables" Type="Self.estables" Multiplicity="0..1" />
+          <End Role="lots" Type="Self.lots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estables">
+              <PropertyRef Name="idEstable" />
+            </Principal>
+            <Dependent Role="lots">
+              <PropertyRef Name="idEstabulacio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__inspeccio__idEst__2DE6D218">
+          <End Role="estat_inspeccions" Type="Self.estat_inspeccions" Multiplicity="1" />
+          <End Role="inspeccions" Type="Self.inspeccions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estat_inspeccions">
+              <PropertyRef Name="idEstatInspeccio" />
+            </Principal>
+            <Dependent Role="inspeccions">
+              <PropertyRef Name="idEstatInspeccio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__processat__idUsu__3864608B">
+          <End Role="estat_processos_envasat" Type="Self.estat_processos_envasat" Multiplicity="1" />
+          <End Role="processats_finals" Type="Self.processats_finals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estat_processos_envasat">
+              <PropertyRef Name="idEstatProcesEnvasat" />
+            </Principal>
+            <Dependent Role="processats_finals">
+              <PropertyRef Name="idUsuari" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__processat__idEst__395884C4">
+          <End Role="estat_processos_inicials" Type="Self.estat_processos_inicials" Multiplicity="1" />
+          <End Role="processats_inicials" Type="Self.processats_inicials" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estat_processos_inicials">
+              <PropertyRef Name="idEstatProcesInicial" />
+            </Principal>
+            <Dependent Role="processats_inicials">
+              <PropertyRef Name="idEstatInicial" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__sacrifici__idEst__40058253">
+          <End Role="estat_sacrifici" Type="Self.estat_sacrifici" Multiplicity="0..1" />
+          <End Role="sacrificis" Type="Self.sacrificis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estat_sacrifici">
+              <PropertyRef Name="idEstatSacrifici" />
+            </Principal>
+            <Dependent Role="sacrificis">
+              <PropertyRef Name="idEstatSacrifici" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__sacrifici__idIns__40F9A68C">
+          <End Role="inspeccions" Type="Self.inspeccions" Multiplicity="1" />
+          <End Role="sacrificis" Type="Self.sacrificis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="inspeccions">
+              <PropertyRef Name="idInspeccio" />
+            </Principal>
+            <Dependent Role="sacrificis">
+              <PropertyRef Name="idInspeccioSanitaria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__lots__idProcessa__30C33EC3">
+          <End Role="processats_finals" Type="Self.processats_finals" Multiplicity="0..1" />
+          <End Role="lots" Type="Self.lots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="processats_finals">
+              <PropertyRef Name="idProcessatFinal" />
+            </Principal>
+            <Dependent Role="lots">
+              <PropertyRef Name="idProcessatFinal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__lots__idProcessa__31B762FC">
+          <End Role="processats_inicials" Type="Self.processats_inicials" Multiplicity="0..1" />
+          <End Role="lots" Type="Self.lots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="processats_inicials">
+              <PropertyRef Name="idProcessatInicial" />
+            </Principal>
+            <Dependent Role="lots">
+              <PropertyRef Name="idProcessatInicial" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__lots__idRemo__32AB8735">
+          <End Role="recepcions_bestiar" Type="Self.recepcions_bestiar" Multiplicity="1" />
+          <End Role="lots" Type="Self.lots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="recepcions_bestiar">
+              <PropertyRef Name="idRecepcio" />
+            </Principal>
+            <Dependent Role="lots">
+              <PropertyRef Name="idRemo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__lots__idSacrific__339FAB6E">
+          <End Role="sacrificis" Type="Self.sacrificis" Multiplicity="0..1" />
+          <End Role="lots" Type="Self.lots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sacrificis">
+              <PropertyRef Name="idSacrifici" />
+            </Principal>
+            <Dependent Role="lots">
+              <PropertyRef Name="idSacrifici" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__permisos__idNive__46B27FE2">
+          <End Role="nivells_acces" Type="Self.nivells_acces" Multiplicity="1" />
+          <End Role="permisos" Type="Self.permisos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nivells_acces">
+              <PropertyRef Name="idNivellAcces" />
+            </Principal>
+            <Dependent Role="permisos">
+              <PropertyRef Name="idNivellAcces" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__processat__idSaf__367C1819">
+          <End Role="referencies" Type="Self.referencies" Multiplicity="1" />
+          <End Role="processats_finals" Type="Self.processats_finals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="referencies">
+              <PropertyRef Name="idReferencia" />
+            </Principal>
+            <Dependent Role="processats_finals">
+              <PropertyRef Name="idSafata" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__processat__idUsu__37703C52">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="processats_finals" Type="Self.processats_finals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="processats_finals">
+              <PropertyRef Name="idUsuari" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__processat__idUsu__3A4CA8FD">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="processats_inicials" Type="Self.processats_inicials" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="processats_inicials">
+              <PropertyRef Name="idUsuari" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__proveidor__idSit__3C34F16F">
+          <End Role="situacio_explotacions" Type="Self.situacio_explotacions" Multiplicity="1" />
+          <End Role="proveidors" Type="Self.proveidors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="situacio_explotacions">
+              <PropertyRef Name="idSituacioExplotacio" />
+            </Principal>
+            <Dependent Role="proveidors">
+              <PropertyRef Name="idSituacioActual" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__proveidor__idTip__3D2915A8">
+          <End Role="tipus_explotacions" Type="Self.tipus_explotacions" Multiplicity="1" />
+          <End Role="proveidors" Type="Self.proveidors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipus_explotacions">
+              <PropertyRef Name="idTipusExplotacio" />
+            </Principal>
+            <Dependent Role="proveidors">
+              <PropertyRef Name="idTipusExplotacio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recepcion__idPro__3E1D39E1">
+          <End Role="proveidors" Type="Self.proveidors" Multiplicity="1" />
+          <End Role="recepcions_bestiar" Type="Self.recepcions_bestiar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="proveidors">
+              <PropertyRef Name="idProveidor" />
+            </Principal>
+            <Dependent Role="recepcions_bestiar">
+              <PropertyRef Name="idProveidor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recepcion__idUsu__3F115E1A">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="recepcions_bestiar" Type="Self.recepcions_bestiar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="recepcions_bestiar">
+              <PropertyRef Name="idUsuariReceptor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__sacrifici__idSis__41EDCAC5">
+          <End Role="sistemes_atordiment" Type="Self.sistemes_atordiment" Multiplicity="1" />
+          <End Role="sacrificis" Type="Self.sacrificis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sistemes_atordiment">
+              <PropertyRef Name="idSistemaAtordiment" />
+            </Principal>
+            <Dependent Role="sacrificis">
+              <PropertyRef Name="idSistemaAtordiment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__sacrifici__idUsu__42E1EEFE">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="sacrificis" Type="Self.sacrificis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="sacrificis">
+              <PropertyRef Name="idUsuari" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__permisos__idUsua__3587F3E0">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="permisos" Type="Self.permisos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="permisos">
+              <PropertyRef Name="idUsuari" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__permisos__idUsua__45BE5BA9">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="permisos" Type="Self.permisos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="permisos">
+              <PropertyRef Name="idUsuari" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__permisos__idUsua__47A6A41B">
+          <End Role="usuaris" Type="Self.usuaris" Multiplicity="1" />
+          <End Role="permisos" Type="Self.permisos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuaris">
+              <PropertyRef Name="idUsuari" />
+            </Principal>
+            <Dependent Role="permisos">
+              <PropertyRef Name="idUsuari" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="escorxadam" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="animals" EntityType="Self.animals" />
+          <EntitySet Name="comptadors_lot_mes" EntityType="Self.comptadors_lot_mes" />
+          <EntitySet Name="comunitats_autonomes" EntityType="Self.comunitats_autonomes" />
+          <EntitySet Name="emmagatzematges" EntityType="Self.emmagatzematges" />
+          <EntitySet Name="estables" EntityType="Self.estables" />
+          <EntitySet Name="estat_estabulacions" EntityType="Self.estat_estabulacions" />
+          <EntitySet Name="estat_inspeccions" EntityType="Self.estat_inspeccions" />
+          <EntitySet Name="estat_processos_envasat" EntityType="Self.estat_processos_envasat" />
+          <EntitySet Name="estat_processos_inicials" EntityType="Self.estat_processos_inicials" />
+          <EntitySet Name="estat_refrigeracions" EntityType="Self.estat_refrigeracions" />
+          <EntitySet Name="estat_sacrifici" EntityType="Self.estat_sacrifici" />
+          <EntitySet Name="inspeccions" EntityType="Self.inspeccions" />
+          <EntitySet Name="itemMenu" EntityType="Self.itemMenu" />
+          <EntitySet Name="lots" EntityType="Self.lots" />
+          <EntitySet Name="nivells_acces" EntityType="Self.nivells_acces" />
+          <EntitySet Name="paisos" EntityType="Self.paisos" />
+          <EntitySet Name="processats_finals" EntityType="Self.processats_finals" />
+          <EntitySet Name="processats_inicials" EntityType="Self.processats_inicials" />
+          <EntitySet Name="proveidors" EntityType="Self.proveidors" />
+          <EntitySet Name="recepcions_bestiar" EntityType="Self.recepcions_bestiar" />
+          <EntitySet Name="referencies" EntityType="Self.referencies" />
+          <EntitySet Name="sacrificis" EntityType="Self.sacrificis" />
+          <EntitySet Name="sistemes_atordiment" EntityType="Self.sistemes_atordiment" />
+          <EntitySet Name="situacio_explotacions" EntityType="Self.situacio_explotacions" />
+          <EntitySet Name="tipus_explotacions" EntityType="Self.tipus_explotacions" />
+          <EntitySet Name="usuaris" EntityType="Self.usuaris" />
+          <EntitySet Name="permisos" EntityType="Self.permisos" />
+          <AssociationSet Name="FK__animals__idPaisN__25518C17" Association="Self.FK__animals__idPaisN__25518C17">
+            <End Role="paisos" EntitySet="paisos" />
+            <End Role="animals" EntitySet="animals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__animals__idRecep__2645B050" Association="Self.FK__animals__idRecep__2645B050">
+            <End Role="recepcions_bestiar" EntitySet="recepcions_bestiar" />
+            <End Role="animals" EntitySet="animals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__proveidor__idCom__3B40CD36" Association="Self.FK__proveidor__idCom__3B40CD36">
+            <End Role="comunitats_autonomes" EntitySet="comunitats_autonomes" />
+            <End Role="proveidors" EntitySet="proveidors" />
+          </AssociationSet>
+          <AssociationSet Name="FK__emmagatze__idEst__282DF8C2" Association="Self.FK__emmagatze__idEst__282DF8C2">
+            <End Role="estat_refrigeracions" EntitySet="estat_refrigeracions" />
+            <End Role="emmagatzematges" EntitySet="emmagatzematges" />
+          </AssociationSet>
+          <AssociationSet Name="FK__emmagatze__idUsu__29221CFB" Association="Self.FK__emmagatze__idUsu__29221CFB">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="emmagatzematges" EntitySet="emmagatzematges" />
+          </AssociationSet>
+          <AssociationSet Name="FK__emmagatze__idUsu__2A164134" Association="Self.FK__emmagatze__idUsu__2A164134">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="emmagatzematges" EntitySet="emmagatzematges" />
+          </AssociationSet>
+          <AssociationSet Name="FK__lots__idEmmagatz__2EDAF651" Association="Self.FK__lots__idEmmagatz__2EDAF651">
+            <End Role="emmagatzematges" EntitySet="emmagatzematges" />
+            <End Role="lots" EntitySet="lots" />
+          </AssociationSet>
+          <AssociationSet Name="FK__estables__idEsta__2B0A656D" Association="Self.FK__estables__idEsta__2B0A656D">
+            <End Role="estat_estabulacions" EntitySet="estat_estabulacions" />
+            <End Role="estables" EntitySet="estables" />
+          </AssociationSet>
+          <AssociationSet Name="FK__estables__idInsp__2BFE89A6" Association="Self.FK__estables__idInsp__2BFE89A6">
+            <End Role="inspeccions" EntitySet="inspeccions" />
+            <End Role="estables" EntitySet="estables" />
+          </AssociationSet>
+          <AssociationSet Name="FK__estables__idUsua__2CF2ADDF" Association="Self.FK__estables__idUsua__2CF2ADDF">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="estables" EntitySet="estables" />
+          </AssociationSet>
+          <AssociationSet Name="FK__lots__idEstabula__2FCF1A8A" Association="Self.FK__lots__idEstabula__2FCF1A8A">
+            <End Role="estables" EntitySet="estables" />
+            <End Role="lots" EntitySet="lots" />
+          </AssociationSet>
+          <AssociationSet Name="FK__inspeccio__idEst__2DE6D218" Association="Self.FK__inspeccio__idEst__2DE6D218">
+            <End Role="estat_inspeccions" EntitySet="estat_inspeccions" />
+            <End Role="inspeccions" EntitySet="inspeccions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__processat__idUsu__3864608B" Association="Self.FK__processat__idUsu__3864608B">
+            <End Role="estat_processos_envasat" EntitySet="estat_processos_envasat" />
+            <End Role="processats_finals" EntitySet="processats_finals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__processat__idEst__395884C4" Association="Self.FK__processat__idEst__395884C4">
+            <End Role="estat_processos_inicials" EntitySet="estat_processos_inicials" />
+            <End Role="processats_inicials" EntitySet="processats_inicials" />
+          </AssociationSet>
+          <AssociationSet Name="FK__sacrifici__idEst__40058253" Association="Self.FK__sacrifici__idEst__40058253">
+            <End Role="estat_sacrifici" EntitySet="estat_sacrifici" />
+            <End Role="sacrificis" EntitySet="sacrificis" />
+          </AssociationSet>
+          <AssociationSet Name="FK__sacrifici__idIns__40F9A68C" Association="Self.FK__sacrifici__idIns__40F9A68C">
+            <End Role="inspeccions" EntitySet="inspeccions" />
+            <End Role="sacrificis" EntitySet="sacrificis" />
+          </AssociationSet>
+          <AssociationSet Name="FK__lots__idProcessa__30C33EC3" Association="Self.FK__lots__idProcessa__30C33EC3">
+            <End Role="processats_finals" EntitySet="processats_finals" />
+            <End Role="lots" EntitySet="lots" />
+          </AssociationSet>
+          <AssociationSet Name="FK__lots__idProcessa__31B762FC" Association="Self.FK__lots__idProcessa__31B762FC">
+            <End Role="processats_inicials" EntitySet="processats_inicials" />
+            <End Role="lots" EntitySet="lots" />
+          </AssociationSet>
+          <AssociationSet Name="FK__lots__idRemo__32AB8735" Association="Self.FK__lots__idRemo__32AB8735">
+            <End Role="recepcions_bestiar" EntitySet="recepcions_bestiar" />
+            <End Role="lots" EntitySet="lots" />
+          </AssociationSet>
+          <AssociationSet Name="FK__lots__idSacrific__339FAB6E" Association="Self.FK__lots__idSacrific__339FAB6E">
+            <End Role="sacrificis" EntitySet="sacrificis" />
+            <End Role="lots" EntitySet="lots" />
+          </AssociationSet>
+          <AssociationSet Name="FK__permisos__idNive__46B27FE2" Association="Self.FK__permisos__idNive__46B27FE2">
+            <End Role="nivells_acces" EntitySet="nivells_acces" />
+            <End Role="permisos" EntitySet="permisos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__processat__idSaf__367C1819" Association="Self.FK__processat__idSaf__367C1819">
+            <End Role="referencies" EntitySet="referencies" />
+            <End Role="processats_finals" EntitySet="processats_finals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__processat__idUsu__37703C52" Association="Self.FK__processat__idUsu__37703C52">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="processats_finals" EntitySet="processats_finals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__processat__idUsu__3A4CA8FD" Association="Self.FK__processat__idUsu__3A4CA8FD">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="processats_inicials" EntitySet="processats_inicials" />
+          </AssociationSet>
+          <AssociationSet Name="FK__proveidor__idSit__3C34F16F" Association="Self.FK__proveidor__idSit__3C34F16F">
+            <End Role="situacio_explotacions" EntitySet="situacio_explotacions" />
+            <End Role="proveidors" EntitySet="proveidors" />
+          </AssociationSet>
+          <AssociationSet Name="FK__proveidor__idTip__3D2915A8" Association="Self.FK__proveidor__idTip__3D2915A8">
+            <End Role="tipus_explotacions" EntitySet="tipus_explotacions" />
+            <End Role="proveidors" EntitySet="proveidors" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recepcion__idPro__3E1D39E1" Association="Self.FK__recepcion__idPro__3E1D39E1">
+            <End Role="proveidors" EntitySet="proveidors" />
+            <End Role="recepcions_bestiar" EntitySet="recepcions_bestiar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recepcion__idUsu__3F115E1A" Association="Self.FK__recepcion__idUsu__3F115E1A">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="recepcions_bestiar" EntitySet="recepcions_bestiar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__sacrifici__idSis__41EDCAC5" Association="Self.FK__sacrifici__idSis__41EDCAC5">
+            <End Role="sistemes_atordiment" EntitySet="sistemes_atordiment" />
+            <End Role="sacrificis" EntitySet="sacrificis" />
+          </AssociationSet>
+          <AssociationSet Name="FK__sacrifici__idUsu__42E1EEFE" Association="Self.FK__sacrifici__idUsu__42E1EEFE">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="sacrificis" EntitySet="sacrificis" />
+          </AssociationSet>
+          <AssociationSet Name="FK__permisos__idUsua__3587F3E0" Association="Self.FK__permisos__idUsua__3587F3E0">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="permisos" EntitySet="permisos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__permisos__idUsua__45BE5BA9" Association="Self.FK__permisos__idUsua__45BE5BA9">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="permisos" EntitySet="permisos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__permisos__idUsua__47A6A41B" Association="Self.FK__permisos__idUsua__47A6A41B">
+            <End Role="usuaris" EntitySet="usuaris" />
+            <End Role="permisos" EntitySet="permisos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="escorxadam2ModelStoreContainer" CdmEntityContainer="escorxadam">
+          <EntitySetMapping Name="animals">
+            <EntityTypeMapping TypeName="escorxadam2Model.animals">
+              <MappingFragment StoreEntitySet="animals">
+                <ScalarProperty Name="idAnimal" ColumnName="idAnimal" />
+                <ScalarProperty Name="idPaisNaixement" ColumnName="idPaisNaixement" />
+                <ScalarProperty Name="idRecepcioBestiar" ColumnName="idRecepcioBestiar" />
+                <ScalarProperty Name="DIB" ColumnName="DIB" />
+                <ScalarProperty Name="Sexe" ColumnName="Sexe" />
+                <ScalarProperty Name="Edat" ColumnName="Edat" />
+                <ScalarProperty Name="DIBmare" ColumnName="DIBmare" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="comptadors_lot_mes">
+            <EntityTypeMapping TypeName="escorxadam2Model.comptadors_lot_mes">
+              <MappingFragment StoreEntitySet="comptadors_lot_mes">
+                <ScalarProperty Name="idComptadorLotMes" ColumnName="idComptadorLotMes" />
+                <ScalarProperty Name="nomComptadorLotMes" ColumnName="nomComptadorLotMes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="comunitats_autonomes">
+            <EntityTypeMapping TypeName="escorxadam2Model.comunitats_autonomes">
+              <MappingFragment StoreEntitySet="comunitats_autonomes">
+                <ScalarProperty Name="idComunitatAutonoma" ColumnName="idComunitatAutonoma" />
+                <ScalarProperty Name="nomComunitatAutonoma" ColumnName="nomComunitatAutonoma" />
+                <ScalarProperty Name="abreviacioComunitatAutonoma" ColumnName="abreviacioComunitatAutonoma" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="emmagatzematges">
+            <EntityTypeMapping TypeName="escorxadam2Model.emmagatzematges">
+              <MappingFragment StoreEntitySet="emmagatzematges">
+                <ScalarProperty Name="idEmmagatzematge" ColumnName="idEmmagatzematge" />
+                <ScalarProperty Name="idEstatRefrigeracio" ColumnName="idEstatRefrigeracio" />
+                <ScalarProperty Name="idUsuariEntrada" ColumnName="idUsuariEntrada" />
+                <ScalarProperty Name="idUsuariSortida" ColumnName="idUsuariSortida" />
+                <ScalarProperty Name="numCambraFrigorifica" ColumnName="numCambraFrigorifica" />
+                <ScalarProperty Name="dataEntrada" ColumnName="dataEntrada" />
+                <ScalarProperty Name="dataSortida" ColumnName="dataSortida" />
+                <ScalarProperty Name="temperaturaMaxima" ColumnName="temperaturaMaxima" />
+                <ScalarProperty Name="temperaturaMinima" ColumnName="temperaturaMinima" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estables">
+            <EntityTypeMapping TypeName="escorxadam2Model.estables">
+              <MappingFragment StoreEntitySet="estables">
+                <ScalarProperty Name="idEstable" ColumnName="idEstable" />
+                <ScalarProperty Name="idUsuariResponsable" ColumnName="idUsuariResponsable" />
+                <ScalarProperty Name="idEstatEstabulacio" ColumnName="idEstatEstabulacio" />
+                <ScalarProperty Name="idInspeccioSanitaria" ColumnName="idInspeccioSanitaria" />
+                <ScalarProperty Name="numEstable" ColumnName="numEstable" />
+                <ScalarProperty Name="dataEntrada" ColumnName="dataEntrada" />
+                <ScalarProperty Name="dataSortida" ColumnName="dataSortida" />
+                <ScalarProperty Name="Incidencies" ColumnName="Incidencies" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estat_estabulacions">
+            <EntityTypeMapping TypeName="escorxadam2Model.estat_estabulacions">
+              <MappingFragment StoreEntitySet="estat_estabulacions">
+                <ScalarProperty Name="idEstatEstabulacio" ColumnName="idEstatEstabulacio" />
+                <ScalarProperty Name="nomEstatEstabulacio" ColumnName="nomEstatEstabulacio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estat_inspeccions">
+            <EntityTypeMapping TypeName="escorxadam2Model.estat_inspeccions">
+              <MappingFragment StoreEntitySet="estat_inspeccions">
+                <ScalarProperty Name="idEstatInspeccio" ColumnName="idEstatInspeccio" />
+                <ScalarProperty Name="nomEstatInspeccio" ColumnName="nomEstatInspeccio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estat_processos_envasat">
+            <EntityTypeMapping TypeName="escorxadam2Model.estat_processos_envasat">
+              <MappingFragment StoreEntitySet="estat_processos_envasat">
+                <ScalarProperty Name="idEstatProcesEnvasat" ColumnName="idEstatProcesEnvasat" />
+                <ScalarProperty Name="nomEstatProcesEnvasat" ColumnName="nomEstatProcesEnvasat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estat_processos_inicials">
+            <EntityTypeMapping TypeName="escorxadam2Model.estat_processos_inicials">
+              <MappingFragment StoreEntitySet="estat_processos_inicials">
+                <ScalarProperty Name="idEstatProcesInicial" ColumnName="idEstatProcesInicial" />
+                <ScalarProperty Name="Estat" ColumnName="Estat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estat_refrigeracions">
+            <EntityTypeMapping TypeName="escorxadam2Model.estat_refrigeracions">
+              <MappingFragment StoreEntitySet="estat_refrigeracions">
+                <ScalarProperty Name="idEstatRefrigeracio" ColumnName="idEstatRefrigeracio" />
+                <ScalarProperty Name="nomEstatRefrigeracio" ColumnName="nomEstatRefrigeracio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estat_sacrifici">
+            <EntityTypeMapping TypeName="escorxadam2Model.estat_sacrifici">
+              <MappingFragment StoreEntitySet="estat_sacrifici">
+                <ScalarProperty Name="idEstatSacrifici" ColumnName="idEstatSacrifici" />
+                <ScalarProperty Name="nomEstatSacrifici" ColumnName="nomEstatSacrifici" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inspeccions">
+            <EntityTypeMapping TypeName="escorxadam2Model.inspeccions">
+              <MappingFragment StoreEntitySet="inspeccions">
+                <ScalarProperty Name="idInspeccio" ColumnName="idInspeccio" />
+                <ScalarProperty Name="idEstatInspeccio" ColumnName="idEstatInspeccio" />
+                <ScalarProperty Name="codiInspeccio" ColumnName="codiInspeccio" />
+                <ScalarProperty Name="codiVeterinari" ColumnName="codiVeterinari" />
+                <ScalarProperty Name="dataInspeccio" ColumnName="dataInspeccio" />
+                <ScalarProperty Name="descInspeccio" ColumnName="descInspeccio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="itemMenu">
+            <EntityTypeMapping TypeName="escorxadam2Model.itemMenu">
+              <MappingFragment StoreEntitySet="itemMenu">
+                <ScalarProperty Name="idItem" ColumnName="idItem" />
+                <ScalarProperty Name="nomItem" ColumnName="nomItem" />
+                <ScalarProperty Name="ordre" ColumnName="ordre" />
+                <ScalarProperty Name="dll" ColumnName="dll" />
+                <ScalarProperty Name="taula" ColumnName="taula" />
+                <ScalarProperty Name="nivellAcces" ColumnName="nivellAcces" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lots">
+            <EntityTypeMapping TypeName="escorxadam2Model.lots">
+              <MappingFragment StoreEntitySet="lots">
+                <ScalarProperty Name="idLot" ColumnName="idLot" />
+                <ScalarProperty Name="idRemo" ColumnName="idRemo" />
+                <ScalarProperty Name="idEstabulacio" ColumnName="idEstabulacio" />
+                <ScalarProperty Name="idSacrifici" ColumnName="idSacrifici" />
+                <ScalarProperty Name="idProcessatInicial" ColumnName="idProcessatInicial" />
+                <ScalarProperty Name="idProcessatFinal" ColumnName="idProcessatFinal" />
+                <ScalarProperty Name="idEmmagatzematge" ColumnName="idEmmagatzematge" />
+                <ScalarProperty Name="numLot" ColumnName="numLot" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="nivells_acces">
+            <EntityTypeMapping TypeName="escorxadam2Model.nivells_acces">
+              <MappingFragment StoreEntitySet="nivells_acces">
+                <ScalarProperty Name="idNivellAcces" ColumnName="idNivellAcces" />
+                <ScalarProperty Name="nomNivellAcces" ColumnName="nomNivellAcces" />
+                <ScalarProperty Name="abreviacioNivellAcces" ColumnName="abreviacioNivellAcces" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="paisos">
+            <EntityTypeMapping TypeName="escorxadam2Model.paisos">
+              <MappingFragment StoreEntitySet="paisos">
+                <ScalarProperty Name="idPais" ColumnName="idPais" />
+                <ScalarProperty Name="nomPais" ColumnName="nomPais" />
+                <ScalarProperty Name="abreviaturaPais" ColumnName="abreviaturaPais" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="processats_finals">
+            <EntityTypeMapping TypeName="escorxadam2Model.processats_finals">
+              <MappingFragment StoreEntitySet="processats_finals">
+                <ScalarProperty Name="idProcessatFinal" ColumnName="idProcessatFinal" />
+                <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
+                <ScalarProperty Name="idSafata" ColumnName="idSafata" />
+                <ScalarProperty Name="idEstatEnvasat" ColumnName="idEstatEnvasat" />
+                <ScalarProperty Name="DIB" ColumnName="DIB" />
+                <ScalarProperty Name="dataEnvasat" ColumnName="dataEnvasat" />
+                <ScalarProperty Name="diaCaducitat" ColumnName="diaCaducitat" />
+                <ScalarProperty Name="pesSafata" ColumnName="pesSafata" />
+                <ScalarProperty Name="percO2" ColumnName="percO2" />
+                <ScalarProperty Name="percCO2" ColumnName="percCO2" />
+                <ScalarProperty Name="Mioglobina" ColumnName="Mioglobina" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="processats_inicials">
+            <EntityTypeMapping TypeName="escorxadam2Model.processats_inicials">
+              <MappingFragment StoreEntitySet="processats_inicials">
+                <ScalarProperty Name="idProcessatInicial" ColumnName="idProcessatInicial" />
+                <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
+                <ScalarProperty Name="idEstatInicial" ColumnName="idEstatInicial" />
+                <ScalarProperty Name="numCarril" ColumnName="numCarril" />
+                <ScalarProperty Name="DIB" ColumnName="DIB" />
+                <ScalarProperty Name="pesCanal" ColumnName="pesCanal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="proveidors">
+            <EntityTypeMapping TypeName="escorxadam2Model.proveidors">
+              <MappingFragment StoreEntitySet="proveidors">
+                <ScalarProperty Name="idProveidor" ColumnName="idProveidor" />
+                <ScalarProperty Name="idComunitatAutonoma" ColumnName="idComunitatAutonoma" />
+                <ScalarProperty Name="idTipusExplotacio" ColumnName="idTipusExplotacio" />
+                <ScalarProperty Name="idSituacioActual" ColumnName="idSituacioActual" />
+                <ScalarProperty Name="nomResponsable" ColumnName="nomResponsable" />
+                <ScalarProperty Name="primerCognom" ColumnName="primerCognom" />
+                <ScalarProperty Name="segonCognom" ColumnName="segonCognom" />
+                <ScalarProperty Name="nomExplotacio" ColumnName="nomExplotacio" />
+                <ScalarProperty Name="direccioExplotacio" ColumnName="direccioExplotacio" />
+                <ScalarProperty Name="codiExplotacio" ColumnName="codiExplotacio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="recepcions_bestiar">
+            <EntityTypeMapping TypeName="escorxadam2Model.recepcions_bestiar">
+              <MappingFragment StoreEntitySet="recepcions_bestiar">
+                <ScalarProperty Name="idRecepcio" ColumnName="idRecepcio" />
+                <ScalarProperty Name="idUsuariReceptor" ColumnName="idUsuariReceptor" />
+                <ScalarProperty Name="idProveidor" ColumnName="idProveidor" />
+                <ScalarProperty Name="codiREMO" ColumnName="codiREMO" />
+                <ScalarProperty Name="codiREGA" ColumnName="codiREGA" />
+                <ScalarProperty Name="codiTransportista" ColumnName="codiTransportista" />
+                <ScalarProperty Name="dataSortidaExplotacio" ColumnName="dataSortidaExplotacio" />
+                <ScalarProperty Name="dataEntradaEscorxador" ColumnName="dataEntradaEscorxador" />
+                <ScalarProperty Name="numTotalAnimals" ColumnName="numTotalAnimals" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="referencies">
+            <EntityTypeMapping TypeName="escorxadam2Model.referencies">
+              <MappingFragment StoreEntitySet="referencies">
+                <ScalarProperty Name="idReferencia" ColumnName="idReferencia" />
+                <ScalarProperty Name="nomReferencia" ColumnName="nomReferencia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sacrificis">
+            <EntityTypeMapping TypeName="escorxadam2Model.sacrificis">
+              <MappingFragment StoreEntitySet="sacrificis">
+                <ScalarProperty Name="idSacrifici" ColumnName="idSacrifici" />
+                <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
+                <ScalarProperty Name="idSistemaAtordiment" ColumnName="idSistemaAtordiment" />
+                <ScalarProperty Name="idInspeccioSanitaria" ColumnName="idInspeccioSanitaria" />
+                <ScalarProperty Name="idEstatSacrifici" ColumnName="idEstatSacrifici" />
+                <ScalarProperty Name="boxImmobilitzacio" ColumnName="boxImmobilitzacio" />
+                <ScalarProperty Name="AparellAtordiment" ColumnName="AparellAtordiment" />
+                <ScalarProperty Name="dataSacrifici" ColumnName="dataSacrifici" />
+                <ScalarProperty Name="Incidencies" ColumnName="Incidencies" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sistemes_atordiment">
+            <EntityTypeMapping TypeName="escorxadam2Model.sistemes_atordiment">
+              <MappingFragment StoreEntitySet="sistemes_atordiment">
+                <ScalarProperty Name="idSistemaAtordiment" ColumnName="idSistemaAtordiment" />
+                <ScalarProperty Name="nomSistemaAtordiment" ColumnName="nomSistemaAtordiment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="situacio_explotacions">
+            <EntityTypeMapping TypeName="escorxadam2Model.situacio_explotacions">
+              <MappingFragment StoreEntitySet="situacio_explotacions">
+                <ScalarProperty Name="idSituacioExplotacio" ColumnName="idSituacioExplotacio" />
+                <ScalarProperty Name="nomSituacioExplotacio" ColumnName="nomSituacioExplotacio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipus_explotacions">
+            <EntityTypeMapping TypeName="escorxadam2Model.tipus_explotacions">
+              <MappingFragment StoreEntitySet="tipus_explotacions">
+                <ScalarProperty Name="idTipusExplotacio" ColumnName="idTipusExplotacio" />
+                <ScalarProperty Name="nomTipusExplotacio" ColumnName="nomTipusExplotacio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuaris">
+            <EntityTypeMapping TypeName="escorxadam2Model.usuaris">
+              <MappingFragment StoreEntitySet="usuaris">
+                <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
+                <ScalarProperty Name="Nom" ColumnName="Nom" />
+                <ScalarProperty Name="primerCognom" ColumnName="primerCognom" />
+                <ScalarProperty Name="segonCognom" ColumnName="segonCognom" />
+                <ScalarProperty Name="codiUsuari" ColumnName="codiUsuari" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="actiu" ColumnName="actiu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="permisos">
+            <EntityTypeMapping TypeName="escorxadam2Model.permisos">
+              <MappingFragment StoreEntitySet="permisos">
+                <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
+                <ScalarProperty Name="idNivellAcces" ColumnName="idNivellAcces" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
