@@ -4,33 +4,33 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="eabdd12e391640c497bbe02a223d0f6e" Name="Diagram1">
-        <EntityTypeShape EntityType="escorxadam2Model.animals" Width="1.5" PointX="8.375" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.comptadors_lot_mes" Width="1.5" PointX="4.375" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.comunitats_autonomes" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.emmagatzematges" Width="1.5" PointX="3.25" PointY="13.375" IsExpanded="true" />
+      <Diagram DiagramId="991df55335ef42bd9a645f5c3e0563fe" Name="Diagram1">
+        <EntityTypeShape EntityType="escorxadam2Model.animals" Width="1.5" PointX="8.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.comptadors_lot_mes" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.comunitats_autonomes" Width="1.5" PointX="1.5" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.emmagatzematges" Width="1.5" PointX="3" PointY="14.25" IsExpanded="true" />
         <EntityTypeShape EntityType="escorxadam2Model.estables" Width="1.5" PointX="6" PointY="14.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.estat_estabulacions" Width="1.5" PointX="3.5" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.estat_estabulacions" Width="1.5" PointX="3.75" PointY="22.5" IsExpanded="true" />
         <EntityTypeShape EntityType="escorxadam2Model.estat_inspeccions" Width="1.5" PointX="1.5" PointY="25.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.estat_processos_envasat" Width="1.5" PointX="8.375" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.estat_processos_envasat" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="escorxadam2Model.estat_processos_inicials" Width="1.5" PointX="0.75" PointY="22.25" IsExpanded="true" />
         <EntityTypeShape EntityType="escorxadam2Model.estat_refrigeracions" Width="1.5" PointX="0.75" PointY="19.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.estat_sacrifici" Width="1.5" PointX="6.25" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.estat_sacrifici" Width="1.5" PointX="3.75" PointY="29" IsExpanded="true" />
         <EntityTypeShape EntityType="escorxadam2Model.inspeccions" Width="1.5" PointX="3.75" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.itemMenu" Width="1.5" PointX="5.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.itemMenu" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="escorxadam2Model.lots" Width="1.5" PointX="11.25" PointY="14.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.nivells_acces" Width="1.5" PointX="9.125" PointY="18.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.paisos" Width="1.5" PointX="2.875" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.processats_finals" Width="1.5" PointX="11.625" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.nivells_acces" Width="1.5" PointX="6.75" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.paisos" Width="1.5" PointX="6" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.processats_finals" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="escorxadam2Model.processats_inicials" Width="1.5" PointX="3" PointY="18.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.proveidors" Width="1.5" PointX="3.375" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.recepcions_bestiar" Width="1.5" PointX="6" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.referencies" Width="1.5" PointX="8.375" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.sacrificis" Width="1.5" PointX="6.375" PointY="18.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.sistemes_atordiment" Width="1.5" PointX="8" PointY="22.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.situacio_explotacions" Width="1.5" PointX="0.5" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.tipus_explotacions" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.usuaris" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.proveidors" Width="1.5" PointX="3.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.recepcions_bestiar" Width="1.5" PointX="6" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.referencies" Width="1.5" PointX="0.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.sacrificis" Width="1.5" PointX="6" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.sistemes_atordiment" Width="1.5" PointX="3.75" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.situacio_explotacions" Width="1.5" PointX="1.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.tipus_explotacions" Width="1.5" PointX="1.5" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.usuaris" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
         <EntityTypeShape EntityType="escorxadam2Model.permisos" Width="1.5" PointX="9" PointY="14.875" IsExpanded="true" />
         <AssociationConnector Association="escorxadam2Model.FK__animals__idPaisN__25518C17" ManuallyRouted="false" />
         <AssociationConnector Association="escorxadam2Model.FK__animals__idRecep__2645B050" ManuallyRouted="false" />

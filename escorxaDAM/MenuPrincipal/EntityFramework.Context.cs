@@ -13,10 +13,10 @@ namespace MenuPrincipal
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class escorxadam2Entities : DbContext
+    public partial class escorxadam2Entities1 : DbContext
     {
-        public escorxadam2Entities()
-            : base("name=escorxadam2Entities")
+        public escorxadam2Entities1()
+            : base("name=escorxadam2Entities1")
         {
         }
     

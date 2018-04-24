@@ -1566,7 +1566,7 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="escorxadam2Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="escorxadam2Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="animals" EntityType="Self.animals" />
           <EntitySet Name="comptadors_lot_mes" EntityType="Self.comptadors_lot_mes" />
           <EntitySet Name="comunitats_autonomes" EntityType="Self.comunitats_autonomes" />
@@ -1732,7 +1732,7 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="escorxadam2ModelStoreContainer" CdmEntityContainer="escorxadam2Entities">
+        <EntityContainerMapping StorageEntityContainer="escorxadam2ModelStoreContainer" CdmEntityContainer="escorxadam2Entities1">
           <EntitySetMapping Name="animals">
             <EntityTypeMapping TypeName="escorxadam2Model.animals">
               <MappingFragment StoreEntitySet="animals">
