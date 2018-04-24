@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BaseForm;
+using MantenimentUsuaris;
+using Configuracio;
 
 namespace MenuPrincipal
 {
@@ -87,6 +89,7 @@ namespace MenuPrincipal
             }
             //form.BringToFront();
         }
+
         private void sobreToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             AcercDe frm = new AcercDe();
@@ -106,6 +109,14 @@ namespace MenuPrincipal
             if (Metodes.IsOpen("AcercDe"))
             {
                 Application.OpenForms.OfType<AcercDe>().First().Close();
+            }
+            if (Metodes.IsOpen("AfegirUsuari"))
+            {
+                Application.OpenForms.OfType<AfegirUsuari>().First().Close();
+            }
+            if (Metodes.IsOpen("MantenimentUsuaris"))
+            {
+                Application.OpenForms.OfType<MantenimentUsuaris.MantenimentUsuaris>().First().Close();
             }
             Login frm = new Login();
             frm.Show();
