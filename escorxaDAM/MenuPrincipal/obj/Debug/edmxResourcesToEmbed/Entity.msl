@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="escorxadam2ModelStoreContainer" CdmEntityContainer="escorxadam2Entities1">
+    <EntitySetMapping Name="animals">
+      <EntityTypeMapping TypeName="escorxadam2Model.animals">
+        <MappingFragment StoreEntitySet="animals">
+          <ScalarProperty Name="idAnimal" ColumnName="idAnimal" />
+          <ScalarProperty Name="idPaisNaixement" ColumnName="idPaisNaixement" />
+          <ScalarProperty Name="idRecepcioBestiar" ColumnName="idRecepcioBestiar" />
+          <ScalarProperty Name="DIB" ColumnName="DIB" />
+          <ScalarProperty Name="Sexe" ColumnName="Sexe" />
+          <ScalarProperty Name="Edat" ColumnName="Edat" />
+          <ScalarProperty Name="DIBmare" ColumnName="DIBmare" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comptadors_lot_mes">
+      <EntityTypeMapping TypeName="escorxadam2Model.comptadors_lot_mes">
+        <MappingFragment StoreEntitySet="comptadors_lot_mes">
+          <ScalarProperty Name="idComptadorLotMes" ColumnName="idComptadorLotMes" />
+          <ScalarProperty Name="nomComptadorLotMes" ColumnName="nomComptadorLotMes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comunitats_autonomes">
+      <EntityTypeMapping TypeName="escorxadam2Model.comunitats_autonomes">
+        <MappingFragment StoreEntitySet="comunitats_autonomes">
+          <ScalarProperty Name="idComunitatAutonoma" ColumnName="idComunitatAutonoma" />
+          <ScalarProperty Name="nomComunitatAutonoma" ColumnName="nomComunitatAutonoma" />
+          <ScalarProperty Name="abreviacioComunitatAutonoma" ColumnName="abreviacioComunitatAutonoma" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emmagatzematges">
+      <EntityTypeMapping TypeName="escorxadam2Model.emmagatzematges">
+        <MappingFragment StoreEntitySet="emmagatzematges">
+          <ScalarProperty Name="idEmmagatzematge" ColumnName="idEmmagatzematge" />
+          <ScalarProperty Name="idEstatRefrigeracio" ColumnName="idEstatRefrigeracio" />
+          <ScalarProperty Name="idUsuariEntrada" ColumnName="idUsuariEntrada" />
+          <ScalarProperty Name="idUsuariSortida" ColumnName="idUsuariSortida" />
+          <ScalarProperty Name="numCambraFrigorifica" ColumnName="numCambraFrigorifica" />
+          <ScalarProperty Name="dataEntrada" ColumnName="dataEntrada" />
+          <ScalarProperty Name="dataSortida" ColumnName="dataSortida" />
+          <ScalarProperty Name="temperaturaMaxima" ColumnName="temperaturaMaxima" />
+          <ScalarProperty Name="temperaturaMinima" ColumnName="temperaturaMinima" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estables">
+      <EntityTypeMapping TypeName="escorxadam2Model.estables">
+        <MappingFragment StoreEntitySet="estables">
+          <ScalarProperty Name="idEstable" ColumnName="idEstable" />
+          <ScalarProperty Name="idUsuariResponsable" ColumnName="idUsuariResponsable" />
+          <ScalarProperty Name="idEstatEstabulacio" ColumnName="idEstatEstabulacio" />
+          <ScalarProperty Name="idInspeccioSanitaria" ColumnName="idInspeccioSanitaria" />
+          <ScalarProperty Name="numEstable" ColumnName="numEstable" />
+          <ScalarProperty Name="dataEntrada" ColumnName="dataEntrada" />
+          <ScalarProperty Name="dataSortida" ColumnName="dataSortida" />
+          <ScalarProperty Name="Incidencies" ColumnName="Incidencies" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estat_estabulacions">
+      <EntityTypeMapping TypeName="escorxadam2Model.estat_estabulacions">
+        <MappingFragment StoreEntitySet="estat_estabulacions">
+          <ScalarProperty Name="idEstatEstabulacio" ColumnName="idEstatEstabulacio" />
+          <ScalarProperty Name="nomEstatEstabulacio" ColumnName="nomEstatEstabulacio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estat_inspeccions">
+      <EntityTypeMapping TypeName="escorxadam2Model.estat_inspeccions">
+        <MappingFragment StoreEntitySet="estat_inspeccions">
+          <ScalarProperty Name="idEstatInspeccio" ColumnName="idEstatInspeccio" />
+          <ScalarProperty Name="nomEstatInspeccio" ColumnName="nomEstatInspeccio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estat_processos_envasat">
+      <EntityTypeMapping TypeName="escorxadam2Model.estat_processos_envasat">
+        <MappingFragment StoreEntitySet="estat_processos_envasat">
+          <ScalarProperty Name="idEstatProcesEnvasat" ColumnName="idEstatProcesEnvasat" />
+          <ScalarProperty Name="nomEstatProcesEnvasat" ColumnName="nomEstatProcesEnvasat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estat_processos_inicials">
+      <EntityTypeMapping TypeName="escorxadam2Model.estat_processos_inicials">
+        <MappingFragment StoreEntitySet="estat_processos_inicials">
+          <ScalarProperty Name="idEstatProcesInicial" ColumnName="idEstatProcesInicial" />
+          <ScalarProperty Name="Estat" ColumnName="Estat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estat_refrigeracions">
+      <EntityTypeMapping TypeName="escorxadam2Model.estat_refrigeracions">
+        <MappingFragment StoreEntitySet="estat_refrigeracions">
+          <ScalarProperty Name="idEstatRefrigeracio" ColumnName="idEstatRefrigeracio" />
+          <ScalarProperty Name="nomEstatRefrigeracio" ColumnName="nomEstatRefrigeracio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estat_sacrifici">
+      <EntityTypeMapping TypeName="escorxadam2Model.estat_sacrifici">
+        <MappingFragment StoreEntitySet="estat_sacrifici">
+          <ScalarProperty Name="idEstatSacrifici" ColumnName="idEstatSacrifici" />
+          <ScalarProperty Name="nomEstatSacrifici" ColumnName="nomEstatSacrifici" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inspeccions">
+      <EntityTypeMapping TypeName="escorxadam2Model.inspeccions">
+        <MappingFragment StoreEntitySet="inspeccions">
+          <ScalarProperty Name="idInspeccio" ColumnName="idInspeccio" />
+          <ScalarProperty Name="idEstatInspeccio" ColumnName="idEstatInspeccio" />
+          <ScalarProperty Name="codiInspeccio" ColumnName="codiInspeccio" />
+          <ScalarProperty Name="codiVeterinari" ColumnName="codiVeterinari" />
+          <ScalarProperty Name="dataInspeccio" ColumnName="dataInspeccio" />
+          <ScalarProperty Name="descInspeccio" ColumnName="descInspeccio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="itemMenu">
+      <EntityTypeMapping TypeName="escorxadam2Model.itemMenu">
+        <MappingFragment StoreEntitySet="itemMenu">
+          <ScalarProperty Name="idItem" ColumnName="idItem" />
+          <ScalarProperty Name="nomItem" ColumnName="nomItem" />
+          <ScalarProperty Name="ordre" ColumnName="ordre" />
+          <ScalarProperty Name="dll" ColumnName="dll" />
+          <ScalarProperty Name="taula" ColumnName="taula" />
+          <ScalarProperty Name="nivellAcces" ColumnName="nivellAcces" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lots">
+      <EntityTypeMapping TypeName="escorxadam2Model.lots">
+        <MappingFragment StoreEntitySet="lots">
+          <ScalarProperty Name="idLot" ColumnName="idLot" />
+          <ScalarProperty Name="idRemo" ColumnName="idRemo" />
+          <ScalarProperty Name="idEstabulacio" ColumnName="idEstabulacio" />
+          <ScalarProperty Name="idSacrifici" ColumnName="idSacrifici" />
+          <ScalarProperty Name="idProcessatInicial" ColumnName="idProcessatInicial" />
+          <ScalarProperty Name="idProcessatFinal" ColumnName="idProcessatFinal" />
+          <ScalarProperty Name="idEmmagatzematge" ColumnName="idEmmagatzematge" />
+          <ScalarProperty Name="numLot" ColumnName="numLot" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nivells_acces">
+      <EntityTypeMapping TypeName="escorxadam2Model.nivells_acces">
+        <MappingFragment StoreEntitySet="nivells_acces">
+          <ScalarProperty Name="idNivellAcces" ColumnName="idNivellAcces" />
+          <ScalarProperty Name="nomNivellAcces" ColumnName="nomNivellAcces" />
+          <ScalarProperty Name="abreviacioNivellAcces" ColumnName="abreviacioNivellAcces" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="paisos">
+      <EntityTypeMapping TypeName="escorxadam2Model.paisos">
+        <MappingFragment StoreEntitySet="paisos">
+          <ScalarProperty Name="idPais" ColumnName="idPais" />
+          <ScalarProperty Name="nomPais" ColumnName="nomPais" />
+          <ScalarProperty Name="abreviaturaPais" ColumnName="abreviaturaPais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="processats_finals">
+      <EntityTypeMapping TypeName="escorxadam2Model.processats_finals">
+        <MappingFragment StoreEntitySet="processats_finals">
+          <ScalarProperty Name="idProcessatFinal" ColumnName="idProcessatFinal" />
+          <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
+          <ScalarProperty Name="idSafata" ColumnName="idSafata" />
+          <ScalarProperty Name="idEstatEnvasat" ColumnName="idEstatEnvasat" />
+          <ScalarProperty Name="DIB" ColumnName="DIB" />
+          <ScalarProperty Name="dataEnvasat" ColumnName="dataEnvasat" />
+          <ScalarProperty Name="diaCaducitat" ColumnName="diaCaducitat" />
+          <ScalarProperty Name="pesSafata" ColumnName="pesSafata" />
+          <ScalarProperty Name="percO2" ColumnName="percO2" />
+          <ScalarProperty Name="percCO2" ColumnName="percCO2" />
+          <ScalarProperty Name="Mioglobina" ColumnName="Mioglobina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="processats_inicials">
+      <EntityTypeMapping TypeName="escorxadam2Model.processats_inicials">
+        <MappingFragment StoreEntitySet="processats_inicials">
+          <ScalarProperty Name="idProcessatInicial" ColumnName="idProcessatInicial" />
+          <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
+          <ScalarProperty Name="idEstatInicial" ColumnName="idEstatInicial" />
+          <ScalarProperty Name="numCarril" ColumnName="numCarril" />
+          <ScalarProperty Name="DIB" ColumnName="DIB" />
+          <ScalarProperty Name="pesCanal" ColumnName="pesCanal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="proveidors">
+      <EntityTypeMapping TypeName="escorxadam2Model.proveidors">
+        <MappingFragment StoreEntitySet="proveidors">
+          <ScalarProperty Name="idProveidor" ColumnName="idProveidor" />
+          <ScalarProperty Name="idComunitatAutonoma" ColumnName="idComunitatAutonoma" />
+          <ScalarProperty Name="idTipusExplotacio" ColumnName="idTipusExplotacio" />
+          <ScalarProperty Name="idSituacioActual" ColumnName="idSituacioActual" />
+          <ScalarProperty Name="nomResponsable" ColumnName="nomResponsable" />
+          <ScalarProperty Name="primerCognom" ColumnName="primerCognom" />
+          <ScalarProperty Name="segonCognom" ColumnName="segonCognom" />
+          <ScalarProperty Name="nomExplotacio" ColumnName="nomExplotacio" />
+          <ScalarProperty Name="direccioExplotacio" ColumnName="direccioExplotacio" />
+          <ScalarProperty Name="codiExplotacio" ColumnName="codiExplotacio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recepcions_bestiar">
+      <EntityTypeMapping TypeName="escorxadam2Model.recepcions_bestiar">
+        <MappingFragment StoreEntitySet="recepcions_bestiar">
+          <ScalarProperty Name="idRecepcio" ColumnName="idRecepcio" />
+          <ScalarProperty Name="idUsuariReceptor" ColumnName="idUsuariReceptor" />
+          <ScalarProperty Name="idProveidor" ColumnName="idProveidor" />
+          <ScalarProperty Name="codiREMO" ColumnName="codiREMO" />
+          <ScalarProperty Name="codiREGA" ColumnName="codiREGA" />
+          <ScalarProperty Name="codiTransportista" ColumnName="codiTransportista" />
+          <ScalarProperty Name="dataSortidaExplotacio" ColumnName="dataSortidaExplotacio" />
+          <ScalarProperty Name="dataEntradaEscorxador" ColumnName="dataEntradaEscorxador" />
+          <ScalarProperty Name="numTotalAnimals" ColumnName="numTotalAnimals" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="referencies">
+      <EntityTypeMapping TypeName="escorxadam2Model.referencies">
+        <MappingFragment StoreEntitySet="referencies">
+          <ScalarProperty Name="idReferencia" ColumnName="idReferencia" />
+          <ScalarProperty Name="nomReferencia" ColumnName="nomReferencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sacrificis">
+      <EntityTypeMapping TypeName="escorxadam2Model.sacrificis">
+        <MappingFragment StoreEntitySet="sacrificis">
+          <ScalarProperty Name="idSacrifici" ColumnName="idSacrifici" />
+          <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
+          <ScalarProperty Name="idSistemaAtordiment" ColumnName="idSistemaAtordiment" />
+          <ScalarProperty Name="idInspeccioSanitaria" ColumnName="idInspeccioSanitaria" />
+          <ScalarProperty Name="idEstatSacrifici" ColumnName="idEstatSacrifici" />
+          <ScalarProperty Name="boxImmobilitzacio" ColumnName="boxImmobilitzacio" />
+          <ScalarProperty Name="AparellAtordiment" ColumnName="AparellAtordiment" />
+          <ScalarProperty Name="dataSacrifici" ColumnName="dataSacrifici" />
+          <ScalarProperty Name="Incidencies" ColumnName="Incidencies" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sistemes_atordiment">
+      <EntityTypeMapping TypeName="escorxadam2Model.sistemes_atordiment">
+        <MappingFragment StoreEntitySet="sistemes_atordiment">
+          <ScalarProperty Name="idSistemaAtordiment" ColumnName="idSistemaAtordiment" />
+          <ScalarProperty Name="nomSistemaAtordiment" ColumnName="nomSistemaAtordiment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="situacio_explotacions">
+      <EntityTypeMapping TypeName="escorxadam2Model.situacio_explotacions">
+        <MappingFragment StoreEntitySet="situacio_explotacions">
+          <ScalarProperty Name="idSituacioExplotacio" ColumnName="idSituacioExplotacio" />
+          <ScalarProperty Name="nomSituacioExplotacio" ColumnName="nomSituacioExplotacio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipus_explotacions">
+      <EntityTypeMapping TypeName="escorxadam2Model.tipus_explotacions">
+        <MappingFragment StoreEntitySet="tipus_explotacions">
+          <ScalarProperty Name="idTipusExplotacio" ColumnName="idTipusExplotacio" />
+          <ScalarProperty Name="nomTipusExplotacio" ColumnName="nomTipusExplotacio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuaris">
+      <EntityTypeMapping TypeName="escorxadam2Model.usuaris">
+        <MappingFragment StoreEntitySet="usuaris">
+          <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="primerCognom" ColumnName="primerCognom" />
+          <ScalarProperty Name="segonCognom" ColumnName="segonCognom" />
+          <ScalarProperty Name="codiUsuari" ColumnName="codiUsuari" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="actiu" ColumnName="actiu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="permisos">
+      <EntityTypeMapping TypeName="escorxadam2Model.permisos">
+        <MappingFragment StoreEntitySet="permisos">
+          <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
+          <ScalarProperty Name="idNivellAcces" ColumnName="idNivellAcces" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
