@@ -153,6 +153,10 @@
       <Project>{8c221afb-fbe1-4a6a-8626-c98b8960a54a}</Project>
       <Name>MantenimentUsuaris</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{0010e369-5b6f-456f-8c9a-e1b3faf4c7f6}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Paisos\Paisos.csproj">
       <Project>{67e0b030-f54a-4355-97b3-34464fb55e9f}</Project>
       <Name>Paisos</Name>
