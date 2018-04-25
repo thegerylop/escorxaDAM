@@ -28,13 +28,15 @@ namespace MenuPrincipal
                      && u.password == CCPassword.Text);
             //var query = hacerla
             // permisos.ToList();
-            
             if (myUser != null)
             {
-                string commandAcces = "SELECT idNivellAcces FROM permisos WHERE idUsuari= " + myUser.idUsuari;
-                string[] nivellAcces = conn.resultatComandaArray(commandAcces);
+                var dataset = _m.permisos
+                    .Where(x => x.idUsuari == myUser.idUsuari)
+                    .Select(x => new { x.idNivellAcces }).ToString().ToArray();
+                //string commandAcces = "SELECT idNivellAcces FROM permisos WHERE idUsuari= " + myUser.idUsuari;
+                //string[] nivellAcces = conn.resultatComandaArray(commandAcces);
                 MenuPrincipal frm = new MenuPrincipal();
-                frm.menuAcces(nivellAcces);
+                frm.menuAcces(dataset);
                 frm.Show();
                 this.Hide();
             }
@@ -42,9 +44,6 @@ namespace MenuPrincipal
             {
                 MessageBox.Show("Usuari o contrasenya incorrecta");
             }
-            permisos p = new permisos();
-            p.idUsuari = 1233;
-
         }
 
         private void Login_Load(object sender, EventArgs e)
