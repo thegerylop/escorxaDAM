@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConexioBBDD;
 using BaseForm;
+using Models;
 namespace MenuPrincipal
 {
     public partial class Login : Form
@@ -20,16 +21,23 @@ namespace MenuPrincipal
         }
         private void loginEF()
         {
-            //escorxadam _m = new escorxadam();
+            escorxadam2Entities _m = new escorxadam2Entities();
 
-            ////var query = hacerla
-            //// permisos.ToList();
+            var myUser = _m.usuaris
+            .FirstOrDefault(u => u.Nom == CCLogin.Text
+                     && u.password == CCPassword.Text);
 
-            //permisos p = new permisos();
-            //p.idUsuari = 1233;
-
-            //    _m.SaveChanges();
-                
+            if (myUser != null)
+            {
+                MenuPrincipal frm = new MenuPrincipal();   
+                frm.menuAcces(myUser.idUsuari);
+                frm.Show();
+                this.Hide();
+            } 
+            else 
+            {
+                MessageBox.Show("Usuari o contrasenya incorrecta");
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -41,22 +49,7 @@ namespace MenuPrincipal
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string command = "SELECT idUsuari FROM usuaris where Nom = '" + CCLogin.Text + "' and password = '" + CCPassword.Text + "'";
-            //BINARY
-            string idUsuari = conn.resultatComanda(command);
-            string commandAcces = "SELECT idNivellAcces FROM permisos WHERE idUsuari= " + idUsuari;
-            if(idUsuari != "")
-            {
-                string[] nivellAcces = conn.resultatComandaArray(commandAcces);
-                MenuPrincipal frm = new MenuPrincipal();
-                frm.menuAcces(nivellAcces);
-                frm.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Usuari o contrasenya incorrecta");
-            }
+            loginEF();
         }
 
         private void CCLogin_Click(object sender, KeyEventArgs e)
