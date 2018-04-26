@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>71eecea5-6d84-4658-8173-20d8385ec2cd</ProjectGuid>
+    <ProjectGuid>{71EECEA5-6D84-4658-8173-20D8385EC2CD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MantenimentProveidors</RootNamespace>
@@ -30,24 +30,54 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="inserirProveidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inserirProveidor.Designer.cs">
+      <DependentUpon>inserirProveidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modificarProveidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modificarProveidor.Designer.cs">
+      <DependentUpon>modificarProveidor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="inserirProveidor.resx">
+      <DependentUpon>inserirProveidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modificarProveidor.resx">
+      <DependentUpon>modificarProveidor.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseForm\BaseForm.csproj">
+      <Project>{cf89ea7d-d834-4cb1-8888-e9c0fb24ee7f}</Project>
+      <Name>BaseForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConexioBBDD\ConexioBBDD.csproj">
+      <Project>{384145e7-5b9b-43cb-92b0-d8be9b92fde8}</Project>
+      <Name>ConexioBBDD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomControl\CustomControl.csproj">
+      <Project>{a7279e0e-d844-4cc7-99da-9939eaa74818}</Project>
+      <Name>CustomControl</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>

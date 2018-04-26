@@ -47,6 +47,7 @@
             this.comboBox2 = new CustomControl.comboBox();
             this.comboBox3 = new CustomControl.comboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -229,11 +230,22 @@
             this.panel1.Size = new System.Drawing.Size(1, 135);
             this.panel1.TabIndex = 55;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.label11.Location = new System.Drawing.Point(425, 307);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(100, 20);
+            this.label11.TabIndex = 56;
+            this.label11.Text = "Puto gerygay ";
+            // 
             // modificarProveidor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1211, 733);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
@@ -275,6 +287,7 @@
             this.Controls.SetChildIndex(this.comboBox2, 0);
             this.Controls.SetChildIndex(this.comboBox3, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.label11, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,5 +314,6 @@
         private CustomControl.comboBox comboBox2;
         private CustomControl.comboBox comboBox3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label11;
     }
 }
