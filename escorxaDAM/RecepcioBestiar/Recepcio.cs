@@ -15,6 +15,7 @@ namespace RecepcioBestiar
         public Recepcio()
         {
             InitializeComponent();
+            //test
         }
     }
 }
