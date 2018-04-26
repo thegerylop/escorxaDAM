@@ -22,25 +22,19 @@ namespace MenuPrincipal
         private void loginEF()
         {
             escorxadam2Entities _m = new escorxadam2Entities();
-            //user Object
+
             var myUser = _m.usuaris
             .FirstOrDefault(u => u.Nom == CCLogin.Text
                      && u.password == CCPassword.Text);
-            //var query = hacerla
-            // permisos.ToList();
+
             if (myUser != null)
             {
-                var dataset = _m.permisos
-                    .Where(x => x.idUsuari == myUser.idUsuari)
-                    .Select(x => new { x.idNivellAcces }).ToString().ToArray();
-                //string commandAcces = "SELECT idNivellAcces FROM permisos WHERE idUsuari= " + myUser.idUsuari;
-                //string[] nivellAcces = conn.resultatComandaArray(commandAcces);
-                MenuPrincipal frm = new MenuPrincipal();
-                frm.menuAcces(dataset);
+                MenuPrincipal frm = new MenuPrincipal();   
+                frm.menuAcces(myUser.idUsuari);
                 frm.Show();
                 this.Hide();
-            }
-            else
+            } 
+            else 
             {
                 MessageBox.Show("Usuari o contrasenya incorrecta");
             }
