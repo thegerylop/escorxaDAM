@@ -9,8 +9,7 @@ C:\DAM\Projecte 2\escorxaDAM\ComptadorsLotsMs\obj\Debug\ComptadorsLotsMs.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\ComptadorsLotsMs.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\ComptadorsLotsMs.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ComptadorsLotsMs\obj\Debug\ComptadorsLotsMs.comptadorsLotsMes.resources
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ComptadorsLotsMs\obj\Debug\ComptadorsLotsMes.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ComptadorsLotsMs\obj\Debug\ComptadorsLotsMes.csproj.GenerateResource.Cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ComptadorsLotsMs\obj\Debug\ComptadorsLotsMes.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ComptadorsLotsMs\obj\Debug\ComptadorsLotsMes.csproj.CopyComplete
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ComptadorsLotsMs\obj\Debug\ComptadorsLotsMs.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ComptadorsLotsMs\obj\Debug\ComptadorsLotsMs.pdb

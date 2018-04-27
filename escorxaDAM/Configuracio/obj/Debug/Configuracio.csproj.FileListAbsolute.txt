@@ -10,8 +10,7 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Configuracio.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Configuracio.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Configuracio\obj\Debug\Configuracio.csprojResolveAssemblyReference.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Configuracio\obj\Debug\Configuracio.configuracio.resources
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Configuracio\obj\Debug\Configuracio.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Configuracio\obj\Debug\Configuracio.csproj.GenerateResource.Cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Configuracio\obj\Debug\Configuracio.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Configuracio\obj\Debug\Configuracio.csproj.CopyComplete
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Configuracio\obj\Debug\Configuracio.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Configuracio\obj\Debug\Configuracio.pdb

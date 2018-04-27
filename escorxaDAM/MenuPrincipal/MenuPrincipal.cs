@@ -17,6 +17,7 @@ namespace MenuPrincipal
     {
         escorxadam2Entities _m = new escorxadam2Entities();
         ConexioBBDD.Conexio conn = new ConexioBBDD.Conexio();
+        DownloadDataFTP.FtpForm frm = new DownloadDataFTP.FtpForm();
 
         long user;
         public void menuAcces(long value)
@@ -99,6 +100,11 @@ namespace MenuPrincipal
         private void MenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void fTPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm.Show();
         }
     }
 }

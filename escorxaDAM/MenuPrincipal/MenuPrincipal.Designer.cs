@@ -35,6 +35,7 @@
             this.sobreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sortirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tancarSessióToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fTPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +64,8 @@
             // 
             this.ajudaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajudaToolStripMenuItem2,
-            this.sobreToolStripMenuItem1});
+            this.sobreToolStripMenuItem1,
+            this.fTPToolStripMenuItem});
             this.ajudaToolStripMenuItem1.Name = "ajudaToolStripMenuItem1";
             this.ajudaToolStripMenuItem1.Size = new System.Drawing.Size(165, 24);
             this.ajudaToolStripMenuItem1.Text = "Ajuda";
@@ -95,6 +97,13 @@
             this.tancarSessióToolStripMenuItem.Text = "Tancar Sessió";
             this.tancarSessióToolStripMenuItem.Click += new System.EventHandler(this.tancarSessióToolStripMenuItem_Click);
             // 
+            // fTPToolStripMenuItem
+            // 
+            this.fTPToolStripMenuItem.Name = "fTPToolStripMenuItem";
+            this.fTPToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.fTPToolStripMenuItem.Text = "FTP";
+            this.fTPToolStripMenuItem.Click += new System.EventHandler(this.fTPToolStripMenuItem_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,6 +134,7 @@
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sortirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tancarSessióToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fTPToolStripMenuItem;
     }
 }
 

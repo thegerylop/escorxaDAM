@@ -114,12 +114,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BaseForm\BaseForm.csproj">
       <Project>{cf89ea7d-d834-4cb1-8888-e9c0fb24ee7f}</Project>
       <Name>BaseForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassHelpers\ClassHelpers.csproj">
+      <Project>{9526d638-b53d-4fd8-a2c5-b2fbe0c9634a}</Project>
+      <Name>ClassHelpers</Name>
     </ProjectReference>
     <ProjectReference Include="..\ComptadorsLotsMs\ComptadorsLotsMes.csproj">
       <Project>{11fd1d45-8920-4e99-a2f3-de059f2bb017}</Project>
@@ -136,6 +142,10 @@
     <ProjectReference Include="..\CustomControl\CustomControl.csproj">
       <Project>{a7279e0e-d844-4cc7-99da-9939eaa74818}</Project>
       <Name>CustomControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DownloadDataFTP\FTP.csproj">
+      <Project>{d5b2b62c-2d04-4cde-943d-76e0e7808652}</Project>
+      <Name>FTP</Name>
     </ProjectReference>
     <ProjectReference Include="..\EstatInspeccio\EstatInspeccio.csproj">
       <Project>{db9b3d0e-03e3-4757-912d-6687b9399c6a}</Project>
