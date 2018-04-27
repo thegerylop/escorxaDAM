@@ -20,6 +20,7 @@ namespace DownloadDataFTP
             InitializeComponent();
         }
 
+        bool connexio;
         private byte[] downloadedData;
         string[] credentials = new string[2];
 
@@ -170,10 +171,22 @@ namespace DownloadDataFTP
 
         private void btnGetList_Click(object sender, EventArgs e)
         {
-            if (txtFTPAddress.Text != "ftp://" && txtFTPAddress.Text != string.Empty)
-                getFileList(txtFTPAddress.Text, txtUsername.Text, txtPassword.Text);
+            if (connexio)
+            {
+                if (txtFTPAddress.Text != "ftp://" && txtFTPAddress.Text != string.Empty)
+                {
+                    getFileList(txtFTPAddress.Text, txtUsername.Text, txtPassword.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Introdueix una adreça FTP");
+                }
+            }
             else
-                MessageBox.Show("Introdueix una adreça FTP");
+            {
+                MessageBox.Show("No es pot establir la connexió");
+            }
+
         }
 
         // Descarrega el arxiu en memoria
@@ -214,10 +227,10 @@ namespace DownloadDataFTP
         private void ftpForm_Load(object sender, EventArgs e)
         {
             //comprova que hi hagi conexio i omple els camps de les credencials obtingudes en el config
-            string connexio = ftp.AccesoInternet();
-            if(connexio != "")
+            connexio = ftp.AccesoInternet();
+            if(!connexio)
             {
-                MessageBox.Show(connexio);
+                MessageBox.Show("No hi ha accés a internet");
             }
             credentials = ftp.getCredentials();
             txtUsername.Text = credentials[0];

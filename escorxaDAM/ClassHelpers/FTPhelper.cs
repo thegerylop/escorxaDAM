@@ -9,17 +9,16 @@ namespace ClassHelpers
 {
     public class FTPhelper
     {
-        public string AccesoInternet()
+        public bool AccesoInternet()
         {
             try
             {
                 System.Net.IPHostEntry host = System.Net.Dns.GetHostEntry("www.google.com");
-                return "";
+                return true;
             }
             catch (Exception es)
             {
-                string message = "No hi ha conexió a internet";
-                return message;
+                return false;
             }
         }
 

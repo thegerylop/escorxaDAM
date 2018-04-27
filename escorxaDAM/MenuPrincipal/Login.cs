@@ -22,22 +22,29 @@ namespace MenuPrincipal
         private void loginEF()
         {
             escorxadam2Entities _m = new escorxadam2Entities();
-
-            var myUser = _m.usuaris
-            .FirstOrDefault(u => u.Nom == CCLogin.Text
-                     && u.password == CCPassword.Text);
-
-            if (myUser != null)
+            try
             {
-                MenuPrincipal frm = new MenuPrincipal();   
-                frm.menuAcces(myUser.idUsuari);
-                frm.Show();
-                this.Hide();
-            } 
-            else 
-            {
-                MessageBox.Show("Usuari o contrasenya incorrecta");
+                var myUser = _m.usuaris
+                .FirstOrDefault(u => u.Nom == CCLogin.Text
+                    && u.password == CCPassword.Text);
+
+                if (myUser != null)
+                {
+                    MenuPrincipal frm = new MenuPrincipal();
+                    frm.menuAcces(myUser.idUsuari);
+                    frm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuari o contrasenya incorrecta");
+                }
             }
+            catch
+            {
+                MessageBox.Show("o hi ha connexió a la base de dades");
+            }
+           
         }
 
         private void Login_Load(object sender, EventArgs e)
