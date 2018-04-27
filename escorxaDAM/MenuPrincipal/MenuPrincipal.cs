@@ -101,10 +101,5 @@ namespace MenuPrincipal
         {
             Application.Exit();
         }
-
-        private void fTPToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frm.Show();
-        }
     }
 }

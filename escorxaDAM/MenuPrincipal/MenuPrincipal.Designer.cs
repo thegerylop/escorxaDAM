@@ -30,12 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arxiuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajudaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajudaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sobreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sortirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tancarSessióToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fTPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajudaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajudaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,29 +59,6 @@
             this.arxiuToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.arxiuToolStripMenuItem.Text = "Arxiu";
             // 
-            // ajudaToolStripMenuItem1
-            // 
-            this.ajudaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajudaToolStripMenuItem2,
-            this.sobreToolStripMenuItem1,
-            this.fTPToolStripMenuItem});
-            this.ajudaToolStripMenuItem1.Name = "ajudaToolStripMenuItem1";
-            this.ajudaToolStripMenuItem1.Size = new System.Drawing.Size(165, 24);
-            this.ajudaToolStripMenuItem1.Text = "Ajuda";
-            // 
-            // ajudaToolStripMenuItem2
-            // 
-            this.ajudaToolStripMenuItem2.Name = "ajudaToolStripMenuItem2";
-            this.ajudaToolStripMenuItem2.Size = new System.Drawing.Size(152, 24);
-            this.ajudaToolStripMenuItem2.Text = "Ajuda";
-            // 
-            // sobreToolStripMenuItem1
-            // 
-            this.sobreToolStripMenuItem1.Name = "sobreToolStripMenuItem1";
-            this.sobreToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
-            this.sobreToolStripMenuItem1.Text = "Sobre...";
-            this.sobreToolStripMenuItem1.Click += new System.EventHandler(this.sobreToolStripMenuItem1_Click);
-            // 
             // sortirToolStripMenuItem
             // 
             this.sortirToolStripMenuItem.Name = "sortirToolStripMenuItem";
@@ -97,12 +73,27 @@
             this.tancarSessióToolStripMenuItem.Text = "Tancar Sessió";
             this.tancarSessióToolStripMenuItem.Click += new System.EventHandler(this.tancarSessióToolStripMenuItem_Click);
             // 
-            // fTPToolStripMenuItem
+            // ajudaToolStripMenuItem2
             // 
-            this.fTPToolStripMenuItem.Name = "fTPToolStripMenuItem";
-            this.fTPToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.fTPToolStripMenuItem.Text = "FTP";
-            this.fTPToolStripMenuItem.Click += new System.EventHandler(this.fTPToolStripMenuItem_Click);
+            this.ajudaToolStripMenuItem2.Name = "ajudaToolStripMenuItem2";
+            this.ajudaToolStripMenuItem2.Size = new System.Drawing.Size(152, 24);
+            this.ajudaToolStripMenuItem2.Text = "Ajuda";
+            // 
+            // sobreToolStripMenuItem1
+            // 
+            this.sobreToolStripMenuItem1.Name = "sobreToolStripMenuItem1";
+            this.sobreToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
+            this.sobreToolStripMenuItem1.Text = "Sobre...";
+            this.sobreToolStripMenuItem1.Click += new System.EventHandler(this.sobreToolStripMenuItem1_Click);
+            // 
+            // ajudaToolStripMenuItem1
+            // 
+            this.ajudaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajudaToolStripMenuItem2,
+            this.sobreToolStripMenuItem1});
+            this.ajudaToolStripMenuItem1.Name = "ajudaToolStripMenuItem1";
+            this.ajudaToolStripMenuItem1.Size = new System.Drawing.Size(165, 24);
+            this.ajudaToolStripMenuItem1.Text = "Ajuda";
             // 
             // MenuPrincipal
             // 
@@ -129,12 +120,11 @@
 
         public System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem arxiuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sortirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tancarSessióToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem sortirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tancarSessióToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fTPToolStripMenuItem;
     }
 }
 
