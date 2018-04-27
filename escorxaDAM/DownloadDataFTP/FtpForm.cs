@@ -30,10 +30,8 @@ namespace DownloadDataFTP
 
             try
             {
-
                 //Crea una peticio FTP
                 FtpWebRequest request = FtpWebRequest.Create(FTPAddress + "/" + filename) as FtpWebRequest;
-                
 
                 //Consegueixo el tamany del arxiu per a la progress bar
                 request.Method = WebRequestMethods.Ftp.GetFileSize;
@@ -119,7 +117,6 @@ namespace DownloadDataFTP
 
             try
             {
-
                 //Peticio FTP
                 FtpWebRequest request = FtpWebRequest.Create(FTPAddress) as FtpWebRequest;
 
