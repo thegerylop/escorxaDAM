@@ -188,6 +188,7 @@ namespace DownloadDataFTP
                     downloadFile(txtFTPAddress.Text, txtFileName.Text, txtUsername.Text, txtPassword.Text);
 
                     saveFile1.FileName = txtFileName.Text;
+                    save();
                 }
                 else
                     MessageBox.Show("Seleciona o escriu un arxiu");
@@ -196,10 +197,13 @@ namespace DownloadDataFTP
         }
 
         //Guarda el arxiu descarregat
-        private void btnSave_Click(object sender, EventArgs e)
+        public void save()
         {
             if (downloadedData != null && downloadedData.Length != 0)
             {
+                string CombinedPath = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "..\\ArxiusFTP");
+                saveFile1.InitialDirectory = System.IO.Path.GetFullPath(CombinedPath);
+                saveFile1.Filter = "All files (*.*)|*.*";
                 if (saveFile1.ShowDialog() == DialogResult.OK)
                 {
                     FileStream newFile = new FileStream(saveFile1.FileName, FileMode.Create);

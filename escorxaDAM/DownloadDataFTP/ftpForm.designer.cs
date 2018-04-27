@@ -40,7 +40,6 @@ namespace DownloadDataFTP
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label6 = new System.Windows.Forms.Label();
             this.txtFileName = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnDownload = new System.Windows.Forms.Button();
             this.saveFile1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1.SuspendLayout();
@@ -125,7 +124,7 @@ namespace DownloadDataFTP
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 150);
+            this.label4.Location = new System.Drawing.Point(18, 165);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 18;
@@ -133,7 +132,7 @@ namespace DownloadDataFTP
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(81, 145);
+            this.progressBar1.Location = new System.Drawing.Point(81, 160);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(251, 23);
             this.progressBar1.TabIndex = 16;
@@ -141,7 +140,7 @@ namespace DownloadDataFTP
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 120);
+            this.label6.Location = new System.Drawing.Point(18, 135);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 12;
@@ -149,28 +148,18 @@ namespace DownloadDataFTP
             // 
             // txtFileName
             // 
-            this.txtFileName.Location = new System.Drawing.Point(81, 117);
+            this.txtFileName.Location = new System.Drawing.Point(81, 132);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(251, 20);
             this.txtFileName.TabIndex = 13;
             // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(338, 145);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(84, 23);
-            this.btnSave.TabIndex = 20;
-            this.btnSave.Text = "Guardar";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // btnDownload
             // 
-            this.btnDownload.Location = new System.Drawing.Point(338, 117);
+            this.btnDownload.Location = new System.Drawing.Point(338, 132);
             this.btnDownload.Name = "btnDownload";
             this.btnDownload.Size = new System.Drawing.Size(84, 23);
             this.btnDownload.TabIndex = 19;
-            this.btnDownload.Text = "Descarregar";
+            this.btnDownload.Text = "Guardar";
             this.btnDownload.UseVisualStyleBackColor = true;
             this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
             // 
@@ -179,7 +168,6 @@ namespace DownloadDataFTP
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 233);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDownload);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.progressBar1);
@@ -211,7 +199,6 @@ namespace DownloadDataFTP
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtFileName;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDownload;
         private System.Windows.Forms.Button btnGetList;
         private System.Windows.Forms.SaveFileDialog saveFile1;
