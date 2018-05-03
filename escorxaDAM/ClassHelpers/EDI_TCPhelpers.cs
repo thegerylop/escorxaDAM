@@ -35,7 +35,7 @@ namespace ClassHelpers
             read(ruta);
         }
 
-        public StreamReader read(string ruta)
+        public static StreamReader read(string ruta)
         {
             FileStream fs_text = new FileStream(ruta, FileMode.Open, FileAccess.Read);
 
@@ -49,7 +49,7 @@ namespace ClassHelpers
             return rtext;
         }
 
-        private string sendUDPData(string Ip, int port, string data)
+        public static string sendUDPData(string Ip, int port, string data)
         {
             string DestinationIP = Ip;
             int Port = port;
@@ -69,7 +69,7 @@ namespace ClassHelpers
             return returnData;
         }
 
-        private string sendTCPData(string Ip, int port, string data)
+        public static string sendTCPData(string Ip, int port, string data)
         {
             TcpClient client = new TcpClient(Ip, port);
             NetworkStream nwStream = client.GetStream();

@@ -8,13 +8,14 @@ namespace ClassHelpers
 {
     class SafataHelper
     {
+        float pes;
         Boolean correcte = false;
         public bool EstatSafata(object safata)
         {
             correcte = PesSafata(safata);
             if (correcte)
             {
-                correcte = EstatEspectograf(safata);
+                correcte = EstatEspectograf();
                 if (correcte)
                 {
                     return true;
@@ -26,8 +27,8 @@ namespace ClassHelpers
 
         public bool PesSafata(object safata)
         {
-            string TipusSafata = safata.TipusSafata;
-            int pes = //Trucada udp
+            string TipusSafata = "";
+            pes = Convert.ToSingle(EDI_TCPhelpers.sendUDPData("172.17.50.2",7000,TipusSafata));
 
             if(TipusSafata == "familiar")
             {
@@ -59,10 +60,10 @@ namespace ClassHelpers
             }
         }
 
-        public bool EstatEspectograf(object safata)
+        public bool EstatEspectograf()
         {
-            int[] valors = //TrucadaUDPEspectograf
-            if(COcorrecte(valors[0]) && Ocorrecte(valors[1]) && ATMcorrecte(valors[2]))
+            string valors = EDI_TCPhelpers.sendTCPData("172.17.50.2", 7000, Convert.ToString(pes));
+            if (COcorrecte(valors[0]) && Ocorrecte(valors[1]) && ATMcorrecte(valors[2]))
             {
                 correcte = true;
             }
