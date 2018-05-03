@@ -11,7 +11,7 @@ namespace ClassHelpers
         Boolean correcte = false;
         public bool EstatSafata(object safata)
         {
-            correcte = EstatPes(safata);
+            correcte = PesSafata(safata);
             if (correcte)
             {
                 correcte = EstatEspectograf(safata);
@@ -24,16 +24,11 @@ namespace ClassHelpers
             return false;
         }
 
-        public bool EstatPes(object safata)
-        {
-            correcte = PesSafata(safata);
-            return correcte;
-        }
-
         public bool PesSafata(object safata)
         {
             string TipusSafata = safata.TipusSafata;
             int pes = //Trucada udp
+
             if(TipusSafata == "familiar")
             {
                if(pes >= 1080 && pes <= 1320)

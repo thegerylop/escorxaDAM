@@ -35,7 +35,6 @@ namespace ClassHelpers
             read(ruta);
         }
 
-        //Retornar el StreamReader amb tota la informació.
         public StreamReader read(string ruta)
         {
             FileStream fs_text = new FileStream(ruta, FileMode.Open, FileAccess.Read);
@@ -50,38 +49,38 @@ namespace ClassHelpers
             return rtext;
         }
 
-        static void Main(string[] args)
+        private string sendUDPData(string Ip, int port, string data)
         {
-            connPoint = new IPEndPoint(listenerIP, port);
-            new Thread(Listener).Start();
-            Console.ReadLine();
-            listen = false;
+            string DestinationIP = Ip;
+            int Port = port;
+            UdpClient client = new UdpClient();
+            IPEndPoint ep = new IPEndPoint(IPAddress.Parse(DestinationIP), Port);
+            client.Connect(ep);
+
+            // send data
+            Byte[] sendBytes = Encoding.ASCII.GetBytes(data);
+            client.Send(sendBytes, sendBytes.Length);
+
+            // then receive data
+            Byte[] receiveBytes = client.Receive(ref ep);
+            string returnData = Encoding.ASCII.GetString(receiveBytes);
+            client.Close();
+
+            return returnData;
         }
 
-        private static void Listener()
+        private string sendTCPData(string Ip, int port, string data)
         {
-            UdpClient udpServer = new UdpClient(port);
-
-            while (true)
-            {
-
-                //Rep les dades
-                Byte[] receiveBytes = udpServer.Receive(ref connPoint);
-                string returnData = Encoding.ASCII.GetString(receiveBytes);
-                Console.Write("Connection successful. Data received. \n");
-                //Manipula les dades
-                string temps = FilteredData(returnData);
-
-                //Envia les dades
-
-                //Byte[] sendBytes = Encoding.ASCII.GetBytes(temps);
-                //udpServer.Send(sendBytes, sendBytes.Length, connPoint);
-            }
-        }
-        private static string FilteredData(string time)
-        {
-            // Manipular dades necesarias a trobar
-            return "";
+            TcpClient client = new TcpClient(Ip, port);
+            NetworkStream nwStream = client.GetStream();
+            byte[] buffer = new byte[client.ReceiveBufferSize];
+            // send data
+            Byte[] sendBytes = Encoding.ASCII.GetBytes(data);
+            nwStream.Write(sendBytes, 0, sendBytes.Length);
+            //---convert the data received into a string---
+            int bytesRead = nwStream.Read(buffer, 0, client.ReceiveBufferSize);
+            string dataReceived = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+            return dataReceived;
         }
     }
 }
