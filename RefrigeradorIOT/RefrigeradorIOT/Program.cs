@@ -40,6 +40,7 @@ namespace RefrigeradorIOT
 
                 Byte[] sendBytes = Encoding.ASCII.GetBytes(temps);
                 udpServer.Send(sendBytes, sendBytes.Length, connPoint);
+                Console.Write("Connection closed. \n\n");
             }
         }
 
