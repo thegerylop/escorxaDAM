@@ -33,7 +33,7 @@ namespace Balança
         public static string liniaRandom(string safata)
         {
             string file = "Pes" + safata + ".txt";
-            var lines = File.ReadAllLines("C:/Users/admin/source/repos/Balança/Fitxers/" + file);
+            var lines = File.ReadAllLines("C:/Users/admin/Desktop/escorxaDAM/Balança/Fitxers" + file);
             var r = new Random();
             var randomLineNumber = r.Next(0, lines.Length - 1);
             var line = lines[randomLineNumber];
