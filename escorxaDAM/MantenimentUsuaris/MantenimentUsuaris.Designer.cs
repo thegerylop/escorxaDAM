@@ -45,6 +45,7 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.idUsuari = new CustomControl.CustomTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -237,6 +238,17 @@
             this.checkBox7.Tag = "actiu";
             this.checkBox7.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(106, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(165, 20);
+            this.label6.TabIndex = 60;
+            this.label6.Text = "DADES DE L\'EMPRESA";
+            // 
             // idUsuari
             // 
             this.idUsuari.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -252,6 +264,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1211, 733);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.idUsuari);
             this.Controls.Add(this.checkBox7);
             this.Controls.Add(this.groupBox1);
@@ -264,12 +277,11 @@
             this.Controls.Add(this.customTextBox3);
             this.Controls.Add(this.customTextBox2);
             this.Controls.Add(this.customTextBox1);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "MantenimentUsuaris";
             this.ShowIcon = false;
             this.Text = "Manteniment d\'usuaris";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MantenimentUsuaris_Load);
-            this.Controls.SetChildIndex(this.btnActualitzar, 0);
             this.Controls.SetChildIndex(this.customTextBox1, 0);
             this.Controls.SetChildIndex(this.customTextBox2, 0);
             this.Controls.SetChildIndex(this.customTextBox3, 0);
@@ -282,6 +294,8 @@
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.checkBox7, 0);
             this.Controls.SetChildIndex(this.idUsuari, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.btnActualitzar, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -308,6 +322,7 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.Label label6;
         private CustomControl.CustomTextBox idUsuari;
     }
 }

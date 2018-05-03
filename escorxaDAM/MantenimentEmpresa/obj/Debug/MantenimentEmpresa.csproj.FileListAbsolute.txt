@@ -1,0 +1,9 @@
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\MantenimentEmpresa.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\MantenimentEmpresa.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.inserirEmpresa.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.modificarEmpresa.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.csproj.CopyComplete
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.pdb

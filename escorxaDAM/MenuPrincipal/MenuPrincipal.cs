@@ -10,16 +10,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BaseForm;
-
+using Models;
 namespace MenuPrincipal
 {
     public partial class MenuPrincipal : Form
     {
+        escorxadam2Entities _m = new escorxadam2Entities();
         ConexioBBDD.Conexio conn = new ConexioBBDD.Conexio();
-        string[] acces;
-        public void menuAcces(string[] value)
+        DownloadDataFTP.FtpForm frm = new DownloadDataFTP.FtpForm();
+
+        long user;
+        public void menuAcces(long value)
         {
-            acces = value;
+            user = value;
         }
         public MenuPrincipal()
         {
@@ -37,35 +40,25 @@ namespace MenuPrincipal
         }
         private void accesMenu()
         {
-            string nivells = "";
-            int count = 0;
-            foreach (string item in acces)
-            {
-                count++;
-                if(count == acces.Length)
-                {
-                    nivells += item + "%'";
-                } else
-                {
-                    nivells += item + "%' OR nivellAcces like '%";
-                }
-                
-            }
-            string query = "select * from itemMenu where nivellAcces like '%" + nivells;
-            DataSet menu = conn.portarPerConsulta(query, "menu");
-            DataTable dt = menu.Tables[0];
-            ToolStripMenuItem mt = new ToolStripMenuItem();
+            var userAcces = from a in _m.permisos
+                          where a.idUsuari == user
+                          select a.idNivellAcces;
 
-            foreach(DataRow row in dt.Rows)
+
+            var menuStrip = from a in _m.itemMenu
+                            where userAcces.Any(item => a.nivellAcces.Contains(item.ToString()))
+                            select a;
+
+
+            foreach (Models.itemMenu items in menuStrip)
             {
                 CustomControl.menuItem item = new CustomControl.menuItem();
                 item.Font = new Font("Segoe UI", 11f);
-                item.Text = Convert.ToString(row["nomItem"]);
-                item.Dll = Convert.ToString(row["dll"]);
-                item.Taula = Convert.ToString(row["taula"]);
+                item.Text = items.nomItem;
+                item.Dll = items.dll;
+                item.Taula = items.taula;
                 item.Click += new EventHandler(itemForm);
                 menuStrip1.Items.Add(item);
-
             }
 
         }
