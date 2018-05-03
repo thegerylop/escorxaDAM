@@ -22,7 +22,8 @@ namespace TestUDP
 
         private void sendData()
         {
-            string DestinationIP = File.ReadAllText(Path.Combine(Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")), @"Config\Config.txt"));
+            string DestinationIP = "127.0.0.1";
+            //File.ReadAllText(Path.Combine(Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")), @"Config\Config.txt"));
             UdpClient client = new UdpClient();
             IPEndPoint ep = new IPEndPoint(IPAddress.Parse(DestinationIP), 8000);
             client.Connect(ep);
