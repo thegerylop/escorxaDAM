@@ -1,11 +1,3 @@
-C:\DAM\Projecte 2\escorxaDAM\dll\Configuracio.dll
-C:\DAM\Projecte 2\escorxaDAM\dll\Configuracio.pdb
-C:\DAM\Projecte 2\escorxaDAM\Configuracio\obj\Debug\Configuracio.csprojResolveAssemblyReference.cache
-C:\DAM\Projecte 2\escorxaDAM\Configuracio\obj\Debug\Configuracio.configuracio.resources
-C:\DAM\Projecte 2\escorxaDAM\Configuracio\obj\Debug\Configuracio.csproj.GenerateResource.Cache
-C:\DAM\Projecte 2\escorxaDAM\Configuracio\obj\Debug\Configuracio.csproj.CoreCompileInputs.cache
-C:\DAM\Projecte 2\escorxaDAM\Configuracio\obj\Debug\Configuracio.dll
-C:\DAM\Projecte 2\escorxaDAM\Configuracio\obj\Debug\Configuracio.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Configuracio\obj\Debug\Configuracio.csprojResolveAssemblyReference.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Configuracio\obj\Debug\Configuracio.configuracio.resources
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Configuracio\obj\Debug\Configuracio.csproj.GenerateResource.Cache
@@ -14,3 +6,11 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Configuracio.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Configuracio.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Configuracio\obj\Debug\Configuracio.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Configuracio\obj\Debug\Configuracio.pdb
+C:\DAM\Projecte 2\escorxaDAM\dll\Configuracio.dll
+C:\DAM\Projecte 2\escorxaDAM\dll\Configuracio.pdb
+C:\DAM\Projecte 2\escorxaDAM\Configuracio\obj\Debug\Configuracio.csprojResolveAssemblyReference.cache
+C:\DAM\Projecte 2\escorxaDAM\Configuracio\obj\Debug\Configuracio.configuracio.resources
+C:\DAM\Projecte 2\escorxaDAM\Configuracio\obj\Debug\Configuracio.csproj.GenerateResource.Cache
+C:\DAM\Projecte 2\escorxaDAM\Configuracio\obj\Debug\Configuracio.csproj.CoreCompileInputs.cache
+C:\DAM\Projecte 2\escorxaDAM\Configuracio\obj\Debug\Configuracio.dll
+C:\DAM\Projecte 2\escorxaDAM\Configuracio\obj\Debug\Configuracio.pdb
