@@ -66,7 +66,6 @@ namespace Balança
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            
             Byte[] sendBytes = Encoding.ASCII.GetBytes(txtPes.Text);
             udpServer.Send(sendBytes, sendBytes.Length, connPoint);
         }

@@ -13,7 +13,6 @@ namespace Balança
 {
     public class Program
     {
-        
         /// <summary>
         /// Agafa el tipus de safata de la referencia del lot sencer
         /// </summary>
