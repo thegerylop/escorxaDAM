@@ -101,5 +101,11 @@ namespace MenuPrincipal
         {
             Application.Exit();
         }
+
+        private void fTPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DownloadDataFTP.FtpForm frm = new DownloadDataFTP.FtpForm();
+            frm.Show();
+        }
     }
 }
