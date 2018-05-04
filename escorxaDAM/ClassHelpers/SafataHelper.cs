@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace ClassHelpers
 {
-    class SafataHelper
+    public class SafataHelper
     {
         float pes;
         Boolean correcte = false;
-        public bool EstatSafata(object safata)
+        public bool EstatSafata(string safata)
         {
             correcte = PesSafata(safata);
             if (correcte)
             {
-                correcte = EstatEspectograf();
+                correcte = EstatEspectograf(safata);
                 if (correcte)
                 {
                     return true;
@@ -25,9 +25,9 @@ namespace ClassHelpers
             return false;
         }
 
-        public bool PesSafata(object safata)
+        public bool PesSafata(string Safata)
         {
-            string TipusSafata = "";
+            string TipusSafata = Safata;
             pes = Convert.ToSingle(EDI_TCPhelpers.sendUDPData("172.17.50.2",7000,TipusSafata));
 
             if(TipusSafata == "familiar")
@@ -60,12 +60,13 @@ namespace ClassHelpers
             }
         }
 
-        public bool EstatEspectograf()
+        public bool EstatEspectograf(string Safata)
         {
-            string valors = EDI_TCPhelpers.sendTCPData("172.17.50.2", 7000, Convert.ToString(pes));
+            string TipusSafata = Safata;
+            string valors = EDI_TCPhelpers.sendTCPData("172.17.50.2", 7000, Convert.ToString(TipusSafata));
             if (COcorrecte(valors[0]) && Ocorrecte(valors[1]) && ATMcorrecte(valors[2]))
             {
-                correcte = true;
+                return true;
             }
             return false;
         }
