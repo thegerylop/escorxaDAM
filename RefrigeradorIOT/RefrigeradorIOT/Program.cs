@@ -46,40 +46,85 @@ namespace RefrigeradorIOT
 
         private static string FilteredData(string time)
         {
-            string line = null, data = "";
-            int max = 0, min = 9999, tempmax = 0, tempmin = 0;
             Boolean checkTime = false;
+            string line = null, data = "";
+            string openTime = time.Substring(0, time.IndexOf('-'));
+            string closeTime = time.Substring(time.IndexOf('-') + 1);
+            string openTimeHo = "HO|" + openTime;
+            string closeTimeHo = "HO|" + closeTime;
+            string docTime = "";
+            int max = -9999, min = 9999, tempmax = 0, tempmin = 0;
             string pathToTextFile = Path.Combine(Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin")), @"Data\IOT.txt");
-            string openTime = "HO|" + time.Substring(0, time.IndexOf('-'));
-            string closeTime = "HO|" + time.Substring(time.IndexOf('-') + 1);
             File.OpenRead(pathToTextFile);
             StreamReader file = new StreamReader(pathToTextFile);
-            while(line != "")
+
+            if (Int32.Parse(openTime) < Int32.Parse(closeTime))
             {
-                line = file.ReadLine();
-                if (line.StartsWith(openTime))
+                while (line != "")
                 {
-                    checkTime = true;
-                }
-                if (checkTime)
-                {
-                    tempmin = Convert.ToInt32(line.Substring(8, 4));
-                    tempmax = Convert.ToInt32(line.Substring(13, 4));
-                    if(tempmax > max)
+                    line = file.ReadLine();
+                    if (line.StartsWith(openTimeHo))
                     {
-                        max = tempmax;
+                        checkTime = true;
                     }
-                    if(tempmin < min)
+                    if (checkTime)
                     {
-                        min = tempmin;
+                        tempmin = Convert.ToInt32(line.Substring(8, 4));
+                        tempmax = Convert.ToInt32(line.Substring(13, 4));
+                        if (tempmax > max)
+                        {
+                            max = tempmax;
+                        }
+                        if (tempmin < min)
+                        {
+                            min = tempmin;
+                        }
                     }
-                }
-                if (line.StartsWith(closeTime))
-                {
-                    line = "";
+                    if (line.StartsWith(closeTimeHo))
+                    {
+                        line = "";
+                    }
                 }
             }
-            data = min + "-" + max;
+            else if (Int32.Parse(openTime) > Int32.Parse(closeTime))
+            {
+                checkTime = true;
+                while (line != "")
+                {
+                    line = file.ReadLine();
+                    if (line.StartsWith(openTimeHo))
+                    {
+                        checkTime = true;
+                    }
+                    if (checkTime)
+                    {
+                        docTime = line.Substring(3, 4);
+                        tempmin = Convert.ToInt32(line.Substring(8, 4));
+                        tempmax = Convert.ToInt32(line.Substring(13, 4));
+                        if (tempmax > max)
+                        {
+                            max = tempmax;
+                        }
+                        if (tempmin < min)
+                        {
+                            min = tempmin;
+                        }
+                    }
+                    if (line.StartsWith(closeTimeHo))
+                    {
+                        checkTime = false;
+                    }
+                    if (docTime == "2345")
+                    {
+                        line = "";
+                    }
+                }
+            }
+            else
+            {
+                data = "Error";
+            }
+            data = data + min + "-" + max;
             return (data);
         }
     }
