@@ -14,11 +14,6 @@ namespace ClassHelpers
     public class EDI_TCPhelpers
     {
         String ruta;
-        private static Socket socket = null;
-        private static bool listen = false;
-        private static IPEndPoint connPoint = null;
-        private static IPAddress listenerIP = IPAddress.Any;
-        private static int port = 8000;
 
         public void openFile()
         {
@@ -49,7 +44,7 @@ namespace ClassHelpers
             return rtext;
         }
 
-        public static string sendUDPData(string Ip, int port, string data)
+        public string sendUDPData(string Ip, int port, string data)
         {
             string DestinationIP = Ip;
             int Port = port;
@@ -64,23 +59,25 @@ namespace ClassHelpers
             // then receive data
             Byte[] receiveBytes = client.Receive(ref ep);
             string returnData = Encoding.ASCII.GetString(receiveBytes);
+            MessageBox.Show(returnData);
             client.Close();
 
             return returnData;
         }
 
-        public static string sendTCPData(string Ip, int port, string data)
+        public string sendTCPData(string Ip, int port, string data)
         {
-            TcpClient client = new TcpClient(Ip, port);
-            NetworkStream nwStream = client.GetStream();
-            byte[] buffer = new byte[client.ReceiveBufferSize];
-            // send data
-            Byte[] sendBytes = Encoding.ASCII.GetBytes(data);
-            nwStream.Write(sendBytes, 0, sendBytes.Length);
-            //---convert the data received into a string---
-            int bytesRead = nwStream.Read(buffer, 0, client.ReceiveBufferSize);
-            string dataReceived = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-            return dataReceived;
+            Byte[] fileBuffer = System.Text.Encoding.ASCII.GetBytes(data);
+            TcpClient clientSocket = new TcpClient(Ip, port);
+            NetworkStream networkStream = clientSocket.GetStream();
+            networkStream.Write(fileBuffer, 0, fileBuffer.Length);
+            Byte[] dataRec = new Byte[256];
+            String responseData = String.Empty;
+            Int32 bytes = networkStream.Read(dataRec, 0, dataRec.Length);
+            responseData = System.Text.Encoding.ASCII.GetString(dataRec, 0, bytes);
+            networkStream.Close();
+            MessageBox.Show(responseData);
+            return responseData;
         }
     }
 }

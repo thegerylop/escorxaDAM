@@ -34,8 +34,10 @@
             this.ajudaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.fTPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tCPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tancarSessióToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uDPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +67,9 @@
             this.ajudaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajudaToolStripMenuItem2,
             this.sobreToolStripMenuItem1,
-            this.fTPToolStripMenuItem});
+            this.fTPToolStripMenuItem,
+            this.tCPToolStripMenuItem,
+            this.uDPToolStripMenuItem});
             this.ajudaToolStripMenuItem1.Name = "ajudaToolStripMenuItem1";
             this.ajudaToolStripMenuItem1.Size = new System.Drawing.Size(165, 24);
             this.ajudaToolStripMenuItem1.Text = "Ajuda";
@@ -90,6 +94,13 @@
             this.fTPToolStripMenuItem.Text = "FTP";
             this.fTPToolStripMenuItem.Click += new System.EventHandler(this.fTPToolStripMenuItem_Click);
             // 
+            // tCPToolStripMenuItem
+            // 
+            this.tCPToolStripMenuItem.Name = "tCPToolStripMenuItem";
+            this.tCPToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.tCPToolStripMenuItem.Text = "TCP";
+            this.tCPToolStripMenuItem.Click += new System.EventHandler(this.tCPToolStripMenuItem_Click);
+            // 
             // sortirToolStripMenuItem
             // 
             this.sortirToolStripMenuItem.Name = "sortirToolStripMenuItem";
@@ -103,6 +114,13 @@
             this.tancarSessióToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
             this.tancarSessióToolStripMenuItem.Text = "Tancar Sessió";
             this.tancarSessióToolStripMenuItem.Click += new System.EventHandler(this.tancarSessióToolStripMenuItem_Click);
+            // 
+            // uDPToolStripMenuItem
+            // 
+            this.uDPToolStripMenuItem.Name = "uDPToolStripMenuItem";
+            this.uDPToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.uDPToolStripMenuItem.Text = "UDP";
+            this.uDPToolStripMenuItem.Click += new System.EventHandler(this.uDPToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 
@@ -135,6 +153,8 @@
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem fTPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tCPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem uDPToolStripMenuItem;
     }
 }
 

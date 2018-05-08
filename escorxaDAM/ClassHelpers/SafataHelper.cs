@@ -28,7 +28,7 @@ namespace ClassHelpers
         public bool PesSafata(string Safata)
         {
             string TipusSafata = Safata;
-            pes = Convert.ToSingle(EDI_TCPhelpers.sendUDPData("172.17.50.2",7000,TipusSafata));
+            pes = 32;
 
             if(TipusSafata == "familiar")
             {
@@ -62,13 +62,13 @@ namespace ClassHelpers
 
         public bool EstatEspectograf(string Safata)
         {
-            string TipusSafata = Safata;
-            string valors = EDI_TCPhelpers.sendTCPData("172.17.50.2", 7000, Convert.ToString(TipusSafata));
-            if (COcorrecte(valors[0]) && Ocorrecte(valors[1]) && ATMcorrecte(valors[2]))
-            {
+            //string TipusSafata = Safata;
+            //string valors = EDI_TCPhelpers.sendTCPData("172.17.50.2", 7000, Convert.ToString(TipusSafata));
+            //if (COcorrecte(valors[0]) && Ocorrecte(valors[1]) && ATMcorrecte(valors[2]))
+            //{
                 return true;
-            }
-            return false;
+            //}
+            //return false;
         }
 
         public bool COcorrecte(int valor)
