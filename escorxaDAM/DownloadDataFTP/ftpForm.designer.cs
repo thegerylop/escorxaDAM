@@ -119,7 +119,7 @@ namespace DownloadDataFTP
             this.txtFTPAddress.Name = "txtFTPAddress";
             this.txtFTPAddress.Size = new System.Drawing.Size(244, 20);
             this.txtFTPAddress.TabIndex = 8;
-            this.txtFTPAddress.Text = "ftp://172.17.6.0/Grupo_2/2/";
+            this.txtFTPAddress.Text = "ftp://172.17.6.50/Grupo_2/2/";
             // 
             // label4
             // 

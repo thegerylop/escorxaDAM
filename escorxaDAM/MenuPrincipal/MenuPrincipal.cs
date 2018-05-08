@@ -18,6 +18,7 @@ namespace MenuPrincipal
         escorxadam2Entities _m = new escorxadam2Entities();
         ConexioBBDD.Conexio conn = new ConexioBBDD.Conexio();
         DownloadDataFTP.FtpForm frm = new DownloadDataFTP.FtpForm();
+        ClassHelpers.EDI_TCPhelpers test = new ClassHelpers.EDI_TCPhelpers();
 
         long user;
         public void menuAcces(long value)
@@ -100,6 +101,22 @@ namespace MenuPrincipal
         private void MenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void fTPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DownloadDataFTP.FtpForm frm = new DownloadDataFTP.FtpForm();
+            frm.Show();
+        }
+
+        private void tCPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            test.sendTCPData("172.17.20.249",5000,"SF");
+        }
+
+        private void uDPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            test.sendUDPData("172.17.21.32", 7000, "SF");
         }
     }
 }
