@@ -32,11 +32,11 @@ namespace Balança
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Balança());
+            connPoint = new IPEndPoint(listenerIP, port);
             //Començar threading
-            Thread newThread = new Thread(listener);
-            newThread.Start();
-
+            new Thread(listener).Start();
+            Application.Run(new Balança());
+            
         }
         public static void listener()
         {
@@ -44,6 +44,7 @@ namespace Balança
             {
                 Byte[] receiveBytes = udpServer.Receive(ref connPoint);
                 returnData = Encoding.ASCII.GetString(receiveBytes);
+                MessageBox.Show(returnData);
             }
         }
         /// <summary>
