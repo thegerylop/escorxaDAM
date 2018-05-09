@@ -37,7 +37,7 @@
             // btnPesar
             // 
             this.btnPesar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesar.Location = new System.Drawing.Point(61, 78);
+            this.btnPesar.Location = new System.Drawing.Point(66, 77);
             this.btnPesar.Name = "btnPesar";
             this.btnPesar.Size = new System.Drawing.Size(75, 28);
             this.btnPesar.TabIndex = 2;
@@ -49,7 +49,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(156, 80);
+            this.label2.Location = new System.Drawing.Point(161, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 24);
             this.label2.TabIndex = 3;
@@ -58,7 +58,7 @@
             // txtPes
             // 
             this.txtPes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPes.Location = new System.Drawing.Point(225, 77);
+            this.txtPes.Location = new System.Drawing.Point(230, 76);
             this.txtPes.Multiline = true;
             this.txtPes.Name = "txtPes";
             this.txtPes.Size = new System.Drawing.Size(253, 29);
@@ -67,7 +67,7 @@
             // btnEnviar
             // 
             this.btnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviar.Location = new System.Drawing.Point(391, 135);
+            this.btnEnviar.Location = new System.Drawing.Point(396, 134);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(87, 29);
             this.btnEnviar.TabIndex = 5;
@@ -79,7 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 220);
+            this.ClientSize = new System.Drawing.Size(560, 214);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.txtPes);
             this.Controls.Add(this.label2);
