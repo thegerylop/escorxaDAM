@@ -35,9 +35,9 @@
             this.sobreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.fTPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tCPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uDPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tancarSessióToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.uDPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,8 +55,8 @@
             // 
             this.arxiuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajudaToolStripMenuItem1,
-            this.sortirToolStripMenuItem,
-            this.tancarSessióToolStripMenuItem});
+            this.tancarSessióToolStripMenuItem,
+            this.sortirToolStripMenuItem});
             this.arxiuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.arxiuToolStripMenuItem.Name = "arxiuToolStripMenuItem";
             this.arxiuToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
@@ -77,29 +77,36 @@
             // ajudaToolStripMenuItem2
             // 
             this.ajudaToolStripMenuItem2.Name = "ajudaToolStripMenuItem2";
-            this.ajudaToolStripMenuItem2.Size = new System.Drawing.Size(152, 24);
+            this.ajudaToolStripMenuItem2.Size = new System.Drawing.Size(126, 24);
             this.ajudaToolStripMenuItem2.Text = "Ajuda";
             // 
             // sobreToolStripMenuItem1
             // 
             this.sobreToolStripMenuItem1.Name = "sobreToolStripMenuItem1";
-            this.sobreToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
+            this.sobreToolStripMenuItem1.Size = new System.Drawing.Size(126, 24);
             this.sobreToolStripMenuItem1.Text = "Sobre...";
             this.sobreToolStripMenuItem1.Click += new System.EventHandler(this.sobreToolStripMenuItem1_Click);
             // 
             // fTPToolStripMenuItem
             // 
             this.fTPToolStripMenuItem.Name = "fTPToolStripMenuItem";
-            this.fTPToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.fTPToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
             this.fTPToolStripMenuItem.Text = "FTP";
             this.fTPToolStripMenuItem.Click += new System.EventHandler(this.fTPToolStripMenuItem_Click);
             // 
             // tCPToolStripMenuItem
             // 
             this.tCPToolStripMenuItem.Name = "tCPToolStripMenuItem";
-            this.tCPToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.tCPToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
             this.tCPToolStripMenuItem.Text = "TCP";
             this.tCPToolStripMenuItem.Click += new System.EventHandler(this.tCPToolStripMenuItem_Click);
+            // 
+            // uDPToolStripMenuItem
+            // 
+            this.uDPToolStripMenuItem.Name = "uDPToolStripMenuItem";
+            this.uDPToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
+            this.uDPToolStripMenuItem.Text = "UDP";
+            this.uDPToolStripMenuItem.Click += new System.EventHandler(this.uDPToolStripMenuItem_Click);
             // 
             // sortirToolStripMenuItem
             // 
@@ -114,13 +121,6 @@
             this.tancarSessióToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
             this.tancarSessióToolStripMenuItem.Text = "Tancar Sessió";
             this.tancarSessióToolStripMenuItem.Click += new System.EventHandler(this.tancarSessióToolStripMenuItem_Click);
-            // 
-            // uDPToolStripMenuItem
-            // 
-            this.uDPToolStripMenuItem.Name = "uDPToolStripMenuItem";
-            this.uDPToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.uDPToolStripMenuItem.Text = "UDP";
-            this.uDPToolStripMenuItem.Click += new System.EventHandler(this.uDPToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 

@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BaseForm;
 using Models;
+using MantenimentUsuaris;
+
 namespace MenuPrincipal
 {
     public partial class MenuPrincipal : Form

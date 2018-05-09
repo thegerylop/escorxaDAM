@@ -18,4 +18,3 @@ C:\DAM\Projecte 2\escorxaDAM\BaseForm\obj\Debug\BaseForm.csproj.GenerateResource
 C:\DAM\Projecte 2\escorxaDAM\BaseForm\obj\Debug\BaseForm.csproj.CoreCompileInputs.cache
 C:\DAM\Projecte 2\escorxaDAM\BaseForm\obj\Debug\BaseForm.dll
 C:\DAM\Projecte 2\escorxaDAM\BaseForm\obj\Debug\BaseForm.pdb
-C:\DAM\Projecte 2\escorxaDAM\BaseForm\obj\Debug\BaseForm.csprojResolveAssemblyReference.cache

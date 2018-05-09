@@ -56,22 +56,7 @@ namespace MenuPrincipal
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string command = "SELECT idUsuari FROM usuaris where Nom = '" + CCLogin.Text + "' and password = '" + CCPassword.Text + "'";
-            //BINARY
-            string idUsuari = conn.resultatComanda(command);
-            string commandAcces = "SELECT `idNivellAcces` FROM `permisos` WHERE `idUsuari`= " + idUsuari;
-            if(idUsuari != "")
-            {
-                string[] nivellAcces = conn.resultatComandaArray(commandAcces);
-                MenuPrincipal frm = new MenuPrincipal();
-                frm.menuAcces(nivellAcces);
-                frm.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Usuari o contrasenya incorrecta");
-            }
+            loginEF();
         }
 
         private void CCLogin_Click(object sender, KeyEventArgs e)
