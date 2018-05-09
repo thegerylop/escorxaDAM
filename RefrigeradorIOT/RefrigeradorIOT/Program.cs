@@ -12,8 +12,6 @@ namespace RefrigeradorIOT
 {
     class Program
     {
-        private static Socket socket = null;
-        private static bool listen = false;
         private static IPEndPoint connPoint = null;
         private static IPAddress listenerIP = IPAddress.Any;
         private static int port = 8000;
@@ -23,7 +21,6 @@ namespace RefrigeradorIOT
             connPoint = new IPEndPoint(listenerIP, port);
             new Thread(Listener).Start();
             Console.ReadLine();
-            listen = false;
         }
 
         private static void Listener()
@@ -85,6 +82,7 @@ namespace RefrigeradorIOT
                         line = "";
                     }
                 }
+                data = min + "-" + max;
             }
             else if (Int32.Parse(openTime) > Int32.Parse(closeTime))
             {
@@ -119,12 +117,12 @@ namespace RefrigeradorIOT
                         line = "";
                     }
                 }
+                data = min + "-" + max;
             }
             else
             {
                 data = "Error";
             }
-            data = data + min + "-" + max;
             return (data);
         }
     }
