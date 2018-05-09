@@ -2,9 +2,8 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\EstatInspeccio.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\EstatInspeccio.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.csprojResolveAssemblyReference.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.estatInspeccio.resources
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.csproj.GenerateResource.Cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.csproj.CopyComplete
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatInspeccio\obj\Debug\EstatInspeccio.pdb
 C:\DAM\Projecte 2\escorxaDAM\dll\EstatInspeccio.dll

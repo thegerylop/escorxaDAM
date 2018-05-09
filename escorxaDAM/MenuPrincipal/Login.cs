@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConexioBBDD;
 using BaseForm;
+using Models;
 namespace MenuPrincipal
 {
     public partial class Login : Form
@@ -18,7 +19,33 @@ namespace MenuPrincipal
         {
             InitializeComponent();
         }
+        private void loginEF()
+        {
+            escorxadam2Entities _m = new escorxadam2Entities();
+            try
+            {
+                var myUser = _m.usuaris
+                .FirstOrDefault(u => u.Nom == CCLogin.Text
+                    && u.password == CCPassword.Text);
 
+                if (myUser != null)
+                {
+                    MenuPrincipal frm = new MenuPrincipal();
+                    frm.menuAcces(myUser.idUsuari);
+                    frm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuari o contrasenya incorrecta");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("o hi ha connexió a la base de dades");
+            }
+           
+        }
 
         private void Login_Load(object sender, EventArgs e)
         {
@@ -32,7 +59,7 @@ namespace MenuPrincipal
             string command = "SELECT idUsuari FROM usuaris where Nom = '" + CCLogin.Text + "' and password = '" + CCPassword.Text + "'";
             //BINARY
             string idUsuari = conn.resultatComanda(command);
-            string commandAcces = "SELECT idNivellAcces FROM permisos WHERE idUsuari= " + idUsuari;
+            string commandAcces = "SELECT `idNivellAcces` FROM `permisos` WHERE `idUsuari`= " + idUsuari;
             if(idUsuari != "")
             {
                 string[] nivellAcces = conn.resultatComandaArray(commandAcces);

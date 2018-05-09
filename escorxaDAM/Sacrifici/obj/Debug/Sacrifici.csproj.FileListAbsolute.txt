@@ -1,0 +1,17 @@
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Sacrifici.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Sacrifici.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Sacrifici\obj\Debug\Sacrifici.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Sacrifici\obj\Debug\Sacrifici.sacrifici.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Sacrifici\obj\Debug\Sacrifici.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Sacrifici\obj\Debug\Sacrifici.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Sacrifici\obj\Debug\Sacrifici.csproj.CopyComplete
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Sacrifici\obj\Debug\Sacrifici.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Sacrifici\obj\Debug\Sacrifici.pdb
+C:\DAM\Projecte 2\escorxaDAM\dll\Sacrifici.dll
+C:\DAM\Projecte 2\escorxaDAM\dll\Sacrifici.pdb
+C:\DAM\Projecte 2\escorxaDAM\Sacrifici\obj\Debug\Sacrifici.csprojResolveAssemblyReference.cache
+C:\DAM\Projecte 2\escorxaDAM\Sacrifici\obj\Debug\Sacrifici.sacrifici.resources
+C:\DAM\Projecte 2\escorxaDAM\Sacrifici\obj\Debug\Sacrifici.csproj.GenerateResource.Cache
+C:\DAM\Projecte 2\escorxaDAM\Sacrifici\obj\Debug\Sacrifici.csproj.CoreCompileInputs.cache
+C:\DAM\Projecte 2\escorxaDAM\Sacrifici\obj\Debug\Sacrifici.dll
+C:\DAM\Projecte 2\escorxaDAM\Sacrifici\obj\Debug\Sacrifici.pdb

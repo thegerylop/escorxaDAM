@@ -1,0 +1,18 @@
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\MantenimentEmpresa.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\MantenimentEmpresa.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.inserirEmpresa.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.modificarEmpresa.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.csproj.CopyComplete
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.pdb
+C:\DAM\Projecte 2\escorxaDAM\dll\MantenimentEmpresa.dll
+C:\DAM\Projecte 2\escorxaDAM\dll\MantenimentEmpresa.pdb
+C:\DAM\Projecte 2\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.csprojResolveAssemblyReference.cache
+C:\DAM\Projecte 2\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.inserirEmpresa.resources
+C:\DAM\Projecte 2\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.modificarEmpresa.resources
+C:\DAM\Projecte 2\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.csproj.GenerateResource.Cache
+C:\DAM\Projecte 2\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.csproj.CoreCompileInputs.cache
+C:\DAM\Projecte 2\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.dll
+C:\DAM\Projecte 2\escorxaDAM\MantenimentEmpresa\obj\Debug\MantenimentEmpresa.pdb
