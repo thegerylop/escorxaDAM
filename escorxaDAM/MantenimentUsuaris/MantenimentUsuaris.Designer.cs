@@ -245,9 +245,9 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(106, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 20);
+            this.label6.Size = new System.Drawing.Size(153, 20);
             this.label6.TabIndex = 60;
-            this.label6.Text = "DADES DE L\'EMPRESA";
+            this.label6.Text = "DADES DE L\'USUARI";
             // 
             // idUsuari
             // 

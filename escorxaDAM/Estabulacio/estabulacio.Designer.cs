@@ -56,6 +56,7 @@
             // btnInserir
             // 
             this.btnInserir.Location = new System.Drawing.Point(837, 621);
+            this.btnInserir.TabIndex = 50;
             // 
             // panel1
             // 
@@ -74,7 +75,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Reference = null;
             this.comboBox1.Size = new System.Drawing.Size(192, 21);
-            this.comboBox1.TabIndex = 77;
+            this.comboBox1.TabIndex = 14;
             // 
             // label10
             // 
@@ -95,7 +96,7 @@
             this.customTextBox6.Options = CustomControl.CustomTextBox.Items.Password;
             this.customTextBox6.Placeholder = null;
             this.customTextBox6.Size = new System.Drawing.Size(192, 20);
-            this.customTextBox6.TabIndex = 72;
+            this.customTextBox6.TabIndex = 13;
             // 
             // label8
             // 
@@ -127,7 +128,7 @@
             this.customTextBox3.Options = CustomControl.CustomTextBox.Items.Password;
             this.customTextBox3.Placeholder = null;
             this.customTextBox3.Size = new System.Drawing.Size(192, 20);
-            this.customTextBox3.TabIndex = 69;
+            this.customTextBox3.TabIndex = 11;
             // 
             // customTextBox4
             // 
@@ -137,7 +138,7 @@
             this.customTextBox4.Options = CustomControl.CustomTextBox.Items.Password;
             this.customTextBox4.Placeholder = null;
             this.customTextBox4.Size = new System.Drawing.Size(192, 20);
-            this.customTextBox4.TabIndex = 68;
+            this.customTextBox4.TabIndex = 10;
             // 
             // label6
             // 
@@ -169,7 +170,7 @@
             this.customTextBox1.Options = CustomControl.CustomTextBox.Items.Password;
             this.customTextBox1.Placeholder = null;
             this.customTextBox1.Size = new System.Drawing.Size(192, 20);
-            this.customTextBox1.TabIndex = 64;
+            this.customTextBox1.TabIndex = 5;
             // 
             // label5
             // 
@@ -223,7 +224,7 @@
             this.customTextBox5.Options = CustomControl.CustomTextBox.Items.Password;
             this.customTextBox5.Placeholder = null;
             this.customTextBox5.Size = new System.Drawing.Size(192, 20);
-            this.customTextBox5.TabIndex = 80;
+            this.customTextBox5.TabIndex = 7;
             // 
             // label1
             // 
@@ -242,7 +243,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(680, 87);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 81;
+            this.dateTimePicker1.TabIndex = 8;
             // 
             // dateTimePicker2
             // 
@@ -250,7 +251,7 @@
             this.dateTimePicker2.Location = new System.Drawing.Point(680, 141);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 82;
+            this.dateTimePicker2.TabIndex = 9;
             // 
             // label13
             // 
@@ -280,16 +281,17 @@
             this.dateTimePicker3.Location = new System.Drawing.Point(288, 518);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(192, 20);
-            this.dateTimePicker3.TabIndex = 86;
+            this.dateTimePicker3.TabIndex = 12;
             // 
             // comboBox2
             // 
+            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(231, 145);
+            this.comboBox2.Location = new System.Drawing.Point(231, 144);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Reference = null;
             this.comboBox2.Size = new System.Drawing.Size(192, 21);
-            this.comboBox2.TabIndex = 87;
+            this.comboBox2.TabIndex = 6;
             // 
             // estabulacio
             // 

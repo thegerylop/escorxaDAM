@@ -247,9 +247,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(43, 75);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 20);
+            this.label4.Size = new System.Drawing.Size(157, 20);
             this.label4.TabIndex = 90;
-            this.label4.Text = "Bpox d\'immobilització :";
+            this.label4.Text = "Box d\'immobilització :";
             // 
             // label3
             // 

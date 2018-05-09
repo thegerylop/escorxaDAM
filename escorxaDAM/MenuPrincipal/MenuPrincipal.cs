@@ -61,8 +61,8 @@ namespace MenuPrincipal
                 item.Click += new EventHandler(itemForm);
                 menuStrip1.Items.Add(item);
             }
-
         }
+
         public void itemForm(object sender, EventArgs e)
         {
             string name = ((CustomControl.menuItem)sender).Dll+"."+((CustomControl.menuItem)sender).Taula;

@@ -6,7 +6,6 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ConexioBBDD\obj\Debug\ConexioBBDD.d
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ConexioBBDD\obj\Debug\ConexioBBDD.pdb
 C:\DAM\Projecte 2\escorxaDAM\dll\ConexioBBDD.dll
 C:\DAM\Projecte 2\escorxaDAM\dll\ConexioBBDD.pdb
-C:\DAM\Projecte 2\escorxaDAM\ConexioBBDD\obj\Debug\ConexioBBDD.csprojResolveAssemblyReference.cache
 C:\DAM\Projecte 2\escorxaDAM\ConexioBBDD\obj\Debug\ConexioBBDD.csproj.CoreCompileInputs.cache
 C:\DAM\Projecte 2\escorxaDAM\ConexioBBDD\obj\Debug\ConexioBBDD.dll
 C:\DAM\Projecte 2\escorxaDAM\ConexioBBDD\obj\Debug\ConexioBBDD.pdb
