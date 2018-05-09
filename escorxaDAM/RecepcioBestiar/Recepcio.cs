@@ -23,6 +23,8 @@ namespace RecepcioBestiar
 
         private void Recepcio_Load(object sender, EventArgs e)
         {
+            dateToday.Value = DateTime.Now;
+            dateSortida.CustomFormat = "yyyymmdd";
         }
         private void Edi()
         {
@@ -30,20 +32,14 @@ namespace RecepcioBestiar
             dades = edi.read(ruta);
             omplirCamps(dades);
         }
-        private void tratarEdi()
-        {
-            customTextBox1.Text = "hola";
- 
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Edi();
-            tratarEdi();
         }
         private void omplirCamps(string[] dades)
         {
-            string output;
+            string output = "";
             string Char;
             int index;
             foreach(string item in dades)
@@ -78,6 +74,35 @@ namespace RecepcioBestiar
                             index = item.IndexOf("|");
                             output = item.Substring(index + 1);
                             break;
+                    }
+                    actualizarTextBox(Char, output);
+                }
+            }
+        }
+        private void actualizarTextBox(string Char, string text)
+        {
+            foreach (Control txt in this.Controls)
+            {
+                if (txt.GetType() == typeof(CustomControl.CustomTextBox))
+                {
+                    if (txt.Name == Char)
+                    {
+                        if(Char == "TRA")
+                        {
+                            int index = text.IndexOf("|");
+                            string output = text.Substring(0 , index);
+                            txt.Text = output;
+                            index = text.LastIndexOf("|");
+                            output = text.Substring(index + 1);
+                            DateTime enteredDate = DateTime.Parse(output);
+                            dateSortida.Value = enteredDate;
+
+                        }
+                        else
+                        {
+                            txt.Text = text;
+                        }
+                        
                     }
                 }
             }

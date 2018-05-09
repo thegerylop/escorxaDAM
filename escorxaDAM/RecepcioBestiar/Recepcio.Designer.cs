@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new CustomControl.comboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -37,14 +36,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox2 = new CustomControl.comboBox();
-            this.customTextBox1 = new CustomControl.CustomTextBox();
-            this.customTextBox2 = new CustomControl.CustomTextBox();
-            this.customTextBox3 = new CustomControl.CustomTextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.REMO = new CustomControl.CustomTextBox();
+            this.ORI = new CustomControl.CustomTextBox();
+            this.TOTAN = new CustomControl.CustomTextBox();
+            this.dateToday = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.customTextBox4 = new CustomControl.CustomTextBox();
+            this.numLot = new CustomControl.CustomTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -54,18 +52,10 @@
             this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIB_Mare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LLegirEdi = new System.Windows.Forms.Button();
+            this.TRA = new CustomControl.CustomTextBox();
+            this.dateSortida = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(706, 96);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Reference = null;
-            this.comboBox1.Size = new System.Drawing.Size(109, 21);
-            this.comboBox1.TabIndex = 38;
             // 
             // label1
             // 
@@ -154,53 +144,44 @@
             this.comboBox2.Size = new System.Drawing.Size(109, 21);
             this.comboBox2.TabIndex = 47;
             // 
-            // customTextBox1
+            // REMO
             // 
-            this.customTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.customTextBox1.Location = new System.Drawing.Point(194, 97);
-            this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Options = CustomControl.CustomTextBox.Items.Password;
-            this.customTextBox1.Placeholder = null;
-            this.customTextBox1.Size = new System.Drawing.Size(150, 20);
-            this.customTextBox1.TabIndex = 49;
+            this.REMO.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.REMO.Location = new System.Drawing.Point(194, 97);
+            this.REMO.Name = "REMO";
+            this.REMO.Options = CustomControl.CustomTextBox.Items.Text;
+            this.REMO.Placeholder = null;
+            this.REMO.Size = new System.Drawing.Size(150, 20);
+            this.REMO.TabIndex = 49;
             // 
-            // customTextBox2
+            // ORI
             // 
-            this.customTextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.customTextBox2.Location = new System.Drawing.Point(194, 140);
-            this.customTextBox2.Name = "customTextBox2";
-            this.customTextBox2.Options = CustomControl.CustomTextBox.Items.Password;
-            this.customTextBox2.Placeholder = null;
-            this.customTextBox2.Size = new System.Drawing.Size(150, 20);
-            this.customTextBox2.TabIndex = 50;
+            this.ORI.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ORI.Location = new System.Drawing.Point(194, 140);
+            this.ORI.Name = "ORI";
+            this.ORI.Options = CustomControl.CustomTextBox.Items.Text;
+            this.ORI.Placeholder = null;
+            this.ORI.Size = new System.Drawing.Size(150, 20);
+            this.ORI.TabIndex = 50;
             // 
-            // customTextBox3
+            // TOTAN
             // 
-            this.customTextBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.customTextBox3.Location = new System.Drawing.Point(194, 216);
-            this.customTextBox3.Name = "customTextBox3";
-            this.customTextBox3.Options = CustomControl.CustomTextBox.Items.Password;
-            this.customTextBox3.Placeholder = null;
-            this.customTextBox3.Size = new System.Drawing.Size(52, 20);
-            this.customTextBox3.TabIndex = 51;
+            this.TOTAN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TOTAN.Location = new System.Drawing.Point(194, 216);
+            this.TOTAN.Name = "TOTAN";
+            this.TOTAN.Options = CustomControl.CustomTextBox.Items.Text;
+            this.TOTAN.Placeholder = null;
+            this.TOTAN.Size = new System.Drawing.Size(52, 20);
+            this.TOTAN.TabIndex = 51;
             // 
-            // dateTimePicker2
+            // dateToday
             // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(706, 140);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(109, 20);
-            this.dateTimePicker2.TabIndex = 53;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(706, 177);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(109, 20);
-            this.dateTimePicker3.TabIndex = 54;
+            this.dateToday.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateToday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateToday.Location = new System.Drawing.Point(706, 177);
+            this.dateToday.Name = "dateToday";
+            this.dateToday.Size = new System.Drawing.Size(109, 20);
+            this.dateToday.TabIndex = 54;
             // 
             // label9
             // 
@@ -222,15 +203,15 @@
             this.panel1.Size = new System.Drawing.Size(740, 1);
             this.panel1.TabIndex = 56;
             // 
-            // customTextBox4
+            // numLot
             // 
-            this.customTextBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.customTextBox4.Location = new System.Drawing.Point(194, 179);
-            this.customTextBox4.Name = "customTextBox4";
-            this.customTextBox4.Options = CustomControl.CustomTextBox.Items.Password;
-            this.customTextBox4.Placeholder = null;
-            this.customTextBox4.Size = new System.Drawing.Size(52, 20);
-            this.customTextBox4.TabIndex = 57;
+            this.numLot.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numLot.Location = new System.Drawing.Point(194, 180);
+            this.numLot.Name = "numLot";
+            this.numLot.Options = CustomControl.CustomTextBox.Items.Text;
+            this.numLot.Placeholder = null;
+            this.numLot.Size = new System.Drawing.Size(52, 20);
+            this.numLot.TabIndex = 57;
             // 
             // label10
             // 
@@ -315,23 +296,43 @@
             this.LLegirEdi.UseVisualStyleBackColor = false;
             this.LLegirEdi.Click += new System.EventHandler(this.button1_Click);
             // 
+            // TRA
+            // 
+            this.TRA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TRA.Location = new System.Drawing.Point(706, 96);
+            this.TRA.Name = "TRA";
+            this.TRA.Options = CustomControl.CustomTextBox.Items.Text;
+            this.TRA.Placeholder = null;
+            this.TRA.Size = new System.Drawing.Size(112, 20);
+            this.TRA.TabIndex = 72;
+            // 
+            // dateSortida
+            // 
+            this.dateSortida.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateSortida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateSortida.Location = new System.Drawing.Point(706, 140);
+            this.dateSortida.Name = "dateSortida";
+            this.dateSortida.Size = new System.Drawing.Size(109, 20);
+            this.dateSortida.TabIndex = 53;
+            // 
             // Recepcio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 604);
+            this.Controls.Add(this.TRA);
             this.Controls.Add(this.LLegirEdi);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.customTextBox4);
+            this.Controls.Add(this.numLot);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.customTextBox3);
-            this.Controls.Add(this.customTextBox2);
-            this.Controls.Add(this.customTextBox1);
+            this.Controls.Add(this.dateToday);
+            this.Controls.Add(this.dateSortida);
+            this.Controls.Add(this.TOTAN);
+            this.Controls.Add(this.ORI);
+            this.Controls.Add(this.REMO);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -340,13 +341,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Recepcio";
             this.Text = "Recepcio";
             this.Load += new System.EventHandler(this.Recepcio_Load);
-            this.Controls.SetChildIndex(this.btnInserir, 0);
-            this.Controls.SetChildIndex(this.comboBox1, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label4, 0);
@@ -355,18 +353,20 @@
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.label8, 0);
             this.Controls.SetChildIndex(this.comboBox2, 0);
-            this.Controls.SetChildIndex(this.customTextBox1, 0);
-            this.Controls.SetChildIndex(this.customTextBox2, 0);
-            this.Controls.SetChildIndex(this.customTextBox3, 0);
-            this.Controls.SetChildIndex(this.dateTimePicker2, 0);
-            this.Controls.SetChildIndex(this.dateTimePicker3, 0);
+            this.Controls.SetChildIndex(this.REMO, 0);
+            this.Controls.SetChildIndex(this.ORI, 0);
+            this.Controls.SetChildIndex(this.TOTAN, 0);
+            this.Controls.SetChildIndex(this.dateSortida, 0);
+            this.Controls.SetChildIndex(this.dateToday, 0);
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.customTextBox4, 0);
+            this.Controls.SetChildIndex(this.numLot, 0);
             this.Controls.SetChildIndex(this.label10, 0);
             this.Controls.SetChildIndex(this.label15, 0);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.Controls.SetChildIndex(this.LLegirEdi, 0);
+            this.Controls.SetChildIndex(this.TRA, 0);
+            this.Controls.SetChildIndex(this.btnInserir, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -374,8 +374,6 @@
         }
 
         #endregion
-
-        private CustomControl.comboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -384,14 +382,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private CustomControl.comboBox comboBox2;
-        private CustomControl.CustomTextBox customTextBox1;
-        private CustomControl.CustomTextBox customTextBox2;
-        private CustomControl.CustomTextBox customTextBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private CustomControl.CustomTextBox REMO;
+        private CustomControl.CustomTextBox ORI;
+        private CustomControl.CustomTextBox TOTAN;
+        private System.Windows.Forms.DateTimePicker dateToday;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
-        private CustomControl.CustomTextBox customTextBox4;
+        private CustomControl.CustomTextBox numLot;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -401,5 +398,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIB_Mare;
         public System.Windows.Forms.Button LLegirEdi;
+        private CustomControl.CustomTextBox TRA;
+        private System.Windows.Forms.DateTimePicker dateSortida;
     }
 }
