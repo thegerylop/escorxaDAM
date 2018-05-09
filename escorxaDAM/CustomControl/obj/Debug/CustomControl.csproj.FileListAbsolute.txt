@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\CustomControl.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\CustomControl.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\CustomControl\obj\Debug\CustomControl.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\CustomControl\obj\Debug\CustomControl.CustomTextBox.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\CustomControl\obj\Debug\CustomControl.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\CustomControl\obj\Debug\CustomControl.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\CustomControl\obj\Debug\CustomControl.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\CustomControl\obj\Debug\CustomControl.pdb
+>>>>>>> master
 C:\DAM\Projecte 2\escorxaDAM\dll\CustomControl.dll
 C:\DAM\Projecte 2\escorxaDAM\dll\CustomControl.pdb
 C:\DAM\Projecte 2\escorxaDAM\CustomControl\obj\Debug\CustomControl.CustomTextBox.resources
