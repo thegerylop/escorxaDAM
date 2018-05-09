@@ -1,0 +1,11 @@
+C:\DAM\Projecte 2\escorxaDAM\dll\DownloadDataFTP.exe.config
+C:\DAM\Projecte 2\escorxaDAM\dll\DownloadDataFTP.exe
+C:\DAM\Projecte 2\escorxaDAM\dll\DownloadDataFTP.pdb
+C:\DAM\Projecte 2\escorxaDAM\DownloadDataFTP\obj\Debug\FTP.csprojResolveAssemblyReference.cache
+C:\DAM\Projecte 2\escorxaDAM\DownloadDataFTP\obj\Debug\DownloadDataFTP.FtpForm.resources
+C:\DAM\Projecte 2\escorxaDAM\DownloadDataFTP\obj\Debug\DownloadDataFTP.listDialogForm.resources
+C:\DAM\Projecte 2\escorxaDAM\DownloadDataFTP\obj\Debug\DownloadDataFTP.Properties.Resources.resources
+C:\DAM\Projecte 2\escorxaDAM\DownloadDataFTP\obj\Debug\FTP.csproj.GenerateResource.Cache
+C:\DAM\Projecte 2\escorxaDAM\DownloadDataFTP\obj\Debug\FTP.csproj.CoreCompileInputs.cache
+C:\DAM\Projecte 2\escorxaDAM\DownloadDataFTP\obj\Debug\DownloadDataFTP.exe
+C:\DAM\Projecte 2\escorxaDAM\DownloadDataFTP\obj\Debug\DownloadDataFTP.pdb
