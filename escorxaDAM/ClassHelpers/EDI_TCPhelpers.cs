@@ -15,7 +15,7 @@ namespace ClassHelpers
     {
         String ruta;
 
-        public void openFile()
+        public string openFile()
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
@@ -27,21 +27,24 @@ namespace ClassHelpers
             // Crido el method per mostrarlo a la dialog box.
             openFileDialog1.ShowDialog();
             ruta = openFileDialog1.FileName;
-            read(ruta);
+            return ruta;
         }
 
-        public static StreamReader read(string ruta)
+        public string[] read(string ruta)
         {
+            var list = new List<string>();
             FileStream fs_text = new FileStream(ruta, FileMode.Open, FileAccess.Read);
 
             StreamReader rtext = new StreamReader(fs_text);
-            while (rtext.Peek() >= 0)
+            string line;
+            while ((line = rtext.ReadLine()) != null)
             {
-                MessageBox.Show(rtext.ReadLine());
+                list.Add(line);
             }
-
+            string[] result = list.ToArray();
             fs_text.Close();
-            return rtext;
+            return result;
+
         }
 
         public string sendUDPData(string Ip, int port, string data)

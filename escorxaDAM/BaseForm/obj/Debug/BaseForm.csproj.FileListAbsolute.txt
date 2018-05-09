@@ -1,13 +1,3 @@
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\BaseForm.dll
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\BaseForm.pdb
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.csprojResolveAssemblyReference.cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.BaseForm.resources
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.BaseInserir.resources
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.BaseModificar.resources
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.csproj.GenerateResource.Cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.dll
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.pdb
 C:\DAM\Projecte 2\escorxaDAM\dll\BaseForm.dll
 C:\DAM\Projecte 2\escorxaDAM\dll\BaseForm.pdb
 C:\DAM\Projecte 2\escorxaDAM\BaseForm\obj\Debug\BaseForm.csprojResolveAssemblyReference.cache
@@ -18,3 +8,13 @@ C:\DAM\Projecte 2\escorxaDAM\BaseForm\obj\Debug\BaseForm.csproj.GenerateResource
 C:\DAM\Projecte 2\escorxaDAM\BaseForm\obj\Debug\BaseForm.csproj.CoreCompileInputs.cache
 C:\DAM\Projecte 2\escorxaDAM\BaseForm\obj\Debug\BaseForm.dll
 C:\DAM\Projecte 2\escorxaDAM\BaseForm\obj\Debug\BaseForm.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\BaseForm.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\BaseForm.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.BaseForm.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.BaseInserir.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.BaseModificar.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\BaseForm\obj\Debug\BaseForm.pdb
