@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+using Models;
 
 namespace RecepcioBestiar
 {
     public partial class Recepcio : BaseForm.BaseInserir
     {
+        escorxadam2Entities _m = new escorxadam2Entities();
         ClassHelpers.EDI_TCPhelpers edi = new ClassHelpers.EDI_TCPhelpers();
         string[] dades;
 
@@ -20,6 +23,7 @@ namespace RecepcioBestiar
         {
             InitializeComponent();
         }
+
 
         private void Recepcio_Load(object sender, EventArgs e)
         {
@@ -75,7 +79,15 @@ namespace RecepcioBestiar
                             output = item.Substring(index + 1);
                             break;
                     }
-                    actualizarTextBox(Char, output);
+                    if (!Char.Equals("IDAN"))
+                    {
+                        actualizarTextBox(Char, output);
+                    }
+                    else
+                    {
+                        actualitzarDataGrid(Char, output);
+                    }
+                    
                 }
             }
         }
@@ -94,7 +106,7 @@ namespace RecepcioBestiar
                             txt.Text = output;
                             index = text.LastIndexOf("|");
                             output = text.Substring(index + 1);
-                            DateTime enteredDate = DateTime.Parse(output);
+                            DateTime enteredDate = DateTime.ParseExact(output, "yyyyMMdd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
                             dateSortida.Value = enteredDate;
 
                         }
@@ -106,6 +118,57 @@ namespace RecepcioBestiar
                     }
                 }
             }
+        }
+        private void actualitzarDataGrid(string Char, string text)
+        {
+            int i = 0;
+            string[] dataAnimals = new string[5];
+            while(i < 5)
+            {
+                int index = text.IndexOf("|");
+                if(index > 0)
+                {
+                    dataAnimals[i] = text.Substring(0, index);
+                    text = text.Substring(index + 1);
+                }
+                else
+                {
+                    dataAnimals[i] = text;
+                }
+                i++;
+            }
+            AnimalsGrid.Rows.Add(dataAnimals[0], dataAnimals[1], dataAnimals[2], dataAnimals[3], dataAnimals[3]);
+        }
+
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            inserirRecepcio();
+            crearLot();
+        }
+        public void inserirRecepcio()
+        {
+
+        }
+            public void crearLot()
+        {
+            string lot;
+            string date = DateTime.Now.ToString("MMdd");
+
+            var num = (from a in _m.lots
+                       where a.numLot.ToString().StartsWith(date)
+                       select a.numLot).Max();
+            if (num != null)
+            {
+                num = num.Substring(num.Length - 4);
+                long numero = Int64.Parse(num) + 1;
+
+                lot = date + ORI.Text + numero.ToString();
+            }
+            else
+            {
+                lot = date + ORI.Text + "0001";
+            }
+            numLot.Text = lot;
         }
     }
 }

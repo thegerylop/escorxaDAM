@@ -45,7 +45,7 @@
             this.numLot = new CustomControl.CustomTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.AnimalsGrid = new System.Windows.Forms.DataGridView();
             this.DIB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sexe = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,8 +54,12 @@
             this.LLegirEdi = new System.Windows.Forms.Button();
             this.TRA = new CustomControl.CustomTextBox();
             this.dateSortida = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AnimalsGrid)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnInserir
+            // 
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // label1
             // 
@@ -210,7 +214,7 @@
             this.numLot.Name = "numLot";
             this.numLot.Options = CustomControl.CustomTextBox.Items.Text;
             this.numLot.Placeholder = null;
-            this.numLot.Size = new System.Drawing.Size(52, 20);
+            this.numLot.Size = new System.Drawing.Size(150, 20);
             this.numLot.TabIndex = 57;
             // 
             // label10
@@ -235,21 +239,21 @@
             this.label15.TabIndex = 68;
             this.label15.Text = "Animals";
             // 
-            // dataGridView1
+            // AnimalsGrid
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AnimalsGrid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AnimalsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.AnimalsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AnimalsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DIB,
             this.Pais,
             this.Sexe,
             this.Edad,
             this.DIB_Mare});
-            this.dataGridView1.Location = new System.Drawing.Point(68, 339);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(750, 162);
-            this.dataGridView1.TabIndex = 69;
+            this.AnimalsGrid.Location = new System.Drawing.Point(68, 339);
+            this.AnimalsGrid.Name = "AnimalsGrid";
+            this.AnimalsGrid.Size = new System.Drawing.Size(750, 162);
+            this.AnimalsGrid.TabIndex = 69;
             // 
             // DIB
             // 
@@ -322,7 +326,7 @@
             this.ClientSize = new System.Drawing.Size(913, 604);
             this.Controls.Add(this.TRA);
             this.Controls.Add(this.LLegirEdi);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.AnimalsGrid);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.numLot);
@@ -363,11 +367,11 @@
             this.Controls.SetChildIndex(this.numLot, 0);
             this.Controls.SetChildIndex(this.label10, 0);
             this.Controls.SetChildIndex(this.label15, 0);
-            this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.AnimalsGrid, 0);
             this.Controls.SetChildIndex(this.LLegirEdi, 0);
             this.Controls.SetChildIndex(this.TRA, 0);
             this.Controls.SetChildIndex(this.btnInserir, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AnimalsGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,7 +395,7 @@
         private CustomControl.CustomTextBox numLot;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView AnimalsGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIB;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pais;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sexe;
