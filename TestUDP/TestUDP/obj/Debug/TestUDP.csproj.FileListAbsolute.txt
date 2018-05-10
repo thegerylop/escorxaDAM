@@ -1,0 +1,10 @@
+C:\DAM\Projecte 2\TestUDP\TestUDP\bin\Debug\TestUDP.exe.config
+C:\DAM\Projecte 2\TestUDP\TestUDP\bin\Debug\TestUDP.exe
+C:\DAM\Projecte 2\TestUDP\TestUDP\bin\Debug\TestUDP.pdb
+C:\DAM\Projecte 2\TestUDP\TestUDP\obj\Debug\TestUDP.csprojResolveAssemblyReference.cache
+C:\DAM\Projecte 2\TestUDP\TestUDP\obj\Debug\TestUDP.Form1.resources
+C:\DAM\Projecte 2\TestUDP\TestUDP\obj\Debug\TestUDP.Properties.Resources.resources
+C:\DAM\Projecte 2\TestUDP\TestUDP\obj\Debug\TestUDP.csproj.GenerateResource.Cache
+C:\DAM\Projecte 2\TestUDP\TestUDP\obj\Debug\TestUDP.csproj.CoreCompileInputs.cache
+C:\DAM\Projecte 2\TestUDP\TestUDP\obj\Debug\TestUDP.exe
+C:\DAM\Projecte 2\TestUDP\TestUDP\obj\Debug\TestUDP.pdb

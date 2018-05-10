@@ -93,10 +93,6 @@
       <Project>{8c221afb-fbe1-4a6a-8626-c98b8960a54a}</Project>
       <Name>MantenimentUsuaris</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MenuPrincipal\MenuPrincipal.csproj">
-      <Project>{a7c126af-3ea6-4766-bbba-832f69b04982}</Project>
-      <Name>MenuPrincipal</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Paisos\Paisos.csproj">
       <Project>{67e0b030-f54a-4355-97b3-34464fb55e9f}</Project>
       <Name>Paisos</Name>

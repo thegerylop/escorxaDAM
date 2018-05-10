@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BaseForm;
 using Models;
+using MantenimentUsuaris;
+
 namespace MenuPrincipal
 {
     public partial class MenuPrincipal : Form
@@ -61,8 +63,8 @@ namespace MenuPrincipal
                 item.Click += new EventHandler(itemForm);
                 menuStrip1.Items.Add(item);
             }
-
         }
+
         public void itemForm(object sender, EventArgs e)
         {
             string name = ((CustomControl.menuItem)sender).Dll+"."+((CustomControl.menuItem)sender).Taula;
@@ -70,10 +72,18 @@ namespace MenuPrincipal
             Assembly assembly = Assembly.LoadFile(dllFile.FullName+".dll");
             Type type = assembly.GetType(name);
             Form form = (Form)Activator.CreateInstance(type);
-            form.MdiParent = this;
-            form.Show();
+            if (!Metodes.IsOpen(form.Name))
+            {
+                form.MdiParent = this;
+                form.Show();
+            }
+            else
+            {
+                Application.OpenForms[form.Name].Focus();
+            }
             form.BringToFront();
         }
+
         private void sobreToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             AcercDe frm = new AcercDe();
@@ -93,6 +103,14 @@ namespace MenuPrincipal
             if (Metodes.IsOpen("AcercDe"))
             {
                 Application.OpenForms.OfType<AcercDe>().First().Close();
+            }
+            if (Metodes.IsOpen("AfegirUsuari"))
+            {
+                Application.OpenForms.OfType<AfegirUsuari>().First().Close();
+            }
+            if (Metodes.IsOpen("MantenimentUsuaris"))
+            {
+                Application.OpenForms.OfType<MantenimentUsuaris.MantenimentUsuaris>().First().Close();
             }
             Login frm = new Login();
             frm.Show();
