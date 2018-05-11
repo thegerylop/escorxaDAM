@@ -15,20 +15,26 @@ namespace DownloadDataFTP
     {
         private List<string> Llista = new List<string>();
         private string arxiu;
-
+        /// <summary>
+        /// Inicialitza el component
+        /// </summary>
+        /// <param name="arxius"></param>
         public listDialogForm(List<string> arxius)
         {
             InitializeComponent();
 
             Llista = arxius; //the list of files to display
         }
-
-        //Accessor for the user selected file
+        /// <summary>
+        ///Accessor for the user selected file 
+        /// </summary>
         public string ArxiuEscollit
         {
             get { return arxiu; }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         private void listDialogForm_Load(object sender, EventArgs e)
         {
             //Setup the dialog buttons
@@ -41,7 +47,9 @@ namespace DownloadDataFTP
                 listboxFiles.Items.Add(arxiu);
             }
         }
-
+        /// <summary>
+        /// Guarda l'arxiu seleccionat
+        /// </summary>
         private void btnOK_Click(object sender, EventArgs e)
         {
             //Save which file was selected
