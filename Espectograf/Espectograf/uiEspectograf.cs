@@ -122,11 +122,11 @@ namespace Espectograf
             }
         }
         /// <summary>
-        /// 
+        /// Agafa un valor numèric dintre una cadena
         /// </summary>
-        /// <param name="start"></param>
-        /// <param name="end"></param>
-        /// <param name="texto"></param>
+        /// <param name="start">Començament de la subcadena</param>
+        /// <param name="end">Punt final de la subcadena</param>
+        /// <param name="texto">Cadena que hem de tallar</param>
         /// <returns></returns>
         private float getValueFromString(string start, string end, string texto)
         {
@@ -163,7 +163,7 @@ namespace Espectograf
             }
         }
         /// <summary>
-        /// 
+        /// Funció que controla el procés TCP
         /// </summary>
         public void listener()
         {
@@ -187,10 +187,10 @@ namespace Espectograf
             }
         }
         /// <summary>
-        /// 
+        /// Calcula els mg d'hemoglobina per 100 grams de carn que té la safata
         /// </summary>
-        /// <param name="pes"></param>
-        /// <param name="mg"></param>
+        /// <param name="pes">Pes del tros de carn</param>
+        /// <param name="mg">Mg que té la safata</param>
         /// <returns></returns>
         private float calculper100g(float pes, float mg)
         {
@@ -208,11 +208,11 @@ namespace Espectograf
             return mgper100g;
         }
         /// <summary>
-        /// 
+        /// Envia els resultats al programa
         /// </summary>
-        /// <param name="vg1"></param>
-        /// <param name="vg2"></param>
-        /// <param name="vg3"></param>
+        /// <param name="vg1">Valor 1</param>
+        /// <param name="vg2">Valor 2</param>
+        /// <param name="vg3">Valor 3</param>
         public void updateGauges(float vg1, float vg2, float vg3)
         {
             aGauge1.Invoke((MethodInvoker)delegate { aGauge1.Value = 0f; });
