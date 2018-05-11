@@ -35,7 +35,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new CustomControl.comboBox();
+            this.userComboBox = new CustomControl.comboBox();
             this.REMO = new CustomControl.CustomTextBox();
             this.ORI = new CustomControl.CustomTextBox();
             this.TOTAN = new CustomControl.CustomTextBox();
@@ -77,7 +77,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.label3.Location = new System.Drawing.Point(74, 97);
+            this.label3.Location = new System.Drawing.Point(74, 177);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 20);
             this.label3.TabIndex = 41;
@@ -110,7 +110,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.label6.Location = new System.Drawing.Point(489, 138);
+            this.label6.Location = new System.Drawing.Point(489, 141);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(197, 20);
             this.label6.TabIndex = 44;
@@ -138,23 +138,25 @@
             this.label8.TabIndex = 46;
             this.label8.Text = "Num. Animals";
             // 
-            // comboBox2
+            // userComboBox
             // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(706, 215);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Reference = null;
-            this.comboBox2.Size = new System.Drawing.Size(109, 21);
-            this.comboBox2.TabIndex = 47;
+            this.userComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.userComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.userComboBox.FormattingEnabled = true;
+            this.userComboBox.Location = new System.Drawing.Point(706, 215);
+            this.userComboBox.Name = "userComboBox";
+            this.userComboBox.Reference = null;
+            this.userComboBox.Size = new System.Drawing.Size(109, 21);
+            this.userComboBox.TabIndex = 47;
             // 
             // REMO
             // 
             this.REMO.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.REMO.Location = new System.Drawing.Point(194, 97);
+            this.REMO.Location = new System.Drawing.Point(194, 177);
             this.REMO.Name = "REMO";
             this.REMO.Options = CustomControl.CustomTextBox.Items.Text;
             this.REMO.Placeholder = null;
+            this.REMO.ReadOnly = true;
             this.REMO.Size = new System.Drawing.Size(150, 20);
             this.REMO.TabIndex = 49;
             // 
@@ -165,6 +167,7 @@
             this.ORI.Name = "ORI";
             this.ORI.Options = CustomControl.CustomTextBox.Items.Text;
             this.ORI.Placeholder = null;
+            this.ORI.ReadOnly = true;
             this.ORI.Size = new System.Drawing.Size(150, 20);
             this.ORI.TabIndex = 50;
             // 
@@ -175,12 +178,14 @@
             this.TOTAN.Name = "TOTAN";
             this.TOTAN.Options = CustomControl.CustomTextBox.Items.Text;
             this.TOTAN.Placeholder = null;
+            this.TOTAN.ReadOnly = true;
             this.TOTAN.Size = new System.Drawing.Size(52, 20);
             this.TOTAN.TabIndex = 51;
             // 
             // dateToday
             // 
             this.dateToday.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateToday.Enabled = false;
             this.dateToday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateToday.Location = new System.Drawing.Point(706, 177);
             this.dateToday.Name = "dateToday";
@@ -210,10 +215,11 @@
             // numLot
             // 
             this.numLot.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numLot.Location = new System.Drawing.Point(194, 180);
+            this.numLot.Location = new System.Drawing.Point(194, 96);
             this.numLot.Name = "numLot";
             this.numLot.Options = CustomControl.CustomTextBox.Items.Text;
             this.numLot.Placeholder = null;
+            this.numLot.ReadOnly = true;
             this.numLot.Size = new System.Drawing.Size(150, 20);
             this.numLot.TabIndex = 57;
             // 
@@ -222,7 +228,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.label10.Location = new System.Drawing.Point(74, 179);
+            this.label10.Location = new System.Drawing.Point(74, 95);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(69, 20);
             this.label10.TabIndex = 58;
@@ -307,12 +313,14 @@
             this.TRA.Name = "TRA";
             this.TRA.Options = CustomControl.CustomTextBox.Items.Text;
             this.TRA.Placeholder = null;
+            this.TRA.ReadOnly = true;
             this.TRA.Size = new System.Drawing.Size(112, 20);
             this.TRA.TabIndex = 72;
             // 
             // dateSortida
             // 
             this.dateSortida.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateSortida.Enabled = false;
             this.dateSortida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateSortida.Location = new System.Drawing.Point(706, 140);
             this.dateSortida.Name = "dateSortida";
@@ -337,7 +345,7 @@
             this.Controls.Add(this.TOTAN);
             this.Controls.Add(this.ORI);
             this.Controls.Add(this.REMO);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.userComboBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -356,7 +364,7 @@
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.label8, 0);
-            this.Controls.SetChildIndex(this.comboBox2, 0);
+            this.Controls.SetChildIndex(this.userComboBox, 0);
             this.Controls.SetChildIndex(this.REMO, 0);
             this.Controls.SetChildIndex(this.ORI, 0);
             this.Controls.SetChildIndex(this.TOTAN, 0);
@@ -385,7 +393,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private CustomControl.comboBox comboBox2;
+        private CustomControl.comboBox userComboBox;
         private CustomControl.CustomTextBox REMO;
         private CustomControl.CustomTextBox ORI;
         private CustomControl.CustomTextBox TOTAN;

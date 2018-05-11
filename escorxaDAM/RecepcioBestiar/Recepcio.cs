@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Data.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,11 +25,11 @@ namespace RecepcioBestiar
             InitializeComponent();
         }
 
-
         private void Recepcio_Load(object sender, EventArgs e)
         {
             dateToday.Value = DateTime.Now;
             dateSortida.CustomFormat = "yyyymmdd";
+            obtenirUsuaris();
         }
         private void Edi()
         {
@@ -46,19 +47,19 @@ namespace RecepcioBestiar
             string output = "";
             string Char;
             int index;
-            foreach(string item in dades)
+            foreach (string item in dades)
             {
                 int charLocation = item.IndexOf("|", StringComparison.Ordinal);
                 if (charLocation > 0)
                 {
-                    Char =  item.Substring(0, charLocation);
+                    Char = item.Substring(0, charLocation);
                     switch (Char)
                     {
                         case "REMO":
                             output = item.Split('|', '|')[1];
                             break;
                         case "ORI":
-                            index =  item.IndexOf("|");
+                            index = item.IndexOf("|");
                             output = item.Substring(index + 1);
                             break;
                         case "DES":
@@ -87,7 +88,6 @@ namespace RecepcioBestiar
                     {
                         actualitzarDataGrid(Char, output);
                     }
-                    
                 }
             }
         }
@@ -99,22 +99,20 @@ namespace RecepcioBestiar
                 {
                     if (txt.Name == Char)
                     {
-                        if(Char == "TRA")
+                        if (Char == "TRA")
                         {
                             int index = text.IndexOf("|");
-                            string output = text.Substring(0 , index);
+                            string output = text.Substring(0, index);
                             txt.Text = output;
                             index = text.LastIndexOf("|");
                             output = text.Substring(index + 1);
                             DateTime enteredDate = DateTime.ParseExact(output, "yyyyMMdd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
                             dateSortida.Value = enteredDate;
-
                         }
                         else
                         {
                             txt.Text = text;
                         }
-                        
                     }
                 }
             }
@@ -123,10 +121,10 @@ namespace RecepcioBestiar
         {
             int i = 0;
             string[] dataAnimals = new string[5];
-            while(i < 5)
+            while (i < 5)
             {
                 int index = text.IndexOf("|");
-                if(index > 0)
+                if (index > 0)
                 {
                     dataAnimals[i] = text.Substring(0, index);
                     text = text.Substring(index + 1);
@@ -144,12 +142,16 @@ namespace RecepcioBestiar
         {
             inserirRecepcio();
             crearLot();
+            inserir();
         }
         public void inserirRecepcio()
         {
 
+            var proveidor = (from a in _m.proveidors
+                             where a.codiExplotacio.ToString() == ORI.Text
+                             select a.idProveidor).ToString();
         }
-            public void crearLot()
+        public void crearLot()
         {
             string lot;
             string date = DateTime.Now.ToString("MMdd");
@@ -161,7 +163,6 @@ namespace RecepcioBestiar
             {
                 num = num.Substring(num.Length - 4);
                 long numero = Int64.Parse(num) + 1;
-
                 lot = date + ORI.Text + numero.ToString();
             }
             else
@@ -169,6 +170,52 @@ namespace RecepcioBestiar
                 lot = date + ORI.Text + "0001";
             }
             numLot.Text = lot;
+        }
+
+        public void obtenirUsuaris()
+        {
+            var usuaris = (from a in _m.usuaris
+                           select new { a.idUsuari, a.Nom }).ToArray();
+            userComboBox.DataSource = usuaris;
+            userComboBox.DisplayMember = "Nom";
+            userComboBox.ValueMember = "idUsuari";
+        }
+
+        public void inserir()
+        {
+            Data data = new Data(numLot.Text, Int32.Parse(userComboBox.SelectedValue.ToString()), Int32.Parse(ORI.Text), REMO.Text, TRA.Text, dateSortida.Text, dateToday.Text,Int32.Parse(TOTAN.Text))
+            {
+                lot = numLot.Text,
+                idUsuariReceptor = Int32.Parse(userComboBox.SelectedValue.ToString()),
+                idProveidor = Int32.Parse(ORI.Text),
+                codiREMO = REMO.Text,
+                codiTransportista = TRA.Text,
+                dataSortidaExplotacio = dateSortida.Text,
+                dataEntradaEscorxador = dateToday.Text,
+                numTotalAnimals = Int32.Parse(TOTAN.Text)
+            };
+        }
+    }
+    public class Data
+    {
+        public string lot { get; set; }
+        public int idUsuariReceptor { get; set; }
+        public int idProveidor { get; set; }
+        public string codiREMO { get; set; }
+        public string codiTransportista { get; set; }
+        public string dataSortidaExplotacio { get; set; }
+        public string dataEntradaEscorxador { get; set; }
+        public int numTotalAnimals { get; set; }
+        public Data(string Lot, int usuari, int proveidor, string codiRemo, string codiTrans, string dataSortida, string dataEntrada, int animals)
+        {
+            lot = Lot;
+            idUsuariReceptor = usuari;
+            idProveidor = proveidor;
+            codiREMO = codiRemo;
+            codiTransportista = codiTrans;
+            dataSortidaExplotacio = dataSortida;
+            dataEntradaEscorxador = dataEntrada;
+            numTotalAnimals = animals;
         }
     }
 }
