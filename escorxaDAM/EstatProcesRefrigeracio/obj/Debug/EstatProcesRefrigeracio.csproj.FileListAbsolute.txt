@@ -1,3 +1,11 @@
+C:\DAM\Projecte 2\escorxaDAM\dll\EstatProcesRefrigeracio.dll
+C:\DAM\Projecte 2\escorxaDAM\dll\EstatProcesRefrigeracio.pdb
+C:\DAM\Projecte 2\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.csprojResolveAssemblyReference.cache
+C:\DAM\Projecte 2\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.estatProcesRefrigeracio.resources
+C:\DAM\Projecte 2\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.csproj.GenerateResource.Cache
+C:\DAM\Projecte 2\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.csproj.CoreCompileInputs.cache
+C:\DAM\Projecte 2\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.dll
+C:\DAM\Projecte 2\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\EstatProcesRefrigeracio.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\EstatProcesRefrigeracio.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.csprojResolveAssemblyReference.cache
@@ -7,11 +15,3 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\E
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.csproj.CopyComplete
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.pdb
-C:\DAM\Projecte 2\escorxaDAM\dll\EstatProcesRefrigeracio.dll
-C:\DAM\Projecte 2\escorxaDAM\dll\EstatProcesRefrigeracio.pdb
-C:\DAM\Projecte 2\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.csprojResolveAssemblyReference.cache
-C:\DAM\Projecte 2\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.estatProcesRefrigeracio.resources
-C:\DAM\Projecte 2\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.csproj.GenerateResource.Cache
-C:\DAM\Projecte 2\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.csproj.CoreCompileInputs.cache
-C:\DAM\Projecte 2\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.dll
-C:\DAM\Projecte 2\escorxaDAM\EstatProcesRefrigeracio\obj\Debug\EstatProcesRefrigeracio.pdb

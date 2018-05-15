@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\dll\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\dll\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -43,6 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Emmagatzematge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emmagatzematge.Designer.cs">
+      <DependentUpon>Emmagatzematge.cs</DependentUpon>
+    </Compile>
     <Compile Include="Processat Final.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Emmagatzematge.resx">
+      <DependentUpon>Emmagatzematge.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Processat Final.resx">
       <DependentUpon>Processat Final.cs</DependentUpon>
     </EmbeddedResource>
