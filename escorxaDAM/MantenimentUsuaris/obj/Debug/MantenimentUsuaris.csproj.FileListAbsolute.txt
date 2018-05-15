@@ -8,15 +8,6 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\bin\Debug\BaseFo
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\bin\Debug\ConexioBBDD.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\bin\Debug\CustomControl.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\bin\Debug\MySql.Data.xml
-C:\DAM\Projecte 2\escorxaDAM\dll\MantenimentUsuaris.dll
-C:\DAM\Projecte 2\escorxaDAM\dll\MantenimentUsuaris.pdb
-C:\DAM\Projecte 2\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.csprojResolveAssemblyReference.cache
-C:\DAM\Projecte 2\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.AfegirUsuari.resources
-C:\DAM\Projecte 2\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.MantenimentUsuaris.resources
-C:\DAM\Projecte 2\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.csproj.GenerateResource.Cache
-C:\DAM\Projecte 2\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.csproj.CoreCompileInputs.cache
-C:\DAM\Projecte 2\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.dll
-C:\DAM\Projecte 2\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\MantenimentUsuaris.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\MantenimentUsuaris.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.csprojResolveAssemblyReference.cache
@@ -27,3 +18,12 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\obj\Debug\Manten
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.csproj.CopyComplete
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.pdb
+C:\DAM\Projecte 2\escorxaDAM\dll\MantenimentUsuaris.dll
+C:\DAM\Projecte 2\escorxaDAM\dll\MantenimentUsuaris.pdb
+C:\DAM\Projecte 2\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.csprojResolveAssemblyReference.cache
+C:\DAM\Projecte 2\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.AfegirUsuari.resources
+C:\DAM\Projecte 2\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.MantenimentUsuaris.resources
+C:\DAM\Projecte 2\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.csproj.GenerateResource.Cache
+C:\DAM\Projecte 2\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.csproj.CoreCompileInputs.cache
+C:\DAM\Projecte 2\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.dll
+C:\DAM\Projecte 2\escorxaDAM\MantenimentUsuaris\obj\Debug\MantenimentUsuaris.pdb

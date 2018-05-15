@@ -6,7 +6,6 @@ C:\DAM\Projecte 2\escorxaDAM\RecepcioBestiar\bin\Debug\CustomControl.dll
 C:\DAM\Projecte 2\escorxaDAM\RecepcioBestiar\bin\Debug\BaseForm.pdb
 C:\DAM\Projecte 2\escorxaDAM\RecepcioBestiar\bin\Debug\ConexioBBDD.pdb
 C:\DAM\Projecte 2\escorxaDAM\RecepcioBestiar\bin\Debug\CustomControl.pdb
-C:\DAM\Projecte 2\escorxaDAM\RecepcioBestiar\obj\Debug\RecepcioBestiar.csprojResolveAssemblyReference.cache
 C:\DAM\Projecte 2\escorxaDAM\RecepcioBestiar\obj\Debug\RecepcioBestiar.Recepcio.resources
 C:\DAM\Projecte 2\escorxaDAM\RecepcioBestiar\obj\Debug\RecepcioBestiar.csproj.GenerateResource.Cache
 C:\DAM\Projecte 2\escorxaDAM\RecepcioBestiar\obj\Debug\RecepcioBestiar.csproj.CoreCompileInputs.cache
