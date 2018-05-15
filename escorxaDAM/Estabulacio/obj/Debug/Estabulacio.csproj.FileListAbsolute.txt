@@ -1,6 +1,5 @@
 C:\DAM\Projecte 2\escorxaDAM\dll\Estabulacio.dll
 C:\DAM\Projecte 2\escorxaDAM\dll\Estabulacio.pdb
-C:\DAM\Projecte 2\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.csprojResolveAssemblyReference.cache
 C:\DAM\Projecte 2\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.estabulacio.resources
 C:\DAM\Projecte 2\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.csproj.GenerateResource.Cache
 C:\DAM\Projecte 2\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.csproj.CoreCompileInputs.cache
