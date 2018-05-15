@@ -240,11 +240,10 @@ namespace DownloadDataFTP
             }
         }
         /// <summary>
-        /// 
+        /// Comprova que hi ha connexió i omple els camps de les credencials obtingudes en el config
         /// </summary>
         private void ftpForm_Load(object sender, EventArgs e)
         {
-            //comprova que hi hagi conexio i omple els camps de les credencials obtingudes en el config
             connexio = ftp.AccesoInternet();
             if(!connexio)
             {

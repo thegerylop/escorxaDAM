@@ -33,7 +33,7 @@ namespace DownloadDataFTP
             get { return arxiu; }
         }
         /// <summary>
-        /// 
+        /// Carrega la llista
         /// </summary>
         private void listDialogForm_Load(object sender, EventArgs e)
         {
