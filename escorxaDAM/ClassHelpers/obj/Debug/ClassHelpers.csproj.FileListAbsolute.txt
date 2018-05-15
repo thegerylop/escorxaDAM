@@ -4,3 +4,8 @@ C:\DAM\Projecte 2\escorxaDAM\ClassHelpers\obj\Debug\ClassHelpers.csprojResolveAs
 C:\DAM\Projecte 2\escorxaDAM\ClassHelpers\obj\Debug\ClassHelpers.csproj.CoreCompileInputs.cache
 C:\DAM\Projecte 2\escorxaDAM\ClassHelpers\obj\Debug\ClassHelpers.dll
 C:\DAM\Projecte 2\escorxaDAM\ClassHelpers\obj\Debug\ClassHelpers.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\ClassHelpers.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\ClassHelpers.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ClassHelpers\obj\Debug\ClassHelpers.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ClassHelpers\obj\Debug\ClassHelpers.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\ClassHelpers\obj\Debug\ClassHelpers.pdb

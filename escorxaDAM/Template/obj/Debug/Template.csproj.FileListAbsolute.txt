@@ -2,14 +2,7 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Template.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Template.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Template\obj\Debug\Template.csprojResolveAssemblyReference.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Template\obj\Debug\Template.TemplateMenu.resources
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Template\obj\Debug\Template.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Template\obj\Debug\Template.csproj.GenerateResource.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Template\obj\Debug\Template.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Template\obj\Debug\Template.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Template\obj\Debug\Template.pdb
-C:\DAM\Projecte 2\escorxaDAM\dll\Template.dll
-C:\DAM\Projecte 2\escorxaDAM\dll\Template.pdb
-C:\DAM\Projecte 2\escorxaDAM\Template\obj\Debug\Template.TemplateMenu.resources
-C:\DAM\Projecte 2\escorxaDAM\Template\obj\Debug\Template.csproj.GenerateResource.Cache
-C:\DAM\Projecte 2\escorxaDAM\Template\obj\Debug\Template.csproj.CoreCompileInputs.cache
-C:\DAM\Projecte 2\escorxaDAM\Template\obj\Debug\Template.dll
-C:\DAM\Projecte 2\escorxaDAM\Template\obj\Debug\Template.pdb

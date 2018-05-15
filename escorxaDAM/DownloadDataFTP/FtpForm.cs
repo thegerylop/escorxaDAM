@@ -23,8 +23,13 @@ namespace DownloadDataFTP
         bool connexio;
         private byte[] downloadedData;
         string[] credentials = new string[2];
-
-        //Connects to the FTP server and downloads the file
+        /// <summary>
+        /// Connecta amb el servidor FTP i descarrega l'arxiu
+        /// </summary>
+        /// <param name="FTPAddress">Adreça FTP</param>
+        /// <param name="filename">Nom de l'arxiu</param>
+        /// <param name="username">Nom d'usuari</param>
+        /// <param name="password">Contrassenya</param>
         private void downloadFile(string FTPAddress, string filename, string username, string password)
         {
             downloadedData = new byte[0];
@@ -111,7 +116,12 @@ namespace DownloadDataFTP
             }
         }
 
-        //Conecta amb el ftp i aconsegueix la llista d'arxius
+        /// <summary>
+        /// Connecta amb el ftp i aconsegueix la llista d'arxius
+        /// </summary>
+        /// <param name="FTPAddress">Adreça FTP</param>
+        /// <param name="username">Nom d'usuari</param>
+        /// <param name="password">Contrassenya</param>
         private void getFileList(string FTPAddress, string username, string password)
         {
             List<string> files = new List<string>();
@@ -162,7 +172,9 @@ namespace DownloadDataFTP
             }
         }
 
-        //Comprova que la ruta comença per "ftp://"
+        /// <summary>
+        /// Comprova que la ruta comença per "ftp://"
+        /// </summary>
         private void txtFTPAddress_Leave(object sender, EventArgs e)
         {
             if (!txtFTPAddress.Text.StartsWith("ftp://"))
@@ -189,7 +201,9 @@ namespace DownloadDataFTP
 
         }
 
-        // Descarrega el arxiu en memoria
+        /// <summary>
+        /// Descarrega l'arxiu en memoria
+        /// </summary>
         private void btnDownload_Click(object sender, EventArgs e)
         {
             if (txtFTPAddress.Text != "ftp://" && txtFTPAddress.Text != string.Empty)
@@ -206,7 +220,9 @@ namespace DownloadDataFTP
                 MessageBox.Show("Introdueix una adreça FTP");
         }
 
-        //Guarda el arxiu descarregat
+        /// <summary>
+        /// Guarda l'arxiu descarregat
+        /// </summary>
         public void save()
         {
             if (downloadedData != null && downloadedData.Length != 0)
@@ -223,7 +239,9 @@ namespace DownloadDataFTP
                 }
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         private void ftpForm_Load(object sender, EventArgs e)
         {
             //comprova que hi hagi conexio i omple els camps de les credencials obtingudes en el config

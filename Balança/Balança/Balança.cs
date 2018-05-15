@@ -25,7 +25,7 @@ namespace Balança
         public static string returnData = "";
         public static UdpClient udpServer = new UdpClient(port);
         /// <summary>
-        /// Punt d'entrada de l'aplicació. Generen un thread i gestionem l'UDP.
+        /// Punt d'entrada de l'aplicació. Generem un thread i gestionem l'UDP.
         /// </summary>
         [STAThread]
         static void Main()
@@ -38,6 +38,9 @@ namespace Balança
             Application.Run(new Balança());
             
         }
+        /// <summary>
+        /// Començem el listener i el mantenim obert permanentment
+        /// </summary>
         public static void listener()
         {
             while (true)
@@ -54,7 +57,10 @@ namespace Balança
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Quan pesem, agafem les dades rebudes, seleccionem l'arxiu corresponent, en llegim una línia random i n'agafem el pes.
+        /// Posem el pes en el textbox
+        /// </summary>
         private void btnPesar_Click(object sender, EventArgs e)
         {
             string data = returnData;
@@ -64,7 +70,11 @@ namespace Balança
             txtPes.Text = pes.ToString();
             
         }
-
+        /// <summary>
+        /// Enviem el pes al programa
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             Byte[] sendBytes = Encoding.ASCII.GetBytes(txtPes.Text);
