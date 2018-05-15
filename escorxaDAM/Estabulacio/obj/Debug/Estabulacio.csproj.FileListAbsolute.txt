@@ -5,3 +5,11 @@ C:\DAM\Projecte 2\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.csproj.GenerateRe
 C:\DAM\Projecte 2\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.csproj.CoreCompileInputs.cache
 C:\DAM\Projecte 2\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.dll
 C:\DAM\Projecte 2\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Estabulacio.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Estabulacio.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.estabulacio.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.csproj.CopyComplete
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.pdb

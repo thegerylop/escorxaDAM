@@ -1,11 +1,3 @@
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\SistemesAtordiment.dll
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\SistemesAtordiment.pdb
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.sistemesAtordiment.resources
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.csproj.GenerateResource.cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.csproj.CopyComplete
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.dll
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.pdb
 C:\DAM\Projecte 2\escorxaDAM\dll\SistemesAtordiment.dll
 C:\DAM\Projecte 2\escorxaDAM\dll\SistemesAtordiment.pdb
 C:\DAM\Projecte 2\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.csprojResolveAssemblyReference.cache
@@ -14,3 +6,11 @@ C:\DAM\Projecte 2\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.csp
 C:\DAM\Projecte 2\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.csproj.CoreCompileInputs.cache
 C:\DAM\Projecte 2\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.dll
 C:\DAM\Projecte 2\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\SistemesAtordiment.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\SistemesAtordiment.pdb
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.sistemesAtordiment.resources
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.csproj.CopyComplete
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.dll
+C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\SistemesAtordiment\obj\Debug\SistemesAtordiment.pdb

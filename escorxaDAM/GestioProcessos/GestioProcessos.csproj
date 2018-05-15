@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\dll\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\dll\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -43,27 +43,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Emmagatzematge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emmagatzematge.Designer.cs">
+      <DependentUpon>Emmagatzematge.cs</DependentUpon>
+    </Compile>
     <Compile Include="Processat Final.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Processat Final.Designer.cs">
       <DependentUpon>Processat Final.cs</DependentUpon>
     </Compile>
-    <Compile Include="Processat Inicial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Processat Inicial.Designer.cs">
-      <DependentUpon>Processat Inicial.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Processat Final.resx">
-      <DependentUpon>Processat Final.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Processat Inicial.resx">
-      <DependentUpon>Processat Inicial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BaseForm\BaseForm.csproj">
@@ -74,6 +66,14 @@
       <Project>{a7279e0e-d844-4cc7-99da-9939eaa74818}</Project>
       <Name>CustomControl</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Emmagatzematge.resx">
+      <DependentUpon>Emmagatzematge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processat Final.resx">
+      <DependentUpon>Processat Final.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
