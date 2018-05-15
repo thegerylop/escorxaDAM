@@ -1,7 +1,0 @@
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Estabulacio.dll
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Estabulacio.pdb
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.estabulacio.resources
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.csproj.GenerateResource.Cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.dll
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Estabulacio\obj\Debug\Estabulacio.pdb

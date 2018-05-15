@@ -5,10 +5,3 @@ C:\DAM\Projecte 2\escorxaDAM\Tipus d'explotacio\obj\Debug\TipusD'explotacio.cspr
 C:\DAM\Projecte 2\escorxaDAM\Tipus d'explotacio\obj\Debug\TipusD'explotacio.csproj.CoreCompileInputs.cache
 C:\DAM\Projecte 2\escorxaDAM\Tipus d'explotacio\obj\Debug\Tipus d'explotacio.dll
 C:\DAM\Projecte 2\escorxaDAM\Tipus d'explotacio\obj\Debug\Tipus d'explotacio.pdb
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Tipus d'explotacio.dll
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Tipus d'explotacio.pdb
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Tipus d'explotacio\obj\Debug\Tipus_d_explotacio.TipusExplotacio.resources
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Tipus d'explotacio\obj\Debug\TipusD'explotacio.csproj.GenerateResource.Cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Tipus d'explotacio\obj\Debug\TipusD'explotacio.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Tipus d'explotacio\obj\Debug\Tipus d'explotacio.dll
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Tipus d'explotacio\obj\Debug\Tipus d'explotacio.pdb

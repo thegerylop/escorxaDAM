@@ -6,10 +6,3 @@ C:\DAM\Projecte 2\escorxaDAM\Referencies\obj\Debug\Referencies.csproj.GenerateRe
 C:\DAM\Projecte 2\escorxaDAM\Referencies\obj\Debug\Referencies.csproj.CoreCompileInputs.cache
 C:\DAM\Projecte 2\escorxaDAM\Referencies\obj\Debug\Referencies.dll
 C:\DAM\Projecte 2\escorxaDAM\Referencies\obj\Debug\Referencies.pdb
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Referencies.dll
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\Referencies.pdb
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Referencies\obj\Debug\Referencies.referencies.resources
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Referencies\obj\Debug\Referencies.csproj.GenerateResource.Cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Referencies\obj\Debug\Referencies.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Referencies\obj\Debug\Referencies.dll
-C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\Referencies\obj\Debug\Referencies.pdb

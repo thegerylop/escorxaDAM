@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using Models;
+using System.Data.Entity.Infrastructure;
 
 namespace RecepcioBestiar
 {
@@ -19,6 +20,7 @@ namespace RecepcioBestiar
         escorxadam2Entities _m = new escorxadam2Entities();
         ClassHelpers.EDI_TCPhelpers edi = new ClassHelpers.EDI_TCPhelpers();
         string[] dades;
+        string proveidor;
 
         public Recepcio()
         {
@@ -147,7 +149,7 @@ namespace RecepcioBestiar
         public void inserirRecepcio()
         {
 
-            var proveidor = (from a in _m.proveidors
+            proveidor = (from a in _m.proveidors
                              where a.codiExplotacio.ToString() == ORI.Text
                              select a.idProveidor).ToString();
         }
@@ -183,17 +185,24 @@ namespace RecepcioBestiar
 
         public void inserir()
         {
-            Data data = new Data(numLot.Text, Int32.Parse(userComboBox.SelectedValue.ToString()), Int32.Parse(ORI.Text), REMO.Text, TRA.Text, dateSortida.Text, dateToday.Text,Int32.Parse(TOTAN.Text))
+            var objectContext = ((IObjectContextAdapter)_m).ObjectContext;
+            Data data = new Data(Int32.Parse(userComboBox.SelectedValue.ToString()), Int32.Parse(ORI.Text), REMO.Text, TRA.Text, dateSortida.Text, dateToday.Text,Int32.Parse(TOTAN.Text))
             {
-                lot = numLot.Text,
                 idUsuariReceptor = Int32.Parse(userComboBox.SelectedValue.ToString()),
-                idProveidor = Int32.Parse(ORI.Text),
+                idProveidor = Int32.Parse(proveidor),
                 codiREMO = REMO.Text,
+                codiREGA = Int32.Parse(ORI.Text),
                 codiTransportista = TRA.Text,
                 dataSortidaExplotacio = dateSortida.Text,
                 dataEntradaEscorxador = dateToday.Text,
                 numTotalAnimals = Int32.Parse(TOTAN.Text)
             };
+
+
+            objectContext.AddObject("recepcions_bestiar", data);
+            _m.SaveChanges();
+
+
         }
     }
     public class Data
@@ -202,16 +211,17 @@ namespace RecepcioBestiar
         public int idUsuariReceptor { get; set; }
         public int idProveidor { get; set; }
         public string codiREMO { get; set; }
+        public int codiREGA { get; set; }
         public string codiTransportista { get; set; }
         public string dataSortidaExplotacio { get; set; }
         public string dataEntradaEscorxador { get; set; }
         public int numTotalAnimals { get; set; }
-        public Data(string Lot, int usuari, int proveidor, string codiRemo, string codiTrans, string dataSortida, string dataEntrada, int animals)
+        public Data(int usuari, int proveidor, string codiRemo, string codiTrans, string dataSortida, string dataEntrada, int animals)
         {
-            lot = Lot;
             idUsuariReceptor = usuari;
             idProveidor = proveidor;
             codiREMO = codiRemo;
+            codiREGA = 1;
             codiTransportista = codiTrans;
             dataSortidaExplotacio = dataSortida;
             dataEntradaEscorxador = dataEntrada;
