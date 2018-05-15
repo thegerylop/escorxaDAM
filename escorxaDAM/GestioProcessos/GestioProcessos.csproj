@@ -49,7 +49,21 @@
     <Compile Include="Processat Final.Designer.cs">
       <DependentUpon>Processat Final.cs</DependentUpon>
     </Compile>
+    <Compile Include="Processat Inicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Processat Inicial.Designer.cs">
+      <DependentUpon>Processat Inicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Processat Final.resx">
+      <DependentUpon>Processat Final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processat Inicial.resx">
+      <DependentUpon>Processat Inicial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BaseForm\BaseForm.csproj">
@@ -60,11 +74,6 @@
       <Project>{a7279e0e-d844-4cc7-99da-9939eaa74818}</Project>
       <Name>CustomControl</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Processat Final.resx">
-      <DependentUpon>Processat Final.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
