@@ -76,6 +76,10 @@
       <Project>{a7279e0e-d844-4cc7-99da-9939eaa74818}</Project>
       <Name>CustomControl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DownloadDataFTP\FTP.csproj">
+      <Project>{d5b2b62c-2d04-4cde-943d-76e0e7808652}</Project>
+      <Name>FTP</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{0010e369-5b6f-456f-8c9a-e1b3faf4c7f6}</Project>
       <Name>Models</Name>

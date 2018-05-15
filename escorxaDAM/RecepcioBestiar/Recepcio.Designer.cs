@@ -49,7 +49,7 @@
             this.DIB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sexe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIB_Mare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LLegirEdi = new System.Windows.Forms.Button();
             this.TRA = new CustomControl.CustomTextBox();
@@ -247,6 +247,10 @@
             // 
             // AnimalsGrid
             // 
+            this.AnimalsGrid.AllowUserToAddRows = false;
+            this.AnimalsGrid.AllowUserToDeleteRows = false;
+            this.AnimalsGrid.AllowUserToResizeColumns = false;
+            this.AnimalsGrid.AllowUserToResizeRows = false;
             this.AnimalsGrid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AnimalsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.AnimalsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -254,7 +258,7 @@
             this.DIB,
             this.Pais,
             this.Sexe,
-            this.Edad,
+            this.Edat,
             this.DIB_Mare});
             this.AnimalsGrid.Location = new System.Drawing.Point(68, 339);
             this.AnimalsGrid.Name = "AnimalsGrid";
@@ -279,11 +283,11 @@
             this.Sexe.Name = "Sexe";
             this.Sexe.ReadOnly = true;
             // 
-            // Edad
+            // Edat
             // 
-            this.Edad.HeaderText = "Edad";
-            this.Edad.Name = "Edad";
-            this.Edad.ReadOnly = true;
+            this.Edat.HeaderText = "Edad";
+            this.Edat.Name = "Edat";
+            this.Edat.ReadOnly = true;
             // 
             // DIB_Mare
             // 
@@ -404,13 +408,13 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView AnimalsGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DIB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pais;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sexe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DIB_Mare;
         public System.Windows.Forms.Button LLegirEdi;
         private CustomControl.CustomTextBox TRA;
         private System.Windows.Forms.DateTimePicker dateSortida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DIB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pais;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sexe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Edat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DIB_Mare;
     }
 }

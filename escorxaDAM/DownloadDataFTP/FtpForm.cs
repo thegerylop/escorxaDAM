@@ -221,6 +221,7 @@ namespace DownloadDataFTP
                     newFile.Close();
                     MessageBox.Show("Guardat correctament");
                 }
+                string ruta = CombinedPath + @"\" + saveFile1.FileName; 
             }
         }
 
