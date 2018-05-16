@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\dll\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -30,8 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -60,6 +64,10 @@
       <Project>{cf89ea7d-d834-4cb1-8888-e9c0fb24ee7f}</Project>
       <Name>BaseForm</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ClassHelpers\ClassHelpers.csproj">
+      <Project>{9526d638-b53d-4fd8-a2c5-b2fbe0c9634a}</Project>
+      <Name>ClassHelpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConexioBBDD\ConexioBBDD.csproj">
       <Project>{384145e7-5b9b-43cb-92b0-d8be9b92fde8}</Project>
       <Name>ConexioBBDD</Name>
@@ -67,6 +75,14 @@
     <ProjectReference Include="..\CustomControl\CustomControl.csproj">
       <Project>{a7279e0e-d844-4cc7-99da-9939eaa74818}</Project>
       <Name>CustomControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DownloadDataFTP\FTP.csproj">
+      <Project>{d5b2b62c-2d04-4cde-943d-76e0e7808652}</Project>
+      <Name>FTP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{0010e369-5b6f-456f-8c9a-e1b3faf4c7f6}</Project>
+      <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
