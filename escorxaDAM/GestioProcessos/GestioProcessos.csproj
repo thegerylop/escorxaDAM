@@ -55,6 +55,12 @@
     <Compile Include="Processat Final.Designer.cs">
       <DependentUpon>Processat Final.cs</DependentUpon>
     </Compile>
+    <Compile Include="Processat Inicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Processat Inicial.Designer.cs">
+      <DependentUpon>Processat Inicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +79,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Processat Final.resx">
       <DependentUpon>Processat Final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processat Inicial.resx">
+      <DependentUpon>Processat Inicial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
