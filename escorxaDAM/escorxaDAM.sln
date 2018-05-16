@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControl", "CustomControl\CustomControl.csproj", "{A7279E0E-D844-4CC7-99DA-9939EAA74818}"
 EndProject
@@ -52,6 +52,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MantenimentProveidors", "MantenimentProveidors\MantenimentProveidors.csproj", "{71EECEA5-6D84-4658-8173-20D8385EC2CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestioProcessos", "GestioProcessos\GestioProcessos.csproj", "{719B27AE-B8A7-421A-98E7-96000C2B234E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MantenimentEmpresa", "MantenimentEmpresa\MantenimentEmpresa.csproj", "{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -465,6 +467,22 @@ Global
 		{719B27AE-B8A7-421A-98E7-96000C2B234E}.Release|x64.Build.0 = Release|Any CPU
 		{719B27AE-B8A7-421A-98E7-96000C2B234E}.Release|x86.ActiveCfg = Release|Any CPU
 		{719B27AE-B8A7-421A-98E7-96000C2B234E}.Release|x86.Build.0 = Release|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Debug|ARM.Build.0 = Debug|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Debug|x64.Build.0 = Debug|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Debug|x86.Build.0 = Debug|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Release|ARM.Build.0 = Release|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Release|x64.ActiveCfg = Release|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Release|x64.Build.0 = Release|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Release|x86.ActiveCfg = Release|Any CPU
+		{4C8BB4A7-9FBA-44CD-B84D-C1777B45492E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
