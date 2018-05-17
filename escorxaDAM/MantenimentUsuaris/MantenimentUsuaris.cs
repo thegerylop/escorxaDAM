@@ -18,8 +18,9 @@ namespace MantenimentUsuaris
 
         private void MantenimentUsuaris_Load(object sender, EventArgs e)
         {
-            Table(table);
-            amagarCamps();
+            PortarDades();
+            //Table(table);
+            //amagarCamps();
         }
 
         private void amagarCamps()

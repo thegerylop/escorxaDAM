@@ -8,19 +8,66 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConexioBBDD;
+using Models;
+
+
 namespace BaseForm
 {
 
     public partial class BaseModificar : Form
     {
-        String query = "";
-        DataRow row;
-        DataSet dataSet = new DataSet();
-        String table = "";
+        escorxadam2Entities esEnt = new escorxadam2Entities();
+
         public BaseModificar()
         {
             InitializeComponent();
         }
+
+        public void PortarDades()
+        {
+            var query = from prov in esEnt.proveidors
+                        select prov;
+
+            dgvBase.DataSource = query.ToList();
+        }
+        /*
+        private void BindingDades(string table)
+        {
+            foreach (Control txt in this.Controls)
+            {
+                if (txt.GetType() == typeof(CustomControl.CustomTextBox) || txt.GetType() == typeof(CheckBox))
+                {
+                    if (txt.Tag.ToString() != "")
+                    {
+                        txt.DataBindings.Clear();
+                        if (txt.GetType() == typeof(CustomControl.CustomTextBox))
+                        {
+                            txt.DataBindings.Add("Text", dataSet.Tables[table], txt.Tag.ToString(), true);
+                        }
+                        else if (txt.GetType() == typeof(CheckBox))
+                        {
+                            txt.DataBindings.Add("Checked", dataSet.Tables[table], txt.Tag.ToString());
+                        }
+
+                        txt.Validated += new System.EventHandler(this.validarText);
+                    }
+                }
+            }
+            dgvBase.AutoGenerateColumns = true;
+            dgvBase.DataSource = dataSet.Tables[table]; // dataset
+        }
+
+
+
+
+
+
+
+
+        /*String query = "";
+        DataRow row;
+        DataSet dataSet = new DataSet();
+        String table = "";
         public void Table(string value)
         {
             table = value;
@@ -111,6 +158,6 @@ namespace BaseForm
             e.ThrowException = false;
             MessageBox.Show("Entrada no vàlida");
             dgvBase.RefreshEdit();
-        }
+        }*/
     }
 }
