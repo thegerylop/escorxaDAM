@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Globalization;
 using Models;
 using System.Data.Entity.Infrastructure;
+using System.Data.Entity.Validation;
 
 namespace RecepcioBestiar
 {
@@ -36,9 +37,9 @@ namespace RecepcioBestiar
         private void Edi()
         {
             DownloadDataFTP.FtpForm ftp = new DownloadDataFTP.FtpForm();
-            
+
             ftp.ShowDialog();
-            
+
             string ruta = edi.openFile();
             dades = edi.read(ruta);
             omplirCamps(dades);
@@ -154,8 +155,8 @@ namespace RecepcioBestiar
         {
 
             proveidor = (from a in _m.proveidors
-                             where a.codiExplotacio.ToString() == ORI.Text
-                             select a.idProveidor).First().ToString();
+                         where a.codiExplotacio.ToString() == ORI.Text
+                         select a.idProveidor).First().ToString();
 
         }
         public void crearLot()
@@ -193,6 +194,16 @@ namespace RecepcioBestiar
 
             using (escorxadam2Entities test = new escorxadam2Entities())
             {
+                var estable = new estables
+                {
+                    idEstatEstabulacio = 1,
+                    idInspeccioSanitaria = 1,
+
+                };
+                _m.estables.Add(estable);
+                _m.SaveChanges();
+
+
                 var recepcio = new recepcions_bestiar
                 {
                     idUsuariReceptor = Int32.Parse(userComboBox.SelectedValue.ToString()),
@@ -226,7 +237,7 @@ namespace RecepcioBestiar
                 {
                     string pais = row.Cells["Pais"].Value.ToString();
                     string paisAnimal = (from a in _m.paisos
-                                   where a.abreviaturaPais.ToString() == pais
+                                         where a.abreviaturaPais.ToString() == pais
                                          select a.idPais).First().ToString();
 
                     int idRecepcio = Int32.Parse(_m.recepcions_bestiar.Max(u => u.idRecepcio).ToString());
@@ -247,8 +258,14 @@ namespace RecepcioBestiar
                     };
                     _m.animals.Add(animal);
                     _m.SaveChanges();
+
+                    int idEstable = Int32.Parse(_m.estables.Max(u => u.idEstable).ToString());
+                    var lots = _m.lots.Max();
+
+                    lots.idEstabulacio = idEstable;
+                    _m.SaveChanges();
                 }
-               
+
             }
         }
     }
