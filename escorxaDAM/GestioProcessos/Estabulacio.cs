@@ -104,22 +104,19 @@ namespace GestioProcessos
             }
             using (escorxadam2Entities test = new escorxadam2Entities())
             {
-                var estabulacio = new estables
-                {
-                    idUsuariResponsable = Int32.Parse(Usuaris.SelectedValue.ToString()),
-                    idEstatEstabulacio = 1,
-                    idInspeccioSanitaria = 1,
-                    numEstable = NumEstable.Text,
-                    dataEntrada = DateTime.ParseExact(DiaEntrada.Text, "yyyy/MM/dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal),
-                    Incidencies = incidencia,
-                };
-                _m.estables.Add(estabulacio);
-                _m.SaveChanges();
+                string idEst = (from a in _m.lots
+                                            where a.numLot.ToString() == Lots.Text
+                                            select a.idEstabulacio).First().ToString();
+                var est = (from a in _m.estables
+                           where a.idEstable.ToString() == idEst 
+                           select a).FirstOrDefault();
 
-                int idEstable = Int32.Parse(_m.estables.Max(u => u.idEstable).ToString());
-                var lots = _m.lots.SingleOrDefault(a => a.numLot == lot);
-
-                lots.idEstabulacio = idEstable;
+                est.idUsuariResponsable = Int32.Parse(Usuaris.SelectedValue.ToString());
+                est.idEstatEstabulacio = 2;
+                est.idInspeccioSanitaria = 1;
+                est.numEstable = NumEstable.Text;
+                est.dataEntrada = DateTime.ParseExact(DiaEntrada.Text, "yyyy/MM/dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
+                est.Incidencies = incidencia;
                 _m.SaveChanges();
 
                 ActualitzarDataGrid();

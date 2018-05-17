@@ -196,6 +196,7 @@ namespace RecepcioBestiar
             {
                 var estable = new estables
                 {
+                    idUsuariResponsable = 1,
                     idEstatEstabulacio = 1,
                     idInspeccioSanitaria = 1,
 
@@ -260,9 +261,9 @@ namespace RecepcioBestiar
                     _m.SaveChanges();
 
                     int idEstable = Int32.Parse(_m.estables.Max(u => u.idEstable).ToString());
-                    var lots = _m.lots.Max();
+                    var lotes = _m.lots.OrderByDescending(u => u.idLot).FirstOrDefault();
 
-                    lots.idEstabulacio = idEstable;
+                    lotes.idEstabulacio = idEstable;
                     _m.SaveChanges();
                 }
 

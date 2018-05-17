@@ -117,7 +117,7 @@
             this.Incidencies.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Incidencies.Location = new System.Drawing.Point(661, 432);
             this.Incidencies.Name = "Incidencies";
-            this.Incidencies.Options = CustomControl.CustomTextBox.Items.Password;
+            this.Incidencies.Options = CustomControl.CustomTextBox.Items.Text;
             this.Incidencies.Placeholder = null;
             this.Incidencies.Size = new System.Drawing.Size(192, 20);
             this.Incidencies.TabIndex = 102;
@@ -138,7 +138,7 @@
             this.NumEstable.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.NumEstable.Location = new System.Drawing.Point(202, 539);
             this.NumEstable.Name = "NumEstable";
-            this.NumEstable.Options = CustomControl.CustomTextBox.Items.Password;
+            this.NumEstable.Options = CustomControl.CustomTextBox.Items.Text;
             this.NumEstable.Placeholder = null;
             this.NumEstable.Size = new System.Drawing.Size(192, 20);
             this.NumEstable.TabIndex = 100;
@@ -190,7 +190,7 @@
             this.Lots.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Lots.Location = new System.Drawing.Point(202, 434);
             this.Lots.Name = "Lots";
-            this.Lots.Options = CustomControl.CustomTextBox.Items.Password;
+            this.Lots.Options = CustomControl.CustomTextBox.Items.Text;
             this.Lots.Placeholder = null;
             this.Lots.Size = new System.Drawing.Size(192, 20);
             this.Lots.TabIndex = 113;
@@ -211,7 +211,7 @@
             this.DiaEntrada.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.DiaEntrada.Location = new System.Drawing.Point(661, 485);
             this.DiaEntrada.Name = "DiaEntrada";
-            this.DiaEntrada.Options = CustomControl.CustomTextBox.Items.Password;
+            this.DiaEntrada.Options = CustomControl.CustomTextBox.Items.Text;
             this.DiaEntrada.Placeholder = null;
             this.DiaEntrada.Size = new System.Drawing.Size(192, 20);
             this.DiaEntrada.TabIndex = 115;
@@ -221,7 +221,7 @@
             this.DisSortida.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.DisSortida.Location = new System.Drawing.Point(661, 539);
             this.DisSortida.Name = "DisSortida";
-            this.DisSortida.Options = CustomControl.CustomTextBox.Items.Password;
+            this.DisSortida.Options = CustomControl.CustomTextBox.Items.Text;
             this.DisSortida.Placeholder = null;
             this.DisSortida.Size = new System.Drawing.Size(192, 20);
             this.DisSortida.TabIndex = 116;
@@ -246,7 +246,7 @@
             this.Estats.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Estats.Location = new System.Drawing.Point(202, 485);
             this.Estats.Name = "Estats";
-            this.Estats.Options = CustomControl.CustomTextBox.Items.Password;
+            this.Estats.Options = CustomControl.CustomTextBox.Items.Text;
             this.Estats.Placeholder = null;
             this.Estats.Size = new System.Drawing.Size(192, 20);
             this.Estats.TabIndex = 118;
