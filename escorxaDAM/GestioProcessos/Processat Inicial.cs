@@ -53,6 +53,8 @@ namespace GestioProcessos
 
         private string getDIBAnimal(string numLot)
         {
+
+            //Agafo el DNI del animal
             var dades = (from l in _m.lots
                          join rb in _m.recepcions_bestiar on l.idRemo equals rb.idRecepcio
                          join a in _m.animals on rb.idRecepcio equals a.idRecepcioBestiar

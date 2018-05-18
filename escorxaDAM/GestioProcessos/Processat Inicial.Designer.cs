@@ -263,5 +263,6 @@
         private System.Windows.Forms.Label label4;
         public CustomControl.CustomTextBox txtNLot;
         public CustomControl.CustomTextBox txtBoxEstat;
+
     }
 }
