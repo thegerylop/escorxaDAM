@@ -43,7 +43,7 @@
             this.Lots = new CustomControl.CustomTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.DiaEntrada = new CustomControl.CustomTextBox();
-            this.DisSortida = new CustomControl.CustomTextBox();
+            this.DiaSortida = new CustomControl.CustomTextBox();
             this.btnFinalitzar = new System.Windows.Forms.Button();
             this.Estats = new CustomControl.CustomTextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -216,15 +216,15 @@
             this.DiaEntrada.Size = new System.Drawing.Size(192, 20);
             this.DiaEntrada.TabIndex = 115;
             // 
-            // DisSortida
+            // DiaSortida
             // 
-            this.DisSortida.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DisSortida.Location = new System.Drawing.Point(661, 539);
-            this.DisSortida.Name = "DisSortida";
-            this.DisSortida.Options = CustomControl.CustomTextBox.Items.Text;
-            this.DisSortida.Placeholder = null;
-            this.DisSortida.Size = new System.Drawing.Size(192, 20);
-            this.DisSortida.TabIndex = 116;
+            this.DiaSortida.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.DiaSortida.Location = new System.Drawing.Point(661, 539);
+            this.DiaSortida.Name = "DiaSortida";
+            this.DiaSortida.Options = CustomControl.CustomTextBox.Items.Text;
+            this.DiaSortida.Placeholder = null;
+            this.DiaSortida.Size = new System.Drawing.Size(192, 20);
+            this.DiaSortida.TabIndex = 116;
             // 
             // btnFinalitzar
             // 
@@ -269,7 +269,7 @@
             this.Controls.Add(this.Estats);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnFinalitzar);
-            this.Controls.Add(this.DisSortida);
+            this.Controls.Add(this.DiaSortida);
             this.Controls.Add(this.DiaEntrada);
             this.Controls.Add(this.Lots);
             this.Controls.Add(this.label6);
@@ -304,7 +304,7 @@
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.Lots, 0);
             this.Controls.SetChildIndex(this.DiaEntrada, 0);
-            this.Controls.SetChildIndex(this.DisSortida, 0);
+            this.Controls.SetChildIndex(this.DiaSortida, 0);
             this.Controls.SetChildIndex(this.btnFinalitzar, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.Estats, 0);
@@ -331,7 +331,7 @@
         private CustomControl.CustomTextBox Lots;
         private System.Windows.Forms.Label label6;
         private CustomControl.CustomTextBox DiaEntrada;
-        private CustomControl.CustomTextBox DisSortida;
+        private CustomControl.CustomTextBox DiaSortida;
         public System.Windows.Forms.Button btnFinalitzar;
         private CustomControl.CustomTextBox Estats;
         private System.Windows.Forms.Label label7;

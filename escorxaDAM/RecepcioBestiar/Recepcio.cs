@@ -171,7 +171,8 @@ namespace RecepcioBestiar
             {
                 num = num.Substring(num.Length - 4);
                 long numero = Int64.Parse(num) + 1;
-                lot = date + ORI.Text + numero.ToString();
+                num = numero.ToString().PadLeft(5-numero.ToString().Length,'0');
+                lot = date + ORI.Text + num.ToString();
             }
             else
             {

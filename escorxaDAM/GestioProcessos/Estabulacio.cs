@@ -41,6 +41,7 @@ namespace GestioProcessos
         {
             dadesDataGrid(e);
             omplirCampsComuns();
+            omplirCampsEspera();
             if (estat.Equals("En espera"))
             {
                 btnInserir.Visible = true;
@@ -50,6 +51,7 @@ namespace GestioProcessos
             {
                 btnFinalitzar.Visible = true;
                 omplirCampsProces();
+
             }
 
         }
@@ -66,22 +68,32 @@ namespace GestioProcessos
         }
         private void omplirCampsEspera()
         {
-        }
-        private void omplirCampsProces()
-        {
-
-        }
-        private void btnInserir_Click(object sender, EventArgs e)
-        {
             Random rnd = new Random();
             NumEstable.Text = rnd.Next(1, 11).ToString();
             DiaEntrada.Text = DateTime.Now.ToString("yyy/MM/dd HH:mm");
+        }
+        private void omplirCampsProces()
+        {
+                var estable = (from a in _m.lots
+                               join b in _m.estables on a.idEstabulacio equals b.idEstable
+                               where a.numLot == lot
+                               select b).FirstOrDefault(); ;
+            NumEstable.Text = estable.numEstable;
+            Incidencies.Text = estable.Incidencies;
+            Usuaris.SelectedValue = estable.idUsuariResponsable;
+            DiaEntrada.Text = estable.dataEntrada.ToString();
+        }
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            omplirCampsEspera();
             afegirBBDD();
         }
 
         private void btnFinalitzar_Click(object sender, EventArgs e)
         {
-
+            DiaSortida.Text = DateTime.Now.ToString("yyy/MM/dd HH:mm");
+            afegirBBDD();
+            finalitzarProces();
         }
         public void obtenirUsuaris()
         {
@@ -111,14 +123,25 @@ namespace GestioProcessos
                            where a.idEstable.ToString() == idEst 
                            select a).FirstOrDefault();
 
-                est.idUsuariResponsable = Int32.Parse(Usuaris.SelectedValue.ToString());
-                est.idEstatEstabulacio = 2;
-                est.idInspeccioSanitaria = 1;
-                est.numEstable = NumEstable.Text;
-                est.dataEntrada = DateTime.ParseExact(DiaEntrada.Text, "yyyy/MM/dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
-                est.Incidencies = incidencia;
-                _m.SaveChanges();
+                if(est.idEstatEstabulacio == 1)
+                {
+                    est.idUsuariResponsable = Int32.Parse(Usuaris.SelectedValue.ToString());
+                    est.idEstatEstabulacio = 2;
+                    est.idInspeccioSanitaria = 1;
+                    est.numEstable = NumEstable.Text;
+                    est.dataEntrada = DateTime.ParseExact(DiaEntrada.Text, "yyyy/MM/dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
+                    est.Incidencies = incidencia;
 
+                }
+                else
+                {
+                    est.idUsuariResponsable = Int32.Parse(Usuaris.SelectedValue.ToString());
+                    est.idEstatEstabulacio = 3;
+                    est.dataSortida = DateTime.ParseExact(DiaSortida.Text, "yyyy/MM/dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
+                    est.Incidencies = incidencia;
+                }
+
+                _m.SaveChanges();
                 ActualitzarDataGrid();
             }
         }
