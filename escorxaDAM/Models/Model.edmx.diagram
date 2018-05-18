@@ -65,6 +65,7 @@
         <AssociationConnector Association="escorxadam2Model.FK__permisos__idUsua__3587F3E0" ManuallyRouted="false" />
         <AssociationConnector Association="escorxadam2Model.FK__permisos__idUsua__45BE5BA9" ManuallyRouted="false" />
         <AssociationConnector Association="escorxadam2Model.FK__permisos__idUsua__47A6A41B" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="escorxadam2Model.sitran" Width="1.5" PointX="8.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

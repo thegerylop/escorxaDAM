@@ -47,7 +47,7 @@ namespace ClassHelpers
 
         }
 
-        public string sendUDPData(string Ip, int port, string data)
+        public static string sendUDPData(string Ip, int port, string data)
         {
             string DestinationIP = Ip;
             int Port = port;

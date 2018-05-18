@@ -138,6 +138,9 @@
     <Compile Include="sistemes_atordiment.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="sitran.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="situacio_explotacions.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

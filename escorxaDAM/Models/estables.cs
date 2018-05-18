@@ -25,8 +25,8 @@ namespace Models
         public long idEstatEstabulacio { get; set; }
         public long idInspeccioSanitaria { get; set; }
         public string numEstable { get; set; }
-        public System.DateTime dataEntrada { get; set; }
-        public System.DateTime dataSortida { get; set; }
+        public Nullable<System.DateTime> dataEntrada { get; set; }
+        public Nullable<System.DateTime> dataSortida { get; set; }
         public string Incidencies { get; set; }
     
         public virtual estat_estabulacions estat_estabulacions { get; set; }
