@@ -145,5 +145,9 @@ namespace GestioProcessos
                 ActualitzarDataGrid();
             }
         }
+        private void finalitzarProces()
+        {
+
+        }
     }
 }
