@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -62,6 +63,12 @@
       <DependentUpon>Processat Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sacrifici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sacrifici.Designer.cs">
+      <DependentUpon>Sacrifici.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BaseForm\BaseForm.csproj">
@@ -71,6 +78,10 @@
     <ProjectReference Include="..\CustomControl\CustomControl.csproj">
       <Project>{a7279e0e-d844-4cc7-99da-9939eaa74818}</Project>
       <Name>CustomControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{0010e369-5b6f-456f-8c9a-e1b3faf4c7f6}</Project>
+      <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Processat Inicial.resx">
       <DependentUpon>Processat Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sacrifici.resx">
+      <DependentUpon>Sacrifici.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
