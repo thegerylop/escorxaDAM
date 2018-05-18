@@ -240,6 +240,7 @@
             this.btnFinalitzar.Text = "Finalitzar";
             this.btnFinalitzar.UseVisualStyleBackColor = false;
             this.btnFinalitzar.Visible = false;
+            this.btnFinalitzar.Click += new System.EventHandler(this.btnFinalitzar_Click);
             // 
             // Estats
             // 
