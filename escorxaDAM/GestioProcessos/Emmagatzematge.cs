@@ -26,7 +26,7 @@ namespace GestioProcessos
                        join b in _m.usuaris on a.idUsuariEntrada equals b.idUsuari
                        join c in _m.estat_refrigeracions on a.idEstatRefrigeracio equals c.idEstatRefrigeracio
                        where (c.nomEstatRefrigeracio == "En espera" || c.nomEstatRefrigeracio == "En procés")
-                       select new { a.lots, c.nomEstatRefrigeracio, a.numCambraFrigorifica, b.codiUsuari, a.dataEntrada, });
+                       select new { a.lots, c.nomEstatRefrigeracio, a.numCambraFrigorifica, b.codiUsuari, a.dataEntrada });
 
             dgwEmmagatzematge.DataSource = num;
         }
