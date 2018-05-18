@@ -30,6 +30,21 @@ namespace BaseForm
 
             dgvBase.DataSource = query.ToList();
         }
+
+        //public void PortarDades(string taula) {
+
+        //    var query;
+
+        //    switch (taula)
+        //    {
+        //        case "proveidors": query = from table in esEnt.proveidors select table; break;
+        //        case "usuaris": query = from table in esEnt.usuaris select table; break;
+        //    }
+
+        //    dgvBase.DataSource = query.ToList();
+        //}
+
+        //
         /*
         private void BindingDades(string table)
         {

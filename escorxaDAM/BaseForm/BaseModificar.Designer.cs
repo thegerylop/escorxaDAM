@@ -47,7 +47,8 @@
             this.dgvBase.ReadOnly = true;
             this.dgvBase.Size = new System.Drawing.Size(873, 255);
             this.dgvBase.TabIndex = 0;
-            this.dgvBase.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvBase_DataError);
+            //Daniel Fornas
+            //this.dgvBase.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvBase_DataError);
             // 
             // btnActualitzar
             // 
@@ -62,7 +63,8 @@
             this.btnActualitzar.TabIndex = 36;
             this.btnActualitzar.Text = "Actualitzar";
             this.btnActualitzar.UseVisualStyleBackColor = false;
-            this.btnActualitzar.Click += new System.EventHandler(this.actualitzar_Click);
+            //Daniel Fornas
+            //this.btnActualitzar.Click += new System.EventHandler(this.actualitzar_Click);
             // 
             // contextMenuStrip1
             // 

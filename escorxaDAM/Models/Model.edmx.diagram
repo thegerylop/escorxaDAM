@@ -21,7 +21,7 @@
         <EntityTypeShape EntityType="escorxadam2Model.lots" Width="1.5" PointX="11.25" PointY="14.125" IsExpanded="true" />
         <EntityTypeShape EntityType="escorxadam2Model.nivells_acces" Width="1.5" PointX="6.75" PointY="24.125" IsExpanded="true" />
         <EntityTypeShape EntityType="escorxadam2Model.paisos" Width="1.5" PointX="6" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="escorxadam2Model.processats_finals" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="escorxadam2Model.processats_finals" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
         <EntityTypeShape EntityType="escorxadam2Model.processats_inicials" Width="1.5" PointX="3" PointY="18.625" IsExpanded="true" />
         <EntityTypeShape EntityType="escorxadam2Model.proveidors" Width="1.5" PointX="3.75" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="escorxadam2Model.recepcions_bestiar" Width="1.5" PointX="6" PointY="9.25" IsExpanded="true" />
