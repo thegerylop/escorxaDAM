@@ -52,5 +52,6 @@ namespace Models
         public virtual DbSet<tipus_explotacions> tipus_explotacions { get; set; }
         public virtual DbSet<usuaris> usuaris { get; set; }
         public virtual DbSet<permisos> permisos { get; set; }
+        public virtual DbSet<sitran> sitran { get; set; }
     }
 }

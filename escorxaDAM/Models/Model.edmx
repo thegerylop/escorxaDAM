@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="escorxadam2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="escorxadam2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="animals">
           <Key>
             <PropertyRef Name="idAnimal" />
@@ -54,10 +54,10 @@
           <Property Name="idUsuariResponsable" Type="bigint" Nullable="false" />
           <Property Name="idEstatEstabulacio" Type="bigint" Nullable="false" />
           <Property Name="idInspeccioSanitaria" Type="bigint" Nullable="false" />
-          <Property Name="numEstable" Type="varchar" MaxLength="8" Nullable="false" />
-          <Property Name="dataEntrada" Type="datetime2" Precision="0" Nullable="false" />
-          <Property Name="dataSortida" Type="datetime2" Precision="0" Nullable="false" />
-          <Property Name="Incidencies" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="numEstable" Type="varchar" MaxLength="8" />
+          <Property Name="dataEntrada" Type="datetime2" Precision="0" />
+          <Property Name="dataSortida" Type="datetime2" Precision="0" />
+          <Property Name="Incidencies" Type="varchar" MaxLength="300" />
         </EntityType>
         <EntityType Name="estat_estabulacions">
           <Key>
@@ -245,6 +245,18 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
           </Key>
           <Property Name="idSistemaAtordiment" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nomSistemaAtordiment" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="sitran">
+          <Key>
+            <PropertyRef Name="idSitran" />
+          </Key>
+          <Property Name="idSitran" Type="bigint" Nullable="false" />
+          <Property Name="codiREGA" Type="varchar" MaxLength="5" />
+          <Property Name="tipusExplotacio" Type="varchar" MaxLength="20" />
+          <Property Name="situacioExplotacio" Type="varchar" MaxLength="20" />
+          <Property Name="tipusBestiar" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="situacio_explotacions">
           <Key>
@@ -701,6 +713,15 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
     [permisos].[idNivellAcces] AS [idNivellAcces]
     FROM [dbo].[permisos] AS [permisos]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="sitran" EntityType="Self.sitran" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [sitran].[idSitran] AS [idSitran], 
+    [sitran].[codiREGA] AS [codiREGA], 
+    [sitran].[tipusExplotacio] AS [tipusExplotacio], 
+    [sitran].[situacioExplotacio] AS [situacioExplotacio], 
+    [sitran].[tipusBestiar] AS [tipusBestiar]
+    FROM [dbo].[sitran] AS [sitran]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK__animals__idPaisN__25518C17" Association="Self.FK__animals__idPaisN__25518C17">
             <End Role="paisos" EntitySet="paisos" />
             <End Role="animals" EntitySet="animals" />
@@ -834,8 +855,7 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
             <End Role="sacrificis" EntitySet="sacrificis" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="escorxadam2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -895,10 +915,10 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
           <Property Name="idUsuariResponsable" Type="Int64" Nullable="false" />
           <Property Name="idEstatEstabulacio" Type="Int64" Nullable="false" />
           <Property Name="idInspeccioSanitaria" Type="Int64" Nullable="false" />
-          <Property Name="numEstable" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="dataEntrada" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="dataSortida" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Incidencies" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="numEstable" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="dataEntrada" Type="DateTime" Precision="0" />
+          <Property Name="dataSortida" Type="DateTime" Precision="0" />
+          <Property Name="Incidencies" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="estat_estabulacions" Relationship="Self.FK__estables__idEsta__2B0A656D" FromRole="estables" ToRole="estat_estabulacions" />
           <NavigationProperty Name="inspeccions" Relationship="Self.FK__estables__idInsp__2BFE89A6" FromRole="estables" ToRole="inspeccions" />
           <NavigationProperty Name="usuaris" Relationship="Self.FK__estables__idUsua__2CF2ADDF" FromRole="estables" ToRole="usuaris" />
@@ -1726,7 +1746,18 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
             <End Role="usuaris" EntitySet="usuaris" />
             <End Role="permisos" EntitySet="permisos" />
           </AssociationSet>
+          <EntitySet Name="sitran" EntityType="escorxadam2Model.sitran" />
         </EntityContainer>
+        <EntityType Name="sitran">
+          <Key>
+            <PropertyRef Name="idSitran" />
+          </Key>
+          <Property Name="idSitran" Type="Int64" Nullable="false" />
+          <Property Name="codiREGA" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="tipusExplotacio" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="situacioExplotacio" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="tipusBestiar" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2021,6 +2052,17 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
               <MappingFragment StoreEntitySet="permisos">
                 <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
                 <ScalarProperty Name="idNivellAcces" ColumnName="idNivellAcces" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sitran">
+            <EntityTypeMapping TypeName="escorxadam2Model.sitran">
+              <MappingFragment StoreEntitySet="sitran">
+                <ScalarProperty Name="tipusBestiar" ColumnName="tipusBestiar" />
+                <ScalarProperty Name="situacioExplotacio" ColumnName="situacioExplotacio" />
+                <ScalarProperty Name="tipusExplotacio" ColumnName="tipusExplotacio" />
+                <ScalarProperty Name="codiREGA" ColumnName="codiREGA" />
+                <ScalarProperty Name="idSitran" ColumnName="idSitran" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

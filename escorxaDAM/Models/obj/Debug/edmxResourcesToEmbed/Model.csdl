@@ -56,10 +56,10 @@
     <Property Name="idUsuariResponsable" Type="Int64" Nullable="false" />
     <Property Name="idEstatEstabulacio" Type="Int64" Nullable="false" />
     <Property Name="idInspeccioSanitaria" Type="Int64" Nullable="false" />
-    <Property Name="numEstable" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="dataEntrada" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="dataSortida" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="Incidencies" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="numEstable" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="dataEntrada" Type="DateTime" Precision="0" />
+    <Property Name="dataSortida" Type="DateTime" Precision="0" />
+    <Property Name="Incidencies" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="estat_estabulacions" Relationship="Self.FK__estables__idEsta__2B0A656D" FromRole="estables" ToRole="estat_estabulacions" />
     <NavigationProperty Name="inspeccions" Relationship="Self.FK__estables__idInsp__2BFE89A6" FromRole="estables" ToRole="inspeccions" />
     <NavigationProperty Name="usuaris" Relationship="Self.FK__estables__idUsua__2CF2ADDF" FromRole="estables" ToRole="usuaris" />
@@ -887,5 +887,16 @@
       <End Role="usuaris" EntitySet="usuaris" />
       <End Role="permisos" EntitySet="permisos" />
     </AssociationSet>
+    <EntitySet Name="sitran" EntityType="escorxadam2Model.sitran" />
   </EntityContainer>
+  <EntityType Name="sitran">
+    <Key>
+      <PropertyRef Name="idSitran" />
+    </Key>
+    <Property Name="idSitran" Type="Int64" Nullable="false" />
+    <Property Name="codiREGA" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="tipusExplotacio" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="situacioExplotacio" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="tipusBestiar" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

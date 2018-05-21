@@ -292,5 +292,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="sitran">
+      <EntityTypeMapping TypeName="escorxadam2Model.sitran">
+        <MappingFragment StoreEntitySet="sitran">
+          <ScalarProperty Name="tipusBestiar" ColumnName="tipusBestiar" />
+          <ScalarProperty Name="situacioExplotacio" ColumnName="situacioExplotacio" />
+          <ScalarProperty Name="tipusExplotacio" ColumnName="tipusExplotacio" />
+          <ScalarProperty Name="codiREGA" ColumnName="codiREGA" />
+          <ScalarProperty Name="idSitran" ColumnName="idSitran" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
