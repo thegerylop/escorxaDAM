@@ -1,3 +1,17 @@
 C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.csprojResolveAssemblyReference.cache
 C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.modificarProveidor.resources
 C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.csproj.GenerateResource.Cache
+C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\bin\Debug\MantenimentProveidors.dll
+C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\bin\Debug\MantenimentProveidors.pdb
+C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\bin\Debug\BaseForm.dll
+C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\bin\Debug\ConexioBBDD.dll
+C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\bin\Debug\CustomControl.dll
+C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\bin\Debug\BaseForm.pdb
+C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\bin\Debug\ConexioBBDD.pdb
+C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\bin\Debug\CustomControl.pdb
+C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.inserirProveidor.resources
+C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.modificarProveidor.resources
+C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.csproj.GenerateResource.Cache
+C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.csproj.CoreCompileInputs.cache
+C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.dll
+C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.pdb
