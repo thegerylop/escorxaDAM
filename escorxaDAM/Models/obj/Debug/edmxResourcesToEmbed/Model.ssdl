@@ -229,8 +229,8 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
     <Property Name="idSistemaAtordiment" Type="bigint" Nullable="false" />
     <Property Name="idInspeccioSanitaria" Type="bigint" Nullable="false" />
     <Property Name="idEstatSacrifici" Type="bigint" />
-    <Property Name="boxImmobilitzacio" Type="varchar" MaxLength="8" Nullable="false" />
-    <Property Name="AparellAtordiment" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="boxImmobilitzacio" Type="varchar" MaxLength="8" />
+    <Property Name="AparellAtordiment" Type="varchar" MaxLength="50" />
     <Property Name="dataSacrifici" Type="date" Nullable="false" />
     <Property Name="Incidencies" Type="varchar" MaxLength="300" Nullable="false" />
   </EntityType>

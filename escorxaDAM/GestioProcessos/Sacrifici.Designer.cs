@@ -39,15 +39,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnFinalitzar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dataSacrifici = new CustomControl.CustomTextBox();
+            this.Usuaris = new CustomControl.comboBox();
+            this.txtBoxNLot = new CustomControl.CustomTextBox();
+            this.txtBoxIncidencies = new CustomControl.CustomTextBox();
             this.cBoxAtordiment = new CustomControl.comboBox();
             this.txtBoxBox = new CustomControl.CustomTextBox();
             this.txtBoxEstat = new CustomControl.CustomTextBox();
             this.txtBoxAparell = new CustomControl.CustomTextBox();
-            this.txtBoxUsuari = new CustomControl.CustomTextBox();
-            this.txtBoxIncidencies = new CustomControl.CustomTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtBoxNLot = new CustomControl.CustomTextBox();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridAnimals)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +58,8 @@
             // btnInserir
             // 
             this.btnInserir.Location = new System.Drawing.Point(837, 621);
+            this.btnInserir.Visible = false;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // gridAnimals
             // 
@@ -173,6 +178,98 @@
             this.panel2.Size = new System.Drawing.Size(740, 1);
             this.panel2.TabIndex = 124;
             // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(62, 602);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 16);
+            this.label6.TabIndex = 125;
+            this.label6.Text = "Incidències:";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(492, 534);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(63, 16);
+            this.label9.TabIndex = 127;
+            this.label9.Text = "Num. Lot:";
+            // 
+            // btnFinalitzar
+            // 
+            this.btnFinalitzar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnFinalitzar.BackColor = System.Drawing.Color.DimGray;
+            this.btnFinalitzar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFinalitzar.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.btnFinalitzar.ForeColor = System.Drawing.Color.White;
+            this.btnFinalitzar.Location = new System.Drawing.Point(837, 621);
+            this.btnFinalitzar.Name = "btnFinalitzar";
+            this.btnFinalitzar.Size = new System.Drawing.Size(132, 26);
+            this.btnFinalitzar.TabIndex = 130;
+            this.btnFinalitzar.Text = "Finalitzar";
+            this.btnFinalitzar.UseVisualStyleBackColor = false;
+            this.btnFinalitzar.Visible = false;
+            this.btnFinalitzar.Click += new System.EventHandler(this.btnFinalitzar_Click);
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(492, 599);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 16);
+            this.label10.TabIndex = 131;
+            this.label10.Text = "Dia sacrifici :";
+            // 
+            // dataSacrifici
+            // 
+            this.dataSacrifici.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dataSacrifici.Location = new System.Drawing.Point(589, 598);
+            this.dataSacrifici.Name = "dataSacrifici";
+            this.dataSacrifici.Options = CustomControl.CustomTextBox.Items.Text;
+            this.dataSacrifici.Placeholder = null;
+            this.dataSacrifici.Size = new System.Drawing.Size(161, 20);
+            this.dataSacrifici.TabIndex = 132;
+            this.dataSacrifici.Tag = "Nom";
+            // 
+            // Usuaris
+            // 
+            this.Usuaris.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Usuaris.FormattingEnabled = true;
+            this.Usuaris.Location = new System.Drawing.Point(181, 467);
+            this.Usuaris.Name = "Usuaris";
+            this.Usuaris.Reference = null;
+            this.Usuaris.Size = new System.Drawing.Size(163, 21);
+            this.Usuaris.TabIndex = 129;
+            // 
+            // txtBoxNLot
+            // 
+            this.txtBoxNLot.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBoxNLot.Location = new System.Drawing.Point(589, 533);
+            this.txtBoxNLot.Name = "txtBoxNLot";
+            this.txtBoxNLot.Options = CustomControl.CustomTextBox.Items.Text;
+            this.txtBoxNLot.Placeholder = null;
+            this.txtBoxNLot.Size = new System.Drawing.Size(161, 20);
+            this.txtBoxNLot.TabIndex = 128;
+            this.txtBoxNLot.Tag = "Nom";
+            // 
+            // txtBoxIncidencies
+            // 
+            this.txtBoxIncidencies.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBoxIncidencies.Location = new System.Drawing.Point(183, 598);
+            this.txtBoxIncidencies.Name = "txtBoxIncidencies";
+            this.txtBoxIncidencies.Options = CustomControl.CustomTextBox.Items.Text;
+            this.txtBoxIncidencies.Placeholder = null;
+            this.txtBoxIncidencies.Size = new System.Drawing.Size(161, 20);
+            this.txtBoxIncidencies.TabIndex = 126;
+            this.txtBoxIncidencies.Tag = "Nom";
+            // 
             // cBoxAtordiment
             // 
             this.cBoxAtordiment.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -182,11 +279,12 @@
             this.cBoxAtordiment.Reference = null;
             this.cBoxAtordiment.Size = new System.Drawing.Size(161, 21);
             this.cBoxAtordiment.TabIndex = 122;
+            this.cBoxAtordiment.TextChanged += new System.EventHandler(this.cBoxAtordiment_TextChanged);
             // 
             // txtBoxBox
             // 
             this.txtBoxBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBoxBox.Location = new System.Drawing.Point(183, 402);
+            this.txtBoxBox.Location = new System.Drawing.Point(183, 404);
             this.txtBoxBox.Name = "txtBoxBox";
             this.txtBoxBox.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxBox.Placeholder = null;
@@ -216,66 +314,15 @@
             this.txtBoxAparell.TabIndex = 116;
             this.txtBoxAparell.Tag = "Nom";
             // 
-            // txtBoxUsuari
-            // 
-            this.txtBoxUsuari.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBoxUsuari.Location = new System.Drawing.Point(183, 466);
-            this.txtBoxUsuari.Name = "txtBoxUsuari";
-            this.txtBoxUsuari.Options = CustomControl.CustomTextBox.Items.Text;
-            this.txtBoxUsuari.Placeholder = null;
-            this.txtBoxUsuari.Size = new System.Drawing.Size(161, 20);
-            this.txtBoxUsuari.TabIndex = 115;
-            this.txtBoxUsuari.Tag = "Nom";
-            // 
-            // txtBoxIncidencies
-            // 
-            this.txtBoxIncidencies.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBoxIncidencies.Location = new System.Drawing.Point(183, 598);
-            this.txtBoxIncidencies.Name = "txtBoxIncidencies";
-            this.txtBoxIncidencies.Options = CustomControl.CustomTextBox.Items.Text;
-            this.txtBoxIncidencies.Placeholder = null;
-            this.txtBoxIncidencies.Size = new System.Drawing.Size(161, 20);
-            this.txtBoxIncidencies.TabIndex = 126;
-            this.txtBoxIncidencies.Tag = "Nom";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(62, 602);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 16);
-            this.label6.TabIndex = 125;
-            this.label6.Text = "Incidències:";
-            // 
-            // txtBoxNLot
-            // 
-            this.txtBoxNLot.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBoxNLot.Location = new System.Drawing.Point(589, 533);
-            this.txtBoxNLot.Name = "txtBoxNLot";
-            this.txtBoxNLot.Options = CustomControl.CustomTextBox.Items.Text;
-            this.txtBoxNLot.Placeholder = null;
-            this.txtBoxNLot.Size = new System.Drawing.Size(161, 20);
-            this.txtBoxNLot.TabIndex = 128;
-            this.txtBoxNLot.Tag = "Nom";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(492, 534);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 16);
-            this.label9.TabIndex = 127;
-            this.label9.Text = "Num. Lot:";
-            // 
             // Sacrifici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1126, 749);
+            this.Controls.Add(this.dataSacrifici);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.btnFinalitzar);
+            this.Controls.Add(this.Usuaris);
             this.Controls.Add(this.txtBoxNLot);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtBoxIncidencies);
@@ -287,7 +334,6 @@
             this.Controls.Add(this.txtBoxBox);
             this.Controls.Add(this.txtBoxEstat);
             this.Controls.Add(this.txtBoxAparell);
-            this.Controls.Add(this.txtBoxUsuari);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
@@ -307,7 +353,6 @@
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.label8, 0);
-            this.Controls.SetChildIndex(this.txtBoxUsuari, 0);
             this.Controls.SetChildIndex(this.txtBoxAparell, 0);
             this.Controls.SetChildIndex(this.txtBoxEstat, 0);
             this.Controls.SetChildIndex(this.txtBoxBox, 0);
@@ -319,6 +364,10 @@
             this.Controls.SetChildIndex(this.txtBoxIncidencies, 0);
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.txtBoxNLot, 0);
+            this.Controls.SetChildIndex(this.Usuaris, 0);
+            this.Controls.SetChildIndex(this.btnFinalitzar, 0);
+            this.Controls.SetChildIndex(this.label10, 0);
+            this.Controls.SetChildIndex(this.dataSacrifici, 0);
             ((System.ComponentModel.ISupportInitialize)(this.gridAnimals)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -336,7 +385,6 @@
         private CustomControl.CustomTextBox txtBoxBox;
         private CustomControl.CustomTextBox txtBoxEstat;
         private CustomControl.CustomTextBox txtBoxAparell;
-        private CustomControl.CustomTextBox txtBoxUsuari;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
@@ -349,5 +397,9 @@
         private System.Windows.Forms.Label label6;
         private CustomControl.CustomTextBox txtBoxNLot;
         private System.Windows.Forms.Label label9;
+        private CustomControl.comboBox Usuaris;
+        public System.Windows.Forms.Button btnFinalitzar;
+        private CustomControl.CustomTextBox dataSacrifici;
+        private System.Windows.Forms.Label label10;
     }
 }

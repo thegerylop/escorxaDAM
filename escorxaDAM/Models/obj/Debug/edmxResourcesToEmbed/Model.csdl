@@ -263,8 +263,8 @@
     <Property Name="idSistemaAtordiment" Type="Int64" Nullable="false" />
     <Property Name="idInspeccioSanitaria" Type="Int64" Nullable="false" />
     <Property Name="idEstatSacrifici" Type="Int64" />
-    <Property Name="boxImmobilitzacio" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="AparellAtordiment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="boxImmobilitzacio" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="AparellAtordiment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="dataSacrifici" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="Incidencies" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="estat_sacrifici" Relationship="Self.FK__sacrifici__idEst__40058253" FromRole="sacrificis" ToRole="estat_sacrifici" />
