@@ -23,9 +23,9 @@ namespace Models
         public long idProcessatInicial { get; set; }
         public long idUsuari { get; set; }
         public long idEstatInicial { get; set; }
-        public int numCarril { get; set; }
+        public Nullable<int> numCarril { get; set; }
         public string DIB { get; set; }
-        public double pesCanal { get; set; }
+        public Nullable<double> pesCanal { get; set; }
     
         public virtual estat_processos_inicials estat_processos_inicials { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

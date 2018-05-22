@@ -11,6 +11,7 @@
     <Property Name="Sexe" Type="char" MaxLength="1" Nullable="false" />
     <Property Name="Edat" Type="varchar" MaxLength="8" Nullable="false" />
     <Property Name="DIBmare" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="Pes" Type="float" />
   </EntityType>
   <EntityType Name="comptadors_lot_mes">
     <Key>
@@ -49,10 +50,10 @@
     <Property Name="idUsuariResponsable" Type="bigint" Nullable="false" />
     <Property Name="idEstatEstabulacio" Type="bigint" Nullable="false" />
     <Property Name="idInspeccioSanitaria" Type="bigint" Nullable="false" />
-    <Property Name="numEstable" Type="varchar" MaxLength="8" Nullable="false" />
-    <Property Name="dataEntrada" Type="datetime2" Precision="0" Nullable="false" />
-    <Property Name="dataSortida" Type="datetime2" Precision="0" Nullable="false" />
-    <Property Name="Incidencies" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="numEstable" Type="varchar" MaxLength="8" />
+    <Property Name="dataEntrada" Type="datetime2" Precision="0" />
+    <Property Name="dataSortida" Type="datetime2" Precision="0" />
+    <Property Name="Incidencies" Type="varchar" MaxLength="300" />
   </EntityType>
   <EntityType Name="estat_estabulacions">
     <Key>
@@ -180,9 +181,9 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
     <Property Name="idProcessatInicial" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idUsuari" Type="bigint" Nullable="false" />
     <Property Name="idEstatInicial" Type="bigint" Nullable="false" />
-    <Property Name="numCarril" Type="int" Nullable="false" />
-    <Property Name="DIB" Type="varchar" MaxLength="14" Nullable="false" />
-    <Property Name="pesCanal" Type="float" Nullable="false" />
+    <Property Name="numCarril" Type="int" />
+    <Property Name="DIB" Type="varchar" MaxLength="14" />
+    <Property Name="pesCanal" Type="float" />
   </EntityType>
   <EntityType Name="proveidors">
     <Key>
@@ -229,8 +230,8 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
     <Property Name="idSistemaAtordiment" Type="bigint" Nullable="false" />
     <Property Name="idInspeccioSanitaria" Type="bigint" Nullable="false" />
     <Property Name="idEstatSacrifici" Type="bigint" />
-    <Property Name="boxImmobilitzacio" Type="varchar" MaxLength="8" Nullable="false" />
-    <Property Name="AparellAtordiment" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="boxImmobilitzacio" Type="varchar" MaxLength="8" />
+    <Property Name="AparellAtordiment" Type="varchar" MaxLength="50" />
     <Property Name="dataSacrifici" Type="date" Nullable="false" />
     <Property Name="Incidencies" Type="varchar" MaxLength="300" Nullable="false" />
   </EntityType>
@@ -240,6 +241,18 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
     </Key>
     <Property Name="idSistemaAtordiment" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nomSistemaAtordiment" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="sitran">
+    <Key>
+      <PropertyRef Name="idSitran" />
+    </Key>
+    <Property Name="idSitran" Type="bigint" Nullable="false" />
+    <Property Name="codiREGA" Type="varchar" MaxLength="5" />
+    <Property Name="tipusExplotacio" Type="varchar" MaxLength="20" />
+    <Property Name="situacioExplotacio" Type="varchar" MaxLength="20" />
+    <Property Name="tipusBestiar" Type="varchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="situacio_explotacions">
     <Key>
@@ -695,6 +708,15 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
     [permisos].[idUsuari] AS [idUsuari], 
     [permisos].[idNivellAcces] AS [idNivellAcces]
     FROM [dbo].[permisos] AS [permisos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="sitran" EntityType="Self.sitran" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [sitran].[idSitran] AS [idSitran], 
+    [sitran].[codiREGA] AS [codiREGA], 
+    [sitran].[tipusExplotacio] AS [tipusExplotacio], 
+    [sitran].[situacioExplotacio] AS [situacioExplotacio], 
+    [sitran].[tipusBestiar] AS [tipusBestiar]
+    FROM [dbo].[sitran] AS [sitran]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK__animals__idPaisN__25518C17" Association="Self.FK__animals__idPaisN__25518C17">
       <End Role="paisos" EntitySet="paisos" />

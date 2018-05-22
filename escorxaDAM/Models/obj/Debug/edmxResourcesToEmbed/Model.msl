@@ -4,6 +4,7 @@
     <EntitySetMapping Name="animals">
       <EntityTypeMapping TypeName="escorxadam2Model.animals">
         <MappingFragment StoreEntitySet="animals">
+          <ScalarProperty Name="Pes" ColumnName="Pes" />
           <ScalarProperty Name="idAnimal" ColumnName="idAnimal" />
           <ScalarProperty Name="idPaisNaixement" ColumnName="idPaisNaixement" />
           <ScalarProperty Name="idRecepcioBestiar" ColumnName="idRecepcioBestiar" />
@@ -289,6 +290,17 @@
         <MappingFragment StoreEntitySet="permisos">
           <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
           <ScalarProperty Name="idNivellAcces" ColumnName="idNivellAcces" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sitran">
+      <EntityTypeMapping TypeName="escorxadam2Model.sitran">
+        <MappingFragment StoreEntitySet="sitran">
+          <ScalarProperty Name="tipusBestiar" ColumnName="tipusBestiar" />
+          <ScalarProperty Name="situacioExplotacio" ColumnName="situacioExplotacio" />
+          <ScalarProperty Name="tipusExplotacio" ColumnName="tipusExplotacio" />
+          <ScalarProperty Name="codiREGA" ColumnName="codiREGA" />
+          <ScalarProperty Name="idSitran" ColumnName="idSitran" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

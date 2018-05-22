@@ -50,6 +50,12 @@
     <Compile Include="Emmagatzematge.Designer.cs">
       <DependentUpon>Emmagatzematge.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estabulacio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estabulacio.Designer.cs">
+      <DependentUpon>Estabulacio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Processat Final.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,15 +69,21 @@
       <DependentUpon>Processat Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sacrifici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sacrifici.Designer.cs">
+      <DependentUpon>Sacrifici.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BaseForm\BaseForm.csproj">
       <Project>{cf89ea7d-d834-4cb1-8888-e9c0fb24ee7f}</Project>
       <Name>BaseForm</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ClassHelpers\ClassHelpers.csproj">
-      <Project>{9526d638-b53d-4fd8-a2c5-b2fbe0c9634a}</Project>
-      <Name>ClassHelpers</Name>
+    <ProjectReference Include="..\ConexioBBDD\ConexioBBDD.csproj">
+      <Project>{384145E7-5B9B-43CB-92B0-D8BE9B92FDE8}</Project>
+      <Name>ConexioBBDD</Name>
     </ProjectReference>
     <ProjectReference Include="..\CustomControl\CustomControl.csproj">
       <Project>{a7279e0e-d844-4cc7-99da-9939eaa74818}</Project>
@@ -86,11 +98,17 @@
     <EmbeddedResource Include="Emmagatzematge.resx">
       <DependentUpon>Emmagatzematge.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Estabulacio.resx">
+      <DependentUpon>Estabulacio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Processat Final.resx">
       <DependentUpon>Processat Final.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Processat Inicial.resx">
       <DependentUpon>Processat Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sacrifici.resx">
+      <DependentUpon>Sacrifici.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
