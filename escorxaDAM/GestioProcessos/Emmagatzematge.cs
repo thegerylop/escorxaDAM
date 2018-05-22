@@ -17,6 +17,7 @@ namespace GestioProcessos
     {
         escorxadam2Entities _m = new escorxadam2Entities();
         ClassHelpers.EDI_TCPhelpers edi = new ClassHelpers.EDI_TCPhelpers();
+
         public Emmagatzematge()
         {
             InitializeComponent();
@@ -74,10 +75,11 @@ namespace GestioProcessos
             txtUserIn.Show();
             lblDataIn.Show();
             dateIn.Show();
-            
+
             //Llegim user i data
             //txtUserIn = user.ToString();
-            //dateIn = avui;
+
+            dateIn.Value = DateTime.Now;
 
             //Canviem l'estat de la refrigeració
         }
@@ -90,7 +92,7 @@ namespace GestioProcessos
             string ip = "127.0.0.1";
             int port = 8000;
 
-            string temps = EDI_TCPhelpers.sendUDPData(ip, port, info);
+            string temps = edi.sendUDPData(ip, port, info);
 
             int change = temps.IndexOf("-");
             string tempMin = temps.Substring(0, change);

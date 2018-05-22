@@ -132,7 +132,7 @@ namespace MenuPrincipal
             test.sendTCPData("172.17.20.249",5000,"SF");
         }
 
-        private void uDPToolStripMenuItem_Click(object sender, EventArgs e)
+        public void uDPToolStripMenuItem_Click(object sender, EventArgs e)
         {
             test.sendUDPData("172.17.21.32", 7000, "SF");
         }
