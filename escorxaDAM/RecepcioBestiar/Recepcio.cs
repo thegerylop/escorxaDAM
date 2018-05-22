@@ -267,8 +267,8 @@ namespace RecepcioBestiar
                     lotes.idEstabulacio = idEstable;
                     _m.SaveChanges();
                 }
-
             }
+            MessageBox.Show("Finalitzat");
         }
     }
 }

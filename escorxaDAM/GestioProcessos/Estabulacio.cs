@@ -114,7 +114,7 @@ namespace GestioProcessos
             {
                 incidencia = Incidencies.Text;
             }
-            using (escorxadam2Entities test = new escorxadam2Entities())
+            using (escorxadam2Entities enti = new escorxadam2Entities())
             {
                 string idEst = (from a in _m.lots
                                             where a.numLot.ToString() == Lots.Text
@@ -131,6 +131,7 @@ namespace GestioProcessos
                     est.numEstable = NumEstable.Text;
                     est.dataEntrada = DateTime.ParseExact(DiaEntrada.Text, "yyyy/MM/dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
                     est.Incidencies = incidencia;
+                    MessageBox.Show("Inserit Correctament");
 
                 }
                 else
@@ -147,7 +148,26 @@ namespace GestioProcessos
         }
         private void finalitzarProces()
         {
+            using (escorxadam2Entities enti = new escorxadam2Entities())
+            {
+                var sac = new sacrificis
+                {
+                    idUsuari = 1,
+                    idSistemaAtordiment = 1,
+                    idInspeccioSanitaria = 1,
+                    idEstatSacrifici = 1,
+                    Incidencies = "Cap incidencia",
+                };
+                _m.sacrificis.Add(sac);
+                _m.SaveChanges();
+                var lotes = _m.lots.OrderByDescending(u => u.numLot == Lots.Text).FirstOrDefault();
+                long idsacrifici  = (from a in _m.sacrificis
+                                    select a.idSacrifici).Max();
 
+                lotes.idSacrifici = idsacrifici;
+                _m.SaveChanges();
+            }
+            MessageBox.Show("Finalitzat");
         }
     }
 }
