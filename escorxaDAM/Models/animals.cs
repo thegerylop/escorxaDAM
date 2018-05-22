@@ -21,6 +21,7 @@ namespace Models
         public string Sexe { get; set; }
         public string Edat { get; set; }
         public string DIBmare { get; set; }
+        public Nullable<double> Pes { get; set; }
     
         public virtual paisos paisos { get; set; }
         public virtual recepcions_bestiar recepcions_bestiar { get; set; }

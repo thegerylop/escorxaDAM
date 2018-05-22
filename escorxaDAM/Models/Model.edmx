@@ -16,6 +16,7 @@
           <Property Name="Sexe" Type="char" MaxLength="1" Nullable="false" />
           <Property Name="Edat" Type="varchar" MaxLength="8" Nullable="false" />
           <Property Name="DIBmare" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="Pes" Type="float" />
         </EntityType>
         <EntityType Name="comptadors_lot_mes">
           <Key>
@@ -185,9 +186,9 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
           <Property Name="idProcessatInicial" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idUsuari" Type="bigint" Nullable="false" />
           <Property Name="idEstatInicial" Type="bigint" Nullable="false" />
-          <Property Name="numCarril" Type="int" Nullable="false" />
-          <Property Name="DIB" Type="varchar" MaxLength="14" Nullable="false" />
-          <Property Name="pesCanal" Type="float" Nullable="false" />
+          <Property Name="numCarril" Type="int" />
+          <Property Name="DIB" Type="varchar" MaxLength="14" />
+          <Property Name="pesCanal" Type="float" />
         </EntityType>
         <EntityType Name="proveidors">
           <Key>
@@ -872,6 +873,7 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
           <Property Name="DIBmare" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="paisos" Relationship="Self.FK__animals__idPaisN__25518C17" FromRole="animals" ToRole="paisos" />
           <NavigationProperty Name="recepcions_bestiar" Relationship="Self.FK__animals__idRecep__2645B050" FromRole="animals" ToRole="recepcions_bestiar" />
+          <Property Name="Pes" Type="Double" />
         </EntityType>
         <EntityType Name="comptadors_lot_mes">
           <Key>
@@ -1061,9 +1063,9 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
           <Property Name="idProcessatInicial" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="idUsuari" Type="Int64" Nullable="false" />
           <Property Name="idEstatInicial" Type="Int64" Nullable="false" />
-          <Property Name="numCarril" Type="Int32" Nullable="false" />
-          <Property Name="DIB" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="pesCanal" Type="Double" Nullable="false" />
+          <Property Name="numCarril" Type="Int32" />
+          <Property Name="DIB" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="pesCanal" Type="Double" />
           <NavigationProperty Name="estat_processos_inicials" Relationship="Self.FK__processat__idEst__395884C4" FromRole="processats_inicials" ToRole="estat_processos_inicials" />
           <NavigationProperty Name="lots" Relationship="Self.FK__lots__idProcessa__31B762FC" FromRole="processats_inicials" ToRole="lots" />
           <NavigationProperty Name="usuaris" Relationship="Self.FK__processat__idUsu__3A4CA8FD" FromRole="processats_inicials" ToRole="usuaris" />
@@ -1767,6 +1769,7 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
           <EntitySetMapping Name="animals">
             <EntityTypeMapping TypeName="escorxadam2Model.animals">
               <MappingFragment StoreEntitySet="animals">
+                <ScalarProperty Name="Pes" ColumnName="Pes" />
                 <ScalarProperty Name="idAnimal" ColumnName="idAnimal" />
                 <ScalarProperty Name="idPaisNaixement" ColumnName="idPaisNaixement" />
                 <ScalarProperty Name="idRecepcioBestiar" ColumnName="idRecepcioBestiar" />

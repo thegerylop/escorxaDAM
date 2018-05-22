@@ -27,7 +27,7 @@ namespace Models
         public Nullable<long> idEstatSacrifici { get; set; }
         public string boxImmobilitzacio { get; set; }
         public string AparellAtordiment { get; set; }
-        public Nullable<System.DateTime> dataSacrifici { get; set; }
+        public System.DateTime dataSacrifici { get; set; }
         public string Incidencies { get; set; }
     
         public virtual estat_sacrifici estat_sacrifici { get; set; }

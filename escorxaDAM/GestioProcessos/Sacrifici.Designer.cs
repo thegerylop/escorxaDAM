@@ -234,6 +234,7 @@
             this.dataSacrifici.Name = "dataSacrifici";
             this.dataSacrifici.Options = CustomControl.CustomTextBox.Items.Text;
             this.dataSacrifici.Placeholder = null;
+            this.dataSacrifici.ReadOnly = true;
             this.dataSacrifici.Size = new System.Drawing.Size(161, 20);
             this.dataSacrifici.TabIndex = 132;
             this.dataSacrifici.Tag = "Nom";
@@ -241,6 +242,7 @@
             // Usuaris
             // 
             this.Usuaris.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Usuaris.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Usuaris.FormattingEnabled = true;
             this.Usuaris.Location = new System.Drawing.Point(181, 467);
             this.Usuaris.Name = "Usuaris";
@@ -255,6 +257,7 @@
             this.txtBoxNLot.Name = "txtBoxNLot";
             this.txtBoxNLot.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxNLot.Placeholder = null;
+            this.txtBoxNLot.ReadOnly = true;
             this.txtBoxNLot.Size = new System.Drawing.Size(161, 20);
             this.txtBoxNLot.TabIndex = 128;
             this.txtBoxNLot.Tag = "Nom";
@@ -273,6 +276,7 @@
             // cBoxAtordiment
             // 
             this.cBoxAtordiment.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cBoxAtordiment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxAtordiment.FormattingEnabled = true;
             this.cBoxAtordiment.Location = new System.Drawing.Point(183, 532);
             this.cBoxAtordiment.Name = "cBoxAtordiment";
@@ -288,6 +292,7 @@
             this.txtBoxBox.Name = "txtBoxBox";
             this.txtBoxBox.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxBox.Placeholder = null;
+            this.txtBoxBox.ReadOnly = true;
             this.txtBoxBox.Size = new System.Drawing.Size(161, 20);
             this.txtBoxBox.TabIndex = 118;
             this.txtBoxBox.Tag = "Nom";
@@ -299,6 +304,7 @@
             this.txtBoxEstat.Name = "txtBoxEstat";
             this.txtBoxEstat.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxEstat.Placeholder = null;
+            this.txtBoxEstat.ReadOnly = true;
             this.txtBoxEstat.Size = new System.Drawing.Size(161, 20);
             this.txtBoxEstat.TabIndex = 117;
             this.txtBoxEstat.Tag = "Nom";
@@ -310,6 +316,7 @@
             this.txtBoxAparell.Name = "txtBoxAparell";
             this.txtBoxAparell.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxAparell.Placeholder = null;
+            this.txtBoxAparell.ReadOnly = true;
             this.txtBoxAparell.Size = new System.Drawing.Size(161, 20);
             this.txtBoxAparell.TabIndex = 116;
             this.txtBoxAparell.Tag = "Nom";

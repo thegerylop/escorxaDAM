@@ -13,6 +13,7 @@
     <Property Name="DIBmare" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="paisos" Relationship="Self.FK__animals__idPaisN__25518C17" FromRole="animals" ToRole="paisos" />
     <NavigationProperty Name="recepcions_bestiar" Relationship="Self.FK__animals__idRecep__2645B050" FromRole="animals" ToRole="recepcions_bestiar" />
+    <Property Name="Pes" Type="Double" />
   </EntityType>
   <EntityType Name="comptadors_lot_mes">
     <Key>
@@ -202,9 +203,9 @@
     <Property Name="idProcessatInicial" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="idUsuari" Type="Int64" Nullable="false" />
     <Property Name="idEstatInicial" Type="Int64" Nullable="false" />
-    <Property Name="numCarril" Type="Int32" Nullable="false" />
-    <Property Name="DIB" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="pesCanal" Type="Double" Nullable="false" />
+    <Property Name="numCarril" Type="Int32" />
+    <Property Name="DIB" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="pesCanal" Type="Double" />
     <NavigationProperty Name="estat_processos_inicials" Relationship="Self.FK__processat__idEst__395884C4" FromRole="processats_inicials" ToRole="estat_processos_inicials" />
     <NavigationProperty Name="lots" Relationship="Self.FK__lots__idProcessa__31B762FC" FromRole="processats_inicials" ToRole="lots" />
     <NavigationProperty Name="usuaris" Relationship="Self.FK__processat__idUsu__3A4CA8FD" FromRole="processats_inicials" ToRole="usuaris" />

@@ -64,7 +64,7 @@ namespace GestioProcessos
                            join b in _m.sacrificis on a.idSacrifici equals b.idSacrifici
                            where a.numLot == lot
                            select b).FirstOrDefault();
-            txtBoxBox.Text = sacr.AparellAtordiment;
+            txtBoxBox.Text = sacr.boxImmobilitzacio;
             cBoxAtordiment.SelectedValue = sacr.idSistemaAtordiment;
             txtBoxIncidencies.Text = sacr.Incidencies;
             Usuaris.SelectedValue = sacr.idUsuari;
@@ -143,6 +143,7 @@ namespace GestioProcessos
                     sacrifici.boxImmobilitzacio = txtBoxBox.Text;
                     sacrifici.dataSacrifici = DateTime.ParseExact(dataSacrifici.Text, "yyyy/MM/dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
                     sacrifici.Incidencies = incidencia;
+                    MessageBox.Show("Inserit correctament");
 
                 }
                 else
@@ -161,9 +162,25 @@ namespace GestioProcessos
             afegirBBDD();
             finalitzarProces();
         }
-        private void finalitzarProces()
+        public void finalitzarProces()
         {
+            using (escorxadam2Entities enti = new escorxadam2Entities())
+            {
+                var proc = new processats_inicials
+                {
+                    idUsuari = 1,
+                    idEstatInicial = 1,
+                };
+                _m.processats_inicials.Add(proc);
+                _m.SaveChanges();
+                var lotes = _m.lots.OrderByDescending(u => u.numLot == txtBoxNLot.Text).FirstOrDefault();
+                long idProcessat = (from a in _m.processats_inicials
+                                    select a.idEstatInicial).Max();
 
+                lotes.idProcessatInicial = idProcessat;
+                _m.SaveChanges();
+            }
+            MessageBox.Show("Finalitzat");
         }
 
         private void cBoxAtordiment_TextChanged(object sender, EventArgs e)

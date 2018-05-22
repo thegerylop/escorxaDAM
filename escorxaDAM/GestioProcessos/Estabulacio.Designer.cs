@@ -83,6 +83,7 @@
             // Usuaris
             // 
             this.Usuaris.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Usuaris.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Usuaris.FormattingEnabled = true;
             this.Usuaris.Location = new System.Drawing.Point(202, 593);
             this.Usuaris.Name = "Usuaris";
@@ -140,6 +141,7 @@
             this.NumEstable.Name = "NumEstable";
             this.NumEstable.Options = CustomControl.CustomTextBox.Items.Text;
             this.NumEstable.Placeholder = null;
+            this.NumEstable.ReadOnly = true;
             this.NumEstable.Size = new System.Drawing.Size(192, 20);
             this.NumEstable.TabIndex = 100;
             // 
@@ -192,6 +194,7 @@
             this.Lots.Name = "Lots";
             this.Lots.Options = CustomControl.CustomTextBox.Items.Text;
             this.Lots.Placeholder = null;
+            this.Lots.ReadOnly = true;
             this.Lots.Size = new System.Drawing.Size(192, 20);
             this.Lots.TabIndex = 113;
             // 
@@ -213,6 +216,7 @@
             this.DiaEntrada.Name = "DiaEntrada";
             this.DiaEntrada.Options = CustomControl.CustomTextBox.Items.Text;
             this.DiaEntrada.Placeholder = null;
+            this.DiaEntrada.ReadOnly = true;
             this.DiaEntrada.Size = new System.Drawing.Size(192, 20);
             this.DiaEntrada.TabIndex = 115;
             // 
@@ -223,6 +227,7 @@
             this.DiaSortida.Name = "DiaSortida";
             this.DiaSortida.Options = CustomControl.CustomTextBox.Items.Text;
             this.DiaSortida.Placeholder = null;
+            this.DiaSortida.ReadOnly = true;
             this.DiaSortida.Size = new System.Drawing.Size(192, 20);
             this.DiaSortida.TabIndex = 116;
             // 
@@ -249,6 +254,7 @@
             this.Estats.Name = "Estats";
             this.Estats.Options = CustomControl.CustomTextBox.Items.Text;
             this.Estats.Placeholder = null;
+            this.Estats.ReadOnly = true;
             this.Estats.Size = new System.Drawing.Size(192, 20);
             this.Estats.TabIndex = 118;
             // 
