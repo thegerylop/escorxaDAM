@@ -14,6 +14,7 @@ namespace GestioProcessos
 {
     public partial class Processat_Final : BaseInserir
     {
+        ClassHelpers.EDI_TCPhelpers tcp = new ClassHelpers.EDI_TCPhelpers();
         escorxadam2Entities _m = new escorxadam2Entities();
 
         string lot;
@@ -26,8 +27,6 @@ namespace GestioProcessos
         private void Processat_Final_Load(object sender, EventArgs e)
         {
             updateGrid();
-            // obtenirUsuaris();
-            // obtenirSistemas();
         }
         private void updateGrid()
         {
@@ -44,11 +43,15 @@ namespace GestioProcessos
         {
             dadesDataGrid(e);
             omplirCampsComuns();
+            btnPes.Enabled = true;
+            btnAnalisi.Enabled = false;
+            btnInserir.Enabled = false;
+
         }
         private void omplirCampsComuns()
         {
             txtBoxLot.Text = lot;
-            txtBoxPes.Text = pes.ToString();
+            txtBoxDIB.Text = pes.ToString();
         }
         private void dadesDataGrid(DataGridViewCellEventArgs e)
         {
@@ -65,6 +68,60 @@ namespace GestioProcessos
             {
                 pes += item;
             }
+            PesBalança.Text = pes.ToString();
+        }
+
+        private void btnPes_Click(object sender, EventArgs e)
+        {
+            string tipus = comboTipus.SelectedValue.ToString();
+            string pesBal = tcp.sendUDPData("172.17.21.32", 7000, "SF");
+            PesBalança.Text = pesBal;
+            comprobarPes(pesBal);
+        }
+        private void comprobarPes(string pesBalança)
+        {
+            double pesFinal = Int64.Parse(pesBalança);
+            if(comboTipus.SelectedValue.ToString() == "SN")
+            {
+                if (pesFinal >= 360 && pesFinal <= 440)
+                {
+                    MessageBox.Show("Pes Correcte");
+                    btnAnalisi.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Pes Incorrecte");
+                }
+            }
+            else if(comboTipus.SelectedValue.ToString() == "SF")
+            {
+                if (pesFinal >= 1080 && pesFinal <= 1320)
+                {
+                    MessageBox.Show("Pes Correcte");
+                    btnAnalisi.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Pes Incorrecte");
+                }
+            }
+            else
+            {
+                if (pesFinal >= 720 && pesFinal <= 880)
+                {
+                    MessageBox.Show("Pes Correcte");
+                    btnAnalisi.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Pes Incorrecte");
+                }
+            }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

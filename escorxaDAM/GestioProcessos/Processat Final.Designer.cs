@@ -40,10 +40,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtBoxId = new CustomControl.CustomTextBox();
-            this.txtBoxDIB = new CustomControl.CustomTextBox();
+            this.PesBalança = new CustomControl.CustomTextBox();
             this.txtBoxLot = new CustomControl.CustomTextBox();
             this.txtBoxUsuari = new CustomControl.CustomTextBox();
-            this.txtBoxPes = new CustomControl.CustomTextBox();
+            this.txtBoxDIB = new CustomControl.CustomTextBox();
             this.txtBoxO2 = new CustomControl.CustomTextBox();
             this.txtBoxCO2 = new CustomControl.CustomTextBox();
             this.txtBoxMG = new CustomControl.CustomTextBox();
@@ -54,11 +54,17 @@
             this.label14 = new System.Windows.Forms.Label();
             this.comboTipus = new CustomControl.comboBox();
             this.comboEstat = new CustomControl.comboBox();
-            this.dateEnvasat = new System.Windows.Forms.DateTimePicker();
             this.dateCaducitat = new System.Windows.Forms.DateTimePicker();
+            this.customTextBox1 = new CustomControl.CustomTextBox();
+            this.btnPes = new System.Windows.Forms.Button();
+            this.btnAnalisi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SafataGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnInserir
+            // 
+            this.btnInserir.Enabled = false;
             // 
             // label1
             // 
@@ -84,7 +90,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(131, 258);
+            this.label2.Location = new System.Drawing.Point(131, 268);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 16);
             this.label2.TabIndex = 71;
@@ -94,7 +100,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(152, 297);
+            this.label3.Location = new System.Drawing.Point(152, 311);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 72;
@@ -104,7 +110,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(92, 334);
+            this.label4.Location = new System.Drawing.Point(92, 352);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(123, 16);
             this.label4.TabIndex = 73;
@@ -114,7 +120,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(118, 379);
+            this.label5.Location = new System.Drawing.Point(118, 392);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 16);
             this.label5.TabIndex = 74;
@@ -144,11 +150,12 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(559, 309);
+            this.label9.Location = new System.Drawing.Point(516, 309);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 16);
+            this.label9.Size = new System.Drawing.Size(78, 16);
             this.label9.TabIndex = 77;
-            this.label9.Text = "Pes:";
+            this.label9.Text = "Pes animal:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -172,7 +179,7 @@
             // 
             // txtBoxId
             // 
-            this.txtBoxId.Location = new System.Drawing.Point(227, 257);
+            this.txtBoxId.Location = new System.Drawing.Point(227, 267);
             this.txtBoxId.Name = "txtBoxId";
             this.txtBoxId.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxId.Placeholder = null;
@@ -180,15 +187,15 @@
             this.txtBoxId.TabIndex = 80;
             this.txtBoxId.Tag = "Nom";
             // 
-            // txtBoxDIB
+            // PesBalança
             // 
-            this.txtBoxDIB.Location = new System.Drawing.Point(227, 295);
-            this.txtBoxDIB.Name = "txtBoxDIB";
-            this.txtBoxDIB.Options = CustomControl.CustomTextBox.Items.Text;
-            this.txtBoxDIB.Placeholder = null;
-            this.txtBoxDIB.Size = new System.Drawing.Size(161, 20);
-            this.txtBoxDIB.TabIndex = 81;
-            this.txtBoxDIB.Tag = "Nom";
+            this.PesBalança.Location = new System.Drawing.Point(227, 309);
+            this.PesBalança.Name = "PesBalança";
+            this.PesBalança.Options = CustomControl.CustomTextBox.Items.Text;
+            this.PesBalança.Placeholder = null;
+            this.PesBalança.Size = new System.Drawing.Size(161, 20);
+            this.PesBalança.TabIndex = 81;
+            this.PesBalança.Tag = "Nom";
             // 
             // txtBoxLot
             // 
@@ -210,15 +217,15 @@
             this.txtBoxUsuari.TabIndex = 85;
             this.txtBoxUsuari.Tag = "Nom";
             // 
-            // txtBoxPes
+            // txtBoxDIB
             // 
-            this.txtBoxPes.Location = new System.Drawing.Point(608, 307);
-            this.txtBoxPes.Name = "txtBoxPes";
-            this.txtBoxPes.Options = CustomControl.CustomTextBox.Items.Text;
-            this.txtBoxPes.Placeholder = null;
-            this.txtBoxPes.Size = new System.Drawing.Size(161, 20);
-            this.txtBoxPes.TabIndex = 86;
-            this.txtBoxPes.Tag = "Nom";
+            this.txtBoxDIB.Location = new System.Drawing.Point(608, 307);
+            this.txtBoxDIB.Name = "txtBoxDIB";
+            this.txtBoxDIB.Options = CustomControl.CustomTextBox.Items.Text;
+            this.txtBoxDIB.Placeholder = null;
+            this.txtBoxDIB.Size = new System.Drawing.Size(161, 20);
+            this.txtBoxDIB.TabIndex = 86;
+            this.txtBoxDIB.Tag = "Nom";
             // 
             // txtBoxO2
             // 
@@ -242,7 +249,7 @@
             // 
             // txtBoxMG
             // 
-            this.txtBoxMG.Location = new System.Drawing.Point(608, 431);
+            this.txtBoxMG.Location = new System.Drawing.Point(608, 427);
             this.txtBoxMG.Name = "txtBoxMG";
             this.txtBoxMG.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxMG.Placeholder = null;
@@ -254,7 +261,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(475, 431);
+            this.label12.Location = new System.Drawing.Point(475, 427);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(119, 16);
             this.label12.TabIndex = 89;
@@ -301,6 +308,10 @@
             // comboTipus
             // 
             this.comboTipus.FormattingEnabled = true;
+            this.comboTipus.Items.AddRange(new object[] {
+            "SN",
+            "SF",
+            "SE"});
             this.comboTipus.Location = new System.Drawing.Point(227, 221);
             this.comboTipus.Name = "comboTipus";
             this.comboTipus.Reference = null;
@@ -316,29 +327,64 @@
             this.comboEstat.Size = new System.Drawing.Size(161, 21);
             this.comboEstat.TabIndex = 96;
             // 
-            // dateEnvasat
-            // 
-            this.dateEnvasat.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateEnvasat.Location = new System.Drawing.Point(227, 334);
-            this.dateEnvasat.Name = "dateEnvasat";
-            this.dateEnvasat.Size = new System.Drawing.Size(161, 20);
-            this.dateEnvasat.TabIndex = 97;
-            // 
             // dateCaducitat
             // 
             this.dateCaducitat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateCaducitat.Location = new System.Drawing.Point(227, 379);
+            this.dateCaducitat.Location = new System.Drawing.Point(227, 392);
             this.dateCaducitat.Name = "dateCaducitat";
             this.dateCaducitat.Size = new System.Drawing.Size(161, 20);
             this.dateCaducitat.TabIndex = 98;
+            // 
+            // customTextBox1
+            // 
+            this.customTextBox1.Location = new System.Drawing.Point(227, 351);
+            this.customTextBox1.Name = "customTextBox1";
+            this.customTextBox1.Options = CustomControl.CustomTextBox.Items.Text;
+            this.customTextBox1.Placeholder = null;
+            this.customTextBox1.Size = new System.Drawing.Size(161, 20);
+            this.customTextBox1.TabIndex = 99;
+            this.customTextBox1.Tag = "Nom";
+            // 
+            // btnPes
+            // 
+            this.btnPes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPes.BackColor = System.Drawing.Color.DimGray;
+            this.btnPes.Enabled = false;
+            this.btnPes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPes.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.btnPes.ForeColor = System.Drawing.Color.White;
+            this.btnPes.Location = new System.Drawing.Point(422, 549);
+            this.btnPes.Name = "btnPes";
+            this.btnPes.Size = new System.Drawing.Size(132, 26);
+            this.btnPes.TabIndex = 100;
+            this.btnPes.Text = "Pesar";
+            this.btnPes.UseVisualStyleBackColor = false;
+            this.btnPes.Click += new System.EventHandler(this.btnPes_Click);
+            // 
+            // btnAnalisi
+            // 
+            this.btnAnalisi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAnalisi.BackColor = System.Drawing.Color.DimGray;
+            this.btnAnalisi.Enabled = false;
+            this.btnAnalisi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAnalisi.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.btnAnalisi.ForeColor = System.Drawing.Color.White;
+            this.btnAnalisi.Location = new System.Drawing.Point(577, 549);
+            this.btnAnalisi.Name = "btnAnalisi";
+            this.btnAnalisi.Size = new System.Drawing.Size(132, 26);
+            this.btnAnalisi.TabIndex = 101;
+            this.btnAnalisi.Text = "Analisi";
+            this.btnAnalisi.UseVisualStyleBackColor = false;
             // 
             // Processat_Final
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 604);
+            this.Controls.Add(this.btnAnalisi);
+            this.Controls.Add(this.btnPes);
+            this.Controls.Add(this.customTextBox1);
             this.Controls.Add(this.dateCaducitat);
-            this.Controls.Add(this.dateEnvasat);
             this.Controls.Add(this.comboEstat);
             this.Controls.Add(this.comboTipus);
             this.Controls.Add(this.label14);
@@ -347,10 +393,10 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtBoxCO2);
             this.Controls.Add(this.txtBoxO2);
-            this.Controls.Add(this.txtBoxPes);
+            this.Controls.Add(this.txtBoxDIB);
             this.Controls.Add(this.txtBoxUsuari);
             this.Controls.Add(this.txtBoxLot);
-            this.Controls.Add(this.txtBoxDIB);
+            this.Controls.Add(this.PesBalança);
             this.Controls.Add(this.txtBoxId);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -382,10 +428,10 @@
             this.Controls.SetChildIndex(this.label10, 0);
             this.Controls.SetChildIndex(this.label11, 0);
             this.Controls.SetChildIndex(this.txtBoxId, 0);
-            this.Controls.SetChildIndex(this.txtBoxDIB, 0);
+            this.Controls.SetChildIndex(this.PesBalança, 0);
             this.Controls.SetChildIndex(this.txtBoxLot, 0);
             this.Controls.SetChildIndex(this.txtBoxUsuari, 0);
-            this.Controls.SetChildIndex(this.txtBoxPes, 0);
+            this.Controls.SetChildIndex(this.txtBoxDIB, 0);
             this.Controls.SetChildIndex(this.txtBoxO2, 0);
             this.Controls.SetChildIndex(this.txtBoxCO2, 0);
             this.Controls.SetChildIndex(this.label12, 0);
@@ -394,8 +440,10 @@
             this.Controls.SetChildIndex(this.label14, 0);
             this.Controls.SetChildIndex(this.comboTipus, 0);
             this.Controls.SetChildIndex(this.comboEstat, 0);
-            this.Controls.SetChildIndex(this.dateEnvasat, 0);
             this.Controls.SetChildIndex(this.dateCaducitat, 0);
+            this.Controls.SetChildIndex(this.customTextBox1, 0);
+            this.Controls.SetChildIndex(this.btnPes, 0);
+            this.Controls.SetChildIndex(this.btnAnalisi, 0);
             ((System.ComponentModel.ISupportInitialize)(this.SafataGrid)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -417,10 +465,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private CustomControl.CustomTextBox txtBoxId;
-        private CustomControl.CustomTextBox txtBoxDIB;
+        private CustomControl.CustomTextBox PesBalança;
         private CustomControl.CustomTextBox txtBoxLot;
         private CustomControl.CustomTextBox txtBoxUsuari;
-        private CustomControl.CustomTextBox txtBoxPes;
+        private CustomControl.CustomTextBox txtBoxDIB;
         private CustomControl.CustomTextBox txtBoxO2;
         private CustomControl.CustomTextBox txtBoxCO2;
         private CustomControl.CustomTextBox txtBoxMG;
@@ -431,7 +479,9 @@
         private System.Windows.Forms.Label label14;
         private CustomControl.comboBox comboTipus;
         private CustomControl.comboBox comboEstat;
-        private System.Windows.Forms.DateTimePicker dateEnvasat;
         private System.Windows.Forms.DateTimePicker dateCaducitat;
+        private CustomControl.CustomTextBox customTextBox1;
+        public System.Windows.Forms.Button btnPes;
+        public System.Windows.Forms.Button btnAnalisi;
     }
 }
