@@ -48,7 +48,7 @@
             this.txtBoxCO2 = new CustomControl.CustomTextBox();
             this.txtBoxMG = new CustomControl.CustomTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.SafataGrid = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.comboEstat = new CustomControl.comboBox();
             this.dateEnvasat = new System.Windows.Forms.DateTimePicker();
             this.dateCaducitat = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SafataGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,11 +94,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(182, 299);
+            this.label3.Location = new System.Drawing.Point(152, 297);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 16);
+            this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 72;
-            this.label3.Text = "DIB:";
+            this.label3.Text = "Pes total:";
             // 
             // label4
             // 
@@ -260,13 +260,14 @@
             this.label12.TabIndex = 89;
             this.label12.Text = "mg de mioglobina:";
             // 
-            // dataGridView1
+            // SafataGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(227, 87);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(542, 90);
-            this.dataGridView1.TabIndex = 91;
+            this.SafataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SafataGrid.Location = new System.Drawing.Point(227, 87);
+            this.SafataGrid.Name = "SafataGrid";
+            this.SafataGrid.Size = new System.Drawing.Size(542, 90);
+            this.SafataGrid.TabIndex = 91;
+            this.SafataGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SafataGrid_CellDoubleClick);
             // 
             // panel1
             // 
@@ -341,7 +342,7 @@
             this.Controls.Add(this.comboEstat);
             this.Controls.Add(this.comboTipus);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.SafataGrid);
             this.Controls.Add(this.txtBoxMG);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtBoxCO2);
@@ -366,6 +367,7 @@
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Processat_Final";
             this.Text = "Processat_Final";
+            this.Load += new System.EventHandler(this.Processat_Final_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.btnInserir, 0);
             this.Controls.SetChildIndex(this.label6, 0);
@@ -388,13 +390,13 @@
             this.Controls.SetChildIndex(this.txtBoxCO2, 0);
             this.Controls.SetChildIndex(this.label12, 0);
             this.Controls.SetChildIndex(this.txtBoxMG, 0);
-            this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.SafataGrid, 0);
             this.Controls.SetChildIndex(this.label14, 0);
             this.Controls.SetChildIndex(this.comboTipus, 0);
             this.Controls.SetChildIndex(this.comboEstat, 0);
             this.Controls.SetChildIndex(this.dateEnvasat, 0);
             this.Controls.SetChildIndex(this.dateCaducitat, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SafataGrid)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -423,7 +425,7 @@
         private CustomControl.CustomTextBox txtBoxCO2;
         private CustomControl.CustomTextBox txtBoxMG;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView SafataGrid;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
