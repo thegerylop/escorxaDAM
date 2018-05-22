@@ -17,6 +17,8 @@ namespace GestioProcessos
     {
         escorxadam2Entities _m = new escorxadam2Entities();
         ClassHelpers.EDI_TCPhelpers edi = new ClassHelpers.EDI_TCPhelpers();
+        string lot;
+        string estat;
 
         public Emmagatzematge()
         {
@@ -50,22 +52,22 @@ namespace GestioProcessos
             txtEstat.Text = dgwEmmagatzematge.Rows[num].Cells[1].Value.ToString();
 
             //Si l'estat és 'En procés', mostrem més opcions. Sinó, les amaguem
-            //if ()
-            //{
-            //    lblUserIn.Show();
-            //    txtUserIn.Show();
-            //    lblDataIn.Show();
-            //    dateIn.Show();
-            //}
-            //else
-            //{
-            //    lblUserIn.Hide();
-            //    txtUserIn.Hide();
-            //    lblDataIn.Hide();
-            //    dateIn.Hide();
-            //    dateIn.Show();
-            //    gbxNevera.Hide();
-            //}
+            if (estat.Equals("En procés"))
+            {
+                lblUserIn.Show();
+                txtUserIn.Show();
+                lblDataIn.Show();
+                dateIn.Show();
+            }
+            else
+            {
+                lblUserIn.Hide();
+                txtUserIn.Hide();
+                lblDataIn.Hide();
+                dateIn.Hide();
+                dateIn.Show();
+                gbxNevera.Hide();
+            }
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
@@ -82,6 +84,7 @@ namespace GestioProcessos
             dateIn.Value = DateTime.Now;
 
             //Canviem l'estat de la refrigeració
+            estat = "En procés";
         }
 
         private void btnTreure_Click(object sender, EventArgs e)
@@ -118,14 +121,14 @@ namespace GestioProcessos
         private void btnActualitzar_Click(object sender, EventArgs e)
         {
             //Tornem a fer la select per carregar-ho tot
-            //var num = (from a in _m.emmagatzematges
-            //           join b in _m.usuaris on a.idUsuariEntrada equals b.idUsuari
-            //           join c in _m.estat_refrigeracions on a.idEstatRefrigeracio equals c.idEstatRefrigeracio
-            //           join d in _m.lots on a.idEmmagatzematge equals d.idEmmagatzematge
-            //           where (c.nomEstatRefrigeracio == "En espera" || c.nomEstatRefrigeracio == "En procés")
-            //           select new { d.numLot, c.nomEstatRefrigeracio, a.numCambraFrigorifica, b.codiUsuari, a.dataEntrada });
+            var num = (from a in _m.emmagatzematges
+                       join b in _m.usuaris on a.idUsuariEntrada equals b.idUsuari
+                       join c in _m.estat_refrigeracions on a.idEstatRefrigeracio equals c.idEstatRefrigeracio
+                       join d in _m.lots on a.idEmmagatzematge equals d.idEmmagatzematge
+                       where (c.nomEstatRefrigeracio == "En espera" || c.nomEstatRefrigeracio == "En procés")
+                       select new { d.numLot, c.nomEstatRefrigeracio, a.numCambraFrigorifica, b.codiUsuari, a.dataEntrada });
 
-            //dgwEmmagatzematge.DataSource = num;
+            dgwEmmagatzematge.DataSource = num;
         }
     }
 }
