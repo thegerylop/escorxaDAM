@@ -15,8 +15,8 @@ namespace GestioProcessos
     public partial class Processat_Inicial : BaseInserir
     {
         escorxadam2Entities _m = new escorxadam2Entities();
-        string lot;
-        
+        string lot, DIB;
+        int num;
 
         public Processat_Inicial()
         {
@@ -81,36 +81,47 @@ namespace GestioProcessos
     
         private void afegirBBDD()
         { 
-            using(escorxadam2Entities test = new escorxadam2Entities())
-            {
-                string idProcessatInicial = (from a in _m.lots
-                                             where a.numLot.ToString() == gridAnimalsLot.Text
-                                             select a.idProcessatInicial).First().ToString();
-                var ProcessatInicial = (from a in _m.processats_inicials
-                                        where a.idProcessatInicial.ToString() == idProcessatInicial
-                                        select a).FirstOrDefault();
-                
-                var pIA = (from a 
-                           where a.idProcessatInicial.ToString() == idProcessatInicial
-                           select a).FirstOrDefault();
-
-                if(ProcessatInicial.idEstatInicial == 1)
+            if (DIB != null || DIB != "") {
+                using(escorxadam2Entities test = new escorxadam2Entities())
                 {
-                    ProcessatInicial.idUsuari = Int32.Parse(Usuaris.SelectedValue.ToString());
-                    ProcessatInicial.idEstatInicial = 2;
-                    ProcessatInicial.numCarril = Int32.Parse(txtBoxCarril.Text);
-                    ProcessatInicial.pesCanal = Int32.Parse(txtBoxPesCanal.Text);
-                    
+                    string idProcessatInicial = (from a in _m.lots
+                                                 where a.numLot.ToString() == gridAnimalsLot.Text
+                                                 select a.idProcessatInicial).First().ToString();
+                    var ProcessatInicial = (from a in _m.processats_inicials
+                                            where a.idProcessatInicial.ToString() == idProcessatInicial
+                                            select a).FirstOrDefault();
 
-                    MessageBox.Show("Inserit correctament");
+                    var pIA = (from a in _m.procInicial_Animal
+                               where a.idProcessatInicial.ToString() == idProcessatInicial
+                               join anim in _m.animals on a.idAnimal equals anim.idAnimal
+                               select a).FirstOrDefault();
+
+                    var idAnimal = (from a in _m.animals
+                                    where a.DIB == DIB
+                                    select a.idAnimal).First();
+
+                    // join ls in _m.lots on rb.idRecepcio equals ls.idRemo
+
+                    if(ProcessatInicial.idEstatInicial == 1)
+                    {
+                        ProcessatInicial.idUsuari = Int32.Parse(Usuaris.SelectedValue.ToString());
+                        ProcessatInicial.idEstatInicial = 2;
+                        ProcessatInicial.numCarril = Int32.Parse(txtBoxCarril.Text);
+                        // ProcessatInicial.pesCanal = inutilitzada
+                        pIA.Pes = Int32.Parse(txtBoxPesCanal.Text);
+                        pIA.idProcessatInicial = ProcessatInicial.idProcessatInicial;
+                        pIA.idAnimal = idAnimal;
+
+                        MessageBox.Show("Inserit correctament");
+                    }
+                    else
+                    {
+                        ProcessatInicial.idUsuari = Int32.Parse(Usuaris.SelectedValue.ToString());
+                        ProcessatInicial.idEstatInicial = 3;
+                        MessageBox.Show("Finalitzat correctament");
+                    }
+                    _m.SaveChanges();
                 }
-                else
-                {
-                    ProcessatInicial.idUsuari = Int32.Parse(Usuaris.SelectedValue.ToString());
-                    ProcessatInicial.idEstatInicial = 3;
-                    MessageBox.Show("Finalitzat correctament");
-                }
-                _m.SaveChanges();
             }
         }
         public int randomInt(int min, int max)
@@ -154,7 +165,7 @@ namespace GestioProcessos
 
         private void gridLots_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int num = e.RowIndex;
+            num = e.RowIndex;
             lot = gridLots.Rows[num].Cells[0].Value.ToString();
             string estat = gridLots.Rows[num].Cells[1].Value.ToString();
 
@@ -166,7 +177,9 @@ namespace GestioProcessos
 
         private void gridAnimals_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            omplirCampsRandom();
+            num = e.RowIndex;
+            DIB = gridAnimalsLot.Rows[num].Cells[1].Value.ToString();
+            omplirCampsRandom();            
         }
     }
 }

@@ -14,6 +14,12 @@ namespace Models
     
     public partial class animals
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public animals()
+        {
+            this.procInicial_Animal = new HashSet<procInicial_Animal>();
+        }
+    
         public long idAnimal { get; set; }
         public long idPaisNaixement { get; set; }
         public long idRecepcioBestiar { get; set; }
@@ -25,5 +31,7 @@ namespace Models
     
         public virtual paisos paisos { get; set; }
         public virtual recepcions_bestiar recepcions_bestiar { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<procInicial_Animal> procInicial_Animal { get; set; }
     }
 }

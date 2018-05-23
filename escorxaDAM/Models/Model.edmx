@@ -44,8 +44,8 @@
           <Property Name="numCambraFrigorifica" Type="int" Nullable="false" />
           <Property Name="dataEntrada" Type="datetime2" Precision="0" Nullable="false" />
           <Property Name="dataSortida" Type="datetime2" Precision="0" Nullable="false" />
-          <Property Name="temperaturaMaxima" Type="float" Nullable="false" />
-          <Property Name="temperaturaMinima" Type="float" Nullable="false" />
+          <Property Name="temperaturaMaxima" Type="float" />
+          <Property Name="temperaturaMinima" Type="float" />
         </EntityType>
         <EntityType Name="estables">
           <Key>
@@ -171,13 +171,13 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
           <Property Name="idUsuari" Type="bigint" Nullable="false" />
           <Property Name="idSafata" Type="bigint" Nullable="false" />
           <Property Name="idEstatEnvasat" Type="bigint" Nullable="false" />
-          <Property Name="DIB" Type="varchar" MaxLength="14" Nullable="false" />
-          <Property Name="dataEnvasat" Type="datetime2" Precision="0" Nullable="false" />
-          <Property Name="diaCaducitat" Type="date" Nullable="false" />
-          <Property Name="pesSafata" Type="float" Nullable="false" />
-          <Property Name="percO2" Type="float" Nullable="false" />
-          <Property Name="percCO2" Type="float" Nullable="false" />
-          <Property Name="Mioglobina" Type="float" Nullable="false" />
+          <Property Name="DIB" Type="varchar" MaxLength="14" />
+          <Property Name="dataEnvasat" Type="datetime2" Precision="0" />
+          <Property Name="diaCaducitat" Type="date" />
+          <Property Name="pesSafata" Type="float" />
+          <Property Name="percO2" Type="float" />
+          <Property Name="percCO2" Type="float" />
+          <Property Name="Mioglobina" Type="float" />
         </EntityType>
         <EntityType Name="processats_inicials">
           <Key>
@@ -187,8 +187,20 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
           <Property Name="idUsuari" Type="bigint" Nullable="false" />
           <Property Name="idEstatInicial" Type="bigint" Nullable="false" />
           <Property Name="numCarril" Type="int" />
-          <Property Name="DIB" Type="varchar" MaxLength="14" />
           <Property Name="pesCanal" Type="float" />
+          <Property Name="idAnimal" Type="bigint" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'escorxadam2.dbo.procInicial_Animal' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="procInicial_Animal">
+          <Key>
+            <PropertyRef Name="idProcessatInicial" />
+            <PropertyRef Name="idAnimal" />
+            <PropertyRef Name="Pes" />
+          </Key>
+          <Property Name="idProcessatInicial" Type="bigint" Nullable="false" />
+          <Property Name="idAnimal" Type="bigint" Nullable="false" />
+          <Property Name="Pes" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="proveidors">
           <Key>
@@ -681,6 +693,30 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_procInicial_Animal_Animal">
+          <End Role="animals" Type="Self.animals" Multiplicity="1" />
+          <End Role="procInicial_Animal" Type="Self.procInicial_Animal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="animals">
+              <PropertyRef Name="idAnimal" />
+            </Principal>
+            <Dependent Role="procInicial_Animal">
+              <PropertyRef Name="idAnimal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_procInicial_Animal_procInicial">
+          <End Role="processats_inicials" Type="Self.processats_inicials" Multiplicity="1" />
+          <End Role="procInicial_Animal" Type="Self.procInicial_Animal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="processats_inicials">
+              <PropertyRef Name="idProcessatInicial" />
+            </Principal>
+            <Dependent Role="procInicial_Animal">
+              <PropertyRef Name="idProcessatInicial" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="escorxadam2ModelStoreContainer">
           <EntitySet Name="animals" EntityType="Self.animals" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="comptadors_lot_mes" EntityType="Self.comptadors_lot_mes" Schema="dbo" store:Type="Tables" />
@@ -713,6 +749,13 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
     [permisos].[idUsuari] AS [idUsuari], 
     [permisos].[idNivellAcces] AS [idNivellAcces]
     FROM [dbo].[permisos] AS [permisos]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="procInicial_Animal" EntityType="Self.procInicial_Animal" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [procInicial_Animal].[idProcessatInicial] AS [idProcessatInicial], 
+    [procInicial_Animal].[idAnimal] AS [idAnimal], 
+    [procInicial_Animal].[Pes] AS [Pes]
+    FROM [dbo].[procInicial_Animal] AS [procInicial_Animal]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="sitran" EntityType="Self.sitran" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -855,6 +898,14 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
             <End Role="usuaris" EntitySet="usuaris" />
             <End Role="sacrificis" EntitySet="sacrificis" />
           </AssociationSet>
+          <AssociationSet Name="FK_procInicial_Animal_Animal" Association="Self.FK_procInicial_Animal_Animal">
+            <End Role="animals" EntitySet="animals" />
+            <End Role="procInicial_Animal" EntitySet="procInicial_Animal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_procInicial_Animal_procInicial" Association="Self.FK_procInicial_Animal_procInicial">
+            <End Role="processats_inicials" EntitySet="processats_inicials" />
+            <End Role="procInicial_Animal" EntitySet="procInicial_Animal" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -874,6 +925,7 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
           <NavigationProperty Name="paisos" Relationship="Self.FK__animals__idPaisN__25518C17" FromRole="animals" ToRole="paisos" />
           <NavigationProperty Name="recepcions_bestiar" Relationship="Self.FK__animals__idRecep__2645B050" FromRole="animals" ToRole="recepcions_bestiar" />
           <Property Name="Pes" Type="Double" />
+          <NavigationProperty Name="procInicial_Animal" Relationship="escorxadam2Model.FK_procInicial_Animal_Animal" FromRole="animals" ToRole="procInicial_Animal" />
         </EntityType>
         <EntityType Name="comptadors_lot_mes">
           <Key>
@@ -902,8 +954,8 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
           <Property Name="numCambraFrigorifica" Type="Int32" Nullable="false" />
           <Property Name="dataEntrada" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="dataSortida" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="temperaturaMaxima" Type="Double" Nullable="false" />
-          <Property Name="temperaturaMinima" Type="Double" Nullable="false" />
+          <Property Name="temperaturaMaxima" Type="Double" />
+          <Property Name="temperaturaMinima" Type="Double" />
           <NavigationProperty Name="estat_refrigeracions" Relationship="Self.FK__emmagatze__idEst__282DF8C2" FromRole="emmagatzematges" ToRole="estat_refrigeracions" />
           <NavigationProperty Name="usuaris" Relationship="Self.FK__emmagatze__idUsu__29221CFB" FromRole="emmagatzematges" ToRole="usuaris" />
           <NavigationProperty Name="usuaris1" Relationship="Self.FK__emmagatze__idUsu__2A164134" FromRole="emmagatzematges" ToRole="usuaris" />
@@ -1044,13 +1096,13 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
           <Property Name="idUsuari" Type="Int64" Nullable="false" />
           <Property Name="idSafata" Type="Int64" Nullable="false" />
           <Property Name="idEstatEnvasat" Type="Int64" Nullable="false" />
-          <Property Name="DIB" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="dataEnvasat" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="diaCaducitat" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="pesSafata" Type="Double" Nullable="false" />
-          <Property Name="percO2" Type="Double" Nullable="false" />
-          <Property Name="percCO2" Type="Double" Nullable="false" />
-          <Property Name="Mioglobina" Type="Double" Nullable="false" />
+          <Property Name="DIB" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="dataEnvasat" Type="DateTime" Precision="0" />
+          <Property Name="diaCaducitat" Type="DateTime" Precision="0" />
+          <Property Name="pesSafata" Type="Double" />
+          <Property Name="percO2" Type="Double" />
+          <Property Name="percCO2" Type="Double" />
+          <Property Name="Mioglobina" Type="Double" />
           <NavigationProperty Name="estat_processos_envasat" Relationship="Self.FK__processat__idUsu__3864608B" FromRole="processats_finals" ToRole="estat_processos_envasat" />
           <NavigationProperty Name="lots" Relationship="Self.FK__lots__idProcessa__30C33EC3" FromRole="processats_finals" ToRole="lots" />
           <NavigationProperty Name="referencies" Relationship="Self.FK__processat__idSaf__367C1819" FromRole="processats_finals" ToRole="referencies" />
@@ -1069,6 +1121,8 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
           <NavigationProperty Name="estat_processos_inicials" Relationship="Self.FK__processat__idEst__395884C4" FromRole="processats_inicials" ToRole="estat_processos_inicials" />
           <NavigationProperty Name="lots" Relationship="Self.FK__lots__idProcessa__31B762FC" FromRole="processats_inicials" ToRole="lots" />
           <NavigationProperty Name="usuaris" Relationship="Self.FK__processat__idUsu__3A4CA8FD" FromRole="processats_inicials" ToRole="usuaris" />
+          <Property Name="idAnimal" Type="Int64" />
+          <NavigationProperty Name="procInicial_Animal" Relationship="escorxadam2Model.FK_procInicial_Animal_procInicial" FromRole="processats_inicials" ToRole="procInicial_Animal" />
         </EntityType>
         <EntityType Name="proveidors">
           <Key>
@@ -1749,6 +1803,15 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
             <End Role="permisos" EntitySet="permisos" />
           </AssociationSet>
           <EntitySet Name="sitran" EntityType="escorxadam2Model.sitran" />
+          <EntitySet Name="procInicial_Animal" EntityType="escorxadam2Model.procInicial_Animal" />
+          <AssociationSet Name="FK_procInicial_Animal_Animal" Association="escorxadam2Model.FK_procInicial_Animal_Animal">
+            <End Role="animals" EntitySet="animals" />
+            <End Role="procInicial_Animal" EntitySet="procInicial_Animal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_procInicial_Animal_procInicial" Association="escorxadam2Model.FK_procInicial_Animal_procInicial">
+            <End Role="processats_inicials" EntitySet="processats_inicials" />
+            <End Role="procInicial_Animal" EntitySet="procInicial_Animal" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="sitran">
           <Key>
@@ -1760,6 +1823,42 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
           <Property Name="situacioExplotacio" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="tipusBestiar" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="procInicial_Animal">
+          <Key>
+            <PropertyRef Name="idProcessatInicial" />
+            <PropertyRef Name="idAnimal" />
+            <PropertyRef Name="Pes" />
+          </Key>
+          <Property Name="idProcessatInicial" Type="Int64" Nullable="false" />
+          <Property Name="idAnimal" Type="Int64" Nullable="false" />
+          <Property Name="Pes" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="animals" Relationship="escorxadam2Model.FK_procInicial_Animal_Animal" FromRole="procInicial_Animal" ToRole="animals" />
+          <NavigationProperty Name="processats_inicials" Relationship="escorxadam2Model.FK_procInicial_Animal_procInicial" FromRole="procInicial_Animal" ToRole="processats_inicials" />
+        </EntityType>
+        <Association Name="FK_procInicial_Animal_Animal">
+          <End Type="escorxadam2Model.animals" Role="animals" Multiplicity="1" />
+          <End Type="escorxadam2Model.procInicial_Animal" Role="procInicial_Animal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="animals">
+              <PropertyRef Name="idAnimal" />
+            </Principal>
+            <Dependent Role="procInicial_Animal">
+              <PropertyRef Name="idAnimal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_procInicial_Animal_procInicial">
+          <End Type="escorxadam2Model.processats_inicials" Role="processats_inicials" Multiplicity="1" />
+          <End Type="escorxadam2Model.procInicial_Animal" Role="procInicial_Animal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="processats_inicials">
+              <PropertyRef Name="idProcessatInicial" />
+            </Principal>
+            <Dependent Role="procInicial_Animal">
+              <PropertyRef Name="idProcessatInicial" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1950,11 +2049,11 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
           <EntitySetMapping Name="processats_inicials">
             <EntityTypeMapping TypeName="escorxadam2Model.processats_inicials">
               <MappingFragment StoreEntitySet="processats_inicials">
+                <ScalarProperty Name="idAnimal" ColumnName="idAnimal" />
                 <ScalarProperty Name="idProcessatInicial" ColumnName="idProcessatInicial" />
                 <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
                 <ScalarProperty Name="idEstatInicial" ColumnName="idEstatInicial" />
                 <ScalarProperty Name="numCarril" ColumnName="numCarril" />
-                <ScalarProperty Name="DIB" ColumnName="DIB" />
                 <ScalarProperty Name="pesCanal" ColumnName="pesCanal" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -2066,6 +2165,15 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
                 <ScalarProperty Name="tipusExplotacio" ColumnName="tipusExplotacio" />
                 <ScalarProperty Name="codiREGA" ColumnName="codiREGA" />
                 <ScalarProperty Name="idSitran" ColumnName="idSitran" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="procInicial_Animal">
+            <EntityTypeMapping TypeName="escorxadam2Model.procInicial_Animal">
+              <MappingFragment StoreEntitySet="procInicial_Animal">
+                <ScalarProperty Name="Pes" ColumnName="Pes" />
+                <ScalarProperty Name="idAnimal" ColumnName="idAnimal" />
+                <ScalarProperty Name="idProcessatInicial" ColumnName="idProcessatInicial" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
