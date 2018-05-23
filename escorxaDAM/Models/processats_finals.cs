@@ -25,12 +25,12 @@ namespace Models
         public long idSafata { get; set; }
         public long idEstatEnvasat { get; set; }
         public string DIB { get; set; }
-        public System.DateTime dataEnvasat { get; set; }
-        public System.DateTime diaCaducitat { get; set; }
-        public double pesSafata { get; set; }
-        public double percO2 { get; set; }
-        public double percCO2 { get; set; }
-        public double Mioglobina { get; set; }
+        public Nullable<System.DateTime> dataEnvasat { get; set; }
+        public Nullable<System.DateTime> diaCaducitat { get; set; }
+        public Nullable<double> pesSafata { get; set; }
+        public Nullable<double> percO2 { get; set; }
+        public Nullable<double> percCO2 { get; set; }
+        public Nullable<double> Mioglobina { get; set; }
     
         public virtual estat_processos_envasat estat_processos_envasat { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

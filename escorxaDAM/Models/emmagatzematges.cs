@@ -27,8 +27,8 @@ namespace Models
         public int numCambraFrigorifica { get; set; }
         public System.DateTime dataEntrada { get; set; }
         public System.DateTime dataSortida { get; set; }
-        public double temperaturaMaxima { get; set; }
-        public double temperaturaMinima { get; set; }
+        public Nullable<double> temperaturaMaxima { get; set; }
+        public Nullable<double> temperaturaMinima { get; set; }
     
         public virtual estat_refrigeracions estat_refrigeracions { get; set; }
         public virtual usuaris usuaris { get; set; }

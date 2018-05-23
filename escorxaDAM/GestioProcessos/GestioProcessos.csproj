@@ -81,6 +81,10 @@
       <Project>{cf89ea7d-d834-4cb1-8888-e9c0fb24ee7f}</Project>
       <Name>BaseForm</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ClassHelpers\ClassHelpers.csproj">
+      <Project>{9526d638-b53d-4fd8-a2c5-b2fbe0c9634a}</Project>
+      <Name>ClassHelpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConexioBBDD\ConexioBBDD.csproj">
       <Project>{384145E7-5B9B-43CB-92B0-D8BE9B92FDE8}</Project>
       <Name>ConexioBBDD</Name>

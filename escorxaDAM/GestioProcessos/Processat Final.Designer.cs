@@ -51,13 +51,13 @@
             this.SafataGrid = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.comboTipus = new CustomControl.comboBox();
-            this.comboEstat = new CustomControl.comboBox();
-            this.dateCaducitat = new System.Windows.Forms.DateTimePicker();
-            this.customTextBox1 = new CustomControl.CustomTextBox();
+            this.txtDate = new CustomControl.CustomTextBox();
             this.btnPes = new System.Windows.Forms.Button();
             this.btnAnalisi = new System.Windows.Forms.Button();
+            this.txtEstat = new CustomControl.CustomTextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtDateCad = new CustomControl.CustomTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.SafataGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -65,12 +65,14 @@
             // btnInserir
             // 
             this.btnInserir.Enabled = false;
+            this.btnInserir.Text = "Finalitzar";
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(170, 222);
+            this.label1.Location = new System.Drawing.Point(170, 216);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 70;
@@ -90,7 +92,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(131, 268);
+            this.label2.Location = new System.Drawing.Point(131, 265);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 16);
             this.label2.TabIndex = 71;
@@ -100,7 +102,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(152, 311);
+            this.label3.Location = new System.Drawing.Point(152, 352);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 72;
@@ -110,7 +112,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(92, 352);
+            this.label4.Location = new System.Drawing.Point(92, 392);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(123, 16);
             this.label4.TabIndex = 73;
@@ -120,7 +122,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(118, 392);
+            this.label5.Location = new System.Drawing.Point(118, 430);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 16);
             this.label5.TabIndex = 74;
@@ -130,7 +132,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(565, 219);
+            this.label7.Location = new System.Drawing.Point(565, 220);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(29, 16);
             this.label7.TabIndex = 75;
@@ -140,7 +142,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(544, 267);
+            this.label8.Location = new System.Drawing.Point(544, 306);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 16);
             this.label8.TabIndex = 76;
@@ -150,18 +152,17 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(516, 309);
+            this.label9.Location = new System.Drawing.Point(135, 307);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 16);
+            this.label9.Size = new System.Drawing.Size(85, 16);
             this.label9.TabIndex = 77;
-            this.label9.Text = "Pes animal:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.label9.Text = "Pes animals:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(535, 348);
+            this.label10.Location = new System.Drawing.Point(535, 351);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 16);
             this.label10.TabIndex = 78;
@@ -171,7 +172,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(523, 392);
+            this.label11.Location = new System.Drawing.Point(523, 395);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 16);
             this.label11.TabIndex = 79;
@@ -179,80 +180,88 @@
             // 
             // txtBoxId
             // 
-            this.txtBoxId.Location = new System.Drawing.Point(227, 267);
+            this.txtBoxId.Location = new System.Drawing.Point(227, 264);
             this.txtBoxId.Name = "txtBoxId";
             this.txtBoxId.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxId.Placeholder = null;
+            this.txtBoxId.ReadOnly = true;
             this.txtBoxId.Size = new System.Drawing.Size(161, 20);
             this.txtBoxId.TabIndex = 80;
             this.txtBoxId.Tag = "Nom";
             // 
             // PesBalança
             // 
-            this.PesBalança.Location = new System.Drawing.Point(227, 309);
+            this.PesBalança.Location = new System.Drawing.Point(227, 350);
             this.PesBalança.Name = "PesBalança";
             this.PesBalança.Options = CustomControl.CustomTextBox.Items.Text;
             this.PesBalança.Placeholder = null;
+            this.PesBalança.ReadOnly = true;
             this.PesBalança.Size = new System.Drawing.Size(161, 20);
             this.PesBalança.TabIndex = 81;
             this.PesBalança.Tag = "Nom";
             // 
             // txtBoxLot
             // 
-            this.txtBoxLot.Location = new System.Drawing.Point(608, 215);
+            this.txtBoxLot.Location = new System.Drawing.Point(608, 216);
             this.txtBoxLot.Name = "txtBoxLot";
             this.txtBoxLot.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxLot.Placeholder = null;
+            this.txtBoxLot.ReadOnly = true;
             this.txtBoxLot.Size = new System.Drawing.Size(161, 20);
             this.txtBoxLot.TabIndex = 84;
             this.txtBoxLot.Tag = "Nom";
             // 
             // txtBoxUsuari
             // 
-            this.txtBoxUsuari.Location = new System.Drawing.Point(608, 266);
+            this.txtBoxUsuari.Location = new System.Drawing.Point(608, 305);
             this.txtBoxUsuari.Name = "txtBoxUsuari";
             this.txtBoxUsuari.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxUsuari.Placeholder = null;
+            this.txtBoxUsuari.ReadOnly = true;
             this.txtBoxUsuari.Size = new System.Drawing.Size(161, 20);
             this.txtBoxUsuari.TabIndex = 85;
             this.txtBoxUsuari.Tag = "Nom";
             // 
             // txtBoxDIB
             // 
-            this.txtBoxDIB.Location = new System.Drawing.Point(608, 307);
+            this.txtBoxDIB.Location = new System.Drawing.Point(227, 305);
             this.txtBoxDIB.Name = "txtBoxDIB";
             this.txtBoxDIB.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxDIB.Placeholder = null;
+            this.txtBoxDIB.ReadOnly = true;
             this.txtBoxDIB.Size = new System.Drawing.Size(161, 20);
             this.txtBoxDIB.TabIndex = 86;
             this.txtBoxDIB.Tag = "Nom";
             // 
             // txtBoxO2
             // 
-            this.txtBoxO2.Location = new System.Drawing.Point(608, 346);
+            this.txtBoxO2.Location = new System.Drawing.Point(608, 349);
             this.txtBoxO2.Name = "txtBoxO2";
             this.txtBoxO2.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxO2.Placeholder = null;
+            this.txtBoxO2.ReadOnly = true;
             this.txtBoxO2.Size = new System.Drawing.Size(161, 20);
             this.txtBoxO2.TabIndex = 87;
             this.txtBoxO2.Tag = "Nom";
             // 
             // txtBoxCO2
             // 
-            this.txtBoxCO2.Location = new System.Drawing.Point(608, 388);
+            this.txtBoxCO2.Location = new System.Drawing.Point(608, 391);
             this.txtBoxCO2.Name = "txtBoxCO2";
             this.txtBoxCO2.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxCO2.Placeholder = null;
+            this.txtBoxCO2.ReadOnly = true;
             this.txtBoxCO2.Size = new System.Drawing.Size(161, 20);
             this.txtBoxCO2.TabIndex = 88;
             this.txtBoxCO2.Tag = "Nom";
             // 
             // txtBoxMG
             // 
-            this.txtBoxMG.Location = new System.Drawing.Point(608, 427);
+            this.txtBoxMG.Location = new System.Drawing.Point(608, 430);
             this.txtBoxMG.Name = "txtBoxMG";
             this.txtBoxMG.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxMG.Placeholder = null;
+            this.txtBoxMG.ReadOnly = true;
             this.txtBoxMG.Size = new System.Drawing.Size(161, 20);
             this.txtBoxMG.TabIndex = 90;
             this.txtBoxMG.Tag = "Nom";
@@ -261,7 +270,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(475, 427);
+            this.label12.Location = new System.Drawing.Point(475, 430);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(119, 16);
             this.label12.TabIndex = 89;
@@ -269,10 +278,11 @@
             // 
             // SafataGrid
             // 
+            this.SafataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.SafataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SafataGrid.Location = new System.Drawing.Point(227, 87);
             this.SafataGrid.Name = "SafataGrid";
-            this.SafataGrid.Size = new System.Drawing.Size(542, 90);
+            this.SafataGrid.Size = new System.Drawing.Size(219, 90);
             this.SafataGrid.TabIndex = 91;
             this.SafataGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SafataGrid_CellDoubleClick);
             // 
@@ -295,16 +305,6 @@
             this.label13.TabIndex = 93;
             this.label13.Text = "Safates pendents";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(475, 466);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(117, 16);
-            this.label14.TabIndex = 93;
-            this.label14.Text = "Estat de l\'envasat:";
-            // 
             // comboTipus
             // 
             this.comboTipus.FormattingEnabled = true;
@@ -312,38 +312,22 @@
             "SN",
             "SF",
             "SE"});
-            this.comboTipus.Location = new System.Drawing.Point(227, 221);
+            this.comboTipus.Location = new System.Drawing.Point(227, 215);
             this.comboTipus.Name = "comboTipus";
             this.comboTipus.Reference = null;
             this.comboTipus.Size = new System.Drawing.Size(161, 21);
             this.comboTipus.TabIndex = 95;
             // 
-            // comboEstat
+            // txtDate
             // 
-            this.comboEstat.FormattingEnabled = true;
-            this.comboEstat.Location = new System.Drawing.Point(608, 466);
-            this.comboEstat.Name = "comboEstat";
-            this.comboEstat.Reference = null;
-            this.comboEstat.Size = new System.Drawing.Size(161, 21);
-            this.comboEstat.TabIndex = 96;
-            // 
-            // dateCaducitat
-            // 
-            this.dateCaducitat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateCaducitat.Location = new System.Drawing.Point(227, 392);
-            this.dateCaducitat.Name = "dateCaducitat";
-            this.dateCaducitat.Size = new System.Drawing.Size(161, 20);
-            this.dateCaducitat.TabIndex = 98;
-            // 
-            // customTextBox1
-            // 
-            this.customTextBox1.Location = new System.Drawing.Point(227, 351);
-            this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Options = CustomControl.CustomTextBox.Items.Text;
-            this.customTextBox1.Placeholder = null;
-            this.customTextBox1.Size = new System.Drawing.Size(161, 20);
-            this.customTextBox1.TabIndex = 99;
-            this.customTextBox1.Tag = "Nom";
+            this.txtDate.Location = new System.Drawing.Point(227, 391);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Options = CustomControl.CustomTextBox.Items.Text;
+            this.txtDate.Placeholder = null;
+            this.txtDate.ReadOnly = true;
+            this.txtDate.Size = new System.Drawing.Size(161, 20);
+            this.txtDate.TabIndex = 99;
+            this.txtDate.Tag = "Nom";
             // 
             // btnPes
             // 
@@ -375,19 +359,52 @@
             this.btnAnalisi.TabIndex = 101;
             this.btnAnalisi.Text = "Analisi";
             this.btnAnalisi.UseVisualStyleBackColor = false;
+            this.btnAnalisi.Click += new System.EventHandler(this.btnAnalisi_Click);
+            // 
+            // txtEstat
+            // 
+            this.txtEstat.Location = new System.Drawing.Point(608, 264);
+            this.txtEstat.Name = "txtEstat";
+            this.txtEstat.Options = CustomControl.CustomTextBox.Items.Text;
+            this.txtEstat.Placeholder = null;
+            this.txtEstat.ReadOnly = true;
+            this.txtEstat.Size = new System.Drawing.Size(161, 20);
+            this.txtEstat.TabIndex = 104;
+            this.txtEstat.Tag = "Nom";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(475, 268);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(117, 16);
+            this.label14.TabIndex = 103;
+            this.label14.Text = "Estat de l\'envasat:";
+            // 
+            // txtDateCad
+            // 
+            this.txtDateCad.Location = new System.Drawing.Point(227, 429);
+            this.txtDateCad.Name = "txtDateCad";
+            this.txtDateCad.Options = CustomControl.CustomTextBox.Items.Text;
+            this.txtDateCad.Placeholder = null;
+            this.txtDateCad.ReadOnly = true;
+            this.txtDateCad.Size = new System.Drawing.Size(161, 20);
+            this.txtDateCad.TabIndex = 105;
+            this.txtDateCad.Tag = "Nom";
             // 
             // Processat_Final
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 604);
+            this.Controls.Add(this.txtDateCad);
+            this.Controls.Add(this.txtEstat);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.btnAnalisi);
             this.Controls.Add(this.btnPes);
-            this.Controls.Add(this.customTextBox1);
-            this.Controls.Add(this.dateCaducitat);
-            this.Controls.Add(this.comboEstat);
+            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.comboTipus);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.SafataGrid);
             this.Controls.Add(this.txtBoxMG);
             this.Controls.Add(this.label12);
@@ -437,13 +454,13 @@
             this.Controls.SetChildIndex(this.label12, 0);
             this.Controls.SetChildIndex(this.txtBoxMG, 0);
             this.Controls.SetChildIndex(this.SafataGrid, 0);
-            this.Controls.SetChildIndex(this.label14, 0);
             this.Controls.SetChildIndex(this.comboTipus, 0);
-            this.Controls.SetChildIndex(this.comboEstat, 0);
-            this.Controls.SetChildIndex(this.dateCaducitat, 0);
-            this.Controls.SetChildIndex(this.customTextBox1, 0);
+            this.Controls.SetChildIndex(this.txtDate, 0);
             this.Controls.SetChildIndex(this.btnPes, 0);
             this.Controls.SetChildIndex(this.btnAnalisi, 0);
+            this.Controls.SetChildIndex(this.label14, 0);
+            this.Controls.SetChildIndex(this.txtEstat, 0);
+            this.Controls.SetChildIndex(this.txtDateCad, 0);
             ((System.ComponentModel.ISupportInitialize)(this.SafataGrid)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -476,12 +493,12 @@
         private System.Windows.Forms.DataGridView SafataGrid;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
         private CustomControl.comboBox comboTipus;
-        private CustomControl.comboBox comboEstat;
-        private System.Windows.Forms.DateTimePicker dateCaducitat;
-        private CustomControl.CustomTextBox customTextBox1;
+        private CustomControl.CustomTextBox txtDate;
         public System.Windows.Forms.Button btnPes;
         public System.Windows.Forms.Button btnAnalisi;
+        private CustomControl.CustomTextBox txtEstat;
+        private System.Windows.Forms.Label label14;
+        private CustomControl.CustomTextBox txtDateCad;
     }
 }
