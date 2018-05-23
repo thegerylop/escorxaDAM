@@ -16,34 +16,13 @@ namespace GestioProcessos
     {
         escorxadam2Entities _m = new escorxadam2Entities();
         string lot;
-        string estat;
+        
 
         public Processat_Inicial()
         {
             InitializeComponent();
         }
 
-        private void gridAnimals_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dadesDataGrid(e);
-            omplirCampsComuns();
-            if(estat.Equals("En espera"))
-            {
-                btnInserir.Visible = true;
-            }
-            else
-            {
-                btnFinalitzar.Visible = true;
-                omplirCampsProces();
-            }
-
-        }
-        private void omplirCampsComuns()
-        {
-            cBoxLots.Text = lot;
-            txtBoxEstat.Text = estat;
-            txtBoxPesCanal.Text = randomInt(320, 400).ToString();
-        }
 
         private void omplirCampsProces()
         {
@@ -53,27 +32,37 @@ namespace GestioProcessos
                         select b).FirstOrDefault();
 
             txtBoxCarril.Text = randomInt(1,3).ToString();
-            //cBoxAtordiment.SelectedValue = sacr.idSistemaAtordiment;
-            //txtBoxIncidencies.Text = sacr.Incidencies;
             Usuaris.SelectedValue = sacr.idUsuari;
+            txtBoxPesCanal.Text = randomInt(320, 400).ToString();
         }
 
 
-        private void dadesDataGrid(DataGridViewCellEventArgs e)
-        {
-            int num = e.RowIndex;
-            lot = gridLots.Rows[num].Cells[0].Value.ToString();
-            estat = gridLots.Rows[num].Cells[1].Value.ToString();
-        }
+        //private void dadesDataGrid(DataGridViewCellEventArgs e)
+        //{
+        //    int num = e.RowIndex;
+        //    lot = gridLots.Rows[num].Cells[0].Value.ToString();
+        //    estat = gridLots.Rows[num].Cells[1].Value.ToString();
+        //}
 
         private void Processat_Inicial_Load(object sender, EventArgs e)
         {
-            
+            //Carrego el grid de lots
+            updateGridLots();
         }
 
+        private void updateGridLots()
+        {
+            var dades = (from pi in _m.processats_inicials
+                         join lots in _m.lots on pi.idProcessatInicial equals lots.idProcessatInicial
+                         join epi in _m.estat_processos_inicials on pi.idProcessatInicial equals epi.idEstatProcesInicial
+                         where (epi.Estat == "En espera" || epi.Estat == "En procés")
+                         select new { lots.numLot, epi.Estat }).ToArray();
 
+            //Fico les dades
+            gridLots.DataSource = dades;
+        }
 
-        private void updateGrid(string nLot)
+        private void updateGridAnimals(string nLot)
         {
             //Agafo les dades
             //var dades = (from sacrifici in _m.sacrificis
@@ -108,7 +97,7 @@ namespace GestioProcessos
             using(escorxadam2Entities test = new escorxadam2Entities())
             {
                 string idProcessatInicial = (from a in _m.lots
-                                             where a.numLot.ToString() == cBoxLots.Text
+                                             where a.numLot.ToString() == gridAnimalsLot.Text
                                              select a.idProcessatInicial).First().ToString();
                 var ProcessatInicial = (from a in _m.processats_inicials
                                         where a.idProcessatInicial.ToString() == idProcessatInicial
@@ -160,7 +149,7 @@ namespace GestioProcessos
                 };
                 _m.emmagatzematges.Add(proc);
                 _m.SaveChanges();
-                var lotes = _m.lots.OrderByDescending(u => u.numLot == cBoxLots.Text).FirstOrDefault();
+                var lotes = _m.lots.OrderByDescending(u => u.numLot == gridAnimalsLot.Text).FirstOrDefault();
                 long idEmm = (from a in _m.emmagatzematges
                                     select a.idEstatRefrigeracio).Max();
 
@@ -171,10 +160,22 @@ namespace GestioProcessos
         
     }
 
-        private void cBoxLots_SelectionChangeCommitted(object sender, EventArgs e)
+        private void gridLots_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-           // updateGrid();
-            obtenirUsuaris();
+            int num = e.RowIndex;
+            lot = gridLots.Rows[num].Cells[0].Value.ToString();
+            string estat = gridLots.Rows[num].Cells[1].Value.ToString();
+
+            //Introdueixo les dades al grid d'animals i el textbox d'estat
+            updateGridAnimals(lot);
+            txtBoxEstat.Text = estat;
+        }
+
+
+        private void gridAnimals_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+
         }
     }
 }

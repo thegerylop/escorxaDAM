@@ -118,9 +118,10 @@
             this.gridLots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridLots.Location = new System.Drawing.Point(170, 145);
             this.gridLots.Name = "gridLots";
+            this.gridLots.ReadOnly = true;
             this.gridLots.Size = new System.Drawing.Size(261, 100);
             this.gridLots.TabIndex = 106;
-            this.gridLots.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridAnimals_CellDoubleClick);
+            this.gridLots.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLots_CellDoubleClick);
             // 
             // panel1
             // 
@@ -210,8 +211,10 @@
             this.gridAnimalsLot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridAnimalsLot.Location = new System.Drawing.Point(415, 36);
             this.gridAnimalsLot.Name = "gridAnimalsLot";
+            this.gridAnimalsLot.ReadOnly = true;
             this.gridAnimalsLot.Size = new System.Drawing.Size(261, 100);
             this.gridAnimalsLot.TabIndex = 134;
+            this.gridAnimalsLot.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridAnimals_CellDoubleClick);
             // 
             // label6
             // 
