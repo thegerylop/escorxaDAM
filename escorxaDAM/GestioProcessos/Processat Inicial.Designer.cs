@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.gridAnimals = new System.Windows.Forms.DataGridView();
+            this.gridLots = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.Usuaris = new CustomControl.comboBox();
@@ -42,10 +42,11 @@
             this.txtBoxEstat = new CustomControl.CustomTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnFinalitzar = new System.Windows.Forms.Button();
-            this.cBoxLots = new CustomControl.comboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.gridAnimals)).BeginInit();
+            this.gridAnimalsLot = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLots)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridAnimalsLot)).BeginInit();
             this.SuspendLayout();
             // 
             // btnInserir
@@ -112,33 +113,35 @@
             this.label13.TabIndex = 104;
             this.label13.Text = "Processat Inicial";
             // 
-            // gridAnimals
+            // gridLots
             // 
-            this.gridAnimals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridAnimals.Location = new System.Drawing.Point(291, 116);
-            this.gridAnimals.Name = "gridAnimals";
-            this.gridAnimals.Size = new System.Drawing.Size(261, 90);
-            this.gridAnimals.TabIndex = 106;
-            this.gridAnimals.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridAnimals_CellDoubleClick);
+            this.gridLots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridLots.Location = new System.Drawing.Point(170, 145);
+            this.gridLots.Name = "gridLots";
+            this.gridLots.Size = new System.Drawing.Size(261, 100);
+            this.gridLots.TabIndex = 106;
+            this.gridLots.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridAnimals_CellDoubleClick);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.gridAnimalsLot);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(136, 109);
+            this.panel1.Location = new System.Drawing.Point(145, 109);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(710, 108);
+            this.panel1.Size = new System.Drawing.Size(701, 148);
             this.panel1.TabIndex = 107;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 7);
+            this.label3.Location = new System.Drawing.Point(123, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 20);
+            this.label3.Size = new System.Drawing.Size(39, 20);
             this.label3.TabIndex = 93;
-            this.label3.Text = "Material en espera";
+            this.label3.Text = "Lots";
             // 
             // Usuaris
             // 
@@ -202,39 +205,35 @@
             this.btnFinalitzar.Visible = false;
             this.btnFinalitzar.Click += new System.EventHandler(this.btnFinalitzar_Click);
             // 
-            // cBoxLots
+            // gridAnimalsLot
             // 
-            this.cBoxLots.FormattingEnabled = true;
-            this.cBoxLots.Location = new System.Drawing.Point(685, 36);
-            this.cBoxLots.Name = "cBoxLots";
-            this.cBoxLots.Reference = null;
-            this.cBoxLots.Size = new System.Drawing.Size(161, 21);
-            this.cBoxLots.TabIndex = 132;
-            this.cBoxLots.SelectionChangeCommitted += new System.EventHandler(this.cBoxLots_SelectionChangeCommitted);
+            this.gridAnimalsLot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridAnimalsLot.Location = new System.Drawing.Point(415, 36);
+            this.gridAnimalsLot.Name = "gridAnimalsLot";
+            this.gridAnimalsLot.Size = new System.Drawing.Size(261, 100);
+            this.gridAnimalsLot.TabIndex = 134;
             // 
-            // label5
+            // label6
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(571, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 16);
-            this.label5.TabIndex = 133;
-            this.label5.Text = "Número de Lot:";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(501, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 20);
+            this.label6.TabIndex = 135;
+            this.label6.Text = "Animals del Lot";
             // 
             // Processat_Inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 604);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.cBoxLots);
             this.Controls.Add(this.btnFinalitzar);
             this.Controls.Add(this.txtBoxEstat);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Usuaris);
-            this.Controls.Add(this.gridAnimals);
+            this.Controls.Add(this.gridLots);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtBoxPesCanal);
@@ -254,17 +253,16 @@
             this.Controls.SetChildIndex(this.txtBoxPesCanal, 0);
             this.Controls.SetChildIndex(this.label13, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.gridAnimals, 0);
+            this.Controls.SetChildIndex(this.gridLots, 0);
             this.Controls.SetChildIndex(this.Usuaris, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.txtBoxEstat, 0);
             this.Controls.SetChildIndex(this.btnFinalitzar, 0);
-            this.Controls.SetChildIndex(this.cBoxLots, 0);
-            this.Controls.SetChildIndex(this.label5, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.gridAnimals)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLots)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridAnimalsLot)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,7 +275,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView gridAnimals;
+        private System.Windows.Forms.DataGridView gridLots;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private CustomControl.comboBox Usuaris;
@@ -285,7 +283,7 @@
         private CustomControl.CustomTextBox txtBoxEstat;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.Button btnFinalitzar;
-        private CustomControl.comboBox cBoxLots;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView gridAnimalsLot;
     }
 }

@@ -62,8 +62,8 @@ namespace GestioProcessos
         private void dadesDataGrid(DataGridViewCellEventArgs e)
         {
             int num = e.RowIndex;
-            lot = gridAnimals.Rows[num].Cells[0].Value.ToString();
-            estat = gridAnimals.Rows[num].Cells[1].Value.ToString();
+            lot = gridLots.Rows[num].Cells[0].Value.ToString();
+            estat = gridLots.Rows[num].Cells[1].Value.ToString();
         }
 
         private void Processat_Inicial_Load(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace GestioProcessos
                          select new { animals.DIB }).ToArray();
                 
             //Fico les dades
-            gridAnimals.DataSource = dades;
+            gridLots.DataSource = dades;
         }
 
         public void obtenirUsuaris()
