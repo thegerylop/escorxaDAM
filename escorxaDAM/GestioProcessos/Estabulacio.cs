@@ -45,10 +45,12 @@ namespace GestioProcessos
             if (estat.Equals("En espera"))
             {
                 btnInserir.Visible = true;
+                btnFinalitzar.Visible = false;
                 omplirCampsEspera();
             }
             else
             {
+                btnInserir.Visible = false;
                 btnFinalitzar.Visible = true;
                 omplirCampsProces();
 
@@ -87,6 +89,8 @@ namespace GestioProcessos
         {
             omplirCampsEspera();
             afegirBBDD();
+            btnInserir.Visible = false;
+            btnFinalitzar.Visible = true;
         }
 
         private void btnFinalitzar_Click(object sender, EventArgs e)
@@ -94,6 +98,8 @@ namespace GestioProcessos
             DiaSortida.Text = DateTime.Now.ToString("yyy/MM/dd HH:mm");
             afegirBBDD();
             finalitzarProces();
+            btnInserir.Visible = false;
+            btnFinalitzar.Visible = false;
         }
         public void obtenirUsuaris()
         {
