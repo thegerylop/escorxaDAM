@@ -23,26 +23,14 @@ namespace GestioProcessos
             InitializeComponent();
         }
 
-
-        private void omplirCampsProces()
+        private void omplirCampsRandom()
         {
-            var sacr = (from a in _m.lots
-                        join b in _m.sacrificis on a.idSacrifici equals b.idSacrifici
-                        where a.numLot == lot
-                        select b).FirstOrDefault();
 
             txtBoxCarril.Text = randomInt(1,3).ToString();
-            Usuaris.SelectedValue = sacr.idUsuari;
+            obtenirUsuaris();
             txtBoxPesCanal.Text = randomInt(320, 400).ToString();
         }
 
-
-        //private void dadesDataGrid(DataGridViewCellEventArgs e)
-        //{
-        //    int num = e.RowIndex;
-        //    lot = gridLots.Rows[num].Cells[0].Value.ToString();
-        //    estat = gridLots.Rows[num].Cells[1].Value.ToString();
-        //}
 
         private void Processat_Inicial_Load(object sender, EventArgs e)
         {
@@ -79,7 +67,7 @@ namespace GestioProcessos
                          select new { animals.DIB }).ToArray();
                 
             //Fico les dades
-            gridLots.DataSource = dades;
+            gridAnimalsLot.DataSource = dades;
         }
 
         public void obtenirUsuaris()
@@ -90,10 +78,9 @@ namespace GestioProcessos
             Usuaris.DisplayMember = "Nom";
             Usuaris.ValueMember = "idUsuari";
         }
-
-        
+    
         private void afegirBBDD()
-        {
+        { 
             using(escorxadam2Entities test = new escorxadam2Entities())
             {
                 string idProcessatInicial = (from a in _m.lots
@@ -102,6 +89,10 @@ namespace GestioProcessos
                 var ProcessatInicial = (from a in _m.processats_inicials
                                         where a.idProcessatInicial.ToString() == idProcessatInicial
                                         select a).FirstOrDefault();
+                
+                var pIA = (from a 
+                           where a.idProcessatInicial.ToString() == idProcessatInicial
+                           select a).FirstOrDefault();
 
                 if(ProcessatInicial.idEstatInicial == 1)
                 {
@@ -109,16 +100,17 @@ namespace GestioProcessos
                     ProcessatInicial.idEstatInicial = 2;
                     ProcessatInicial.numCarril = Int32.Parse(txtBoxCarril.Text);
                     ProcessatInicial.pesCanal = Int32.Parse(txtBoxPesCanal.Text);
+                    
+
                     MessageBox.Show("Inserit correctament");
                 }
                 else
                 {
                     ProcessatInicial.idUsuari = Int32.Parse(Usuaris.SelectedValue.ToString());
                     ProcessatInicial.idEstatInicial = 3;
+                    MessageBox.Show("Finalitzat correctament");
                 }
-
                 _m.SaveChanges();
-               // updateGrid();
             }
         }
         public int randomInt(int min, int max)
@@ -130,7 +122,7 @@ namespace GestioProcessos
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            omplirCampsProces();
+            
             afegirBBDD();
         }
 
@@ -174,8 +166,7 @@ namespace GestioProcessos
 
         private void gridAnimals_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-
+            omplirCampsRandom();
         }
     }
 }

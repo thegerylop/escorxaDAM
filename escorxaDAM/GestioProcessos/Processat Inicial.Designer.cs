@@ -36,14 +36,14 @@
             this.label13 = new System.Windows.Forms.Label();
             this.gridLots = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.gridAnimalsLot = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.Usuaris = new CustomControl.comboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtBoxEstat = new CustomControl.CustomTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnFinalitzar = new System.Windows.Forms.Button();
-            this.gridAnimalsLot = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridLots)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridAnimalsLot)).BeginInit();
@@ -55,6 +55,7 @@
             // 
             // txtBoxPesCanal
             // 
+            this.txtBoxPesCanal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBoxPesCanal.Location = new System.Drawing.Point(685, 410);
             this.txtBoxPesCanal.Name = "txtBoxPesCanal";
             this.txtBoxPesCanal.Options = CustomControl.CustomTextBox.Items.Text;
@@ -75,6 +76,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(586, 410);
@@ -115,6 +117,7 @@
             // 
             // gridLots
             // 
+            this.gridLots.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gridLots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridLots.Location = new System.Drawing.Point(170, 145);
             this.gridLots.Name = "gridLots";
@@ -125,6 +128,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.gridAnimalsLot);
@@ -133,6 +137,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(701, 148);
             this.panel1.TabIndex = 107;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(501, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 20);
+            this.label6.TabIndex = 135;
+            this.label6.Text = "Animals del Lot";
+            // 
+            // gridAnimalsLot
+            // 
+            this.gridAnimalsLot.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gridAnimalsLot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridAnimalsLot.Location = new System.Drawing.Point(415, 36);
+            this.gridAnimalsLot.Name = "gridAnimalsLot";
+            this.gridAnimalsLot.ReadOnly = true;
+            this.gridAnimalsLot.Size = new System.Drawing.Size(261, 100);
+            this.gridAnimalsLot.TabIndex = 134;
+            this.gridAnimalsLot.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridAnimals_CellDoubleClick);
             // 
             // label3
             // 
@@ -169,7 +194,7 @@
             // 
             // txtBoxEstat
             // 
-            this.txtBoxEstat.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBoxEstat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBoxEstat.Location = new System.Drawing.Point(685, 294);
             this.txtBoxEstat.Name = "txtBoxEstat";
             this.txtBoxEstat.Options = CustomControl.CustomTextBox.Items.Text;
@@ -181,7 +206,7 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(638, 299);
@@ -205,26 +230,6 @@
             this.btnFinalitzar.UseVisualStyleBackColor = false;
             this.btnFinalitzar.Visible = false;
             this.btnFinalitzar.Click += new System.EventHandler(this.btnFinalitzar_Click);
-            // 
-            // gridAnimalsLot
-            // 
-            this.gridAnimalsLot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridAnimalsLot.Location = new System.Drawing.Point(415, 36);
-            this.gridAnimalsLot.Name = "gridAnimalsLot";
-            this.gridAnimalsLot.ReadOnly = true;
-            this.gridAnimalsLot.Size = new System.Drawing.Size(261, 100);
-            this.gridAnimalsLot.TabIndex = 134;
-            this.gridAnimalsLot.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridAnimals_CellDoubleClick);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(501, 10);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 20);
-            this.label6.TabIndex = 135;
-            this.label6.Text = "Animals del Lot";
             // 
             // Processat_Inicial
             // 
