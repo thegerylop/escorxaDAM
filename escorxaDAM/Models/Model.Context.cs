@@ -53,5 +53,6 @@ namespace Models
         public virtual DbSet<usuaris> usuaris { get; set; }
         public virtual DbSet<permisos> permisos { get; set; }
         public virtual DbSet<sitran> sitran { get; set; }
+        public virtual DbSet<procInicial_Animal> procInicial_Animal { get; set; }
     }
 }

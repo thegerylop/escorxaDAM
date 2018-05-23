@@ -5,3 +5,9 @@ C:\DAM\Projecte 2\RefrigeradorIOT\RefrigeradorIOT\obj\Debug\RefrigeradorIOT.cspr
 C:\DAM\Projecte 2\RefrigeradorIOT\RefrigeradorIOT\obj\Debug\RefrigeradorIOT.csproj.CoreCompileInputs.cache
 C:\DAM\Projecte 2\RefrigeradorIOT\RefrigeradorIOT\obj\Debug\RefrigeradorIOT.exe
 C:\DAM\Projecte 2\RefrigeradorIOT\RefrigeradorIOT\obj\Debug\RefrigeradorIOT.pdb
+C:\Users\admin\Desktop\escorxaDAM\RefrigeradorIOT\RefrigeradorIOT\bin\Debug\RefrigeradorIOT.exe.config
+C:\Users\admin\Desktop\escorxaDAM\RefrigeradorIOT\RefrigeradorIOT\bin\Debug\RefrigeradorIOT.exe
+C:\Users\admin\Desktop\escorxaDAM\RefrigeradorIOT\RefrigeradorIOT\bin\Debug\RefrigeradorIOT.pdb
+C:\Users\admin\Desktop\escorxaDAM\RefrigeradorIOT\RefrigeradorIOT\obj\Debug\RefrigeradorIOT.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\escorxaDAM\RefrigeradorIOT\RefrigeradorIOT\obj\Debug\RefrigeradorIOT.exe
+C:\Users\admin\Desktop\escorxaDAM\RefrigeradorIOT\RefrigeradorIOT\obj\Debug\RefrigeradorIOT.pdb
