@@ -29,6 +29,7 @@ namespace GestioProcessos
         private void Processat_Final_Load(object sender, EventArgs e)
         {
             updateGrid();
+            comboTipus.SelectedIndex = 1;
         }
         private void updateGrid()
         {
@@ -130,6 +131,7 @@ namespace GestioProcessos
         }
         private void btnAnalisi_Click(object sender, EventArgs e)
         {
+            btnInserir.Enabled = true;
             string tipus = comboTipus.SelectedItem.ToString();
             string dadesEspectograf = tcp.sendTCPData("172.17.20.249", 5000, tipus);
             string[] output = dadesEspectograf.Split(',');
@@ -207,6 +209,7 @@ namespace GestioProcessos
 
                 _m.SaveChanges();
             }
+            imprimirTicket();
         }
         private void safataIncorrecte()
         {
@@ -220,6 +223,14 @@ namespace GestioProcessos
 
                 _m.SaveChanges();
             }
+            updateGrid();
+            btnAnalisi.Enabled = false;
+            btnInserir.Enabled = false;
+            btnPes.Enabled = false;
+        }
+        private void imprimirTicket()
+        {
+
         }
     }
 }
