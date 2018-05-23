@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControl", "CustomControl\CustomControl.csproj", "{A7279E0E-D844-4CC7-99DA-9939EAA74818}"
 EndProject
@@ -50,6 +50,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MantenimentProveidors", "MantenimentProveidors\MantenimentProveidors.csproj", "{71EECEA5-6D84-4658-8173-20D8385EC2CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestioProcessos", "GestioProcessos\GestioProcessos.csproj", "{719B27AE-B8A7-421A-98E7-96000C2B234E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtiquetaSafata", "EtiquetaSafata\EtiquetaSafata.csproj", "{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -447,6 +449,22 @@ Global
 		{719B27AE-B8A7-421A-98E7-96000C2B234E}.Release|x64.Build.0 = Release|Any CPU
 		{719B27AE-B8A7-421A-98E7-96000C2B234E}.Release|x86.ActiveCfg = Release|Any CPU
 		{719B27AE-B8A7-421A-98E7-96000C2B234E}.Release|x86.Build.0 = Release|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Debug|ARM.Build.0 = Debug|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Debug|x64.Build.0 = Debug|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Debug|x86.Build.0 = Debug|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Release|ARM.ActiveCfg = Release|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Release|ARM.Build.0 = Release|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Release|x64.ActiveCfg = Release|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Release|x64.Build.0 = Release|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Release|x86.ActiveCfg = Release|Any CPU
+		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

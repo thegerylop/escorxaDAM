@@ -39,8 +39,8 @@
     <Property Name="numCambraFrigorifica" Type="int" Nullable="false" />
     <Property Name="dataEntrada" Type="datetime2" Precision="0" Nullable="false" />
     <Property Name="dataSortida" Type="datetime2" Precision="0" Nullable="false" />
-    <Property Name="temperaturaMaxima" Type="float" Nullable="false" />
-    <Property Name="temperaturaMinima" Type="float" Nullable="false" />
+    <Property Name="temperaturaMaxima" Type="float" />
+    <Property Name="temperaturaMinima" Type="float" />
   </EntityType>
   <EntityType Name="estables">
     <Key>
@@ -166,13 +166,13 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
     <Property Name="idUsuari" Type="bigint" Nullable="false" />
     <Property Name="idSafata" Type="bigint" Nullable="false" />
     <Property Name="idEstatEnvasat" Type="bigint" Nullable="false" />
-    <Property Name="DIB" Type="varchar" MaxLength="14" Nullable="false" />
-    <Property Name="dataEnvasat" Type="datetime2" Precision="0" Nullable="false" />
-    <Property Name="diaCaducitat" Type="date" Nullable="false" />
-    <Property Name="pesSafata" Type="float" Nullable="false" />
-    <Property Name="percO2" Type="float" Nullable="false" />
-    <Property Name="percCO2" Type="float" Nullable="false" />
-    <Property Name="Mioglobina" Type="float" Nullable="false" />
+    <Property Name="DIB" Type="varchar" MaxLength="14" />
+    <Property Name="dataEnvasat" Type="datetime2" Precision="0" />
+    <Property Name="diaCaducitat" Type="date" />
+    <Property Name="pesSafata" Type="float" />
+    <Property Name="percO2" Type="float" />
+    <Property Name="percCO2" Type="float" />
+    <Property Name="Mioglobina" Type="float" />
   </EntityType>
   <EntityType Name="processats_inicials">
     <Key>
@@ -182,7 +182,6 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
     <Property Name="idUsuari" Type="bigint" Nullable="false" />
     <Property Name="idEstatInicial" Type="bigint" Nullable="false" />
     <Property Name="numCarril" Type="int" />
-    <Property Name="DIB" Type="varchar" MaxLength="14" />
     <Property Name="pesCanal" Type="float" />
   </EntityType>
   <EntityType Name="proveidors">

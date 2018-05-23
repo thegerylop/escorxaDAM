@@ -189,7 +189,6 @@
           <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
           <ScalarProperty Name="idEstatInicial" ColumnName="idEstatInicial" />
           <ScalarProperty Name="numCarril" ColumnName="numCarril" />
-          <ScalarProperty Name="DIB" ColumnName="DIB" />
           <ScalarProperty Name="pesCanal" ColumnName="pesCanal" />
         </MappingFragment>
       </EntityTypeMapping>

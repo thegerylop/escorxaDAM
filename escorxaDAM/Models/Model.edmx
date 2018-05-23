@@ -44,8 +44,8 @@
           <Property Name="numCambraFrigorifica" Type="int" Nullable="false" />
           <Property Name="dataEntrada" Type="datetime2" Precision="0" Nullable="false" />
           <Property Name="dataSortida" Type="datetime2" Precision="0" Nullable="false" />
-          <Property Name="temperaturaMaxima" Type="float" Nullable="false" />
-          <Property Name="temperaturaMinima" Type="float" Nullable="false" />
+          <Property Name="temperaturaMaxima" Type="float" />
+          <Property Name="temperaturaMinima" Type="float" />
         </EntityType>
         <EntityType Name="estables">
           <Key>
@@ -171,13 +171,13 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
           <Property Name="idUsuari" Type="bigint" Nullable="false" />
           <Property Name="idSafata" Type="bigint" Nullable="false" />
           <Property Name="idEstatEnvasat" Type="bigint" Nullable="false" />
-          <Property Name="DIB" Type="varchar" MaxLength="14" Nullable="false" />
-          <Property Name="dataEnvasat" Type="datetime2" Precision="0" Nullable="false" />
-          <Property Name="diaCaducitat" Type="date" Nullable="false" />
-          <Property Name="pesSafata" Type="float" Nullable="false" />
-          <Property Name="percO2" Type="float" Nullable="false" />
-          <Property Name="percCO2" Type="float" Nullable="false" />
-          <Property Name="Mioglobina" Type="float" Nullable="false" />
+          <Property Name="DIB" Type="varchar" MaxLength="14" />
+          <Property Name="dataEnvasat" Type="datetime2" Precision="0" />
+          <Property Name="diaCaducitat" Type="date" />
+          <Property Name="pesSafata" Type="float" />
+          <Property Name="percO2" Type="float" />
+          <Property Name="percCO2" Type="float" />
+          <Property Name="Mioglobina" Type="float" />
         </EntityType>
         <EntityType Name="processats_inicials">
           <Key>
@@ -187,7 +187,6 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
           <Property Name="idUsuari" Type="bigint" Nullable="false" />
           <Property Name="idEstatInicial" Type="bigint" Nullable="false" />
           <Property Name="numCarril" Type="int" />
-          <Property Name="DIB" Type="varchar" MaxLength="14" />
           <Property Name="pesCanal" Type="float" />
         </EntityType>
         <EntityType Name="proveidors">
@@ -902,8 +901,8 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
           <Property Name="numCambraFrigorifica" Type="Int32" Nullable="false" />
           <Property Name="dataEntrada" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="dataSortida" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="temperaturaMaxima" Type="Double" Nullable="false" />
-          <Property Name="temperaturaMinima" Type="Double" Nullable="false" />
+          <Property Name="temperaturaMaxima" Type="Double" />
+          <Property Name="temperaturaMinima" Type="Double" />
           <NavigationProperty Name="estat_refrigeracions" Relationship="Self.FK__emmagatze__idEst__282DF8C2" FromRole="emmagatzematges" ToRole="estat_refrigeracions" />
           <NavigationProperty Name="usuaris" Relationship="Self.FK__emmagatze__idUsu__29221CFB" FromRole="emmagatzematges" ToRole="usuaris" />
           <NavigationProperty Name="usuaris1" Relationship="Self.FK__emmagatze__idUsu__2A164134" FromRole="emmagatzematges" ToRole="usuaris" />
@@ -1044,13 +1043,13 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
           <Property Name="idUsuari" Type="Int64" Nullable="false" />
           <Property Name="idSafata" Type="Int64" Nullable="false" />
           <Property Name="idEstatEnvasat" Type="Int64" Nullable="false" />
-          <Property Name="DIB" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="dataEnvasat" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="diaCaducitat" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="pesSafata" Type="Double" Nullable="false" />
-          <Property Name="percO2" Type="Double" Nullable="false" />
-          <Property Name="percCO2" Type="Double" Nullable="false" />
-          <Property Name="Mioglobina" Type="Double" Nullable="false" />
+          <Property Name="DIB" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="dataEnvasat" Type="DateTime" Precision="0" />
+          <Property Name="diaCaducitat" Type="DateTime" Precision="0" />
+          <Property Name="pesSafata" Type="Double" />
+          <Property Name="percO2" Type="Double" />
+          <Property Name="percCO2" Type="Double" />
+          <Property Name="Mioglobina" Type="Double" />
           <NavigationProperty Name="estat_processos_envasat" Relationship="Self.FK__processat__idUsu__3864608B" FromRole="processats_finals" ToRole="estat_processos_envasat" />
           <NavigationProperty Name="lots" Relationship="Self.FK__lots__idProcessa__30C33EC3" FromRole="processats_finals" ToRole="lots" />
           <NavigationProperty Name="referencies" Relationship="Self.FK__processat__idSaf__367C1819" FromRole="processats_finals" ToRole="referencies" />
@@ -1954,7 +1953,6 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
                 <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
                 <ScalarProperty Name="idEstatInicial" ColumnName="idEstatInicial" />
                 <ScalarProperty Name="numCarril" ColumnName="numCarril" />
-                <ScalarProperty Name="DIB" ColumnName="DIB" />
                 <ScalarProperty Name="pesCanal" ColumnName="pesCanal" />
               </MappingFragment>
             </EntityTypeMapping>
