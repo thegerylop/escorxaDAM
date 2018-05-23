@@ -31,12 +31,14 @@ namespace GestioProcessos
             if (estat.Equals("En espera"))
             {
                 btnInserir.Visible = true;
+                btnFinalitzar.Visible = false;
                 dataSacrifici.Text = "";
                 txtBoxBox.Text = "";
             }
             else
             {
                 btnFinalitzar.Visible = true;
+                btnInserir.Visible = false;
                 omplirCampsProces();
             }
         }
@@ -125,6 +127,8 @@ namespace GestioProcessos
         {
             omplirCampsEspera();
             afegirBBDD();
+            btnInserir.Visible = false;
+            btnFinalitzar.Visible = true;
         }
         private void afegirBBDD()
         {
@@ -173,6 +177,8 @@ namespace GestioProcessos
         {
             afegirBBDD();
             finalitzarProces();
+            btnInserir.Visible = false;
+            btnFinalitzar.Visible = false;
         }
         public void finalitzarProces()
         {

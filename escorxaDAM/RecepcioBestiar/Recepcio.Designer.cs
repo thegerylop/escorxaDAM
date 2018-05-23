@@ -59,6 +59,7 @@
             // 
             // btnInserir
             // 
+            this.btnInserir.Enabled = false;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // label1

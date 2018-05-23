@@ -48,6 +48,7 @@ namespace RecepcioBestiar
         private void button1_Click(object sender, EventArgs e)
         {
             Edi();
+            btnInserir.Enabled = true;
         }
         private void omplirCamps(string[] dades)
         {
@@ -150,6 +151,7 @@ namespace RecepcioBestiar
             inserirRecepcio();
             crearLot();
             inserir();
+            btnInserir.Enabled = false;
         }
         public void inserirRecepcio()
         {
