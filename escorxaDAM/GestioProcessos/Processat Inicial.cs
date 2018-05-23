@@ -85,21 +85,22 @@ namespace GestioProcessos
                 using(escorxadam2Entities test = new escorxadam2Entities())
                 {
                     string idProcessatInicial = (from a in _m.lots
-                                                 where a.numLot.ToString() == gridAnimalsLot.Text
+                                                 where a.numLot.ToString() == lot
                                                  select a.idProcessatInicial).First().ToString();
                     var ProcessatInicial = (from a in _m.processats_inicials
                                             where a.idProcessatInicial.ToString() == idProcessatInicial
                                             select a).FirstOrDefault();
-
-                    var pIA = (from a in _m.procInicial_Animal
-                               where a.idProcessatInicial.ToString() == idProcessatInicial
-                               join anim in _m.animals on a.idAnimal equals anim.idAnimal
-                               select a).FirstOrDefault();
+                   
+                
+                    //var pIA = (from a in _m.procInicial_Animal
+                    //           where a.idProcessatInicial.ToString() == idProcessatInicial
+                    //           join anim in _m.animals on a.idAnimal equals anim.idAnimal
+                    //           select a).FirstOrDefault();
 
                     var idAnimal = (from a in _m.animals
                                     where a.DIB == DIB
                                     select a.idAnimal).First();
-
+                    
                     // join ls in _m.lots on rb.idRecepcio equals ls.idRemo
 
                     if(ProcessatInicial.idEstatInicial == 1)
@@ -108,10 +109,14 @@ namespace GestioProcessos
                         ProcessatInicial.idEstatInicial = 2;
                         ProcessatInicial.numCarril = Int32.Parse(txtBoxCarril.Text);
                         // ProcessatInicial.pesCanal = inutilitzada
-                        pIA.Pes = Int32.Parse(txtBoxPesCanal.Text);
-                        pIA.idProcessatInicial = ProcessatInicial.idProcessatInicial;
-                        pIA.idAnimal = idAnimal;
-
+                        var pIA = new procInicial_Animal
+                        {
+                            Pes = Int32.Parse(txtBoxPesCanal.Text),
+                            idProcessatInicial = ProcessatInicial.idProcessatInicial,
+                            idAnimal = idAnimal,
+                        };
+                        _m.SaveChanges();
+                        _m.procInicial_Animal.Add(pIA);
                         MessageBox.Show("Inserit correctament");
                     }
                     else
@@ -120,7 +125,10 @@ namespace GestioProcessos
                         ProcessatInicial.idEstatInicial = 3;
                         MessageBox.Show("Finalitzat correctament");
                     }
+                    _m.processats_inicials.Add(ProcessatInicial);
+ 
                     _m.SaveChanges();
+
                 }
             }
         }
@@ -178,7 +186,7 @@ namespace GestioProcessos
         private void gridAnimals_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             num = e.RowIndex;
-            DIB = gridAnimalsLot.Rows[num].Cells[1].Value.ToString();
+            DIB = gridAnimalsLot.Rows[num].Cells[0].Value.ToString();
             omplirCampsRandom();            
         }
     }

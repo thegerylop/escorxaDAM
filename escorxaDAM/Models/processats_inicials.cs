@@ -25,7 +25,6 @@ namespace Models
         public long idUsuari { get; set; }
         public long idEstatInicial { get; set; }
         public Nullable<int> numCarril { get; set; }
-        public string DIB { get; set; }
         public Nullable<double> pesCanal { get; set; }
         public Nullable<long> idAnimal { get; set; }
     
