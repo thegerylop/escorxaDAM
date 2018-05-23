@@ -31,6 +31,8 @@ namespace GestioProcessos
             if (estat.Equals("En espera"))
             {
                 btnInserir.Visible = true;
+                dataSacrifici.Text = "";
+                txtBoxBox.Text = "";
             }
             else
             {
