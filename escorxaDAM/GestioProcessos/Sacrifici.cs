@@ -175,7 +175,7 @@ namespace GestioProcessos
                 _m.SaveChanges();
                 var lotes = _m.lots.OrderByDescending(u => u.numLot == txtBoxNLot.Text).FirstOrDefault();
                 long idProcessat = (from a in _m.processats_inicials
-                                    select a.idEstatInicial).Max();
+                                    select a.idProcessatInicial).Max();
 
                 lotes.idProcessatInicial = idProcessat;
                 _m.SaveChanges();
