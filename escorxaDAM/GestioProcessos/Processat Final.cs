@@ -95,7 +95,7 @@ namespace GestioProcessos
 
         private void btnPes_Click(object sender, EventArgs e)
         {
-            string ip = File.ReadAllText(Path.Combine(Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("GestioProcessos")), @"BaseForm\Config\Balanca.txt")); ;
+            string ip = File.ReadAllText(Path.Combine(Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("dll")), @"BaseForm\Config\Balanca.txt")); ;
             string tipus = comboTipus.SelectedItem.ToString();
             string pesBal = tcp.sendUDPData(ip, 7000, tipus);
             PesBalança.Text = pesBal;
@@ -146,7 +146,7 @@ namespace GestioProcessos
         }
         private void btnAnalisi_Click(object sender, EventArgs e)
         {
-            string ip = File.ReadAllText(Path.Combine(Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("GestioProcessos")), @"BaseForm\Config\Espectograf.txt")); ;
+            string ip = File.ReadAllText(Path.Combine(Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("dll")), @"BaseForm\Config\Espectograf.txt")); ;
             btnInserir.Enabled = true;
             string tipus = comboTipus.SelectedItem.ToString();
             string dadesEspectograf = tcp.sendTCPData(ip, 5000, tipus);

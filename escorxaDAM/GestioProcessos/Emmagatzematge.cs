@@ -110,7 +110,7 @@ namespace GestioProcessos
             dateOut.Text = DateTime.Now.AddHours(07).ToString("yyyy/MM/dd HH:mm");
             string tempsMax = (DateTime.Now.AddHours(07).Hour + obtenirHoraCorrecta(DateTime.Now.Minute.ToString())).ToString();
 
-            string ip = File.ReadAllText(Path.Combine(Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("GestioProcessos")), @"BaseForm\Config\Refrigerador.txt")); ;
+            string ip = File.ReadAllText(Path.Combine(Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("dll")), @"BaseForm\Config\Refrigerador.txt")); ;
 
             //data entrada
             int change = dataEntrada.Text.IndexOf(" ");
