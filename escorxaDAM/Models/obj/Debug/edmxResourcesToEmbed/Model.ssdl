@@ -37,7 +37,7 @@
     <Property Name="idEstatRefrigeracio" Type="bigint" Nullable="false" />
     <Property Name="idUsuariEntrada" Type="bigint" Nullable="false" />
     <Property Name="idUsuariSortida" Type="bigint" Nullable="false" />
-    <Property Name="numCambraFrigorifica" Type="int" Nullable="false" />
+    <Property Name="numCambraFrigorifica" Type="int" />
     <Property Name="dataEntrada" Type="datetime2" Precision="0" Nullable="false" />
     <Property Name="dataSortida" Type="datetime2" Precision="0" Nullable="false" />
     <Property Name="temperaturaMaxima" Type="float" />

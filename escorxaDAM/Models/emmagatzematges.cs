@@ -24,7 +24,7 @@ namespace Models
         public long idEstatRefrigeracio { get; set; }
         public long idUsuariEntrada { get; set; }
         public long idUsuariSortida { get; set; }
-        public int numCambraFrigorifica { get; set; }
+        public Nullable<int> numCambraFrigorifica { get; set; }
         public System.DateTime dataEntrada { get; set; }
         public System.DateTime dataSortida { get; set; }
         public Nullable<double> temperaturaMaxima { get; set; }

@@ -40,7 +40,7 @@
     <Property Name="idEstatRefrigeracio" Type="Int64" Nullable="false" />
     <Property Name="idUsuariEntrada" Type="Int64" Nullable="false" />
     <Property Name="idUsuariSortida" Type="Int64" Nullable="false" />
-    <Property Name="numCambraFrigorifica" Type="Int32" Nullable="false" />
+    <Property Name="numCambraFrigorifica" Type="Int32" />
     <Property Name="dataEntrada" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="dataSortida" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="temperaturaMaxima" Type="Double" />

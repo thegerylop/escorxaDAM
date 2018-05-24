@@ -167,13 +167,14 @@ namespace GestioProcessos
                 var proc = new emmagatzematges
                 {
                     idUsuariEntrada = 1,
+                    idUsuariSortida = 1,
                     idEstatRefrigeracio = 1,
                 };
                 _m.emmagatzematges.Add(proc);
                 _m.SaveChanges();
                 var lotes = _m.lots.OrderByDescending(u => u.numLot == gridAnimalsLot.Text).FirstOrDefault();
                 long idEmm = (from a in _m.emmagatzematges
-                                    select a.idEstatRefrigeracio).Max();
+                                    select a.idEmmagatzematge).Max();
 
                 lotes.idEmmagatzematge = idEmm;
                 _m.SaveChanges();

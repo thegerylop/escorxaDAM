@@ -42,7 +42,7 @@
           <Property Name="idEstatRefrigeracio" Type="bigint" Nullable="false" />
           <Property Name="idUsuariEntrada" Type="bigint" Nullable="false" />
           <Property Name="idUsuariSortida" Type="bigint" Nullable="false" />
-          <Property Name="numCambraFrigorifica" Type="int" Nullable="false" />
+          <Property Name="numCambraFrigorifica" Type="int" />
           <Property Name="dataEntrada" Type="datetime2" Precision="0" Nullable="false" />
           <Property Name="dataSortida" Type="datetime2" Precision="0" Nullable="false" />
           <Property Name="temperaturaMaxima" Type="float" />
@@ -901,7 +901,7 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
           <Property Name="idEstatRefrigeracio" Type="Int64" Nullable="false" />
           <Property Name="idUsuariEntrada" Type="Int64" Nullable="false" />
           <Property Name="idUsuariSortida" Type="Int64" Nullable="false" />
-          <Property Name="numCambraFrigorifica" Type="Int32" Nullable="false" />
+          <Property Name="numCambraFrigorifica" Type="Int32" />
           <Property Name="dataEntrada" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="dataSortida" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="temperaturaMaxima" Type="Double" />
