@@ -42,7 +42,7 @@ namespace MenuPrincipal
             }
             catch
             {
-                MessageBox.Show("o hi ha connexió a la base de dades");
+                MessageBox.Show("No hi ha connexió a la base de dades");
             }
            
         }
