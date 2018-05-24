@@ -84,5 +84,10 @@
       <Name>CustomControl</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\Balanca.txt" />
+    <Content Include="Config\Espectograf.txt" />
+    <Content Include="Config\Refrigerador.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

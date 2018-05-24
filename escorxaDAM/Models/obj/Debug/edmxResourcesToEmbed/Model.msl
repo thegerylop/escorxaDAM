@@ -305,14 +305,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="procInicial_Animal">
-      <EntityTypeMapping TypeName="escorxadam2Model.procInicial_Animal">
-        <MappingFragment StoreEntitySet="procInicial_Animal">
-          <ScalarProperty Name="Pes" ColumnName="Pes" />
-          <ScalarProperty Name="idAnimal" ColumnName="idAnimal" />
-          <ScalarProperty Name="idProcessatInicial" ColumnName="idProcessatInicial" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

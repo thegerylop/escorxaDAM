@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BaseForm;
 using Models;
 using EtiquetaSafata;
+using System.IO;
 
 namespace GestioProcessos
 {
@@ -94,8 +95,9 @@ namespace GestioProcessos
 
         private void btnPes_Click(object sender, EventArgs e)
         {
+            string ip = File.ReadAllText(Path.Combine(Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("GestioProcessos")), @"BaseForm\Config\Balanca.txt")); ;
             string tipus = comboTipus.SelectedItem.ToString();
-            string pesBal = tcp.sendUDPData("172.17.21.32", 7000, tipus);
+            string pesBal = tcp.sendUDPData(ip, 7000, tipus);
             PesBalança.Text = pesBal;
             comprobarPes(pesBal);
         }
@@ -144,9 +146,10 @@ namespace GestioProcessos
         }
         private void btnAnalisi_Click(object sender, EventArgs e)
         {
+            string ip = File.ReadAllText(Path.Combine(Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("GestioProcessos")), @"BaseForm\Config\Espectograf.txt")); ;
             btnInserir.Enabled = true;
             string tipus = comboTipus.SelectedItem.ToString();
-            string dadesEspectograf = tcp.sendTCPData("172.17.20.249", 5000, tipus);
+            string dadesEspectograf = tcp.sendTCPData(ip, 5000, tipus);
             string[] output = dadesEspectograf.Split(',');
             bool estat = comprobarEspectograf(output);
             txtBoxO2.Text = output[1];
