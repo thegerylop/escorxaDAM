@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sacrifici));
             this.gridAnimals = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -243,6 +244,7 @@
             // 
             this.Usuaris.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Usuaris.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Usuaris.Enabled = false;
             this.Usuaris.FormattingEnabled = true;
             this.Usuaris.Location = new System.Drawing.Point(181, 467);
             this.Usuaris.Name = "Usuaris";
@@ -348,6 +350,7 @@
             this.Controls.Add(this.gridAnimals);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label13);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Sacrifici";
             this.Text = "Sacrifici";

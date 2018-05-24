@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Processat_Final));
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -385,6 +386,7 @@
             // txtBoxUsuari
             // 
             this.txtBoxUsuari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtBoxUsuari.Enabled = false;
             this.txtBoxUsuari.FormattingEnabled = true;
             this.txtBoxUsuari.Location = new System.Drawing.Point(608, 303);
             this.txtBoxUsuari.Name = "txtBoxUsuari";
@@ -426,6 +428,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Processat_Final";
             this.Text = "Processat_Final";

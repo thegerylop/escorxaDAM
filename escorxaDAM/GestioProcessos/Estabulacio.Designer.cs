@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Estabulacio));
             this.estabulacioDataGrid = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.Usuaris = new CustomControl.comboBox();
@@ -84,6 +85,7 @@
             // 
             this.Usuaris.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Usuaris.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Usuaris.Enabled = false;
             this.Usuaris.FormattingEnabled = true;
             this.Usuaris.Location = new System.Drawing.Point(202, 593);
             this.Usuaris.Name = "Usuaris";
@@ -292,6 +294,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Estabulacio";
             this.Load += new System.EventHandler(this.Estabulacio_Load);

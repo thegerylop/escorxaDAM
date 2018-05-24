@@ -52,15 +52,11 @@ namespace GestioProcessos
             {
                 btnInserir.Visible = true;
                 btnTreure.Visible = false;
-                UsuarisSortida.Enabled = false;
-                UsuarisEntrada.Enabled = true;
                 UsuarisEntrada.SelectedValue = m.User;
 
             }
             else
             {
-                UsuarisSortida.Enabled = true;
-                UsuarisEntrada.Enabled = false;
                 btnInserir.Visible = false;
                 btnTreure.Visible = true;
                 omplirCampsProces();

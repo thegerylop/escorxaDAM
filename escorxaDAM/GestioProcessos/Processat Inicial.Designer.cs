@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Processat_Inicial));
             this.txtBoxPesCanal = new CustomControl.CustomTextBox();
             this.txtBoxCarril = new CustomControl.CustomTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -176,6 +177,7 @@
             // Usuaris
             // 
             this.Usuaris.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Usuaris.Enabled = false;
             this.Usuaris.FormattingEnabled = true;
             this.Usuaris.Location = new System.Drawing.Point(227, 292);
             this.Usuaris.Name = "Usuaris";
@@ -186,7 +188,7 @@
             // txtBoxEstat
             // 
             this.txtBoxEstat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxEstat.Location = new System.Drawing.Point(227, 342);
+            this.txtBoxEstat.Location = new System.Drawing.Point(227, 344);
             this.txtBoxEstat.Name = "txtBoxEstat";
             this.txtBoxEstat.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxEstat.Placeholder = null;
@@ -263,6 +265,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Processat_Inicial";
             this.Text = "Processat_Inicial";

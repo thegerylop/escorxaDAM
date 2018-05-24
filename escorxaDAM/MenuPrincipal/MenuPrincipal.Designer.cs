@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arxiuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,8 +37,8 @@
             this.fTPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tCPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uDPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sortirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tancarSessióToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sortirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,19 +109,19 @@
             this.uDPToolStripMenuItem.Text = "UDP";
             this.uDPToolStripMenuItem.Click += new System.EventHandler(this.uDPToolStripMenuItem_Click);
             // 
-            // sortirToolStripMenuItem
-            // 
-            this.sortirToolStripMenuItem.Name = "sortirToolStripMenuItem";
-            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
-            this.sortirToolStripMenuItem.Text = "Sortir";
-            this.sortirToolStripMenuItem.Click += new System.EventHandler(this.sortirToolStripMenuItem_Click);
-            // 
             // tancarSessióToolStripMenuItem
             // 
             this.tancarSessióToolStripMenuItem.Name = "tancarSessióToolStripMenuItem";
             this.tancarSessióToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
             this.tancarSessióToolStripMenuItem.Text = "Tancar Sessió";
             this.tancarSessióToolStripMenuItem.Click += new System.EventHandler(this.tancarSessióToolStripMenuItem_Click);
+            // 
+            // sortirToolStripMenuItem
+            // 
+            this.sortirToolStripMenuItem.Name = "sortirToolStripMenuItem";
+            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.sortirToolStripMenuItem.Text = "Sortir";
+            this.sortirToolStripMenuItem.Click += new System.EventHandler(this.sortirToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 
@@ -129,6 +130,7 @@
             this.ClientSize = new System.Drawing.Size(890, 555);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "MenuPrincipal";
             this.ShowIcon = false;

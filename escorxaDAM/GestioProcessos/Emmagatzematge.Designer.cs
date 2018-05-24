@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Emmagatzematge));
             this.lblNumero = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblUserIn = new System.Windows.Forms.Label();
@@ -42,6 +43,10 @@
             this.btnTreure = new System.Windows.Forms.Button();
             this.lblDataOut = new System.Windows.Forms.Label();
             this.gbxNevera = new System.Windows.Forms.GroupBox();
+            this.UsuarisSortida = new CustomControl.comboBox();
+            this.dateOut = new CustomControl.CustomTextBox();
+            this.txtMaxTemp = new CustomControl.CustomTextBox();
+            this.txtMinTemp = new CustomControl.CustomTextBox();
             this.lblUserOut = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.UsuarisEntrada = new CustomControl.comboBox();
@@ -49,10 +54,6 @@
             this.txtEstat = new CustomControl.CustomTextBox();
             this.txtLot = new CustomControl.CustomTextBox();
             this.txtNumCamFrigo = new CustomControl.CustomTextBox();
-            this.UsuarisSortida = new CustomControl.comboBox();
-            this.dateOut = new CustomControl.CustomTextBox();
-            this.txtMaxTemp = new CustomControl.CustomTextBox();
-            this.txtMinTemp = new CustomControl.CustomTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwEmmagatzematge)).BeginInit();
             this.pnlSafates.SuspendLayout();
             this.gbxNevera.SuspendLayout();
@@ -230,6 +231,54 @@
             this.gbxNevera.TabStop = false;
             this.gbxNevera.Text = "Dades refrigeració";
             // 
+            // UsuarisSortida
+            // 
+            this.UsuarisSortida.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.UsuarisSortida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.UsuarisSortida.Enabled = false;
+            this.UsuarisSortida.FormattingEnabled = true;
+            this.UsuarisSortida.Location = new System.Drawing.Point(172, 114);
+            this.UsuarisSortida.Name = "UsuarisSortida";
+            this.UsuarisSortida.Reference = null;
+            this.UsuarisSortida.Size = new System.Drawing.Size(265, 21);
+            this.UsuarisSortida.TabIndex = 1007;
+            // 
+            // dateOut
+            // 
+            this.dateOut.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateOut.Location = new System.Drawing.Point(172, 160);
+            this.dateOut.Name = "dateOut";
+            this.dateOut.Options = CustomControl.CustomTextBox.Items.Text;
+            this.dateOut.Placeholder = null;
+            this.dateOut.ReadOnly = true;
+            this.dateOut.Size = new System.Drawing.Size(265, 20);
+            this.dateOut.TabIndex = 1004;
+            this.dateOut.Tag = "Nom";
+            // 
+            // txtMaxTemp
+            // 
+            this.txtMaxTemp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMaxTemp.Location = new System.Drawing.Point(172, 29);
+            this.txtMaxTemp.Name = "txtMaxTemp";
+            this.txtMaxTemp.Options = CustomControl.CustomTextBox.Items.Text;
+            this.txtMaxTemp.Placeholder = null;
+            this.txtMaxTemp.ReadOnly = true;
+            this.txtMaxTemp.Size = new System.Drawing.Size(265, 20);
+            this.txtMaxTemp.TabIndex = 95;
+            this.txtMaxTemp.Tag = "Nom";
+            // 
+            // txtMinTemp
+            // 
+            this.txtMinTemp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMinTemp.Location = new System.Drawing.Point(172, 74);
+            this.txtMinTemp.Name = "txtMinTemp";
+            this.txtMinTemp.Options = CustomControl.CustomTextBox.Items.Text;
+            this.txtMinTemp.Placeholder = null;
+            this.txtMinTemp.ReadOnly = true;
+            this.txtMinTemp.Size = new System.Drawing.Size(265, 20);
+            this.txtMinTemp.TabIndex = 96;
+            this.txtMinTemp.Tag = "Nom";
+            // 
             // lblUserOut
             // 
             this.lblUserOut.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -265,6 +314,7 @@
             // 
             this.UsuarisEntrada.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.UsuarisEntrada.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.UsuarisEntrada.Enabled = false;
             this.UsuarisEntrada.FormattingEnabled = true;
             this.UsuarisEntrada.Location = new System.Drawing.Point(155, 158);
             this.UsuarisEntrada.Name = "UsuarisEntrada";
@@ -320,53 +370,6 @@
             this.txtNumCamFrigo.TabIndex = 92;
             this.txtNumCamFrigo.Tag = "Nom";
             // 
-            // UsuarisSortida
-            // 
-            this.UsuarisSortida.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.UsuarisSortida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.UsuarisSortida.FormattingEnabled = true;
-            this.UsuarisSortida.Location = new System.Drawing.Point(172, 114);
-            this.UsuarisSortida.Name = "UsuarisSortida";
-            this.UsuarisSortida.Reference = null;
-            this.UsuarisSortida.Size = new System.Drawing.Size(265, 21);
-            this.UsuarisSortida.TabIndex = 1007;
-            // 
-            // dateOut
-            // 
-            this.dateOut.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateOut.Location = new System.Drawing.Point(172, 160);
-            this.dateOut.Name = "dateOut";
-            this.dateOut.Options = CustomControl.CustomTextBox.Items.Text;
-            this.dateOut.Placeholder = null;
-            this.dateOut.ReadOnly = true;
-            this.dateOut.Size = new System.Drawing.Size(265, 20);
-            this.dateOut.TabIndex = 1004;
-            this.dateOut.Tag = "Nom";
-            // 
-            // txtMaxTemp
-            // 
-            this.txtMaxTemp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMaxTemp.Location = new System.Drawing.Point(172, 29);
-            this.txtMaxTemp.Name = "txtMaxTemp";
-            this.txtMaxTemp.Options = CustomControl.CustomTextBox.Items.Text;
-            this.txtMaxTemp.Placeholder = null;
-            this.txtMaxTemp.ReadOnly = true;
-            this.txtMaxTemp.Size = new System.Drawing.Size(265, 20);
-            this.txtMaxTemp.TabIndex = 95;
-            this.txtMaxTemp.Tag = "Nom";
-            // 
-            // txtMinTemp
-            // 
-            this.txtMinTemp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMinTemp.Location = new System.Drawing.Point(172, 74);
-            this.txtMinTemp.Name = "txtMinTemp";
-            this.txtMinTemp.Options = CustomControl.CustomTextBox.Items.Text;
-            this.txtMinTemp.Placeholder = null;
-            this.txtMinTemp.ReadOnly = true;
-            this.txtMinTemp.Size = new System.Drawing.Size(265, 20);
-            this.txtMinTemp.TabIndex = 96;
-            this.txtMinTemp.Tag = "Nom";
-            // 
             // Emmagatzematge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,6 +381,7 @@
             this.Controls.Add(this.dgwEmmagatzematge);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pnlSafates);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Emmagatzematge";
             this.Text = "Processat_Final";

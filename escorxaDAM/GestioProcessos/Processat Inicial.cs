@@ -33,8 +33,10 @@ namespace GestioProcessos
 
         private void Processat_Inicial_Load(object sender, EventArgs e)
         {
+            MenuPrincipal.MenuPrincipal m = ParentForm as MenuPrincipal.MenuPrincipal;
             obtenirUsuaris();
             updateGridLots();
+            Usuaris.SelectedValue = m.User;
         }
 
         private void updateGridLots()
