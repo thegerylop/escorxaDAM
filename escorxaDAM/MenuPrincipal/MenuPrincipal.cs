@@ -22,16 +22,27 @@ namespace MenuPrincipal
         DownloadDataFTP.FtpForm frm = new DownloadDataFTP.FtpForm();
         ClassHelpers.EDI_TCPhelpers test = new ClassHelpers.EDI_TCPhelpers();
 
-        long user;
-        public void menuAcces(long value)
+        private long _user;
+        public long User
         {
-            user = value;
+            get
+            {
+                return _user;
+            }
+            set
+            {
+                _user = value;
+            }
         }
+        public void menuAcces()
+        {
+        }
+
         public MenuPrincipal()
         {
             InitializeComponent();
-        }
 
+        }
         private void sortirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -44,8 +55,8 @@ namespace MenuPrincipal
         private void accesMenu()
         {
             var userAcces = from a in _m.permisos
-                          where a.idUsuari == user
-                          select a.idNivellAcces;
+                          where a.idUsuari == _user
+                            select a.idNivellAcces;
 
 
             var menuStrip = from a in _m.itemMenu
@@ -132,7 +143,7 @@ namespace MenuPrincipal
             test.sendTCPData("172.17.20.249",5000,"SF");
         }
 
-        private void uDPToolStripMenuItem_Click(object sender, EventArgs e)
+        public void uDPToolStripMenuItem_Click(object sender, EventArgs e)
         {
             test.sendUDPData("172.17.21.32", 7000, "SF");
         }

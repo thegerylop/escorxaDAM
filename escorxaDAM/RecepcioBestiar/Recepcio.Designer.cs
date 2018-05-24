@@ -143,6 +143,7 @@
             // 
             this.userComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.userComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.userComboBox.Enabled = false;
             this.userComboBox.FormattingEnabled = true;
             this.userComboBox.Location = new System.Drawing.Point(706, 215);
             this.userComboBox.Name = "userComboBox";

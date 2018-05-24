@@ -122,6 +122,9 @@
     <Compile Include="processats_inicials.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="procInicial_Animal.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="proveidors.cs">
       <DependentUpon>Model.tt</DependentUpon>

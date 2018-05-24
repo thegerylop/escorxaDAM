@@ -163,10 +163,6 @@
       <Project>{d9565db0-a4e6-449b-a5a7-31d01e7cb34c}</Project>
       <Name>EstatProcesRefrigeracio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GestioProcessos\GestioProcessos.csproj">
-      <Project>{719b27ae-b8a7-421a-98e7-96000c2b234e}</Project>
-      <Name>GestioProcessos</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MantenimentUsuaris\MantenimentUsuaris.csproj">
       <Project>{8c221afb-fbe1-4a6a-8626-c98b8960a54a}</Project>
       <Name>MantenimentUsuaris</Name>

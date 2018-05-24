@@ -81,6 +81,10 @@
       <Project>{cf89ea7d-d834-4cb1-8888-e9c0fb24ee7f}</Project>
       <Name>BaseForm</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ClassHelpers\ClassHelpers.csproj">
+      <Project>{9526d638-b53d-4fd8-a2c5-b2fbe0c9634a}</Project>
+      <Name>ClassHelpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConexioBBDD\ConexioBBDD.csproj">
       <Project>{384145E7-5B9B-43CB-92B0-D8BE9B92FDE8}</Project>
       <Name>ConexioBBDD</Name>
@@ -88,6 +92,10 @@
     <ProjectReference Include="..\CustomControl\CustomControl.csproj">
       <Project>{a7279e0e-d844-4cc7-99da-9939eaa74818}</Project>
       <Name>CustomControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MenuPrincipal\MenuPrincipal.csproj">
+      <Project>{a7c126af-3ea6-4766-bbba-832f69b04982}</Project>
+      <Name>MenuPrincipal</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{0010e369-5b6f-456f-8c9a-e1b3faf4c7f6}</Project>
