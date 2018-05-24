@@ -27,14 +27,13 @@ namespace GestioProcessos
         {
 
             txtBoxCarril.Text = randomInt(1,3).ToString();
-            obtenirUsuaris();
             txtBoxPesCanal.Text = randomInt(320, 400).ToString();
         }
 
 
         private void Processat_Inicial_Load(object sender, EventArgs e)
         {
-            //Carrego el grid de lots
+            obtenirUsuaris();
             updateGridLots();
         }
 
@@ -92,32 +91,34 @@ namespace GestioProcessos
                                             select a).FirstOrDefault();
                    
                 
-                    //var pIA = (from a in _m.procInicial_Animal
-                    //           where a.idProcessatInicial.ToString() == idProcessatInicial
-                    //           join anim in _m.animals on a.idAnimal equals anim.idAnimal
-                    //           select a).FirstOrDefault();
+                    var pIA = (from a in _m.procInicial_Animal
+                               where a.idProcessatInicial.ToString() == idProcessatInicial
+                               join anim in _m.animals on a.idAnimal equals anim.idAnimal
+                               select a).FirstOrDefault();
 
-                    var idAnimal = (from a in _m.animals
+                    string idAnimal = (from a in _m.animals
                                     where a.DIB == DIB
-                                    select a.idAnimal).First();
+                                    select a.idAnimal).First().ToString();
+                    var piaTable = new procInicial_Animal
+                    {
+                        idAnimal = Int32.Parse(idAnimal),
+                        idProcessatInicial = Int64.Parse(idProcessatInicial),
+                        Pes = Int32.Parse(txtBoxPesCanal.Text),
+                        
+                        
+                    };
+                    _m.procInicial_Animal.Add(piaTable);
+                    _m.SaveChanges();
                     
+                    MessageBox.Show("Inserit correctament");
                     // join ls in _m.lots on rb.idRecepcio equals ls.idRemo
 
-                    if(ProcessatInicial.idEstatInicial == 1)
+                    if (ProcessatInicial.idEstatInicial == 1)
                     {
                         ProcessatInicial.idUsuari = Int32.Parse(Usuaris.SelectedValue.ToString());
                         ProcessatInicial.idEstatInicial = 2;
                         ProcessatInicial.numCarril = Int32.Parse(txtBoxCarril.Text);
-                        // ProcessatInicial.pesCanal = inutilitzada
-                        var pIA = new procInicial_Animal
-                        {
-                            Pes = Int32.Parse(txtBoxPesCanal.Text),
-                            idProcessatInicial = ProcessatInicial.idProcessatInicial,
-                            idAnimal = idAnimal,
-                        };
-                        _m.SaveChanges();
-                        _m.procInicial_Animal.Add(pIA);
-                        MessageBox.Show("Inserit correctament");
+                       
                     }
                     else
                     {
@@ -137,12 +138,6 @@ namespace GestioProcessos
             Random rnd = new Random();
             int random = rnd.Next(min, max);
             return random;
-        }
-
-        private void btnInserir_Click(object sender, EventArgs e)
-        {
-            
-            afegirBBDD();
         }
 
         private void btnFinalitzar_Click(object sender, EventArgs e)
@@ -185,9 +180,12 @@ namespace GestioProcessos
 
         private void gridAnimals_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            num = e.RowIndex;
+            num = gridAnimalsLot.CurrentCell.RowIndex;
             DIB = gridAnimalsLot.Rows[num].Cells[0].Value.ToString();
-            omplirCampsRandom();            
+            omplirCampsRandom();
+            afegirBBDD();
+            // gridAnimalsLot.Rows.RemoveAt(num);
+            // updateGridAnimals(lot);
         }
     }
 }
