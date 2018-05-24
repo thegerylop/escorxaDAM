@@ -174,7 +174,7 @@ namespace GestioProcessos
                 };
                 _m.emmagatzematges.Add(proc);
                 _m.SaveChanges();
-                var lotes = _m.lots.OrderByDescending(u => u.numLot == gridAnimalsLot.Text).FirstOrDefault();
+                var lotes = _m.lots.OrderByDescending(u => u.numLot == lot).FirstOrDefault();
                 long idEmm = (from a in _m.emmagatzematges
                                     select a.idEmmagatzematge).Max();
 

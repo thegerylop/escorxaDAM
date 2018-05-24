@@ -11,6 +11,7 @@ using BaseForm;
 using Models;
 using ClassHelpers;
 using System.Globalization;
+using System.IO;
 
 namespace GestioProcessos
 {
@@ -105,7 +106,7 @@ namespace GestioProcessos
             dateOut.Text = DateTime.Now.AddHours(07).ToString("yyyy/MM/dd HH:mm");
             string tempsMax = (DateTime.Now.AddHours(07).Hour + obtenirHoraCorrecta(DateTime.Now.Minute.ToString())).ToString();
 
-            string ip = "127.0.0.1";
+            string ip = File.ReadAllText(Path.Combine(Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("dll")), @"BaseForm\Config\Refrigerador.txt")); ;
 
             //data entrada
             int change = dataEntrada.Text.IndexOf(" ");
