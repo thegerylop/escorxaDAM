@@ -80,6 +80,10 @@
       <Project>{d5b2b62c-2d04-4cde-943d-76e0e7808652}</Project>
       <Name>FTP</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MenuPrincipal\MenuPrincipal.csproj">
+      <Project>{a7c126af-3ea6-4766-bbba-832f69b04982}</Project>
+      <Name>MenuPrincipal</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{0010e369-5b6f-456f-8c9a-e1b3faf4c7f6}</Project>
       <Name>Models</Name>

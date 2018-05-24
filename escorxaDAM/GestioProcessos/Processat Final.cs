@@ -28,9 +28,11 @@ namespace GestioProcessos
 
         private void Processat_Final_Load(object sender, EventArgs e)
         {
+            MenuPrincipal.MenuPrincipal m = ParentForm as MenuPrincipal.MenuPrincipal;
             updateGrid();
             comboTipus.SelectedIndex = 1;
             obtenirUsuaris();
+            txtBoxUsuari.SelectedValue = m.User;
         }
         public void obtenirUsuaris()
         {

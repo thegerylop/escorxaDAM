@@ -88,9 +88,12 @@ namespace GestioProcessos
 
         private void Sacrifici_Load(object sender, EventArgs e)
         {
+            MenuPrincipal.MenuPrincipal m = ParentForm as MenuPrincipal.MenuPrincipal;
             updateGrid();
             obtenirUsuaris();
             obtenirSistemas();
+            Usuaris.SelectedValue = m.User;
+
         }
         private void updateGrid()
         {

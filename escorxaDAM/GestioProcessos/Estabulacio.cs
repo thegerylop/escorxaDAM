@@ -25,8 +25,10 @@ namespace GestioProcessos
 
         private void Estabulacio_Load(object sender, EventArgs e)
         {
+            MenuPrincipal.MenuPrincipal m = ParentForm as MenuPrincipal.MenuPrincipal;
             ActualitzarDataGrid();
             obtenirUsuaris();
+            Usuaris.SelectedValue = m.User;
         }
         private void ActualitzarDataGrid()
         {

@@ -27,6 +27,7 @@ namespace GestioProcessos
         }
         private void Emmagatzematge_Load(object sender, EventArgs e)
         {
+            MenuPrincipal.MenuPrincipal m = ParentForm as MenuPrincipal.MenuPrincipal;
             actualitzarDataGrid();
             obtenirUsuaris();
         }
@@ -44,7 +45,7 @@ namespace GestioProcessos
 
         private void dgwEmmagatzematge_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            MenuPrincipal.MenuPrincipal m = ParentForm as MenuPrincipal.MenuPrincipal;
             dadesDataGrid(e);
             omplirCampsComuns();
             if (estat.Equals("En espera"))
@@ -53,6 +54,8 @@ namespace GestioProcessos
                 btnTreure.Visible = false;
                 UsuarisSortida.Enabled = false;
                 UsuarisEntrada.Enabled = true;
+                UsuarisEntrada.SelectedValue = m.User;
+
             }
             else
             {
@@ -61,6 +64,7 @@ namespace GestioProcessos
                 btnInserir.Visible = false;
                 btnTreure.Visible = true;
                 omplirCampsProces();
+                UsuarisSortida.SelectedValue = m.User;
 
             }
 
