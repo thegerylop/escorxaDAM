@@ -18,7 +18,6 @@ namespace Models
         public processats_inicials()
         {
             this.lots = new HashSet<lots>();
-            this.procInicial_Animal = new HashSet<procInicial_Animal>();
         }
     
         public long idProcessatInicial { get; set; }
@@ -32,7 +31,5 @@ namespace Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<lots> lots { get; set; }
         public virtual usuaris usuaris { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<procInicial_Animal> procInicial_Animal { get; set; }
     }
 }

@@ -4,6 +4,7 @@
     <EntitySetMapping Name="animals">
       <EntityTypeMapping TypeName="escorxadam2Model.animals">
         <MappingFragment StoreEntitySet="animals">
+          <ScalarProperty Name="numCarril" ColumnName="numCarril" />
           <ScalarProperty Name="Pes" ColumnName="Pes" />
           <ScalarProperty Name="idAnimal" ColumnName="idAnimal" />
           <ScalarProperty Name="idPaisNaixement" ColumnName="idPaisNaixement" />
@@ -185,11 +186,11 @@
     <EntitySetMapping Name="processats_inicials">
       <EntityTypeMapping TypeName="escorxadam2Model.processats_inicials">
         <MappingFragment StoreEntitySet="processats_inicials">
+          <ScalarProperty Name="idAnimal" ColumnName="idAnimal" />
           <ScalarProperty Name="idProcessatInicial" ColumnName="idProcessatInicial" />
           <ScalarProperty Name="idUsuari" ColumnName="idUsuari" />
           <ScalarProperty Name="idEstatInicial" ColumnName="idEstatInicial" />
           <ScalarProperty Name="numCarril" ColumnName="numCarril" />
-          <ScalarProperty Name="DIB" ColumnName="DIB" />
           <ScalarProperty Name="pesCanal" ColumnName="pesCanal" />
         </MappingFragment>
       </EntityTypeMapping>

@@ -43,15 +43,21 @@
             this.txtBoxEstat = new CustomControl.CustomTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnFinalitzar = new System.Windows.Forms.Button();
+            this.txtDIB = new CustomControl.CustomTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridLots)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridAnimalsLot)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnInserir
+            // 
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
+            // 
             // txtBoxPesCanal
             // 
             this.txtBoxPesCanal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxPesCanal.Location = new System.Drawing.Point(685, 410);
+            this.txtBoxPesCanal.Location = new System.Drawing.Point(617, 342);
             this.txtBoxPesCanal.Name = "txtBoxPesCanal";
             this.txtBoxPesCanal.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxPesCanal.Placeholder = null;
@@ -62,7 +68,7 @@
             // txtBoxCarril
             // 
             this.txtBoxCarril.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxCarril.Location = new System.Drawing.Point(171, 406);
+            this.txtBoxCarril.Location = new System.Drawing.Point(617, 390);
             this.txtBoxCarril.Name = "txtBoxCarril";
             this.txtBoxCarril.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxCarril.Placeholder = null;
@@ -75,7 +81,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(586, 412);
+            this.label8.Location = new System.Drawing.Point(502, 346);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(93, 16);
             this.label8.TabIndex = 99;
@@ -86,7 +92,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 408);
+            this.label2.Location = new System.Drawing.Point(502, 392);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 16);
             this.label2.TabIndex = 97;
@@ -97,7 +103,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 297);
+            this.label1.Location = new System.Drawing.Point(155, 295);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 16);
             this.label1.TabIndex = 96;
@@ -117,7 +123,7 @@
             // 
             this.gridLots.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gridLots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridLots.Location = new System.Drawing.Point(170, 145);
+            this.gridLots.Location = new System.Drawing.Point(127, 130);
             this.gridLots.Name = "gridLots";
             this.gridLots.ReadOnly = true;
             this.gridLots.Size = new System.Drawing.Size(261, 100);
@@ -131,7 +137,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.gridAnimalsLot);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(145, 109);
+            this.panel1.Location = new System.Drawing.Point(102, 94);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(701, 148);
             this.panel1.TabIndex = 107;
@@ -140,7 +146,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(501, 10);
+            this.label6.Location = new System.Drawing.Point(453, 10);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 20);
             this.label6.TabIndex = 135;
@@ -150,12 +156,12 @@
             // 
             this.gridAnimalsLot.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gridAnimalsLot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridAnimalsLot.Location = new System.Drawing.Point(415, 36);
+            this.gridAnimalsLot.Location = new System.Drawing.Point(336, 36);
             this.gridAnimalsLot.Name = "gridAnimalsLot";
             this.gridAnimalsLot.ReadOnly = true;
-            this.gridAnimalsLot.Size = new System.Drawing.Size(261, 100);
+            this.gridAnimalsLot.Size = new System.Drawing.Size(340, 100);
             this.gridAnimalsLot.TabIndex = 134;
-            this.gridAnimalsLot.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridAnimals_CellDoubleClick);
+            this.gridAnimalsLot.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridAnimals_CellDoubleClick);
             // 
             // label3
             // 
@@ -171,7 +177,7 @@
             // 
             this.Usuaris.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Usuaris.FormattingEnabled = true;
-            this.Usuaris.Location = new System.Drawing.Point(171, 294);
+            this.Usuaris.Location = new System.Drawing.Point(227, 292);
             this.Usuaris.Name = "Usuaris";
             this.Usuaris.Reference = null;
             this.Usuaris.Size = new System.Drawing.Size(161, 21);
@@ -180,7 +186,7 @@
             // txtBoxEstat
             // 
             this.txtBoxEstat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxEstat.Location = new System.Drawing.Point(685, 294);
+            this.txtBoxEstat.Location = new System.Drawing.Point(227, 342);
             this.txtBoxEstat.Name = "txtBoxEstat";
             this.txtBoxEstat.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxEstat.Placeholder = null;
@@ -194,7 +200,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(638, 297);
+            this.label4.Location = new System.Drawing.Point(155, 346);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 16);
             this.label4.TabIndex = 118;
@@ -216,11 +222,35 @@
             this.btnFinalitzar.Visible = false;
             this.btnFinalitzar.Click += new System.EventHandler(this.btnFinalitzar_Click);
             // 
+            // txtDIB
+            // 
+            this.txtDIB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDIB.Location = new System.Drawing.Point(617, 294);
+            this.txtDIB.Name = "txtDIB";
+            this.txtDIB.Options = CustomControl.CustomTextBox.Items.Text;
+            this.txtDIB.Placeholder = null;
+            this.txtDIB.Size = new System.Drawing.Size(161, 20);
+            this.txtDIB.TabIndex = 133;
+            this.txtDIB.Tag = "Nom";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(556, 298);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 16);
+            this.label5.TabIndex = 132;
+            this.label5.Text = "DIB:";
+            // 
             // Processat_Inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 604);
+            this.Controls.Add(this.txtDIB);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnFinalitzar);
             this.Controls.Add(this.txtBoxEstat);
             this.Controls.Add(this.label4);
@@ -250,6 +280,8 @@
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.txtBoxEstat, 0);
             this.Controls.SetChildIndex(this.btnFinalitzar, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.txtDIB, 0);
             ((System.ComponentModel.ISupportInitialize)(this.gridLots)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -275,5 +307,7 @@
         public System.Windows.Forms.Button btnFinalitzar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView gridAnimalsLot;
+        private CustomControl.CustomTextBox txtDIB;
+        private System.Windows.Forms.Label label5;
     }
 }

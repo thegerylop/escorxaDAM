@@ -39,11 +39,11 @@ namespace GestioProcessos
 
         private void updateGridLots()
         {
-            var dades = (from pi in _m.processats_inicials
-                         join lots in _m.lots on pi.idProcessatInicial equals lots.idProcessatInicial
-                         join epi in _m.estat_processos_inicials on pi.idProcessatInicial equals epi.idEstatProcesInicial
+            var dades = (from lts in _m.lots
+                         join pi in _m.processats_inicials on lts.idProcessatInicial equals pi.idProcessatInicial 
+                         join epi in _m.estat_processos_inicials on pi.idEstatInicial equals epi.idEstatProcesInicial
                          where (epi.Estat == "En espera" || epi.Estat == "En procés")
-                         select new { lots.numLot, epi.Estat }).ToArray();
+                         select new { lts.numLot, epi.Estat }).ToArray();
 
             //Fico les dades
             gridLots.DataSource = dades;
@@ -63,7 +63,7 @@ namespace GestioProcessos
                          join rb in _m.recepcions_bestiar on animals.idRecepcioBestiar equals rb.idRecepcio
                          join ls in _m.lots on rb.idRecepcio equals ls.idRemo
                          where (ls.numLot == nLot)
-                         select new { animals.DIB }).ToArray();
+                         select new { animals.DIB, animals.Pes, animals.numCarril }).ToArray();
                 
             //Fico les dades
             gridAnimalsLot.DataSource = dades;
@@ -89,49 +89,64 @@ namespace GestioProcessos
                     var ProcessatInicial = (from a in _m.processats_inicials
                                             where a.idProcessatInicial.ToString() == idProcessatInicial
                                             select a).FirstOrDefault();
-                   
-                
-                    var pIA = (from a in _m.procInicial_Animal
-                               where a.idProcessatInicial.ToString() == idProcessatInicial
-                               join anim in _m.animals on a.idAnimal equals anim.idAnimal
-                               select a).FirstOrDefault();
-
-                    string idAnimal = (from a in _m.animals
-                                    where a.DIB == DIB
-                                    select a.idAnimal).First().ToString();
-                    var piaTable = new procInicial_Animal
+                    if (!btnFinalitzar.Visible)
                     {
-                        idAnimal = Int32.Parse(idAnimal),
-                        idProcessatInicial = Int64.Parse(idProcessatInicial),
-                        Pes = Int32.Parse(txtBoxPesCanal.Text),
-                        
-                        
-                    };
-                    _m.procInicial_Animal.Add(piaTable);
-                    _m.SaveChanges();
-                    
-                    MessageBox.Show("Inserit correctament");
-                    // join ls in _m.lots on rb.idRecepcio equals ls.idRemo
+                        var animal = (from a in _m.animals
+                                      where a.DIB == DIB
+                                      select a).First();
+                        animal.Pes = Int64.Parse(txtBoxPesCanal.Text);
+                        animal.numCarril = Int32.Parse(txtBoxCarril.Text);
+                        _m.SaveChanges();
+
+                        MessageBox.Show("Inserit correctament");
+                    }
 
                     if (ProcessatInicial.idEstatInicial == 1)
                     {
                         ProcessatInicial.idUsuari = Int32.Parse(Usuaris.SelectedValue.ToString());
                         ProcessatInicial.idEstatInicial = 2;
-                        ProcessatInicial.numCarril = Int32.Parse(txtBoxCarril.Text);
-                       
                     }
                     else
                     {
-                        ProcessatInicial.idUsuari = Int32.Parse(Usuaris.SelectedValue.ToString());
-                        ProcessatInicial.idEstatInicial = 3;
-                        MessageBox.Show("Finalitzat correctament");
+                        if (comprovarAnimals())
+                        {
+                            if (btnFinalitzar.Visible)
+                            {
+                                ProcessatInicial.idUsuari = Int32.Parse(Usuaris.SelectedValue.ToString());
+                                ProcessatInicial.idEstatInicial = 3;
+                                MessageBox.Show("Finalitzat correctament");
+                            }
+                            else
+                            {
+                                btnFinalitzar.Visible = true;
+                                btnInserir.Visible = false;
+                            }
+                        }
                     }
-                    _m.processats_inicials.Add(ProcessatInicial);
- 
                     _m.SaveChanges();
-
+                    updateGridLots();
                 }
             }
+        }
+        public bool comprovarAnimals()
+        {
+            bool finalitzar = true;
+            foreach (DataGridViewRow row in gridAnimalsLot.Rows)
+            {
+                
+                if (finalitzar)
+                {
+                    foreach(DataGridViewCell cell in row.Cells)
+                    {
+                        if(cell.Value == null)
+                        {
+                            finalitzar = false;
+                            break;
+                        }
+                    }
+                }
+            }
+            return finalitzar;
         }
         public int randomInt(int min, int max)
         {
@@ -142,6 +157,7 @@ namespace GestioProcessos
 
         private void btnFinalitzar_Click(object sender, EventArgs e)
         {
+            afegirBBDD();
             finalitzarProces();
         }
         public void finalitzarProces()
@@ -175,17 +191,31 @@ namespace GestioProcessos
             //Introdueixo les dades al grid d'animals i el textbox d'estat
             updateGridAnimals(lot);
             txtBoxEstat.Text = estat;
+            if (comprovarAnimals())
+            {
+                btnFinalitzar.Visible = true;
+                btnInserir.Visible = false;
+            }
+            else
+            {
+                btnFinalitzar.Visible = false;
+                btnInserir.Visible = true;
+            }
+
         }
 
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            omplirCampsRandom();
+            afegirBBDD();
+            updateGridAnimals(lot);
+        }
 
         private void gridAnimals_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             num = gridAnimalsLot.CurrentCell.RowIndex;
             DIB = gridAnimalsLot.Rows[num].Cells[0].Value.ToString();
-            omplirCampsRandom();
-            afegirBBDD();
-            // gridAnimalsLot.Rows.RemoveAt(num);
-            // updateGridAnimals(lot);
+            txtDIB.Text = DIB;
         }
     }
 }
