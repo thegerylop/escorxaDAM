@@ -82,7 +82,7 @@ namespace GestioProcessos
     
         private void afegirBBDD()
         { 
-            if (DIB != null || DIB != "") {
+            if (DIB != null) {
                 using(escorxadam2Entities test = new escorxadam2Entities())
                 {
                     string idProcessatInicial = (from a in _m.lots

@@ -62,6 +62,7 @@
             this.estabulacioDataGrid.AllowUserToAddRows = false;
             this.estabulacioDataGrid.AllowUserToDeleteRows = false;
             this.estabulacioDataGrid.AllowUserToResizeColumns = false;
+            this.estabulacioDataGrid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.estabulacioDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.estabulacioDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.estabulacioDataGrid.Location = new System.Drawing.Point(52, 77);
@@ -72,7 +73,7 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(49, 28);
@@ -83,7 +84,7 @@
             // 
             // Usuaris
             // 
-            this.Usuaris.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Usuaris.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Usuaris.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Usuaris.Enabled = false;
             this.Usuaris.FormattingEnabled = true;
@@ -95,7 +96,7 @@
             // 
             // label14
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(479, 537);
@@ -106,7 +107,7 @@
             // 
             // label13
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(479, 483);
@@ -117,7 +118,7 @@
             // 
             // Incidencies
             // 
-            this.Incidencies.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Incidencies.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Incidencies.Location = new System.Drawing.Point(661, 432);
             this.Incidencies.Name = "Incidencies";
             this.Incidencies.Options = CustomControl.CustomTextBox.Items.Text;
@@ -127,7 +128,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(508, 432);
@@ -138,7 +139,7 @@
             // 
             // NumEstable
             // 
-            this.NumEstable.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.NumEstable.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NumEstable.Location = new System.Drawing.Point(202, 539);
             this.NumEstable.Name = "NumEstable";
             this.NumEstable.Options = CustomControl.CustomTextBox.Items.Text;
@@ -149,7 +150,7 @@
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(49, 593);
@@ -160,7 +161,7 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(49, 537);
@@ -171,7 +172,7 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(48, 384);
@@ -182,7 +183,7 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Location = new System.Drawing.Point(52, 328);
             this.panel1.Name = "panel1";
@@ -191,7 +192,7 @@
             // 
             // Lots
             // 
-            this.Lots.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Lots.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Lots.Location = new System.Drawing.Point(202, 434);
             this.Lots.Name = "Lots";
             this.Lots.Options = CustomControl.CustomTextBox.Items.Text;
@@ -202,7 +203,7 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(49, 432);
@@ -213,7 +214,7 @@
             // 
             // DiaEntrada
             // 
-            this.DiaEntrada.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.DiaEntrada.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DiaEntrada.Location = new System.Drawing.Point(661, 485);
             this.DiaEntrada.Name = "DiaEntrada";
             this.DiaEntrada.Options = CustomControl.CustomTextBox.Items.Text;
@@ -224,7 +225,7 @@
             // 
             // DiaSortida
             // 
-            this.DiaSortida.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.DiaSortida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DiaSortida.Location = new System.Drawing.Point(661, 539);
             this.DiaSortida.Name = "DiaSortida";
             this.DiaSortida.Options = CustomControl.CustomTextBox.Items.Text;
@@ -251,7 +252,7 @@
             // 
             // Estats
             // 
-            this.Estats.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Estats.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Estats.Location = new System.Drawing.Point(202, 485);
             this.Estats.Name = "Estats";
             this.Estats.Options = CustomControl.CustomTextBox.Items.Text;
@@ -262,7 +263,7 @@
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(49, 483);
