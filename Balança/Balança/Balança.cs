@@ -68,7 +68,7 @@ namespace Balança
             string linia = Program.liniaRandom(safata);
             int pes = Program.agafaPes(linia);
             txtPes.Text = pes.ToString();
-            
+            btnEnviar.Enabled = true;
         }
         /// <summary>
         /// Enviem el pes al programa
@@ -79,6 +79,8 @@ namespace Balança
         {
             Byte[] sendBytes = Encoding.ASCII.GetBytes(txtPes.Text);
             udpServer.Send(sendBytes, sendBytes.Length, connPoint);
+            btnEnviar.Enabled = false;
+            txtPes.Text = "";
         }
     }
 }

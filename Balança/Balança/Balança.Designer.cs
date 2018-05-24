@@ -61,11 +61,13 @@
             this.txtPes.Location = new System.Drawing.Point(230, 76);
             this.txtPes.Multiline = true;
             this.txtPes.Name = "txtPes";
+            this.txtPes.ReadOnly = true;
             this.txtPes.Size = new System.Drawing.Size(253, 29);
             this.txtPes.TabIndex = 4;
             // 
             // btnEnviar
             // 
+            this.btnEnviar.Enabled = false;
             this.btnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.Location = new System.Drawing.Point(396, 134);
             this.btnEnviar.Name = "btnEnviar";
