@@ -93,6 +93,10 @@
       <Project>{a7279e0e-d844-4cc7-99da-9939eaa74818}</Project>
       <Name>CustomControl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MenuPrincipal\MenuPrincipal.csproj">
+      <Project>{a7c126af-3ea6-4766-bbba-832f69b04982}</Project>
+      <Name>MenuPrincipal</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{0010e369-5b6f-456f-8c9a-e1b3faf4c7f6}</Project>
       <Name>Models</Name>

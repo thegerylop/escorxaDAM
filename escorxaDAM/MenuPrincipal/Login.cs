@@ -31,7 +31,8 @@ namespace MenuPrincipal
                 if (myUser != null)
                 {
                     MenuPrincipal frm = new MenuPrincipal();
-                    frm.menuAcces(myUser.idUsuari);
+                    frm.menuAcces();
+                    frm.User = myUser.idUsuari;
                     frm.Show();
                     this.Hide();
                 }

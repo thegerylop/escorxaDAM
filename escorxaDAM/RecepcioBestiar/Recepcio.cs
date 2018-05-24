@@ -18,6 +18,7 @@ namespace RecepcioBestiar
 {
     public partial class Recepcio : BaseForm.BaseInserir
     {
+        // MenuPrincipal.MenuPrincipal test = new MenuPrincipal.MenuPrincipal();
         escorxadam2Entities _m = new escorxadam2Entities();
         ClassHelpers.EDI_TCPhelpers edi = new ClassHelpers.EDI_TCPhelpers();
         string[] dades;
@@ -30,9 +31,11 @@ namespace RecepcioBestiar
 
         private void Recepcio_Load(object sender, EventArgs e)
         {
+            MenuPrincipal.MenuPrincipal m = ParentForm as MenuPrincipal.MenuPrincipal;
             dateToday.Value = DateTime.Now;
             dateSortida.CustomFormat = "yyyymmdd";
             obtenirUsuaris();
+            userComboBox.SelectedValue = m.User;
         }
         private void Edi()
         {
@@ -48,6 +51,7 @@ namespace RecepcioBestiar
         private void button1_Click(object sender, EventArgs e)
         {
             Edi();
+            btnInserir.Enabled = true;
         }
         private void omplirCamps(string[] dades)
         {
@@ -150,6 +154,7 @@ namespace RecepcioBestiar
             inserirRecepcio();
             crearLot();
             inserir();
+            btnInserir.Enabled = false;
         }
         public void inserirRecepcio()
         {

@@ -31,15 +31,16 @@ namespace GestioProcessos
             if (estat.Equals("En espera"))
             {
                 btnInserir.Visible = true;
+                btnFinalitzar.Visible = false;
+                dataSacrifici.Text = "";
+                txtBoxBox.Text = "";
             }
             else
             {
                 btnFinalitzar.Visible = true;
+                btnInserir.Visible = false;
                 omplirCampsProces();
-
             }
-
-
         }
         private void omplirCampsComuns()
         {
@@ -56,7 +57,20 @@ namespace GestioProcessos
         {
             Random rnd = new Random();
             txtBoxBox.Text = rnd.Next(1, 11).ToString();
-            dataSacrifici.Text = DateTime.Now.ToString("yyy/MM/dd");
+            dataSacrifici.Text = DateTime.Now.ToString("yyyy/MM/dd");
+
+            getAtordidor();
+        }
+
+        public void getAtordidor()
+        {
+            string valAtord = cBoxAtordiment.SelectedValue.ToString();
+            switch (valAtord)
+            {
+                case "1": txtBoxAparell.Text = "0042"; break;
+                case "2": txtBoxAparell.Text = "0030"; break;
+                default: txtBoxAparell.Text = "0000"; break;
+            }
         }
         private void omplirCampsProces()
         {
@@ -68,15 +82,18 @@ namespace GestioProcessos
             cBoxAtordiment.SelectedValue = sacr.idSistemaAtordiment;
             txtBoxIncidencies.Text = sacr.Incidencies;
             Usuaris.SelectedValue = sacr.idUsuari;
-            dataSacrifici.Text = sacr.dataSacrifici.ToString();
+            dataSacrifici.Text = sacr.dataSacrifici.ToString("yyyy/MM/dd");
         }
 
 
         private void Sacrifici_Load(object sender, EventArgs e)
         {
+            MenuPrincipal.MenuPrincipal m = ParentForm as MenuPrincipal.MenuPrincipal;
             updateGrid();
             obtenirUsuaris();
             obtenirSistemas();
+            Usuaris.SelectedValue = m.User;
+
         }
         private void updateGrid()
         {
@@ -108,10 +125,13 @@ namespace GestioProcessos
             cBoxAtordiment.DisplayMember = "nomSistemaAtordiment";
             cBoxAtordiment.ValueMember = "idSistemaAtordiment";
         }
+
         private void btnInserir_Click(object sender, EventArgs e)
         {
             omplirCampsEspera();
             afegirBBDD();
+            btnInserir.Visible = false;
+            btnFinalitzar.Visible = true;
         }
         private void afegirBBDD()
         {
@@ -141,10 +161,9 @@ namespace GestioProcessos
                     sacrifici.idEstatSacrifici = 2;
                     sacrifici.idInspeccioSanitaria = 1;
                     sacrifici.boxImmobilitzacio = txtBoxBox.Text;
-                    sacrifici.dataSacrifici = DateTime.ParseExact(dataSacrifici.Text, "yyyy/MM/dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
+                    sacrifici.dataSacrifici = (DateTime.ParseExact(dataSacrifici.Text, "yyyy/MM/dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal));
                     sacrifici.Incidencies = incidencia;
                     MessageBox.Show("Inserit correctament");
-
                 }
                 else
                 {
@@ -161,6 +180,8 @@ namespace GestioProcessos
         {
             afegirBBDD();
             finalitzarProces();
+            btnInserir.Visible = false;
+            btnFinalitzar.Visible = false;
         }
         public void finalitzarProces()
         {
@@ -185,7 +206,7 @@ namespace GestioProcessos
 
         private void cBoxAtordiment_TextChanged(object sender, EventArgs e)
         {
-            txtBoxAparell.Text = cBoxAtordiment.SelectedValue.ToString();
+            getAtordidor();
         }
     }
 }

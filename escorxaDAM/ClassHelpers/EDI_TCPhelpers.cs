@@ -62,7 +62,6 @@ namespace ClassHelpers
             // then receive data
             Byte[] receiveBytes = client.Receive(ref ep);
             string returnData = Encoding.ASCII.GetString(receiveBytes);
-            MessageBox.Show(returnData);
             client.Close();
 
             return returnData;
@@ -79,7 +78,6 @@ namespace ClassHelpers
             Int32 bytes = networkStream.Read(dataRec, 0, dataRec.Length);
             responseData = System.Text.Encoding.ASCII.GetString(dataRec, 0, bytes);
             networkStream.Close();
-            MessageBox.Show(responseData);
             return responseData;
         }
     }
