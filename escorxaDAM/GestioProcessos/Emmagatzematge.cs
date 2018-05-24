@@ -28,6 +28,18 @@ namespace GestioProcessos
         private void Emmagatzematge_Load(object sender, EventArgs e)
         {
             actualitzarDataGrid();
+            obtenirUsuaris();
+        }
+        public void obtenirUsuaris()
+        {
+            var usuaris = (from a in _m.usuaris
+                           select new { a.idUsuari, a.Nom }).ToArray();
+            UsuarisEntrada.DataSource = usuaris;
+            UsuarisEntrada.DisplayMember = "Nom";
+            UsuarisEntrada.ValueMember = "idUsuari";
+            UsuarisSortida.DataSource = usuaris;
+            UsuarisSortida.DisplayMember = "Nom";
+            UsuarisSortida.ValueMember = "idUsuari";
         }
 
         private void dgwEmmagatzematge_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -39,9 +51,13 @@ namespace GestioProcessos
             {
                 btnInserir.Visible = true;
                 btnTreure.Visible = false;
+                UsuarisSortida.Enabled = false;
+                UsuarisEntrada.Enabled = true;
             }
             else
             {
+                UsuarisSortida.Enabled = true;
+                UsuarisEntrada.Enabled = false;
                 btnInserir.Visible = false;
                 btnTreure.Visible = true;
                 omplirCampsProces();
@@ -67,7 +83,7 @@ namespace GestioProcessos
                            join b in _m.emmagatzematges on a.idEmmagatzematge equals b.idEmmagatzematge
                            where a.numLot == lot
                            select b).FirstOrDefault();
-            txtUserIn.Text = "prova";
+            UsuarisEntrada.SelectedValue = emmagatzematge.idUsuariEntrada;
             txtNumCamFrigo.Text = emmagatzematge.numCambraFrigorifica.ToString();
             dataEntrada.Text = emmagatzematge.dataEntrada.ToString();
         }
@@ -85,18 +101,25 @@ namespace GestioProcessos
 
         private void btnTreure_Click(object sender, EventArgs e)
         {
-            dateOut.Text = DateTime.Now.ToString("yyyy/MM/dd HH:mm");
+            //data sortida
+            dateOut.Text = DateTime.Now.AddHours(07).ToString("yyyy/MM/dd HH:mm");
+            string tempsMax = (DateTime.Now.AddHours(07).Hour + obtenirHoraCorrecta(DateTime.Now.Minute.ToString())).ToString();
+
             string ip = "127.0.0.1";
+
+            //data entrada
             int change = dataEntrada.Text.IndexOf(" ");
-            string tempsMax = HoraSortidaEmm.Text;
             string tempsMin = dataEntrada.Text.Substring(change + 1);
             string[] horas = tempsMin.Split(':');
             string hora = obtenirHoraCorrecta(horas[1]);
             tempsMin = horas[0] + hora;
+
+            //Hora entrada - hora sortida
             string query = tempsMin + "-" + tempsMax;
 
-            string temps = edi.sendUDPData(ip,8000,query);
+            string temps = edi.sendUDPData(ip,8000, query);
 
+            //Recupero les temperaturas max i min.
             int changes = temps.IndexOf("-");
             string tempMin = temps.Substring(0, changes);
             string tempMax = temps.Substring(changes + 1);
@@ -105,16 +128,24 @@ namespace GestioProcessos
             int tempMinima = Int32.Parse(tempMin);
             int tempMaxima = Int32.Parse(tempMax);
 
-            if (tempMinima < 2 || tempMaxima > 5)
+            //Comprovo que las temperatures siguin correctes
+            if (tempMinima < 200 || tempMaxima > 500)
             {
                 txtEstat.Text = "Defectuós";
+                MessageBox.Show("Defectuós");
             }
             else
             {
                 txtEstat.Text = "Correcte";
+                MessageBox.Show("Correcte");
             }
             afegirBBDD();
-            
+            if(txtEstat.Text == "Correcte")
+            {
+                finalitzarProces();
+            }
+
+
         }
 
         private string obtenirHoraCorrecta(string hora)
@@ -166,7 +197,7 @@ namespace GestioProcessos
 
                 if (emm.idEstatRefrigeracio == 1)
                 {
-                    emm.idUsuariEntrada = 1;
+                    emm.idUsuariEntrada = Int32.Parse(UsuarisEntrada.SelectedValue.ToString());
                     emm.idUsuariSortida = 1;
                     emm.idEstatRefrigeracio = 4;
                     emm.numCambraFrigorifica = Int32.Parse(txtNumCamFrigo.Text);
@@ -184,7 +215,7 @@ namespace GestioProcessos
                     {
                         emm.idEstatRefrigeracio = 2;
                     }
-                    emm.idUsuariSortida = 1;
+                    emm.idUsuariSortida = Int32.Parse(UsuarisSortida.SelectedValue.ToString());
                     emm.dataSortida = DateTime.ParseExact(dateOut.Text, "yyyy/MM/dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
                     emm.temperaturaMaxima = Int64.Parse(txtMaxTemp.Text);
                     emm.temperaturaMinima = Int64.Parse(txtMinTemp.Text);
@@ -193,6 +224,28 @@ namespace GestioProcessos
                 _m.SaveChanges();
                 actualitzarDataGrid();
             }
+        }
+
+        public void finalitzarProces()
+        {
+            using (escorxadam2Entities enti = new escorxadam2Entities())
+            {
+                var fin = new processats_finals
+                {
+                    idUsuari = 1,
+                    idSafata = 1,
+                    idEstatEnvasat = 1,
+                };
+                _m.processats_finals.Add(fin);
+                _m.SaveChanges();
+                var lotes = _m.lots.OrderByDescending(u => u.numLot == txtLot.Text).FirstOrDefault();
+                long idProcessatFinal = (from a in _m.processats_finals
+                                    select a.idProcessatFinal).Max();
+
+                lotes.idProcessatFinal = idProcessatFinal;
+                _m.SaveChanges();
+            }
+            MessageBox.Show("Finalitzat");
         }
     }
 }

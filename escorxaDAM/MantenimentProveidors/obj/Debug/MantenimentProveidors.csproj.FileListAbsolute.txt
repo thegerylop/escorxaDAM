@@ -22,14 +22,6 @@ C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveido
 C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.csproj.CoreCompileInputs.cache
 C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.dll
 C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.pdb
-C:\Users\glopez\Desktop\escorxa\escorxaDAM\dll\MantenimentProveidors.dll
-C:\Users\glopez\Desktop\escorxa\escorxaDAM\dll\MantenimentProveidors.pdb
-C:\Users\glopez\Desktop\escorxa\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.inserirProveidor.resources
-C:\Users\glopez\Desktop\escorxa\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.modificarProveidor.resources
-C:\Users\glopez\Desktop\escorxa\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.csproj.GenerateResource.Cache
-C:\Users\glopez\Desktop\escorxa\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.csproj.CoreCompileInputs.cache
-C:\Users\glopez\Desktop\escorxa\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.dll
-C:\Users\glopez\Desktop\escorxa\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\MantenimentProveidors.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\MantenimentProveidors.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.inserirProveidor.resources
@@ -38,3 +30,11 @@ C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentProveidors\obj\Debug\Man
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.pdb
+C:\Users\glopez\Desktop\escorxa\escorxaDAM\dll\MantenimentProveidors.dll
+C:\Users\glopez\Desktop\escorxa\escorxaDAM\dll\MantenimentProveidors.pdb
+C:\Users\glopez\Desktop\escorxa\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.inserirProveidor.resources
+C:\Users\glopez\Desktop\escorxa\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.modificarProveidor.resources
+C:\Users\glopez\Desktop\escorxa\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.csproj.GenerateResource.Cache
+C:\Users\glopez\Desktop\escorxa\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.csproj.CoreCompileInputs.cache
+C:\Users\glopez\Desktop\escorxa\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.dll
+C:\Users\glopez\Desktop\escorxa\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.pdb
