@@ -42,7 +42,6 @@
             this.txtBoxId = new CustomControl.CustomTextBox();
             this.PesBalança = new CustomControl.CustomTextBox();
             this.txtBoxLot = new CustomControl.CustomTextBox();
-            this.txtBoxUsuari = new CustomControl.CustomTextBox();
             this.txtBoxDIB = new CustomControl.CustomTextBox();
             this.txtBoxO2 = new CustomControl.CustomTextBox();
             this.txtBoxCO2 = new CustomControl.CustomTextBox();
@@ -58,6 +57,7 @@
             this.txtEstat = new CustomControl.CustomTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtDateCad = new CustomControl.CustomTextBox();
+            this.txtBoxUsuari = new CustomControl.comboBox();
             ((System.ComponentModel.ISupportInitialize)(this.SafataGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -210,17 +210,6 @@
             this.txtBoxLot.Size = new System.Drawing.Size(161, 20);
             this.txtBoxLot.TabIndex = 84;
             this.txtBoxLot.Tag = "Nom";
-            // 
-            // txtBoxUsuari
-            // 
-            this.txtBoxUsuari.Location = new System.Drawing.Point(608, 305);
-            this.txtBoxUsuari.Name = "txtBoxUsuari";
-            this.txtBoxUsuari.Options = CustomControl.CustomTextBox.Items.Text;
-            this.txtBoxUsuari.Placeholder = null;
-            this.txtBoxUsuari.ReadOnly = true;
-            this.txtBoxUsuari.Size = new System.Drawing.Size(161, 20);
-            this.txtBoxUsuari.TabIndex = 85;
-            this.txtBoxUsuari.Tag = "Nom";
             // 
             // txtBoxDIB
             // 
@@ -393,11 +382,22 @@
             this.txtDateCad.TabIndex = 105;
             this.txtDateCad.Tag = "Nom";
             // 
+            // txtBoxUsuari
+            // 
+            this.txtBoxUsuari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtBoxUsuari.FormattingEnabled = true;
+            this.txtBoxUsuari.Location = new System.Drawing.Point(608, 303);
+            this.txtBoxUsuari.Name = "txtBoxUsuari";
+            this.txtBoxUsuari.Reference = null;
+            this.txtBoxUsuari.Size = new System.Drawing.Size(161, 21);
+            this.txtBoxUsuari.TabIndex = 106;
+            // 
             // Processat_Final
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 604);
+            this.Controls.Add(this.txtBoxUsuari);
             this.Controls.Add(this.txtDateCad);
             this.Controls.Add(this.txtEstat);
             this.Controls.Add(this.label14);
@@ -411,7 +411,6 @@
             this.Controls.Add(this.txtBoxCO2);
             this.Controls.Add(this.txtBoxO2);
             this.Controls.Add(this.txtBoxDIB);
-            this.Controls.Add(this.txtBoxUsuari);
             this.Controls.Add(this.txtBoxLot);
             this.Controls.Add(this.PesBalança);
             this.Controls.Add(this.txtBoxId);
@@ -447,7 +446,6 @@
             this.Controls.SetChildIndex(this.txtBoxId, 0);
             this.Controls.SetChildIndex(this.PesBalança, 0);
             this.Controls.SetChildIndex(this.txtBoxLot, 0);
-            this.Controls.SetChildIndex(this.txtBoxUsuari, 0);
             this.Controls.SetChildIndex(this.txtBoxDIB, 0);
             this.Controls.SetChildIndex(this.txtBoxO2, 0);
             this.Controls.SetChildIndex(this.txtBoxCO2, 0);
@@ -461,6 +459,7 @@
             this.Controls.SetChildIndex(this.label14, 0);
             this.Controls.SetChildIndex(this.txtEstat, 0);
             this.Controls.SetChildIndex(this.txtDateCad, 0);
+            this.Controls.SetChildIndex(this.txtBoxUsuari, 0);
             ((System.ComponentModel.ISupportInitialize)(this.SafataGrid)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -484,7 +483,6 @@
         private CustomControl.CustomTextBox txtBoxId;
         private CustomControl.CustomTextBox PesBalança;
         private CustomControl.CustomTextBox txtBoxLot;
-        private CustomControl.CustomTextBox txtBoxUsuari;
         private CustomControl.CustomTextBox txtBoxDIB;
         private CustomControl.CustomTextBox txtBoxO2;
         private CustomControl.CustomTextBox txtBoxCO2;
@@ -500,5 +498,6 @@
         private CustomControl.CustomTextBox txtEstat;
         private System.Windows.Forms.Label label14;
         private CustomControl.CustomTextBox txtDateCad;
+        private CustomControl.comboBox txtBoxUsuari;
     }
 }

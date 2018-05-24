@@ -30,6 +30,15 @@ namespace GestioProcessos
         {
             updateGrid();
             comboTipus.SelectedIndex = 1;
+            obtenirUsuaris();
+        }
+        public void obtenirUsuaris()
+        {
+            var usuaris = (from a in _m.usuaris
+                           select new { a.idUsuari, a.Nom }).ToArray();
+            txtBoxUsuari.DataSource = usuaris;
+            txtBoxUsuari.DisplayMember = "Nom";
+            txtBoxUsuari.ValueMember = "idUsuari";
         }
         private void updateGrid()
         {
@@ -198,6 +207,7 @@ namespace GestioProcessos
                 var idSaf = (from safata in _m.referencies
                              select safata.idReferencia).Max();
 
+                proc.idUsuari = Int32.Parse(txtBoxUsuari.SelectedValue.ToString());
                 proc.dataEnvasat = DateTime.ParseExact(txtDate.Text, "yyyy/MM/dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
                 proc.diaCaducitat = DateTime.ParseExact(txtDateCad.Text, "yyyy/MM/dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal);
                 proc.idEstatEnvasat = 3;
