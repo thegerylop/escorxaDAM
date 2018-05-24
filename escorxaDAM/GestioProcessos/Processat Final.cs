@@ -97,7 +97,7 @@ namespace GestioProcessos
             PesBalança.Text = pesBal;
             comprobarPes(pesBal);
         }
-        private void comprobarPes(string pesBalança)
+        public void comprobarPes(string pesBalança)
         {
             double pesFinal = Int64.Parse(pesBalança);
             if (comboTipus.SelectedItem.ToString() == "SN")
@@ -146,14 +146,15 @@ namespace GestioProcessos
             string tipus = comboTipus.SelectedItem.ToString();
             string dadesEspectograf = tcp.sendTCPData("172.17.20.249", 5000, tipus);
             string[] output = dadesEspectograf.Split(',');
-            comprobarEspectograf(output);
+            bool estat = comprobarEspectograf(output);
             txtBoxO2.Text = output[1];
             txtBoxCO2.Text = output[0];
             txtBoxMG.Text = output[2];
 
         }
-        private void comprobarEspectograf(string[] espe)
+        public bool comprobarEspectograf(string[] espe)
         {
+            bool prova;
             int[] arrayeEspe = Array.ConvertAll(espe,
                                   delegate (string s) { return int.Parse(s); });
             if (arrayeEspe[0] >= 20 && arrayeEspe[0] <= 30)
@@ -164,23 +165,27 @@ namespace GestioProcessos
                     {
                         btnInserir.Visible = true;
                         MessageBox.Show("Analisi finalitzar correctament");
+                        return prova = true;
                     }
                     else
                     {
                         MessageBox.Show("Analisi incorrecte");
                         safataIncorrecte();
+                        return prova =  false;
                     }
                 }
                 else
                 {
                     MessageBox.Show("Analisi incorrecte");
                     safataIncorrecte();
+                    return prova =  false;
                 }
             }
             else
             {
                 MessageBox.Show("Analisi incorrecte");
                 safataIncorrecte();
+                return prova =  false;
             }
         }
 

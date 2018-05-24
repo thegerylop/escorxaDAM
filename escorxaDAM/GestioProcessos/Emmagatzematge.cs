@@ -152,7 +152,7 @@ namespace GestioProcessos
 
         }
 
-        private string obtenirHoraCorrecta(string hora)
+        public string obtenirHoraCorrecta(string hora)
         {
             int horas = Int32.Parse(hora);
             if(horas > 15 && horas < 30)
