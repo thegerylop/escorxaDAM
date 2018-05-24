@@ -14,14 +14,6 @@ C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\obj\Debug\Man
 C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.csproj.CoreCompileInputs.cache
 C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.dll
 C:\Users\erixc\Desktop\escorxadam\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.pdb
-C:\DAM\Projecte 2\escorxaDAM\dll\MantenimentProveidors.dll
-C:\DAM\Projecte 2\escorxaDAM\dll\MantenimentProveidors.pdb
-C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.inserirProveidor.resources
-C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.modificarProveidor.resources
-C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.csproj.GenerateResource.Cache
-C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.csproj.CoreCompileInputs.cache
-C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.dll
-C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\MantenimentProveidors.dll
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\dll\MantenimentProveidors.pdb
 C:\Users\admin\Desktop\escorxaDAM\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.inserirProveidor.resources
@@ -40,6 +32,7 @@ C:\Users\glopez\Desktop\escorxa\escorxaDAM\MantenimentProveidors\obj\Debug\Mante
 C:\Users\glopez\Desktop\escorxa\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.pdb
 C:\DAM\Projecte 2\escorxaDAM\dll\MantenimentProveidors.dll
 C:\DAM\Projecte 2\escorxaDAM\dll\MantenimentProveidors.pdb
+C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.csprojResolveAssemblyReference.cache
 C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.inserirProveidor.resources
 C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.modificarProveidor.resources
 C:\DAM\Projecte 2\escorxaDAM\MantenimentProveidors\obj\Debug\MantenimentProveidors.csproj.GenerateResource.Cache

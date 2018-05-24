@@ -10,11 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BaseForm;
 using Models;
+using EtiquetaSafata;
 
 namespace GestioProcessos
 {
     public partial class Processat_Final : BaseInserir
     {
+        private Form1 Tickets;
         ClassHelpers.EDI_TCPhelpers tcp = new ClassHelpers.EDI_TCPhelpers();
         escorxadam2Entities _m = new escorxadam2Entities();
 
@@ -191,6 +193,7 @@ namespace GestioProcessos
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
+            int idProcessatFinal;
             txtDate.Text = DateTime.Now.ToString("yyy/MM/dd HH:mm");
             txtDateCad.Text = DateTime.Now.AddDays(20).ToString("yyy/MM/dd");
 
@@ -223,10 +226,11 @@ namespace GestioProcessos
                 proc.percO2 = Convert.ToDouble(txtBoxO2.Text);
                 proc.Mioglobina = Convert.ToDouble(txtBoxMG.Text);
                 proc.pesSafata = Convert.ToDouble(PesBalança.Text);
-
+                idProcessatFinal = Int32.Parse(proc.idProcessatFinal.ToString());
                 _m.SaveChanges();
             }
-            imprimirTicket();
+            
+            imprimirTicket(idProcessatFinal);
         }
         private void safataIncorrecte()
         {
@@ -245,9 +249,9 @@ namespace GestioProcessos
             btnInserir.Enabled = false;
             btnPes.Enabled = false;
         }
-        private void imprimirTicket()
+        private void imprimirTicket(int idSafata)
         {
-
+            Tickets = new Form1(idSafata);
         }
     }
 }

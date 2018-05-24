@@ -32,7 +32,7 @@ namespace EtiquetaSafata
             ConnectionInfo crConnectionInfo = new ConnectionInfo();
             Tables CrTables;
 
-            Path = Application.StartupPath.Substring(0, Application.StartupPath.IndexOf("DLL"));
+            Path = Application.StartupPath.Substring(0, Application.StartupPath.IndexOf("dll"));
             cryRpt.Load($"{Path}EtiquetaSafata\\CrystalReport1.rpt");
 
             crConnectionInfo.ServerName = "den1.mssql4.gear.host";
