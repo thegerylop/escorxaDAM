@@ -4,6 +4,7 @@
     <EntitySetMapping Name="animals">
       <EntityTypeMapping TypeName="escorxadam2Model.animals">
         <MappingFragment StoreEntitySet="animals">
+          <ScalarProperty Name="numCarril" ColumnName="numCarril" />
           <ScalarProperty Name="Pes" ColumnName="Pes" />
           <ScalarProperty Name="idAnimal" ColumnName="idAnimal" />
           <ScalarProperty Name="idPaisNaixement" ColumnName="idPaisNaixement" />

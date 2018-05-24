@@ -12,6 +12,7 @@
     <Property Name="Edat" Type="varchar" MaxLength="8" Nullable="false" />
     <Property Name="DIBmare" Type="varchar" MaxLength="14" Nullable="false" />
     <Property Name="Pes" Type="float" />
+    <Property Name="numCarril" Type="int" />
   </EntityType>
   <EntityType Name="comptadors_lot_mes">
     <Key>
@@ -36,7 +37,7 @@
     <Property Name="idEstatRefrigeracio" Type="bigint" Nullable="false" />
     <Property Name="idUsuariEntrada" Type="bigint" Nullable="false" />
     <Property Name="idUsuariSortida" Type="bigint" Nullable="false" />
-    <Property Name="numCambraFrigorifica" Type="int" Nullable="false" />
+    <Property Name="numCambraFrigorifica" Type="int" />
     <Property Name="dataEntrada" Type="datetime2" Precision="0" Nullable="false" />
     <Property Name="dataSortida" Type="datetime2" Precision="0" Nullable="false" />
     <Property Name="temperaturaMaxima" Type="float" />
@@ -184,18 +185,6 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.permisos' no tiene definida 
     <Property Name="numCarril" Type="int" />
     <Property Name="pesCanal" Type="float" />
     <Property Name="idAnimal" Type="bigint" />
-  </EntityType>
-  <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'escorxadam2.dbo.procInicial_Animal' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
-  <EntityType Name="procInicial_Animal">
-    <Key>
-      <PropertyRef Name="idProcessatInicial" />
-      <PropertyRef Name="idAnimal" />
-      <PropertyRef Name="Pes" />
-    </Key>
-    <Property Name="idProcessatInicial" Type="bigint" Nullable="false" />
-    <Property Name="idAnimal" Type="bigint" Nullable="false" />
-    <Property Name="Pes" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="proveidors">
     <Key>
@@ -688,30 +677,6 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_procInicial_Animal_Animal">
-    <End Role="animals" Type="Self.animals" Multiplicity="1" />
-    <End Role="procInicial_Animal" Type="Self.procInicial_Animal" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="animals">
-        <PropertyRef Name="idAnimal" />
-      </Principal>
-      <Dependent Role="procInicial_Animal">
-        <PropertyRef Name="idAnimal" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_procInicial_Animal_procInicial">
-    <End Role="processats_inicials" Type="Self.processats_inicials" Multiplicity="1" />
-    <End Role="procInicial_Animal" Type="Self.procInicial_Animal" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="processats_inicials">
-        <PropertyRef Name="idProcessatInicial" />
-      </Principal>
-      <Dependent Role="procInicial_Animal">
-        <PropertyRef Name="idProcessatInicial" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="escorxadam2ModelStoreContainer">
     <EntitySet Name="animals" EntityType="Self.animals" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="comptadors_lot_mes" EntityType="Self.comptadors_lot_mes" Schema="dbo" store:Type="Tables" />
@@ -744,13 +709,6 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
     [permisos].[idUsuari] AS [idUsuari], 
     [permisos].[idNivellAcces] AS [idNivellAcces]
     FROM [dbo].[permisos] AS [permisos]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="procInicial_Animal" EntityType="Self.procInicial_Animal" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [procInicial_Animal].[idProcessatInicial] AS [idProcessatInicial], 
-    [procInicial_Animal].[idAnimal] AS [idAnimal], 
-    [procInicial_Animal].[Pes] AS [Pes]
-    FROM [dbo].[procInicial_Animal] AS [procInicial_Animal]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="sitran" EntityType="Self.sitran" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -892,14 +850,6 @@ advertencia 6002: La tabla o vista 'escorxadam2.dbo.sitran' no tiene definida ni
     <AssociationSet Name="FK__sacrifici__idUsu__42E1EEFE" Association="Self.FK__sacrifici__idUsu__42E1EEFE">
       <End Role="usuaris" EntitySet="usuaris" />
       <End Role="sacrificis" EntitySet="sacrificis" />
-    </AssociationSet>
-    <AssociationSet Name="FK_procInicial_Animal_Animal" Association="Self.FK_procInicial_Animal_Animal">
-      <End Role="animals" EntitySet="animals" />
-      <End Role="procInicial_Animal" EntitySet="procInicial_Animal" />
-    </AssociationSet>
-    <AssociationSet Name="FK_procInicial_Animal_procInicial" Association="Self.FK_procInicial_Animal_procInicial">
-      <End Role="processats_inicials" EntitySet="processats_inicials" />
-      <End Role="procInicial_Animal" EntitySet="procInicial_Animal" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

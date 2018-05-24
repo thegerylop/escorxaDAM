@@ -14,7 +14,7 @@
     <NavigationProperty Name="paisos" Relationship="Self.FK__animals__idPaisN__25518C17" FromRole="animals" ToRole="paisos" />
     <NavigationProperty Name="recepcions_bestiar" Relationship="Self.FK__animals__idRecep__2645B050" FromRole="animals" ToRole="recepcions_bestiar" />
     <Property Name="Pes" Type="Double" />
-    <NavigationProperty Name="procInicial_Animal" Relationship="escorxadam2Model.FK_procInicial_Animal_Animal" FromRole="animals" ToRole="procInicial_Animal" />
+    <Property Name="numCarril" Type="Int32" />
   </EntityType>
   <EntityType Name="comptadors_lot_mes">
     <Key>
@@ -40,7 +40,7 @@
     <Property Name="idEstatRefrigeracio" Type="Int64" Nullable="false" />
     <Property Name="idUsuariEntrada" Type="Int64" Nullable="false" />
     <Property Name="idUsuariSortida" Type="Int64" Nullable="false" />
-    <Property Name="numCambraFrigorifica" Type="Int32" Nullable="false" />
+    <Property Name="numCambraFrigorifica" Type="Int32" />
     <Property Name="dataEntrada" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="dataSortida" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="temperaturaMaxima" Type="Double" />
@@ -210,7 +210,6 @@
     <NavigationProperty Name="lots" Relationship="Self.FK__lots__idProcessa__31B762FC" FromRole="processats_inicials" ToRole="lots" />
     <NavigationProperty Name="usuaris" Relationship="Self.FK__processat__idUsu__3A4CA8FD" FromRole="processats_inicials" ToRole="usuaris" />
     <Property Name="idAnimal" Type="Int64" />
-    <NavigationProperty Name="procInicial_Animal" Relationship="escorxadam2Model.FK_procInicial_Animal_procInicial" FromRole="processats_inicials" ToRole="procInicial_Animal" />
   </EntityType>
   <EntityType Name="proveidors">
     <Key>
@@ -891,15 +890,6 @@
       <End Role="permisos" EntitySet="permisos" />
     </AssociationSet>
     <EntitySet Name="sitran" EntityType="escorxadam2Model.sitran" />
-    <EntitySet Name="procInicial_Animal" EntityType="escorxadam2Model.procInicial_Animal" />
-    <AssociationSet Name="FK_procInicial_Animal_Animal" Association="escorxadam2Model.FK_procInicial_Animal_Animal">
-      <End Role="animals" EntitySet="animals" />
-      <End Role="procInicial_Animal" EntitySet="procInicial_Animal" />
-    </AssociationSet>
-    <AssociationSet Name="FK_procInicial_Animal_procInicial" Association="escorxadam2Model.FK_procInicial_Animal_procInicial">
-      <End Role="processats_inicials" EntitySet="processats_inicials" />
-      <End Role="procInicial_Animal" EntitySet="procInicial_Animal" />
-    </AssociationSet>
   </EntityContainer>
   <EntityType Name="sitran">
     <Key>
@@ -911,40 +901,4 @@
     <Property Name="situacioExplotacio" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="tipusBestiar" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="procInicial_Animal">
-    <Key>
-      <PropertyRef Name="idProcessatInicial" />
-      <PropertyRef Name="idAnimal" />
-      <PropertyRef Name="Pes" />
-    </Key>
-    <Property Name="idProcessatInicial" Type="Int64" Nullable="false" />
-    <Property Name="idAnimal" Type="Int64" Nullable="false" />
-    <Property Name="Pes" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="animals" Relationship="escorxadam2Model.FK_procInicial_Animal_Animal" FromRole="procInicial_Animal" ToRole="animals" />
-    <NavigationProperty Name="processats_inicials" Relationship="escorxadam2Model.FK_procInicial_Animal_procInicial" FromRole="procInicial_Animal" ToRole="processats_inicials" />
-  </EntityType>
-  <Association Name="FK_procInicial_Animal_Animal">
-    <End Type="escorxadam2Model.animals" Role="animals" Multiplicity="1" />
-    <End Type="escorxadam2Model.procInicial_Animal" Role="procInicial_Animal" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="animals">
-        <PropertyRef Name="idAnimal" />
-      </Principal>
-      <Dependent Role="procInicial_Animal">
-        <PropertyRef Name="idAnimal" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_procInicial_Animal_procInicial">
-    <End Type="escorxadam2Model.processats_inicials" Role="processats_inicials" Multiplicity="1" />
-    <End Type="escorxadam2Model.procInicial_Animal" Role="procInicial_Animal" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="processats_inicials">
-        <PropertyRef Name="idProcessatInicial" />
-      </Principal>
-      <Dependent Role="procInicial_Animal">
-        <PropertyRef Name="idProcessatInicial" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
 </Schema>
