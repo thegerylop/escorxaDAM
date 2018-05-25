@@ -62,6 +62,7 @@
             this.txtBoxPesCanal.Name = "txtBoxPesCanal";
             this.txtBoxPesCanal.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxPesCanal.Placeholder = null;
+            this.txtBoxPesCanal.ReadOnly = true;
             this.txtBoxPesCanal.Size = new System.Drawing.Size(161, 20);
             this.txtBoxPesCanal.TabIndex = 102;
             this.txtBoxPesCanal.Tag = "Nom";
@@ -73,6 +74,7 @@
             this.txtBoxCarril.Name = "txtBoxCarril";
             this.txtBoxCarril.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxCarril.Placeholder = null;
+            this.txtBoxCarril.ReadOnly = true;
             this.txtBoxCarril.Size = new System.Drawing.Size(161, 20);
             this.txtBoxCarril.TabIndex = 100;
             this.txtBoxCarril.Tag = "Nom";
@@ -231,6 +233,7 @@
             this.txtDIB.Name = "txtDIB";
             this.txtDIB.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtDIB.Placeholder = null;
+            this.txtDIB.ReadOnly = true;
             this.txtDIB.Size = new System.Drawing.Size(161, 20);
             this.txtDIB.TabIndex = 133;
             this.txtDIB.Tag = "Nom";

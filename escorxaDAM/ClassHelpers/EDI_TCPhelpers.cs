@@ -32,18 +32,28 @@ namespace ClassHelpers
 
         public string[] read(string ruta)
         {
-            var list = new List<string>();
-            FileStream fs_text = new FileStream(ruta, FileMode.Open, FileAccess.Read);
-
-            StreamReader rtext = new StreamReader(fs_text);
-            string line;
-            while ((line = rtext.ReadLine()) != null)
+            string[] result;
+            try
             {
-                list.Add(line);
+                var list = new List<string>();
+                FileStream fs_text = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+
+                StreamReader rtext = new StreamReader(fs_text);
+                string line;
+                while ((line = rtext.ReadLine()) != null)
+                {
+                    list.Add(line);
+                }
+                result = list.ToArray();
+                fs_text.Close();
+                return result;
             }
-            string[] result = list.ToArray();
-            fs_text.Close();
-            return result;
+            catch
+            {
+                MessageBox.Show("Seleciona un arxiu!");
+                return new string[0];
+            }
+            
 
         }
 
