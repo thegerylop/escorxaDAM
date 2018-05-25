@@ -67,7 +67,7 @@
             this.gridAnimals.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gridAnimals.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridAnimals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridAnimals.Location = new System.Drawing.Point(190, 72);
+            this.gridAnimals.Location = new System.Drawing.Point(335, 57);
             this.gridAnimals.Name = "gridAnimals";
             this.gridAnimals.Size = new System.Drawing.Size(306, 198);
             this.gridAnimals.TabIndex = 109;
@@ -78,7 +78,7 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(35, 65);
+            this.panel1.Location = new System.Drawing.Point(180, 50);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(496, 218);
             this.panel1.TabIndex = 110;
@@ -98,7 +98,7 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(36, 21);
+            this.label13.Location = new System.Drawing.Point(181, 6);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(63, 20);
             this.label13.TabIndex = 108;
@@ -109,7 +109,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(492, 472);
+            this.label8.Location = new System.Drawing.Point(637, 457);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 16);
             this.label8.TabIndex = 114;
@@ -120,7 +120,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(418, 403);
+            this.label7.Location = new System.Drawing.Point(563, 388);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(151, 16);
             this.label7.TabIndex = 113;
@@ -131,7 +131,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(125, 470);
+            this.label2.Location = new System.Drawing.Point(270, 455);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 16);
             this.label2.TabIndex = 112;
@@ -142,7 +142,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 406);
+            this.label1.Location = new System.Drawing.Point(188, 391);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 16);
             this.label1.TabIndex = 111;
@@ -153,7 +153,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(40, 532);
+            this.label5.Location = new System.Drawing.Point(185, 517);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(137, 16);
             this.label5.TabIndex = 121;
@@ -164,7 +164,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(41, 362);
+            this.label4.Location = new System.Drawing.Point(186, 347);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 20);
             this.label4.TabIndex = 123;
@@ -174,7 +174,7 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(40, 348);
+            this.panel2.Location = new System.Drawing.Point(185, 333);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(740, 1);
             this.panel2.TabIndex = 124;
@@ -184,7 +184,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(62, 602);
+            this.label6.Location = new System.Drawing.Point(207, 587);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 16);
             this.label6.TabIndex = 125;
@@ -195,7 +195,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(492, 534);
+            this.label9.Location = new System.Drawing.Point(637, 519);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 16);
             this.label9.TabIndex = 127;
@@ -222,7 +222,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(492, 599);
+            this.label10.Location = new System.Drawing.Point(637, 584);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 16);
             this.label10.TabIndex = 131;
@@ -231,7 +231,7 @@
             // dataSacrifici
             // 
             this.dataSacrifici.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataSacrifici.Location = new System.Drawing.Point(589, 598);
+            this.dataSacrifici.Location = new System.Drawing.Point(734, 583);
             this.dataSacrifici.Name = "dataSacrifici";
             this.dataSacrifici.Options = CustomControl.CustomTextBox.Items.Text;
             this.dataSacrifici.Placeholder = null;
@@ -246,7 +246,7 @@
             this.Usuaris.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Usuaris.Enabled = false;
             this.Usuaris.FormattingEnabled = true;
-            this.Usuaris.Location = new System.Drawing.Point(181, 467);
+            this.Usuaris.Location = new System.Drawing.Point(326, 452);
             this.Usuaris.Name = "Usuaris";
             this.Usuaris.Reference = null;
             this.Usuaris.Size = new System.Drawing.Size(163, 21);
@@ -255,7 +255,7 @@
             // txtBoxNLot
             // 
             this.txtBoxNLot.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxNLot.Location = new System.Drawing.Point(589, 533);
+            this.txtBoxNLot.Location = new System.Drawing.Point(734, 518);
             this.txtBoxNLot.Name = "txtBoxNLot";
             this.txtBoxNLot.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxNLot.Placeholder = null;
@@ -267,7 +267,7 @@
             // txtBoxIncidencies
             // 
             this.txtBoxIncidencies.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxIncidencies.Location = new System.Drawing.Point(183, 598);
+            this.txtBoxIncidencies.Location = new System.Drawing.Point(328, 583);
             this.txtBoxIncidencies.Name = "txtBoxIncidencies";
             this.txtBoxIncidencies.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxIncidencies.Placeholder = null;
@@ -280,7 +280,7 @@
             this.cBoxAtordiment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cBoxAtordiment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxAtordiment.FormattingEnabled = true;
-            this.cBoxAtordiment.Location = new System.Drawing.Point(183, 532);
+            this.cBoxAtordiment.Location = new System.Drawing.Point(328, 517);
             this.cBoxAtordiment.Name = "cBoxAtordiment";
             this.cBoxAtordiment.Reference = null;
             this.cBoxAtordiment.Size = new System.Drawing.Size(161, 21);
@@ -290,7 +290,7 @@
             // txtBoxBox
             // 
             this.txtBoxBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxBox.Location = new System.Drawing.Point(183, 404);
+            this.txtBoxBox.Location = new System.Drawing.Point(328, 389);
             this.txtBoxBox.Name = "txtBoxBox";
             this.txtBoxBox.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxBox.Placeholder = null;
@@ -302,7 +302,7 @@
             // txtBoxEstat
             // 
             this.txtBoxEstat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxEstat.Location = new System.Drawing.Point(589, 470);
+            this.txtBoxEstat.Location = new System.Drawing.Point(734, 455);
             this.txtBoxEstat.Name = "txtBoxEstat";
             this.txtBoxEstat.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxEstat.Placeholder = null;
@@ -314,7 +314,7 @@
             // txtBoxAparell
             // 
             this.txtBoxAparell.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxAparell.Location = new System.Drawing.Point(589, 399);
+            this.txtBoxAparell.Location = new System.Drawing.Point(734, 384);
             this.txtBoxAparell.Name = "txtBoxAparell";
             this.txtBoxAparell.Options = CustomControl.CustomTextBox.Items.Text;
             this.txtBoxAparell.Placeholder = null;
@@ -355,7 +355,6 @@
             this.Name = "Sacrifici";
             this.Text = "Sacrifici";
             this.Load += new System.EventHandler(this.Sacrifici_Load);
-            this.Controls.SetChildIndex(this.btnInserir, 0);
             this.Controls.SetChildIndex(this.label13, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.gridAnimals, 0);
@@ -378,6 +377,7 @@
             this.Controls.SetChildIndex(this.btnFinalitzar, 0);
             this.Controls.SetChildIndex(this.label10, 0);
             this.Controls.SetChildIndex(this.dataSacrifici, 0);
+            this.Controls.SetChildIndex(this.btnInserir, 0);
             ((System.ComponentModel.ISupportInitialize)(this.gridAnimals)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

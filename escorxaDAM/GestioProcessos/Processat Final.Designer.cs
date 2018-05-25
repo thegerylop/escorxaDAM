@@ -85,11 +85,11 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(44, 43);
+            this.label6.Location = new System.Drawing.Point(68, 41);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 20);
+            this.label6.Size = new System.Drawing.Size(111, 20);
             this.label6.TabIndex = 68;
-            this.label6.Text = "Safata";
+            this.label6.Text = "Processat final";
             // 
             // label2
             // 
@@ -292,7 +292,7 @@
             this.SafataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SafataGrid.Location = new System.Drawing.Point(227, 87);
             this.SafataGrid.Name = "SafataGrid";
-            this.SafataGrid.Size = new System.Drawing.Size(219, 90);
+            this.SafataGrid.Size = new System.Drawing.Size(262, 90);
             this.SafataGrid.TabIndex = 91;
             this.SafataGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SafataGrid_CellDoubleClick);
             // 
@@ -303,7 +303,7 @@
             this.panel1.Controls.Add(this.label13);
             this.panel1.Location = new System.Drawing.Point(72, 80);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(710, 108);
+            this.panel1.Size = new System.Drawing.Size(439, 108);
             this.panel1.TabIndex = 92;
             // 
             // label13

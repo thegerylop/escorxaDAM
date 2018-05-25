@@ -126,6 +126,7 @@
             // gridLots
             // 
             this.gridLots.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gridLots.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridLots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridLots.Location = new System.Drawing.Point(127, 130);
             this.gridLots.Name = "gridLots";
@@ -159,6 +160,7 @@
             // gridAnimalsLot
             // 
             this.gridAnimalsLot.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gridAnimalsLot.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridAnimalsLot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridAnimalsLot.Location = new System.Drawing.Point(336, 36);
             this.gridAnimalsLot.Name = "gridAnimalsLot";
