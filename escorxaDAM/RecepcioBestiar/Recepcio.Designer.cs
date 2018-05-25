@@ -55,6 +55,7 @@
             this.LLegirEdi = new System.Windows.Forms.Button();
             this.TRA = new CustomControl.CustomTextBox();
             this.dateSortida = new System.Windows.Forms.DateTimePicker();
+            this.checkRega = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AnimalsGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -334,11 +335,27 @@
             this.dateSortida.Size = new System.Drawing.Size(109, 20);
             this.dateSortida.TabIndex = 53;
             // 
+            // checkRega
+            // 
+            this.checkRega.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkRega.BackColor = System.Drawing.Color.DimGray;
+            this.checkRega.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkRega.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.checkRega.ForeColor = System.Drawing.Color.White;
+            this.checkRega.Location = new System.Drawing.Point(405, 549);
+            this.checkRega.Name = "checkRega";
+            this.checkRega.Size = new System.Drawing.Size(155, 26);
+            this.checkRega.TabIndex = 73;
+            this.checkRega.Text = "Comprova proveidor";
+            this.checkRega.UseVisualStyleBackColor = false;
+            this.checkRega.Click += new System.EventHandler(this.checkRega_Click);
+            // 
             // Recepcio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 604);
+            this.Controls.Add(this.checkRega);
             this.Controls.Add(this.TRA);
             this.Controls.Add(this.LLegirEdi);
             this.Controls.Add(this.AnimalsGrid);
@@ -387,6 +404,7 @@
             this.Controls.SetChildIndex(this.LLegirEdi, 0);
             this.Controls.SetChildIndex(this.TRA, 0);
             this.Controls.SetChildIndex(this.btnInserir, 0);
+            this.Controls.SetChildIndex(this.checkRega, 0);
             ((System.ComponentModel.ISupportInitialize)(this.AnimalsGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -420,5 +438,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Sexe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Edat;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIB_Mare;
+        public System.Windows.Forms.Button checkRega;
     }
 }

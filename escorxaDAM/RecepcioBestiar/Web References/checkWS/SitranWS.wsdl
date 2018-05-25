@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CheckREGA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rega" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckREGAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckREGAResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CheckREGASoapIn">
+    <wsdl:part name="parameters" element="tns:CheckREGA" />
+  </wsdl:message>
+  <wsdl:message name="CheckREGASoapOut">
+    <wsdl:part name="parameters" element="tns:CheckREGAResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SitranWSSoap">
+    <wsdl:operation name="CheckREGA">
+      <wsdl:input message="tns:CheckREGASoapIn" />
+      <wsdl:output message="tns:CheckREGASoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SitranWSSoap" type="tns:SitranWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckREGA">
+      <soap:operation soapAction="http://tempuri.org/CheckREGA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SitranWSSoap12" type="tns:SitranWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckREGA">
+      <soap12:operation soapAction="http://tempuri.org/CheckREGA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SitranWS">
+    <wsdl:port name="SitranWSSoap" binding="tns:SitranWSSoap">
+      <soap:address location="http://localhost:51300/SitranWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SitranWSSoap12" binding="tns:SitranWSSoap12">
+      <soap12:address location="http://localhost:51300/SitranWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -22,6 +22,8 @@ namespace RecepcioBestiar
         ClassHelpers.EDI_TCPhelpers edi = new ClassHelpers.EDI_TCPhelpers();
         string[] dades;
         string proveidor;
+        //checkREGA.SitranWSSoapClient regaOK = new checkREGA.SitranWSSoapClient();
+        checkWS.SitranWS regaOK = new checkWS.SitranWS();
 
         public Recepcio()
         {
@@ -285,6 +287,17 @@ namespace RecepcioBestiar
                     txt.Text = "";
 
                 }
+            }
+        }
+
+        private void checkRega_Click(object sender, EventArgs e)
+        {
+            bool check = regaOK.CheckREGA(ORI.Text);
+            if (check){
+                MessageBox.Show("Codi REGA correcte!");
+            }
+            else{
+                MessageBox.Show("Codi REGA no compleix les condicions!");
             }
         }
     }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControl", "CustomControl\CustomControl.csproj", "{A7279E0E-D844-4CC7-99DA-9939EAA74818}"
 EndProject
@@ -46,6 +46,9 @@ EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Documentacio", "Documentacio\Documentacio.shfbproj", "{A9F99FE7-7186-43FF-8368-5515B08D7F9C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecepcioBestiar", "RecepcioBestiar\RecepcioBestiar.csproj", "{C3FB09A9-36BA-46C7-80D3-552585D46003}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2CFB7302-8FA3-4850-B6EF-67184163076B} = {2CFB7302-8FA3-4850-B6EF-67184163076B}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MantenimentProveidors", "MantenimentProveidors\MantenimentProveidors.csproj", "{71EECEA5-6D84-4658-8173-20D8385EC2CD}"
 EndProject
@@ -54,6 +57,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unitTesting", "unitTesting\unitTesting.csproj", "{95FA0134-337B-4F47-821D-C2C96C80BF0C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtiquetaSafata", "EtiquetaSafata\EtiquetaSafata.csproj", "{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitran", "Sitran\Sitran.csproj", "{2CFB7302-8FA3-4850-B6EF-67184163076B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -483,6 +488,22 @@ Global
 		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Release|x64.Build.0 = Release|Any CPU
 		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Release|x86.ActiveCfg = Release|Any CPU
 		{973C4E36-C9CF-4FFD-9D07-5A0F1F0011AB}.Release|x86.Build.0 = Release|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Debug|ARM.Build.0 = Debug|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Debug|x64.Build.0 = Debug|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Debug|x86.Build.0 = Debug|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Release|ARM.ActiveCfg = Release|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Release|ARM.Build.0 = Release|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Release|x64.ActiveCfg = Release|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Release|x64.Build.0 = Release|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Release|x86.ActiveCfg = Release|Any CPU
+		{2CFB7302-8FA3-4850-B6EF-67184163076B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

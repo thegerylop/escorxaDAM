@@ -51,8 +51,8 @@ namespace MenuPrincipal
         private void Login_Load(object sender, EventArgs e)
         {
             CCLogin.Select();
-            CCLogin.Text = "admin";
-            CCPassword.Text = "admin";
+            CCLogin.Text = "gerard";
+            CCPassword.Text = "12345";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
