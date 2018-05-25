@@ -59,6 +59,7 @@ namespace GestioProcessos
 
         private void SafataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            BuidarCamps();
             dadesDataGrid(e);
             omplirCampsComuns();
             if (comboTipus.SelectedItem.ToString().Length > 0)
@@ -255,6 +256,18 @@ namespace GestioProcessos
         private void imprimirTicket(int idSafata)
         {
             Tickets = new Form1(idSafata);
+        }
+        public void BuidarCamps()
+        {
+            foreach (Control txt in this.Controls)
+            {
+                if (txt.GetType() == typeof(CustomControl.CustomTextBox))
+                {
+
+                    txt.Text = "";
+
+                }
+            }
         }
     }
 }

@@ -46,6 +46,7 @@ namespace GestioProcessos
 
         private void dgwEmmagatzematge_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            BuidarCamps();
             MenuPrincipal.MenuPrincipal m = ParentForm as MenuPrincipal.MenuPrincipal;
             dadesDataGrid(e);
             omplirCampsComuns();
@@ -247,6 +248,24 @@ namespace GestioProcessos
                 _m.SaveChanges();
             }
             MessageBox.Show("Finalitzat");
+        }
+        public void BuidarCamps()
+        {
+            foreach(Control cont in Controls)
+            {
+                if (cont is GroupBox) {
+                    GroupBox gb = cont as GroupBox;
+                    foreach (Control txt in gb.Controls)
+                    {
+                        if (txt.GetType() == typeof(CustomControl.CustomTextBox))
+                        {
+
+                            txt.Text = "";
+
+                        }
+                    }
+                }
+            }
         }
     }
 }

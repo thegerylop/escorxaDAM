@@ -13,7 +13,6 @@ namespace GestioProcessos
 {
     public partial class Estabulacio : BaseForm.BaseInserir
     {
-
         escorxadam2Entities _m = new escorxadam2Entities();
         string lot;
         string estat;
@@ -41,6 +40,7 @@ namespace GestioProcessos
         }
         private void estabulacioDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            BuidarCamps();
             dadesDataGrid(e);
             omplirCampsComuns();
             omplirCampsEspera();
@@ -102,6 +102,7 @@ namespace GestioProcessos
             finalitzarProces();
             btnInserir.Visible = false;
             btnFinalitzar.Visible = false;
+            BuidarCamps();
         }
         public void obtenirUsuaris()
         {
@@ -176,6 +177,18 @@ namespace GestioProcessos
                 _m.SaveChanges();
             }
             MessageBox.Show("Finalitzat");
+        }
+        public void BuidarCamps()
+        {
+            foreach (Control txt in this.Controls)
+            {
+                if (txt.GetType() == typeof(CustomControl.CustomTextBox))
+                {
+
+                    txt.Text = "";
+
+                }
+            }
         }
     }
 }

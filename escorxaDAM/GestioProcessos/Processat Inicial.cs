@@ -187,6 +187,7 @@ namespace GestioProcessos
 
         private void gridLots_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            BuidarCamps();
             num = e.RowIndex;
             lot = gridLots.Rows[num].Cells[0].Value.ToString();
             string estat = gridLots.Rows[num].Cells[1].Value.ToString();
@@ -219,6 +220,18 @@ namespace GestioProcessos
             num = gridAnimalsLot.CurrentCell.RowIndex;
             DIB = gridAnimalsLot.Rows[num].Cells[0].Value.ToString();
             txtDIB.Text = DIB;
+        }
+        public void BuidarCamps()
+        {
+            foreach (Control txt in this.Controls)
+            {
+                if (txt.GetType() == typeof(CustomControl.CustomTextBox))
+                {
+
+                    txt.Text = "";
+
+                }
+            }
         }
     }
 }

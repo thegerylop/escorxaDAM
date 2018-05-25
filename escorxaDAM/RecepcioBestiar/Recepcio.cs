@@ -18,7 +18,6 @@ namespace RecepcioBestiar
 {
     public partial class Recepcio : BaseForm.BaseInserir
     {
-        // MenuPrincipal.MenuPrincipal test = new MenuPrincipal.MenuPrincipal();
         escorxadam2Entities _m = new escorxadam2Entities();
         ClassHelpers.EDI_TCPhelpers edi = new ClassHelpers.EDI_TCPhelpers();
         string[] dades;
@@ -50,6 +49,7 @@ namespace RecepcioBestiar
 
         private void button1_Click(object sender, EventArgs e)
         {
+            BuidarCamps();
             Edi();
             btnInserir.Enabled = true;
         }
@@ -274,6 +274,18 @@ namespace RecepcioBestiar
                 }
             }
             MessageBox.Show("Finalitzat");
+        }
+        public void BuidarCamps()
+        {
+            foreach (Control txt in this.Controls)
+            {
+                if (txt.GetType() == typeof(CustomControl.CustomTextBox))
+                {
+
+                    txt.Text = "";
+
+                }
+            }
         }
     }
 }

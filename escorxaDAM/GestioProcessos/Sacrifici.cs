@@ -26,6 +26,7 @@ namespace GestioProcessos
 
         private void gridAnimals_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            BuidarCamps();
             dadesDataGrid(e);
             omplirCampsComuns();
             if (estat.Equals("En espera"))
@@ -207,6 +208,18 @@ namespace GestioProcessos
         private void cBoxAtordiment_TextChanged(object sender, EventArgs e)
         {
             getAtordidor();
+        }
+        public void BuidarCamps()
+        {
+            foreach (Control txt in this.Controls)
+            {
+                if (txt.GetType() == typeof(CustomControl.CustomTextBox))
+                {
+
+                    txt.Text = "";
+
+                }
+            }
         }
     }
 }
